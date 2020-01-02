@@ -1,0 +1,453 @@
+I"�t<p><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md">本节讲义 →</a></p>
+
+<h2 id="目录">目录</h2>
+<ul>
+  <li><a href="#字符串">字符串</a></li>
+  <li><a href="#列表">列表</a></li>
+  <li><a href="#元组">元组</a></li>
+  <li><a href="#字典">字典</a></li>
+  <li><a href="#集合">集合</a></li>
+</ul>
+
+<h2 id="字符串">字符串</h2>
+
+<h6 id="表示方法">表示方法</h6>
+
+<p>由单引号或双引号括起来的单个或多个字符称为字符串，以三个双引号或单引号开头的字符串可以折行。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="n">s1</span> <span class="o">=</span> <span class="s">'hello, world!'</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s">"hello, world!"</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="s">"""
+hello,
+world!
+"""</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h6 id="转义">转义</h6>
+
+<p>例如： <code class="highlighter-rouge">\n</code>表示换行，<code class="highlighter-rouge">\'</code>表示字符<code class="highlighter-rouge">'</code>，<code class="highlighter-rouge">\\</code>表示字符<code class="highlighter-rouge">\</code></p>
+
+<p><code class="highlighter-rouge">\</code>后面还可以跟一个八进制或者十六进制数来表示字符，例如<code class="highlighter-rouge">\141</code>和<code class="highlighter-rouge">\x61</code>分别为八进制和十六进制的小写字母<code class="highlighter-rouge">a</code></p>
+
+<p><code class="highlighter-rouge">\</code>后面还可以跟Unicode字符编码来表示字符（大大提高了可玩性）</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\u00A2\u132B\u26BD\u2F5B\u3093</span><span class="s">'</span><span class="p">)</span> <span class="c1">#¢ጫ⚽⽛ん
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>若不希望转义，可以通过在字符串的最前面加上字母<code class="highlighter-rouge">r</code>来实现。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">s1</span> <span class="o">=</span> <span class="s">r'\'hello, world!\''</span>   <span class="c1"># \'hello, world!\'
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h6 id="字符串的运算">字符串的运算</h6>
+
+<p>Python为字符串类型提供了非常丰富的运算符:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="n">s1</span> <span class="o">=</span> <span class="s">'hello '</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="c1"># hello hello hello
+</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s">'world'</span>
+<span class="n">s1</span> <span class="o">+=</span> <span class="n">s2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="c1"># hello hello hello world
+</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'ll'</span> <span class="ow">in</span> <span class="n">s1</span><span class="p">)</span> <span class="c1"># True
+</span><span class="k">print</span><span class="p">(</span><span class="s">'good'</span> <span class="ow">in</span> <span class="n">s1</span><span class="p">)</span> <span class="c1"># False
+</span>
+
+<span class="n">str2</span> <span class="o">=</span> <span class="s">'abc123456'</span>
+
+<span class="c1"># 从字符串中取出指定位置的字符(下标运算)
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># c
+</span>
+<span class="c1"># 字符串切片(从指定的开始索引到指定的结束索引)
+#index 从 0 至 n-1，str2[l:r] 包含 l 不包含 r
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># c12
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span> <span class="c1"># c123456
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># c246
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># ac246
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># 654321cba
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># 45
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>在Python中，我们还可以通过一系列的方法来完成对字符串的处理:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+</pre></td><td class="rouge-code"><pre><span class="n">str1</span> <span class="o">=</span> <span class="s">'hello, world!'</span>
+
+<span class="c1"># 通过内置函数len计算字符串的长度
+</span><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">str1</span><span class="p">))</span> <span class="c1"># 13
+</span>
+<span class="c1"># 获得字符串首字母大写的拷贝
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span> <span class="c1"># Hello, world!
+</span>
+<span class="c1"># 获得字符串每个单词首字母大写的拷贝
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">title</span><span class="p">())</span> <span class="c1"># Hello, World!
+</span>
+<span class="c1"># 获得字符串变大写后的拷贝
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span> <span class="c1"># HELLO, WORLD!
+</span>
+<span class="c1"># 从字符串中查找子串所在位置
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'or'</span><span class="p">))</span> <span class="c1"># 8
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'shit'</span><span class="p">))</span> <span class="c1"># -1
+# 与find类似但找不到子串时会引发异常
+# print(str1.index('or'))
+# print(str1.index('shit'))
+</span>
+<span class="c1"># 检查字符串是否以指定的字符串开头
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'He'</span><span class="p">))</span> <span class="c1"># False
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'hel'</span><span class="p">))</span> <span class="c1"># True
+</span>
+<span class="c1"># 检查字符串是否以指定的字符串结尾
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'!'</span><span class="p">))</span> <span class="c1"># True
+</span>
+<span class="c1"># 将字符串以指定的宽度居中并在两侧填充指定的字符
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="s">'*'</span><span class="p">))</span>
+<span class="c1"># 将字符串以指定的宽度靠右放置左侧填充指定的字符
+</span><span class="k">print</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="s">' '</span><span class="p">))</span>
+
+
+<span class="n">str2</span> <span class="o">=</span> <span class="s">'abc123456'</span>
+<span class="c1"># 检查字符串是否由数字构成
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="o">.</span><span class="n">isdigit</span><span class="p">())</span>  <span class="c1"># False
+</span>
+<span class="c1"># 检查字符串是否以字母构成
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="o">.</span><span class="n">isalpha</span><span class="p">())</span>  <span class="c1"># False
+</span>
+<span class="c1"># 检查字符串是否以数字和字母构成
+</span><span class="k">print</span><span class="p">(</span><span class="n">str2</span><span class="o">.</span><span class="n">isalnum</span><span class="p">())</span>  <span class="c1"># True
+</span>
+
+<span class="n">str3</span> <span class="o">=</span> <span class="s">'  jackfrued@126.com '</span>
+<span class="k">print</span><span class="p">(</span><span class="n">str3</span><span class="p">)</span>
+
+<span class="c1"># 获得字符串修剪左右两侧空格之后的拷贝
+</span><span class="k">print</span><span class="p">(</span><span class="n">str3</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>我们之前讲过，可以用下面的方式来格式化输出字符串：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="si">%</span><span class="s">d * </span><span class="si">%</span><span class="s">d = </span><span class="si">%</span><span class="s">d'</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>当然，我们也可以用字符串提供的方法来完成字符串的格式：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'{0} * {1} = {2}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Python 3.6以后，格式化字符串还有更为简洁的书写方式，就是在字符串前加上字母f，我们可以使用下面的语法糖来简化上面的代码。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{a} * {b} = {a * b}'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="列表">列表</h2>
+
+<p>列表（list），与字符串类似，也是一种结构化的、非标量类型，它是值的有序序列，每个值都可以通过索引进行标识，定义列表可以将列表的元素放在<code class="highlighter-rouge">[]</code>中，多个元素用<code class="highlighter-rouge">,</code>进行分隔，可以使用<code class="highlighter-rouge">for</code>循环对列表元素进行遍历，也可以使用<code class="highlighter-rouge">[]</code>或<code class="highlighter-rouge">[:]</code>运算符取出列表中的一个或多个元素</p>
+
+<p>下面的代码演示了如何定义列表、如何遍历列表以及列表的下标运算。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span> <span class="c1"># [1, 3, 5, 7, 100]
+</span>
+<span class="c1"># 乘号表示列表元素的重复
+</span><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="s">'hello'</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span> <span class="c1"># ['hello', 'hello', 'hello']
+</span>
+<span class="c1"># 计算列表长度(元素个数)
+</span><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span> <span class="c1"># 5
+</span>
+<span class="c1"># 下标(索引)运算
+</span><span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># 1
+</span><span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span> <span class="c1"># 100
+</span>
+<span class="c1"># print(list1[5])  # IndexError: list index out of range
+</span><span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># 100
+</span><span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span> <span class="c1"># 5
+</span>
+<span class="n">list1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span> <span class="c1"># [1, 3, 300, 7, 100]
+</span>
+<span class="c1"># 通过循环用下标遍历列表元素
+</span><span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">)):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+<span class="c1"># 通过for循环遍历列表元素
+</span><span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+
+<span class="c1"># 通过enumerate函数处理列表之后再遍历可以同时获得元素索引和值
+</span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">elem</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">list1</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">elem</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>下面的代码演示了如何向列表中添加元素以及如何从列表中移除元素。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+
+<span class="c1"># 添加元素
+</span><span class="n">list1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">list1</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="c1"># 合并两个列表
+# list1.extend([1000, 2000])
+</span><span class="n">list1</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span> <span class="c1"># [1, 400, 3, 5, 7, 100, 200, 1000, 2000]
+</span><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span> <span class="c1"># 9
+</span>
+<span class="c1"># 先通过成员运算判断元素是否在列表中，如果存在就删除该元素
+</span><span class="k">if</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
+	<span class="n">list1</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">if</span> <span class="mi">1234</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
+    <span class="n">list1</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span> <span class="c1"># [1, 400, 5, 7, 100, 200, 1000, 2000]
+</span>
+<span class="c1"># 从指定的位置删除元素
+</span><span class="n">list1</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">list1</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span> <span class="c1"># [400, 5, 7, 100, 200, 1000]
+</span>
+<span class="c1"># 清空列表元素
+</span><span class="n">list1</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span> <span class="c1"># []
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>和字符串一样，列表也可以做切片操作，通过切片操作我们可以实现对列表的复制或者将列表中的一部分取出来创建出新的列表，代码如下所示。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s">'grape'</span><span class="p">,</span> <span class="s">'apple'</span><span class="p">,</span> <span class="s">'strawberry'</span><span class="p">,</span> <span class="s">'waxberry'</span><span class="p">]</span>
+<span class="n">fruits</span> <span class="o">+=</span> <span class="p">[</span><span class="s">'pitaya'</span><span class="p">,</span> <span class="s">'pear'</span><span class="p">,</span> <span class="s">'mango'</span><span class="p">]</span>
+
+<span class="c1"># 列表切片
+</span><span class="n">fruits2</span> <span class="o">=</span> <span class="n">fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">fruits2</span><span class="p">)</span> <span class="c1"># apple strawberry waxberry
+</span>
+<span class="c1"># 可以通过完整切片操作来复制列表
+</span><span class="n">fruits3</span> <span class="o">=</span> <span class="n">fruits</span><span class="p">[:]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">fruits3</span><span class="p">)</span> <span class="c1"># ['grape', 'apple', 'strawberry', 'waxberry', 'pitaya', 'pear', 'mango']
+</span><span class="n">fruits4</span> <span class="o">=</span> <span class="n">fruits</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">fruits4</span><span class="p">)</span> <span class="c1"># ['pitaya', 'pear']
+</span>
+<span class="c1"># 可以通过反向切片操作来获得倒转后的列表的拷贝
+</span><span class="n">fruits5</span> <span class="o">=</span> <span class="n">fruits</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">fruits5</span><span class="p">)</span> <span class="c1"># ['mango', 'pear', 'pitaya', 'waxberry', 'strawberry', 'apple', 'grape']
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>下面的代码实现了对列表的排序操作。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s">'orange'</span><span class="p">,</span> <span class="s">'apple'</span><span class="p">,</span> <span class="s">'zoo'</span><span class="p">,</span> <span class="s">'internationalization'</span><span class="p">,</span> <span class="s">'blueberry'</span><span class="p">]</span>
+
+<span class="n">list2</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="c1"># sorted函数返回列表排序后的拷贝不会修改传入的列表
+# 函数的设计就应该像sorted函数一样尽可能不产生副作用
+</span>
+<span class="n">list3</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1"># 通过key关键字参数指定根据字符串长度进行排序而不是默认的字母表顺序
+</span>
+<span class="n">list4</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list4</span><span class="p">)</span>
+
+<span class="c1"># 给列表对象发出排序消息直接在列表对象上进行排序
+</span><span class="n">list1</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="生成式和生成器"><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md#%E7%94%9F%E6%88%90%E5%BC%8F%E5%92%8C%E7%94%9F%E6%88%90%E5%99%A8">生成式和生成器</a></h4>
+
+<h4 id="元组"><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md#%E4%BD%BF%E7%94%A8%E5%85%83%E7%BB%84">元组</a></h4>
+
+<h4 id="集合"><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md#%E4%BD%BF%E7%94%A8%E9%9B%86%E5%90%88">集合</a></h4>
+
+<h4 id="字典"><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md#%E4%BD%BF%E7%94%A8%E5%AD%97%E5%85%B8">字典</a></h4>
+
+<hr />
+<p><strong>Friendly reminder:</strong> This series are my own study notes of <strong><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></strong>. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a> will not be noted due to huge workload. <strong>The whole series are not allowed to be reproduced</strong>. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong>.</p>
+:ET

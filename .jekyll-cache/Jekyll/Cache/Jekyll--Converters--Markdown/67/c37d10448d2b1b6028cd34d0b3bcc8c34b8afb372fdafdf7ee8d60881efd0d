@@ -1,0 +1,47 @@
+I"�<h4 id="两分支-if-else-语句">两分支 <code class="highlighter-rouge">If-Else</code> 语句</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="s">'admin'</span> <span class="ow">and</span> <span class="n">password</span> <span class="o">==</span> <span class="s">'123456'</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'身份验证成功!'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'身份验证失败!'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="多分支-if-elseif-else-语句">多分支 <code class="highlighter-rouge">If-Elseif-Else</code> 语句</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'x = '</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="悬空else分支">悬空Else分支</h4>
+<p>使用<code class="highlighter-rouge">pass</code>命令执行“不执行任何操作”</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'x = '</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">else</span>
+    <span class="k">pass</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p><strong>Attention</strong>：尽量避免没有必要的嵌套，嵌套既影响可读性也增加bug出现概率</p>
+
+<p><strong>Attention</strong>: 同时注意，与Pascal不同，if和else语句末尾有冒号”:”</p>
+
+<p><strong>Friendly reminder:</strong> This series are my own study notes of <strong><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></strong>. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a> will not be noted due to huge workload. <strong>The whole series are not allowed to be reproduced</strong>. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong>.</p>
+:ET

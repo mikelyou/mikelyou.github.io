@@ -1,0 +1,31 @@
+I"�<h4 id="两分支-if-else-语句">两分支 <code class="highlighter-rouge">If-Else</code> 语句</h4>
+<pre><code class="language-Python">if username == 'admin' and password == '123456':
+    print('身份验证成功!')
+else:
+    print('身份验证失败!')
+</code></pre>
+
+<h4 id="多分支-if-elseif-else-语句">多分支 <code class="highlighter-rouge">If-Elseif-Else</code> 语句</h4>
+<pre><code class="language-Python">x = float(input('x = '))
+if x &gt; 1:
+    y = 3 * x - 5
+elif x &gt;= -1:
+    y = x + 2
+else:
+    y = 5 * x + 3
+</code></pre>
+
+<h4 id="悬空else分支">悬空Else分支</h4>
+<p>使用<code class="highlighter-rouge">pass</code>命令执行“不执行任何操作”</p>
+<pre><code class="language-Python">x = float(input('x = '))
+if x &gt; 1:
+    print(x)
+else
+    pass
+</code></pre>
+<p>Attention：尽量避免没有必要的嵌套，嵌套既影响可读性也增加bug出现概率</p>
+
+<p>Attention: 同时注意，与Pascal不同，if和else语句末尾有冒号”:”</p>
+
+<p><strong>Friendly reminder:</strong> This series are my own study notes of <strong><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></strong>. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a> will not be noted due to huge workload. <strong>The whole series are not allowed to be reproduced</strong>. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong>.</p>
+:ET

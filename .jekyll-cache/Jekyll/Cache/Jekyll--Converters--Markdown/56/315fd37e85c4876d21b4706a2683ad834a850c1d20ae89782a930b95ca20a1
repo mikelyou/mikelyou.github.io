@@ -1,0 +1,52 @@
+I"�<h2 id="函数">函数</h2>
+
+<h5 id="定义函数">定义函数</h5>
+
+<p>使用<code class="highlighter-rouge">def</code>关键字来定义函数，通过<code class="highlighter-rouge">return</code>关键字来返回一个值，举个栗子：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">fac</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>   <span class="c1"># 阶乘，实际上Python的math模块中有factorial函数，这里仅做演示
+</span>    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">*=</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Python 函数与其他语言的区别在于，<strong>在Python中，函数的参数可以有默认值，也支持使用可变参数</strong>，<del>所以Python并不需要像其他语言一样支持函数的重载，因为我们在定义一个函数的时候可以让它有多种不同的使用方式（听不懂）</del></li>
+  <li>如果在调用函数的时候，没有传入对应参数的值，将使用该参数的默认值（如果有的话）</li>
+</ul>
+
+<h2 id="模块">模块</h2>
+
+<p>由于Python没有函数重载的概念，那么后面的定义会覆盖之前的定义，也就意味着两个函数同名函数实际上只有一个是存在的。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'hello, world!'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'goodbye, world!'</span><span class="p">)</span>
+
+<span class="c1"># 下面的代码会输出什么呢？
+</span><span class="n">foo</span><span class="p">()</span>   <span class="c1"># goodbye, world!
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="使用模块管理函数">使用模块管理函数</h2>
+
+<p>不是hin懂，前往<a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/06.函数和模块的使用.md#用模块管理函数">课件</a>.</p>
+
+<hr />
+<p><strong>Friendly reminder:</strong> This series are my own study notes of <strong><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></strong>. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a> will not be noted due to huge workload. <strong>The whole series are not allowed to be reproduced</strong>. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong>.</p>
+:ET

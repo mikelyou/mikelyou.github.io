@@ -10,7 +10,8 @@ tags:
 ---
 
 
-**Friendly reminder:** This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. But if you find mistakes or errors in the notes, please tell me. I really appreciate that. **The whole series are not allowed to be reproduced**.
+**Friendly reminder:** This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
+------------
 
 ## Tools used:
 
@@ -22,4 +23,5 @@ tags:
 
 ## Catalog:
 
--
+- [#00 - Readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)
+- [#01 - Notes, Variables and Operators](https://mikelyou.com/2020/01/02/python-learning-01-notes-variables-operators/)

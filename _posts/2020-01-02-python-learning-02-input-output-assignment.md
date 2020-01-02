@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python Learning #01 - Note, Variable and Operator"
+title: "Python Learning #01 - Notes, Variables and Operators"
 subtitle: '注释，变量，运算符'
 author: "Mike Lyou"
 header-style: text
@@ -82,6 +82,6 @@ print(type(e)) # <class 'bool'>
 
 >**说明：** 在实际开发中，如果搞不清楚运算符的优先级，可以使用括号来确保运算的执行顺序。
 
+-------------
 
-
-**Friendly reminder:** This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. But if you find mistakes or errors in the notes, please tell me. I really appreciate that. **The whole series are not allowed to be reproduced**.
+**Friendly reminder:** This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
