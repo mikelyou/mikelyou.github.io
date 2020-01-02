@@ -1,7 +1,7 @@
 # Site settings
 title: Mike Lyou Blog
 SEOTitle: 采叶小火的博客 | Mike Lyou Blog
-header-img: img/home-bg.jpg
+header-img: img/home-bg-stars.jpg
 email: liuch8120@gmail.com
 description: "这里是 @mikelyou 的个人博客"
 keyword: ""
@@ -16,7 +16,7 @@ RSS: false
 #weibo_username:
 #zhihu_username:
 github_username:    mikelyou
-#twitter_username:   
+#twitter_username:
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 

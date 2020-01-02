@@ -1,0 +1,29 @@
+I"$<p>博客搭建好了，但是我的兴趣还不在写文章上，而在于如何让博客看起来更美。</p>
+
+<blockquote>
+  <p>不要停笔，生活还在继续。</p>
+</blockquote>
+
+<h6 id="修复双重滚动条的bug">修复双重滚动条的bug</h6>
+<p>因为Hux自己的博客一直在修改，稳定的模板现在已经比他的博客落后很多个版本，而在这过程中发现甚至已经解决的问题依然存在在模板里。</p>
+
+<p>这时候，有两种方法都可以尝试：一、看看Hux本人最新的模板添加了什么内容，看看版本更新日志；二、查看issue里有没有同样的问题。</p>
+
+<p>双重滚动条的问题就在<a href="https://github.com/Huxpro/huxpro.github.io/issues/123">#issues</a>被解决过了，解决方法也很简单。</p>
+
+<h6 id="如何预览草稿">如何预览草稿</h6>
+
+<p>这里<a href="http://jekyllcn.com/docs/drafts/">官方文档</a>讲的不够清楚。
+我在这个 <del><a href="https://github.com/chesterchenn/blog/blob/a85ddb55d209de0db21b24684fa48914865b3d33/README.md">意义不明的文档</a></del> 里找到了答案：</p>
+
+<ol>
+  <li>
+    <p>你需要在网站根目录下创建一个名为<code class="highlighter-rouge"> _drafts 的文件夹</code>，把草稿放入这个文件夹。</p>
+  </li>
+  <li>
+    <p>然后运行<code class="highlighter-rouge">jekyll serve --drafts</code>即可</p>
+  </li>
+</ol>
+
+<p>似乎<code class="highlighter-rouge">jekyll serve --drafts</code>命令与<code class="highlighter-rouge">jekyll serve</code>命令无法同时执行。</p>
+:ET

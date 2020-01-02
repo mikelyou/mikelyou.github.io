@@ -1,6 +1,42 @@
-I"8<blockquote>
+I"�<<blockquote>
   <p>This document is not completed and will be updated anytime.</p>
 </blockquote>
+
+<h2 id="catagory">Catagory</h2>
+
+<ol>
+  <li><a href="#unix">Unix</a>
+    <ol>
+      <li><a href="#bell-labs">Bell Labs</a></li>
+      <li><a href="#xenix">Xenix</a></li>
+      <li><a href="#bsd">BSD</a></li>
+      <li><a href="#freebsd--apple">FreeBSD &amp; Apple</a></li>
+      <li><a href="#nextstep">NeXTStep</a></li>
+      <li><a href="#darwin">Darwin</a></li>
+      <li><a href="#posix">POSIX</a></li>
+    </ol>
+  </li>
+  <li><a href="#unix-like">Unix-like</a>
+    <ol>
+      <li><a href="#single-unix-specification">Single Unix Specification</a></li>
+      <li><a href="#apple-ios">Apple iOS</a></li>
+      <li><a href="#xnu-kernel">XNU Kernel</a></li>
+    </ol>
+  </li>
+  <li><a href="#linux">Linux</a>
+    <ol>
+      <li><a href="#linux-kernel">Linux Kernel</a></li>
+      <li><a href="#gnu-project">GNU Project</a></li>
+      <li><a href="#android">Android</a></li>
+      <li><a href="#android-kernel">Android Kernel</a></li>
+      <li><a href="#android-rom">Android ROM</a></li>
+      <li><a href="#chrome-os">Chrome OS</a></li>
+      <li><a href="#chromium-os">Chromium OS</a></li>
+    </ol>
+  </li>
+</ol>
+
+<hr />
 
 <h2 id="unix">Unix</h2>
 
@@ -13,7 +49,7 @@
 <ul>
   <li>
     <h4 id="bell-labs">Bell Labs</h4>
-    <p>Bell 和 AT&amp;A 在那时已经是一家了，可以看到那时的通信公司真是一线 IT 公司呢。 
+    <p>Bell 和 AT&amp;A 在那时已经是一家了，可以看到那时的通信公司真是一线 IT 公司呢。
 <strong>C 语言也是 Bell Labs 的产物</strong>，从一开始就是为了用于 Unix 而设计出来的。所以 Unix （在 73 年用 C 重写）在高校流行后，C 语言也获得了广泛支持。</p>
   </li>
 </ul>
@@ -44,7 +80,7 @@
   </li>
   <li>
     <h4 id="darwin">Darwin</h4>
-    <p><a href="https://en.wikipedia.org/wiki/Darwin_(operating_system)">Darwin</a>, the core set of components upon which Mac OS X and iOS based, mostly POSIX compatible, but has never, by itself, been certified as being compatible with any version of <strong>POSIX</strong>. (OS X, since Leopard, has been certified as compatible with the Single UNIX Specification version 3)<br />
+    <p><a href="http://en.wikipedia.org/wiki/Darwin_(operating_system\)">Darwin</a>, the core set of components upon which Mac OS X and iOS based, mostly POSIX compatible, but has never, by itself, been certified as being compatible with any version of <strong>POSIX</strong>. (OS X, since Leopard, has been certified as compatible with the Single UNIX Specification version 3)<br />
 <strong>所以说 Mac OS X 算是很正统 Unix 的了</strong></p>
   </li>
   <li>
@@ -83,6 +119,8 @@
   </li>
 </ul>
 
+<hr />
+
 <h2 id="unix-like">Unix-like</h2>
 
 <blockquote>
@@ -108,6 +146,8 @@
 
 <h4 id="xnu-kernel">XNU Kernel</h4>
 <p>XNU, the acronym(首字母缩写) for <strong><em>X is Not Unix</em></strong>, which is the <strong>Computer OS Kernel</strong> developed at Apple Inc since Dec 1996 for use in the Mac OS X and released as free open source software as part of Darwin.</p>
+
+<hr />
 
 <h2 id="linux">Linux</h2>
 
@@ -163,13 +203,13 @@
   <li><a href="http://en.wikipedia.org/wiki/Apache_License">Apache License</a></li>
 </ul>
 
-<p><img src="/img/in-post/open-source-license.png" alt="Public License" /></p>
+<p><img src="http://dl2.iteye.com/upload/attachment/0047/4142/d770c85a-49b7-3c7f-8ae2-cbb6451e00d8.png" alt="Public License" /></p>
 
 <h4 id="android">Android</h4>
 
 <p>Android is a mobile OS based on <strong>Linux Kernel</strong>, so it’s definitely <strong>Unix-like</strong>.</p>
 
-<p><strong>Linux is under GPL so Android has to be open source</strong>. 
+<p><strong>Linux is under GPL so Android has to be open source</strong>.
 Android’s source code is released by Google under open source licenses, although most Android devices ultimately ship with a combination of open source and proprietary software, including proprietary software developed and licensed by Google <em>(GMS are all proprietary)</em></p>
 
 <h4 id="android-kernel">Android Kernel</h4>
@@ -232,5 +272,4 @@ Android’s source code is released by Google under open source licenses, althou
 <p>Chrome OS is based on Chromium OS, which is the open-source development version of Chrome OS, which is a <strong>Linux distribution</strong> designed by Google.</p>
 
 <p>For Detail, Chromium OS based on <a href="http://en.wikipedia.org/wiki/Gentoo_Linux">Gentoo Linux</a>, emm…</p>
-
 :ET
