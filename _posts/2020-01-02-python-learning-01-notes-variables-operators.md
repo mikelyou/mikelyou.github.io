@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Python Learning #02 - Input, Output and Assignment"
-subtitle: '输入，输出，赋值'
+title: "Python Learning #01 - Notes, Variables and Operators"
+subtitle: '注释，变量，运算符'
 author: "Mike Lyou"
 header-style: text
 tags:
@@ -9,35 +9,79 @@ tags:
   - 学习笔记
 ---
 
-#### 赋值
+## 注释
+
+单行注释 - 以#和空格开头的部分
+多行注释 - 三个引号开头，三个引号结尾  (单引号与双引号仅有微小区别，可以忽略)
+
+#### 单行注释
 ```python
-a = 10
-b = 3
-a += b # 相当于：a = a + b
-a *= a + 2 # 相当于：a = a * (a + 2)
+a = b + c # 这是一条注释
+```
+#### 多行注释
+```python
+print("下面是多行注释")
+"""
+print("注释")
+print("注释不会编译")
+print("可以看到print的字体颜色改变了")
+"""
 ```
 
-#### 输入`input`
-```python
-a = int(input('a = ')) #读取为int类型
-f = float(input('请输入华氏温度: ')) #显示输入提示
-a, b = map(int, input().split()) #读取在同一行的多个数字
-```
 
-#### 输出`print`
-```python
-print(a)
-print(a + b)
-print(a,b) #输出结果会以空格隔开
-print('%.1f' % a) #输出float型变量a,保留一位小数
-```
-> [Python格式化输出](https://www.cnblogs.com/fat39/p/7159881.html)
+## 数据类型
 
-- 使用`end`函数使`print`不换行
-```python
-for i in range(1, 5+1):
-    print (i, end = " ")  #1 2 3 4 5
-```
+#### 常用数据类型：
 
-------------
+- 整形 int
+- 浮点型 float
+- 字符串型 'hello' or "hello"  (单引号与双引号仅有微小区别，可以忽略)
+- 布尔型 True or False
+
+#### 变量
+
+- 变量命名：建议采用 **全小写加下划线** 的拼写，不能以数字开头，大小写敏感，见名识义。
+- 使用`type`函数检查变量的类型
+```python
+a = 100
+b = 12.345
+c = 1 + 5j
+d = 'hello, world'
+e = True
+print(type(a)) # <class 'int'>
+print(type(b)) # <class 'float'>
+print(type(c)) # <class 'complex'>
+print(type(d)) # <class 'str'>
+print(type(e)) # <class 'bool'>
+```
+- 使用Python内置函数转换变量类型
+  - `int()`：将一个数值或字符串转换成整数，可以指定进制。
+  - `float()`：将一个字符串转换成浮点数。
+  - `str()`：将指定的对象转换成字符串形式，可以指定编码。
+  - `chr()`：将整数转换成该编码对应的字符串（一个字符）。
+  - `ord()`：将字符串（一个字符）转换成对应的编码（整数）。
+
+#### 运算符
+
+| 运算符                                                       | 描述                           |
+| ------------------------------------------------------------ | ------------------------------ |
+| `[]` `[:]`                                                   | 下标，切片                     |
+| `**`                                                         | 指数                           |
+| `~` `+` `-`                                                  | 按位取反, 正负号               |
+| `*` `/` `%` `//`                                             | 乘，除，模，整除               |
+| `+` `-`                                                      | 加，减                         |
+| `>>` `<<`                                                    | 右移，左移                     |
+| `&`                                                          | 按位与                         |
+| `^` `\|`                                                      | 按位异或，按位或               |
+| `<=` `<` `>` `>=`                                            | 小于等于，小于，大于，大于等于 |
+| `==` `!=`                                                    | 等于，不等于                   |
+| `is`  `is not`                                               | 身份运算符                     |
+| `in` `not in`                                                | 成员运算符                     |
+| `not` `or` `and`                                             | 逻辑运算符                     |
+| `=` `+=` `-=` `*=` `/=` `%=` `//=` `**=` `&=` `|=` `^=` `>>=` `<<=` | （复合）赋值运算符             |
+
+>**说明：** 在实际开发中，如果搞不清楚运算符的优先级，可以使用括号来确保运算的执行顺序。
+
+-------------
+
 **Friendly reminder:** This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
