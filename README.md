@@ -13,13 +13,12 @@ This is the boilerplate of [Hux Blog](https://github.com/Huxpro/huxpro.github.io
 If you like Hux Blog, Please star [huxpro.github.io repo](https://github.com/Huxpro/huxpro.github.io) instead of this! Thank you!
 
 ## To-do List
-
-- About 界面使用多语言，[参考](https://github.com/Huxpro/huxpro.github.io#v181)
-- 评论区
-- 谷歌数据
-- Back to top 按钮
-- 浮动目录
-- **[jekyll官方文档](http://jekyllcn.com/docs/structure/)** 中有很多好玩的选项，比如
+- 好难，我还是先学python吧
+  - 评论区
+  - 谷歌数据
+  - Back to top 按钮
+  - 浮动目录
+  - **[jekyll官方文档](http://jekyllcn.com/docs/structure/)** 中有很多好玩的选项，比如
   - [摘要](http://jekyllcn.com/docs/posts/#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81)
 
 ## To-write List
@@ -30,8 +29,9 @@ If you like Hux Blog, Please star [huxpro.github.io repo](https://github.com/Hux
 
 ## Past Works
 
+- 更换最新的 Hux博客模板 v1.8.2 |2020-01-02
 - [post] 给父母的印象笔记入门指南
-- 博客正式公开
+- 博客正式公开 | 2019-12-30
 - 解决双重滚动条的BUG
 - 发现草稿的使用方法
 - About 页面稳定版本
