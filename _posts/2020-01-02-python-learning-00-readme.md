@@ -31,5 +31,5 @@ This series are my own study notes of **[Python-100-Days](https://github.com/jac
 - [#03 - Branch Structure](https://mikelyou.com/2020/01/02/python-learning-03-branch-structure/)
 - [#04 - Loop Structure](https://mikelyou.com/2020/01/02/python-learning-04-loop-structure/)
 - [#05 - Founction and Module](https://mikelyou.com/2020/01/02/python-learning-05-function-module/)
-- [#06 - String, List, Tuple, Dict and Set](https://mikelyou.com/2020/01/02/python-learning-05-string-list-tuple-dict-set/)
+- [#06 - String, List, Tuple, Dict and Set](https://mikelyou.com/2020/01/02/python-learning-06-string-list-tuple-dict-set/)
 - to be continued
