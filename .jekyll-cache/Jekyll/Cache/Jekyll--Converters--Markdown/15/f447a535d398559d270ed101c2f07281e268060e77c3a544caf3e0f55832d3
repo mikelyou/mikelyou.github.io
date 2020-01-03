@@ -1,4 +1,4 @@
-I"�<h2 id="函数">函数</h2>
+I"�<h2 id="函数">函数</h2>
 
 <h5 id="定义函数">定义函数</h5>
 
@@ -46,6 +46,25 @@
 <h2 id="使用模块管理函数">使用模块管理函数</h2>
 
 <p>不是hin懂，以后再看。前往 <a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/06.函数和模块的使用.md#用模块管理函数">课件</a>.</p>
+
+<h2 id="新的代码书写方式">新的代码书写方式</h2>
+
+<p>有了函数的概念，我们今后将以下面的格式书写代码。</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Todo: Add your code here
+</span>    <span class="k">pass</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <hr />
 <p><strong>Friendly reminder:</strong> This series are my own study notes of <strong><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></strong>. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a> will not be noted due to huge workload. <strong>The whole series are not allowed to be reproduced</strong>. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong>.</p>

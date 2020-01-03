@@ -46,7 +46,18 @@ foo()   # goodbye, world!
 
 不是hin懂，以后再看。前往 [课件](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/06.函数和模块的使用.md#用模块管理函数).
 
+## 新的代码书写方式
 
+有了函数的概念，我们今后将以下面的格式书写代码。
+```python
+def main():
+    # Todo: Add your code here
+    pass
+
+
+if __name__ == '__main__':
+    main()
+```
 
 ------------
 **Friendly reminder:** This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.

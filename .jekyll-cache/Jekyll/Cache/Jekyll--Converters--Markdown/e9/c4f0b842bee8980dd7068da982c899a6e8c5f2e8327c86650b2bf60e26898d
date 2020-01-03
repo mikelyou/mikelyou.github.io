@@ -1,0 +1,120 @@
+I"�<p><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md#文件和异常">Python-100-Days</a></p>
+
+<p>Python 进阶的第一篇，决定学习文件操作，这应该和实际应用更近一些。</p>
+
+<p>现在只考虑对文本文件的操作。</p>
+
+<h6 id="读取文本文件">读取文本文件</h6>
+<p>最简单直接的写法为</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'致橡树.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>但如果在文件不存在或无法打开，上述代码会报错。所以有以下改进版。</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>       
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'致橡树.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>   
+            <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="k">except</span> <span class="nb">FileNotFoundError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'无法打开指定的文件!'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">LookupError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'指定了未知的编码!'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">UnicodeDecodeError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'读取文件时解码错误!'</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li>
+    <p>在<code class="highlighter-rouge">try</code>代码块的后面可以跟上一个或多个<code class="highlighter-rouge">except</code>来捕获可能出现的异常状况</p>
+  </li>
+  <li>
+    <p>通过<code class="highlighter-rouge">with</code>关键字指定文件对象的上下文环境并在离开上下文环境时自动释放文件资源</p>
+  </li>
+</ul>
+
+<p>除了使用文件对象的<code class="highlighter-rouge">read</code>方法读取文件之外，还可以使用<code class="highlighter-rouge">for-in</code>循环逐行读取或者用<code class="highlighter-rouge">readlines</code>方法将文件按行读取到一个列表容器中，代码如下所示。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="c1"># 此程序报错
+</span><span class="kn">import</span> <span class="nn">time</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># 一次性读取整个文件内容
+</span>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'致橡树.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+    <span class="c1"># 通过for-in循环逐行读取
+</span>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'致橡树.txt'</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+
+    <span class="c1"># 读取文件按行读取到列表中
+</span>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'致橡树.txt'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<hr />
+<p><strong>Friendly reminder:</strong> This series are my own study notes of <strong><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></strong>. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a> will not be noted due to huge workload. <strong>The whole series are not allowed to be reproduced</strong>. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong>.</p>
+:ET
