@@ -1,4 +1,4 @@
-I"�<p><strong>Friendly reminder</strong>:
+I"�<p><strong>Friendly reminder</strong>:
 This series are my own study notes of <strong><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></strong>. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a> will not be noted due to huge workload. <strong>The whole series are not allowed to be reproduced</strong>. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong>.</p>
 
 <h2 id="tools-used">Tools used:</h2>
@@ -21,6 +21,22 @@ This series are my own study notes of <strong><a href="https://github.com/jackfr
   <li><a href="https://mikelyou.com/2020/01/02/python-learning-04-loop-structure/">#04 - Loop Structure</a></li>
   <li><a href="https://mikelyou.com/2020/01/02/python-learning-05-function-module/">#05 - Founction and Module</a></li>
   <li><a href="https://mikelyou.com/2020/01/02/python-learning-06-string-list-tuple-dict-set/">#06 - String, List, Tuple, Dict and Set</a></li>
-  <li>to be continued</li>
+  <li>Above are ABC of python. Other things are difficult, I may stop here and find what to learn.</li>
+</ul>
+
+<h2 id="interesting-topics">Interesting topics</h2>
+<ul>
+  <li>Pygame. (It’s harder than it seems…)
+    <ul>
+      <li><a href="https://eyehere.net/2011/python-pygame-novice-professional-index/">用Python和Pygame写游戏-从入门到精通</a>;</li>
+      <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/10.图形用户界面和游戏开发.md">Python-100-Days//Day01-15/10.图形用户界面和游戏开发.md</a></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md#文件和异常">Python-100-Days/Day01-15/11.文件和异常.md</a></li>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md">Python-100-Days/Day01-15/12.字符串和正则表达式.md</a></li>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/15.图像和办公文档处理.md">Python-100-Days/Day01-15/15.图像和办公文档处理.md</a></li>
+  <li><a href="Python-100-Days/Day16-20/16-20.Python语言进阶.md">常用算法</a></li>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day36-40/36-38.关系型数据库MySQL.md">Python-100-Days/Day36-40/36-38.关系型数据库MySQL.md</a></li>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Python编程惯例.md">Python-100-Days/Python编程惯例.md</a></li>
 </ul>
 :ET

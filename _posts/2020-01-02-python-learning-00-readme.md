@@ -3,7 +3,9 @@ layout: post
 title: "Python Learning #00 - Readme"
 subtitle: 'Life is short, use Python.'
 author: "Mike Lyou"
-header-style: text
+header-img: "img/post-bg-table.jpg"
+header-mask: 0.4
+#header-style: text
 tags:
   - Python
   - 学习笔记
@@ -32,4 +34,16 @@ This series are my own study notes of **[Python-100-Days](https://github.com/jac
 - [#04 - Loop Structure](https://mikelyou.com/2020/01/02/python-learning-04-loop-structure/)
 - [#05 - Founction and Module](https://mikelyou.com/2020/01/02/python-learning-05-function-module/)
 - [#06 - String, List, Tuple, Dict and Set](https://mikelyou.com/2020/01/02/python-learning-06-string-list-tuple-dict-set/)
-- to be continued
+- Above are ABC of python. Other things are difficult, I may stop here and find what to learn.
+
+
+## Interesting topics
+  - Pygame. (It's harder than it seems...)
+    - [用Python和Pygame写游戏-从入门到精通](https://eyehere.net/2011/python-pygame-novice-professional-index/);
+    - [Python-100-Days//Day01-15/10.图形用户界面和游戏开发.md](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/10.图形用户界面和游戏开发.md)
+  - [Python-100-Days/Day01-15/11.文件和异常.md](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md#文件和异常)
+  - [Python-100-Days/Day01-15/12.字符串和正则表达式.md](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md)
+  - [Python-100-Days/Day01-15/15.图像和办公文档处理.md](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/15.图像和办公文档处理.md)
+  - [常用算法](Python-100-Days/Day16-20/16-20.Python语言进阶.md)
+  - [Python-100-Days/Day36-40/36-38.关系型数据库MySQL.md](https://github.com/jackfrued/Python-100-Days/blob/master/Day36-40/36-38.关系型数据库MySQL.md)
+  - [Python-100-Days/Python编程惯例.md](https://github.com/jackfrued/Python-100-Days/blob/master/Python编程惯例.md)
