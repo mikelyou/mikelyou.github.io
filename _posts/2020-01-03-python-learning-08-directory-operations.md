@@ -20,6 +20,19 @@ tags:
 *  
 {:toc}
 
+## 前往指定目录
+
+使用`os`包的`chdir`函数能够改变当前工作路径（待验证）
+
+```python
+import os
+
+
+os.getcwd()  #获取当前工作目录
+
+os.chdir('d:\\')  #更改当前工作目录
+os.getcwd()
+```
 
 ## 获取目录列表
 
