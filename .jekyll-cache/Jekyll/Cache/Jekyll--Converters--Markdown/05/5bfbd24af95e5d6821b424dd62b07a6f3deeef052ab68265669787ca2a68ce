@@ -1,0 +1,130 @@
+I"r<p>During the building process of my blog, I encountered the <strong>command line</strong>. Though solved the tasks at that time, I know nearly nothing about the command line. So today I am going to figure out what the basic command line can do for me.</p>
+
+<p>Due to huge workload and little importance, not grapghs to illustrate.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>What is the command line?</p>
+
+<p>The command line is a handful tool that let you communicate directly with computer. It can perform some tasks much quicker than normal ways, and sometimes is the only way, like when you launch the <code class="highlighter-rouge">jekyll</code> serve. And it is cool.</p>
+
+<p>The <code class="highlighter-rouge">cmd</code> refers to exactly the word <code class="highlighter-rouge">command</code>.</p>
+
+<p>It looks like DOS, but has little to do with DOS.</p>
+
+<h2 id="access-the-command-line">Access the command line</h2>
+
+<p>There are several ways to access the command line.</p>
+
+<ul>
+  <li>Way one: Press <code class="highlighter-rouge">Win + R</code> to open <code class="highlighter-rouge">Run</code> → type <code class="highlighter-rouge">cmd</code> and <code class="highlighter-rouge">Enter</code>.</li>
+  <li>Way two: Press <code class="highlighter-rouge">Win</code> to open <code class="highlighter-rouge">Start menu</code> → type <code class="highlighter-rouge">cmd</code> and click <code class="highlighter-rouge">Command Prompt</code> (here you can run as Admin).</li>
+</ul>
+
+<p>And you should see the window of <code class="highlighter-rouge">cmd.exe</code>.</p>
+
+<h2 id="commands">Commands</h2>
+
+<p>Now we have launched the <code class="highlighter-rouge">cmd.exe</code>, what can we do next? Below I will introduce several things we can do with command lines.</p>
+
+<h4 id="commands-about-directories-and-files">Commands about directories and files</h4>
+
+<h6 id="cd">cd</h6>
+<p>By default, the <code class="highlighter-rouge">cmd.exe</code> is at <code class="highlighter-rouge">C:\WINDOWS\system32</code> or <code class="highlighter-rouge">C:\Users\Username</code>. You can see it once you open the <code class="highlighter-rouge">cmd.exe</code>.</p>
+
+<p>If we want to search files or run programs in another directory, we have to change the directory to there.</p>
+
+<p>Use <code class="highlighter-rouge">cd NEW_PATH</code> to change directory to <code class="highlighter-rouge">NEW_PATH</code>. If <code class="highlighter-rouge">NEW_PATH</code> is at a drive other than <code class="highlighter-rouge">C:</code>, assuming it is <code class="highlighter-rouge">E:</code>, we need to change drive before that.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>E:              # change drive
+cd E:\NEW_PATH  # change directory
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You can see the directory changes at the begining of tht new lines that pops up.</p>
+
+<h6 id="dir">dir</h6>
+<p>List all the files and sub-directories in current directory.</p>
+
+<h6 id="mkdir">mkdir</h6>
+<p>Use <code class="highlighter-rouge">mkdir DIRNAME</code> to create a new directory named <code class="highlighter-rouge">DIRNAME</code></p>
+
+<h6 id="rmdir">rmdir</h6>
+<p>Use <code class="highlighter-rouge">rmdir DIRNAME</code> to remove directory named <code class="highlighter-rouge">DIRNAME</code>.</p>
+
+<p>Only <strong>empty directory</strong> can be removed. Trying to remove a nonempty directory will generate an error message.</p>
+
+<h6 id="del">del</h6>
+
+<p>Use <code class="highlighter-rouge">del FILENAME.extension</code> to delete file named <code class="highlighter-rouge">FILENAME.extension</code>.</p>
+
+<h6 id="help">help</h6>
+<p>If you don’t know what command is avaliable, type <code class="highlighter-rouge">help</code> to see all commands.</p>
+
+<h4 id="commands-about-systems">Commands about systems</h4>
+
+<h6 id="ping">ping</h6>
+
+<p>Use <code class="highlighter-rouge">ping</code> command to check the responding time bwetween an IP and your computer.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>ping mikelyou.com
+ping 185.199.110.153  # IP of mikelyou.com
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You can check the IP of an website by this way as well.</p>
+
+<h6 id="ipconfig">ipconfig</h6>
+
+<p>Use <code class="highlighter-rouge">ipconfig</code> to reveal many network data of your computer.</p>
+
+<h6 id="systeminfo">systeminfo</h6>
+
+<p>Use <code class="highlighter-rouge">systeminfo</code> to see information about your Windows system.</p>
+
+<h6 id="shutdown">shutdown</h6>
+<p>I don’t know where I can use these…</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>shutdown -s         # system will shutdown in 1 minute
+shutdown -s -t 3600 # system will shutdown in 3600 seconds
+shutdown -a         # cancel shutdown command
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="save-commands-as-batch-file">Save commands as batch file</h2>
+
+<p>Save frequantly used command lines as batch file can free ourselves from typing the same words again and again. To do this, we just need to:</p>
+
+<ol>
+  <li>Create a <code class="highlighter-rouge">.txt</code> file.</li>
+  <li>Write some commands and save.</li>
+  <li>Change the extension to <code class="highlighter-rouge">.bat</code></li>
+</ol>
+
+<p>Now we have created an batch file. <strong>Double-click</strong> it and it will run as command lines in the directory of this batch file.</p>
+
+<p>For Example, I cerated a batch file with content as</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>E:
+cd E:\GitHub\mikelyou.github.io
+jekyll serve
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>And next time when I want to <a href="https://mikelyou.com/2019/12/27/hello-world/#2-使用jekyll搭建本地服务器">launch the jekyll serve</a>, I can simply double-click this batch file, rather than open the command line and type those long words.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/">A Beginner’s Guide To The Windows Command Line</a></li>
+  <li><a href="https://lellansin.wordpress.com/2012/12/15/cmd应用基础-扫盲教程/">cmd应用基础-扫盲教程</a></li>
+</ul>
+
+<blockquote>
+  <p>This article is Mike Lyou’s original work and may not be reproduced without permission.</p>
+</blockquote>
+:ET
