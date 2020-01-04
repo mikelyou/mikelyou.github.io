@@ -1,35 +1,34 @@
 # Mike Lyou Blog
 
+This is Mike Lyou blog.
 [View Mike Lyou Blog &rarr;](https://mikelyou.com)
 
-## About the boilerplate
+## Boilerplate of this blog
 
-This is the boilerplate of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), all documents is over there!
+This repositery is forked from [Hux Blog](https://github.com/Huxpro/huxpro.github.io). Thanks [\@Hux](https://github.com/Huxpro) for the great boilerplate.
 
-- [View Boilerplate &rarr;](http://huangxuan.me/huxblog-boilerplate/)
-
-- [View Live Hux Blog &rarr;](http://huangxuan.me)
-
-If you like Hux Blog, Please star [huxpro.github.io repo](https://github.com/Huxpro/huxpro.github.io) instead of this! Thank you!
+Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of this if you like this boilerplate.
 
 ## To-do List
-- 好难，我还是先学python吧
-  - 评论区
-  - 谷歌数据
-  - Back to top 按钮
-  - 浮动目录
-    - 目前发现固定目录的添加方法：[a &rarr;](http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html)
-  - **[jekyll官方文档](http://jekyllcn.com/docs/structure/)** 中有很多好玩的选项，比如
-  - [摘要](http://jekyllcn.com/docs/posts/#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81)
+- 评论区
+- 谷歌数据
+- Back to top 按钮
+- 浮动目录
+  - 目前发现固定目录的添加方法：[a &rarr;](http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html)
+- **[jekyll官方文档](http://jekyllcn.com/docs/structure/)** 中有很多好玩的选项，比如
+- [摘要](http://jekyllcn.com/docs/posts/#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81)
 
 ## To-write List
 
 - 如何自定义鼠标指针
 - Python 学习
+- Github and Jekyll Markdown
 
 
 ## Past Works
 
+- [post] basic command line
+- [post] python learning series
 - 更换最新的 Hux博客模板 v1.8.2 |2020-01-02
 - [post] 给父母的印象笔记入门指南
 - 博客正式公开 | 2019-12-30
