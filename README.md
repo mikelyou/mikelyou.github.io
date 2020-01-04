@@ -18,6 +18,7 @@ If you like Hux Blog, Please star [huxpro.github.io repo](https://github.com/Hux
   - 谷歌数据
   - Back to top 按钮
   - 浮动目录
+    - 目前发现固定目录的添加方法：[a &rarr;](http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html)
   - **[jekyll官方文档](http://jekyllcn.com/docs/structure/)** 中有很多好玩的选项，比如
   - [摘要](http://jekyllcn.com/docs/posts/#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81)
 

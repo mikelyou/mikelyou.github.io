@@ -13,9 +13,12 @@ tags:
 
 
 **Friendly reminder**:
-This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
+This series are my own study notes of several tutorials and articles, which will be listed below. I do not own copyright of some of the content. And I don't think this is good tutorial for others. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
 
-
+References:
+- [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
+- [掘金：文件与文件夹操作](https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-38)
+- [极客学院](http://wiki.jikexueyuan.com/project/explore-python/File-Directory/text_file_io.html)
 
 ## Tools used:
 
