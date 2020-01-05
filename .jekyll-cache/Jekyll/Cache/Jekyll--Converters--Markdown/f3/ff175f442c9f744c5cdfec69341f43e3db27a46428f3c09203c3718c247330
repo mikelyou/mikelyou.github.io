@@ -1,4 +1,4 @@
-I"�"<p>This article briefly introduced the common usage of command line.</p>
+I"#<p>This article briefly introduced the common usage of command line.</p>
 
 <hr />
 
@@ -11,23 +11,18 @@
 <ul id="markdown-toc">
   <li><a href="#introduction-to-command-line" id="markdown-toc-introduction-to-command-line">Introduction to command line</a></li>
   <li><a href="#access-the-command-line" id="markdown-toc-access-the-command-line">Access the command line</a></li>
-  <li><a href="#common-commands" id="markdown-toc-common-commands">Common Commands</a>    <ul>
-      <li><a href="#commands-about-directories-and-files" id="markdown-toc-commands-about-directories-and-files">Commands about directories and files</a>        <ul>
-          <li><a href="#cd" id="markdown-toc-cd">cd</a></li>
-          <li><a href="#dir" id="markdown-toc-dir">dir</a></li>
-          <li><a href="#mkdir" id="markdown-toc-mkdir">mkdir</a></li>
-          <li><a href="#rmdir" id="markdown-toc-rmdir">rmdir</a></li>
-          <li><a href="#del" id="markdown-toc-del">del</a></li>
-          <li><a href="#help" id="markdown-toc-help">help</a></li>
-        </ul>
-      </li>
-      <li><a href="#commands-about-systems" id="markdown-toc-commands-about-systems">Commands about systems</a>        <ul>
-          <li><a href="#ping" id="markdown-toc-ping">ping</a></li>
-          <li><a href="#ipconfig" id="markdown-toc-ipconfig">ipconfig</a></li>
-          <li><a href="#systeminfo" id="markdown-toc-systeminfo">systeminfo</a></li>
-          <li><a href="#shutdown" id="markdown-toc-shutdown">shutdown</a></li>
-        </ul>
-      </li>
+  <li><a href="#common-commands-about-directories-and-files" id="markdown-toc-common-commands-about-directories-and-files">Common Commands about directories and files</a>    <ul>
+      <li><a href="#cd" id="markdown-toc-cd">cd</a></li>
+      <li><a href="#dir" id="markdown-toc-dir">dir</a></li>
+      <li><a href="#mkdir" id="markdown-toc-mkdir">mkdir</a></li>
+      <li><a href="#rmdir" id="markdown-toc-rmdir">rmdir</a></li>
+      <li><a href="#del" id="markdown-toc-del">del</a></li>
+      <li><a href="#help" id="markdown-toc-help">help</a></li>
+      <li><a href="#common-commands-about-windows-systems" id="markdown-toc-common-commands-about-windows-systems">Common commands about Windows systems</a></li>
+      <li><a href="#ping" id="markdown-toc-ping">ping</a></li>
+      <li><a href="#ipconfig" id="markdown-toc-ipconfig">ipconfig</a></li>
+      <li><a href="#systeminfo" id="markdown-toc-systeminfo">systeminfo</a></li>
+      <li><a href="#shutdown" id="markdown-toc-shutdown">shutdown</a></li>
     </ul>
   </li>
   <li><a href="#save-commands-as-batch-file" id="markdown-toc-save-commands-as-batch-file">Save commands as batch file</a></li>
@@ -57,15 +52,19 @@
 
 <p>And then you should see the window of <code class="highlighter-rouge">cmd.exe</code>.</p>
 
-<h2 id="common-commands">Common Commands</h2>
+<hr />
 
 <p>Now we have launched the <code class="highlighter-rouge">cmd.exe</code>, what can we do next?</p>
 
 <p>Below I will introduce several things we can do with command lines.</p>
 
-<h4 id="commands-about-directories-and-files">Commands about directories and files</h4>
+<h2 id="common-commands-about-directories-and-files">Common Commands about directories and files</h2>
 
-<h6 id="cd">cd</h6>
+<p>Now we have launched the <code class="highlighter-rouge">cmd.exe</code>, what can we do next?</p>
+
+<p>Below I will introduce several things we can do with command lines.</p>
+
+<h4 id="cd">cd</h4>
 <p>By default, the <code class="highlighter-rouge">cmd.exe</code> is at directory of <code class="highlighter-rouge">C:\WINDOWS\system32</code> or <code class="highlighter-rouge">C:\Users\Username</code>. You can see it once you open the <code class="highlighter-rouge">cmd.exe</code>.</p>
 
 <p>If we want to search files or run programs in another directory, we have to change the directory to there.</p>
@@ -82,27 +81,27 @@ cd E:\NEW_PATH  # change directory
 
 <p>You can see the directory changes at the begining of tht new lines that pops up.</p>
 
-<h6 id="dir">dir</h6>
+<h4 id="dir">dir</h4>
 <p>List all the files and sub-directories in current directory.</p>
 
-<h6 id="mkdir">mkdir</h6>
+<h4 id="mkdir">mkdir</h4>
 <p>Use <code class="highlighter-rouge">mkdir DIRNAME</code> to create a new directory named <code class="highlighter-rouge">DIRNAME</code></p>
 
-<h6 id="rmdir">rmdir</h6>
+<h4 id="rmdir">rmdir</h4>
 <p>Use <code class="highlighter-rouge">rmdir DIRNAME</code> to remove directory named <code class="highlighter-rouge">DIRNAME</code>.</p>
 
 <p>Only <strong>empty directory</strong> can be removed. Trying to remove a nonempty directory will generate an error message.</p>
 
-<h6 id="del">del</h6>
+<h4 id="del">del</h4>
 
 <p>Use <code class="highlighter-rouge">del FILENAME.extension</code> to delete file named <code class="highlighter-rouge">FILENAME.extension</code>.</p>
 
-<h6 id="help">help</h6>
+<h4 id="help">help</h4>
 <p>If you don’t know what command is avaliable, type <code class="highlighter-rouge">help</code> to see all commands.</p>
 
-<h4 id="commands-about-systems">Commands about systems</h4>
+<h4 id="common-commands-about-windows-systems">Common commands about Windows systems</h4>
 
-<h6 id="ping">ping</h6>
+<h4 id="ping">ping</h4>
 
 <p>Use <code class="highlighter-rouge">ping</code> command to check the responding time bwetween an IP and your computer.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -113,15 +112,15 @@ ping 185.199.110.153  # IP of mikelyou.com
 
 <p>You can check the IP of an website by this way as well.</p>
 
-<h6 id="ipconfig">ipconfig</h6>
+<h4 id="ipconfig">ipconfig</h4>
 
 <p>Use <code class="highlighter-rouge">ipconfig</code> to reveal many network data of your computer.</p>
 
-<h6 id="systeminfo">systeminfo</h6>
+<h4 id="systeminfo">systeminfo</h4>
 
 <p>Use <code class="highlighter-rouge">systeminfo</code> to see information about your Windows system.</p>
 
-<h6 id="shutdown">shutdown</h6>
+<h4 id="shutdown">shutdown</h4>
 <p>I don’t know where I can use these…</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
