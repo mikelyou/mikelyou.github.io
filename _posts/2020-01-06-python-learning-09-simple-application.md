@@ -10,7 +10,7 @@ tags:
   - Notes
 ---
 
-After learning the file and directory operations, I eventually could try to use python to solve some tasks.
+After learning the [file Operations](https://mikelyou.com/2020/01/03/python-learning-07-file-operations/) and [directory Operations](https://mikelyou.com/2020/01/03/python-learning-08-directory-operations/), I eventually could use python to do some tasks.
 
 <!-- more -->
 

@@ -24,6 +24,9 @@ Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of th
 
 ## Past Works
 
+- [new feature] excerpts
+- [batch] upgrated statements in multiple files useing python
+- [post] python file and repositery operations and their application
 - [post] basic command line
 - [post] python learning series
 - 更换最新的 Hux博客模板 v1.8.2 |2020-01-02

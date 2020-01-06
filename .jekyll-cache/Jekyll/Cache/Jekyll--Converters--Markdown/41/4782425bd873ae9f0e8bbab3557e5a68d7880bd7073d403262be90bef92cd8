@@ -1,13 +1,14 @@
-I"<p>After learning the file and directory operations, I eventually could try to use python to solve some tasks.</p>
+I"�<p>After learning the <a href="https://mikelyou.com/2020/01/03/python-learning-07-file-operations/">file Operations</a> and <a href="https://mikelyou.com/2020/01/03/python-learning-08-directory-operations/">directory Operations</a>, I eventually could use python to do some tasks.</p>
 
 <!-- more -->
 
 <p>This article may be updated for a long time, recording useful applications.</p>
 
-<h2 class="no_toc" id="目录">目录：</h2>
+<h2 class="no_toc" id="catalog">Catalog：</h2>
 
 <ul id="markdown-toc">
   <li><a href="#replace-single-string-in-multiple-markdown-files" id="markdown-toc-replace-single-string-in-multiple-markdown-files">Replace single string in multiple markdown files</a></li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
 </ul>
 
 <h2 id="replace-single-string-in-multiple-markdown-files">Replace single string in multiple markdown files</h2>
@@ -68,8 +69,16 @@
     <span class="n">main</span><span class="p">()</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<p><img src="post-python-replace-strings.png" alt="" /></p>
+<p>Here is the results. I successfully replace all <code class="highlighter-rouge">学习笔记</code> tags with <code class="highlighter-rouge">Notes</code>.</p>
+
+<p><img src="/img/in-post/post-python-replace-strings.png" alt="" /></p>
+
+<p>This would be a very useful tool. Oh my god, I finally made it!</p>
+
+<h2 id="references">References</h2>
 
 <hr />
-<p><strong>Friendly reminder:</strong> This series are my own study notes of <strong><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></strong>. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a> will not be noted due to huge workload. <strong>The whole series are not allowed to be reproduced</strong>. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong>.</p>
+<blockquote>
+  <p>Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong> for more information.</p>
+</blockquote>
 :ET
