@@ -119,3 +119,8 @@ friends: [
 #        href: "#"
 #    }
 ]
+
+
+# Mike Lyou's configuration
+
+excerpt_separator:  '<!-- more -->'

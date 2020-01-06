@@ -2,12 +2,15 @@
 layout: post
 title: "Python Learning #02 - Input, Output and Assignment"
 subtitle: '输入，输出，赋值'
+date: 2020-01-02 14:00:00
 author: "Mike Lyou"
 header-style: text
 tags:
   - Python
   - 学习笔记
 ---
+
+<!-- more -->
 
 #### 赋值
 ```python

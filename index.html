@@ -16,9 +16,9 @@ description: "Blog not stable yet, irrelevant content may appears :D"
         {% endif %}
         <div class="post-content-preview">
             {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:300 }}
-            {% else %}
-                {{ post.content | strip_html | truncate:200 }}
+                {{ post.excerpt | strip_html | truncate:300 }} <!-- mikelyou changed `post.content` to `post.excerpt` -->
+            {% else %}                                         <!-- https://blog.coderzh.com/2015/08/15/JekyllReadMore/ -->
+                {{ post.excerpt | strip_html | truncate:200 }} <!-- mikelyou changed `post.content` to `post.excerpt` -->
             {% endif %}
         </div>
     </a>

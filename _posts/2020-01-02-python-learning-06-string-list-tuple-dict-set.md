@@ -2,6 +2,7 @@
 layout: post
 title: "Python Learning #06 - String, List, Tuple, Dict and Set"
 subtitle: '字符串，列表，元组，字典，集合'
+date: 2020-01-02 18:00:00
 author: "Mike Lyou"
 header-style: text
 tags:
@@ -9,7 +10,7 @@ tags:
   - 学习笔记
 ---
 
-
+<!-- more -->
 
 [本节讲义 &rarr;](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md)
 

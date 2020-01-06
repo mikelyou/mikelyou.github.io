@@ -1,0 +1,262 @@
+I"�I<p>Python 进阶的第一篇，决定学习文件操作，这应该和实际应用更近一些。</p>
+
+<h2 class="no_toc" id="目录">目录：</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#读写文本文件" id="markdown-toc-读写文本文件">读写文本文件</a>    <ul>
+      <li><a href="#读取文本文件" id="markdown-toc-读取文本文件">读取文本文件</a>        <ul>
+          <li><a href="#格式规范" id="markdown-toc-格式规范">格式规范</a></li>
+          <li><a href="#读取所有内容" id="markdown-toc-读取所有内容">读取所有内容</a></li>
+          <li><a href="#按字节读取" id="markdown-toc-按字节读取">按字节读取</a></li>
+          <li><a href="#逐行读取" id="markdown-toc-逐行读取">逐行读取</a></li>
+          <li><a href="#文件迭代器" id="markdown-toc-文件迭代器">文件迭代器</a></li>
+        </ul>
+      </li>
+      <li><a href="#写入文本文件" id="markdown-toc-写入文本文件">写入文本文件</a></li>
+    </ul>
+  </li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+</ul>
+
+<h2 id="读写文本文件">读写文本文件</h2>
+<p>现在只考虑对文本文件的操作。</p>
+
+<h4 id="读取文本文件">读取文本文件</h4>
+
+<h6 id="格式规范">格式规范</h6>
+
+<p>最简单直接的写法为</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'致橡树.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>但如果在文件不存在或无法打开，上述代码会报错。所以有以下改进版。</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>       
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'致橡树.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>   
+            <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="k">except</span> <span class="nb">FileNotFoundError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'无法打开指定的文件!'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">LookupError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'指定了未知的编码!'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">UnicodeDecodeError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'读取文件时解码错误!'</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li>
+    <p>在<code class="highlighter-rouge">try</code>代码块的后面可以跟上一个或多个<code class="highlighter-rouge">except</code>来捕获可能出现的异常状况</p>
+  </li>
+  <li>
+    <p>通过<code class="highlighter-rouge">with</code>关键字指定文件对象的上下文环境并在离开上下文环境时自动释放文件资源</p>
+  </li>
+</ul>
+
+<p>通常而言，读取文件有以下几种方式：</p>
+
+<ul>
+  <li>一次性读取所有内容，使用 <code class="highlighter-rouge">read()</code> 或 <code class="highlighter-rouge">readlines()</code>；</li>
+  <li>按字节读取，使用 <code class="highlighter-rouge">read(size)</code>；</li>
+  <li>按行读取，使用 <code class="highlighter-rouge">readline()</code>；</li>
+</ul>
+
+<h6 id="读取所有内容">读取所有内容</h6>
+<p>读取所有内容可以使用 <code class="highlighter-rouge">read()</code> 或 <code class="highlighter-rouge">readlines()</code>。在上面的例子已经使用了 <code class="highlighter-rouge">read()</code>。下面介绍<code class="highlighter-rouge">readlines()</code>。</p>
+
+<p><code class="highlighter-rouge">readlines()</code> 方法会把文件读入一个字符串列表，在列表中每个字符串就是一行。</p>
+
+<p>假设有一个文件 <code class="highlighter-rouge">data.txt</code>，它的文件内容如下（数字之间的间隔符是<code class="highlighter-rouge">'\t'</code>）：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>10  1   9   9
+6   3   2   8
+20  10  3   23
+1   4   1   10
+10  8   6   3
+10  2   1   6
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>我们使用 <code class="highlighter-rouge">readlines()</code> 将文件读入一个字符串列表：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>   <span class="c1"># 此处 lines 即为文档内容
+</span>    <span class="n">line_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">line_num</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>执行结果：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>['10\t1\t9\t9\n', '6\t3\t2\t8\n', '20\t10\t3\t23\n', '1\t4\t1\t10\n', '10\t8\t6\t3\n', '10\t2\t1\t6']
+6
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>可以看到，列表中的每个元素都是一个字符串，刚好对应文件中的每一行。</p>
+
+<h6 id="按字节读取">按字节读取</h6>
+<p>如果文件很大，比如有 100G，一次性读取所有内容会变得不太现实。这时，我们构造一个固定长度的缓冲区，来不断读取文件内容。</p>
+
+<p>看看例子：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'path/to/file'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">piece</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>        <span class="c1"># 每次读取 1024 个字节（即 1 KB）的内容
+</span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">piece</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">print</span> <span class="n">piece</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>在上面，我们使用 <code class="highlighter-rouge">f.read(1024)</code> 来每次读取 1024 个字节（1KB） 的文件内容，将其存到 <code class="highlighter-rouge">piece</code>，再对 <code class="highlighter-rouge">piece</code> 进行处理。</p>
+
+<p>事实上，我们还可以结合 <code class="highlighter-rouge">yield</code> 来使用：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">read_in_chunks</span><span class="p">(</span><span class="n">file_object</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">):</span>
+    <span class="c1"># Lazy function (generator) to read a file piece by piece.
+</span>    <span class="c1"># Default chunk size: 1k.
+</span>    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">file_object</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">yield</span> <span class="n">data</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'path/to/file'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">piece</span> <span class="ow">in</span> <span class="n">read_in_chunks</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">piece</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h6 id="逐行读取">逐行读取</h6>
+<p>在某些情况下，我们希望逐行读取文件，这时可以使用 <code class="highlighter-rouge">readline()</code> 方法。</p>
+
+<p>看看例子：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>     <span class="c1"># 逐行读取
+</span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>             <span class="c1"># 这里加了 end=' ' 是为了避免 print 自动换行
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+<p>执行结果：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>10  1   9   9
+6   3   2   8
+20  10  3   23
+1   4   1   10
+10  8   6   3
+10  2   1   6
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h6 id="文件迭代器">文件迭代器</h6>
+<p>在 Python 中，文件对象是可迭代的，这意味着我们可以直接在 <code class="highlighter-rouge">for-in</code> 循环中使用它们，而且是逐行迭代的，也就是说，效果和 <code class="highlighter-rouge">readline()</code> 是一样的，而且更简洁。</p>
+
+<p>看看例子：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>在上面的代码中，<code class="highlighter-rouge">f</code> 就是一个文件迭代器，因此我们可以直接使用 <code class="highlighter-rouge">for line in f</code>，它是逐行迭代的。</p>
+
+<h4 id="写入文本文件">写入文本文件</h4>
+
+<p>写文件使用 <code class="highlighter-rouge">write</code> 方法，如下：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'E:/Program Datas/PycharmProjects/p1302/data2.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>    <span class="c1"># 文件需和python程序在同个盘符下，盘符'E:/'可省略
+</span>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'one</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'two'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li>如果上述文件已存在，则会清空原内容并覆盖掉；</li>
+  <li>如果上述路径是正确的（比如存在 上述路径），但是文件不存在（<code class="highlighter-rouge">data2.txt</code> 不存在），则会新建一个文件，并写入上述内容；</li>
+  <li>如果上述路径是不正确的（比如将路径写成 <code class="highlighter-rouge">/PROGRAMDATAS/...</code> ），这时会抛出 <code class="highlighter-rouge">IOError</code>；</li>
+</ul>
+
+<p>如果我们想往已存在的文件追加内容，可以使用 <code class="highlighter-rouge">'a'</code> 模式，如下：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'E:/Program Datas/PycharmProjects/p1302/data2.txt'', '</span><span class="n">a</span><span class="s">') as f:</span><span class="err">
+</span><span class="s">    f.write('</span><span class="n">three</span>\<span class="n">n</span><span class="s">')</span><span class="err">
+</span><span class="s">    f.write('</span><span class="n">four</span><span class="s">')</span><span class="err">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md#文件和异常">Python-100-Days-文件和异常</a></li>
+  <li><a href="https://juejin.im/post/5c720ff3f265da2d8e70ebef#heading-18">用Python读写文件，看这篇就够</a></li>
+  <li><del><a href="http://wiki.jikexueyuan.com/project/explore-python/File-Directory/text_file_io.html">极客学院</a>(invalid)</del></li>
+</ul>
+
+<hr />
+
+<p><strong>Friendly reminder:</strong> This series are my own study notes of <strong><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></strong>. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a> will not be noted due to huge workload. <strong>The whole series are not allowed to be reproduced</strong>. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong>.</p>
+:ET

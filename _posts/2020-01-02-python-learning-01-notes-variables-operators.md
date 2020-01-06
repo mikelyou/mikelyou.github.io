@@ -2,12 +2,15 @@
 layout: post
 title: "Python Learning #01 - Notes, Variables and Operators"
 subtitle: '注释，变量，运算符'
+date: 2020-01-02 13:00:00
 author: "Mike Lyou"
 header-style: text
 tags:
   - Python
   - 学习笔记
 ---
+
+<!-- more -->
 
 ## 注释
 

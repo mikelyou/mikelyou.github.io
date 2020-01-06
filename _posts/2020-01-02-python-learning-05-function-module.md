@@ -2,6 +2,7 @@
 layout: post
 title: "Python Learning #05 - Founction and Module"
 subtitle: '函数和模块'
+date: 2020-01-02 17:00:00
 author: "Mike Lyou"
 header-style: text
 tags:
@@ -9,6 +10,7 @@ tags:
   - 学习笔记
 ---
 
+<!-- more -->
 
 ## 函数
 

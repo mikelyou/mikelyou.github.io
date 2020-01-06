@@ -1,0 +1,126 @@
+---
+layout:     post
+title:      "Tips"
+subtitle:   "一些杂乱的笔记"
+date:       1990-01-01 20:30:00
+author:     "Mike Lyou"
+header-img: "img/post-bg-2015.jpg"
+tags:
+
+#excerpt: I am hap
+---
+
+Some tips discoverd. Write down for later usage. If something is good, a new post will be published.
+
+<!-- more -->
+
+> 不要停笔，生活还在继续。
+
+## Insert catalog
+
+It is eazy to insert catalog in jekyll.
+
+Simply write the following line where you want to display the catalog:
+```
+*  
+{:toc}
+```
+
+If you don't want some heading to show. Add the following line below that heading.
+
+```
+## Catalog： <!--I dont want it appears in itself-->
+{:.no_toc}
+```
+
+Ref:
+- [给JEKYLL的文章添加目录](http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html)
+
+
+## Customized excerpts
+
+The excerpts (or abstract) will appear at the list of posts, and those automatically generated excerpts are usually not beautiful.
+
+Here are two ways to customize the excerpts.
+
+#### Way-1: Adding `excerpt` variable.
+
+Adding the following line in `_config.yml`.
+
+```
+excerpt_separator:  '<!-- more -->'
+```
+
+Go to `index.html`, change `\{\{ post.content }}` to
+```
+\{\{ post.excerpt }}  # (Please ignore `\` character)
+```
+
+Now we can set the end of auto-generated excerprt by adding `<!-- more -->` in our posts，like this:
+
+```
+---
+layout:     post
+title:      "Tips"
+<!-- And Many things -->
+#excerpt: Write your excerpt here.
+---
+
+The excerpt.
+
+<!-- more -->
+
+The main content.
+```
+
+The excerpt shows at homepage will be:
+```
+The excerpt.
+```
+#### Way-2: Write it directly in posts.
+
+You may notice there is an `excerpt` variable in the head of the example post above.
+
+We can simply write our excerpts there. And this will **disable auto-generated excerpts**.
+
+```
+excerpt: Write your excerpt here.
+```
+
+And it will show like this:
+
+```
+Write your excerpt here.
+```
+
+Ref:
+- [使用Jekyll官方的ReadMore摘要功能](https://blog.coderzh.com/2015/08/15/JekyllReadMore/)
+- [Jekyll文章列表摘要设置](https://moonagic.com/configure-the-jekyll-article-list-summary/)
+
+
+## 修复双重滚动条的bug
+因为Hux自己的博客一直在修改，稳定的模板现在已经比他的博客落后很多个版本，而在这过程中发现甚至已经解决的问题依然存在在模板里。
+
+这时候，有两种方法都可以尝试：一、看看Hux本人最新的模板添加了什么内容，看看版本更新日志，如果版本差异太大，考虑直接复制新模板；二、查看issue里有没有同样的问题。
+
+双重滚动条的问题就在[#issues](https://github.com/Huxpro/huxpro.github.io/issues/123)被解决过了，解决方法也很简单。
+
+## 如何预览草稿
+
+这里直接参见[官方文档](http://jekyllcn.com/docs/drafts/)。如果看不太懂，我来翻译一下：
+
+
+- 第一步：你需要在网站根目录下创建一个名为`_drafts`文件夹（因为`_posts`也是在根目录下的，所以`_drafts`理应与`_posts`同级），把草稿放入这个文件夹下。
+
+```
+|-- _posts/
+|-- _drafts/
+|   |-- a-draft-post.md
+```
+
+- 第二步：运行`jekyll serve --drafts`即可（或`jekyll build --drafts`）
+
+```
+jekyll serve            # 普通的 jekyll 服务器搭建
+jekyll serve --drafts   # 显示草稿的 jekyll 服务器搭建
+```

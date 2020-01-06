@@ -2,6 +2,7 @@
 layout: post
 title: "Python Learning #08 - Directory Operations"
 subtitle: '文件夹操作'
+date: 2020-01-04 20:30:00
 author: "Mike Lyou"
 header-style: text
 tags:
@@ -10,6 +11,8 @@ tags:
 ---
 
 > 本文为个人学习笔记，原文为 [《Python文件操作，看这篇就足够》](https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-38)，其翻译原文为 [Working With Files in Python](https://realpython.com/working-with-files-in-python/)。本文不允许转载。
+
+<!-- more -->
 
 （有时间的话写成英文版本，熟悉一下英文术语）
 

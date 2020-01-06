@@ -2,12 +2,15 @@
 layout: post
 title: "Python Learning #03 - Branch Structure"
 subtitle: '分支结构 - if 语句'
+date: 2020-01-02 15:00:00
 author: "Mike Lyou"
 header-style: text
 tags:
   - Python
   - 学习笔记
 ---
+
+<!-- more -->
 
 #### 两分支 `If-Else` 语句
 ```python

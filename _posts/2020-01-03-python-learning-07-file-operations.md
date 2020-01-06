@@ -2,6 +2,7 @@
 layout: post
 title: "Python Learning #07 - File Operations"
 subtitle: '文件操作'
+date: 2020-01-04 19:30:00
 author: "Mike Lyou"
 header-style: text
 tags:
@@ -9,14 +10,15 @@ tags:
   - 学习笔记
 ---
 
-Ref:
-
-- [Python-100-Days](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md#文件和异常)
-- [用Python读写文件，看这篇就够](https://juejin.im/post/5c720ff3f265da2d8e70ebef#heading-18)
-- [极客学院](http://wiki.jikexueyuan.com/project/explore-python/File-Directory/text_file_io.html)
-- [掘金：文件与文件夹操作](https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-38)
-
 Python 进阶的第一篇，决定学习文件操作，这应该和实际应用更近一些。
+
+<!-- more -->
+
+## 目录：
+{:.no_toc}
+
+*  
+{:toc}
 
 ## 读写文本文件
 现在只考虑对文本文件的操作。
@@ -180,7 +182,12 @@ with open('E:/Program Datas/PycharmProjects/p1302/data2.txt'', 'a') as f:
     f.write('three\n')
     f.write('four')
 ```
+## References
 
+- [Python-100-Days-文件和异常](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md#文件和异常)
+- [用Python读写文件，看这篇就够](https://juejin.im/post/5c720ff3f265da2d8e70ebef#heading-18)
+- ~~[极客学院](http://wiki.jikexueyuan.com/project/explore-python/File-Directory/text_file_io.html)(invalid)~~
 
-------------
+------------------
+
 **Friendly reminder:** This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.

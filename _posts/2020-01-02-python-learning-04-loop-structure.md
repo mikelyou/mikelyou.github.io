@@ -2,6 +2,7 @@
 layout: post
 title: "Python Learning #04 - Loop Structure"
 subtitle: '循环结构'
+date: 2020-01-02 16:00:00
 author: "Mike Lyou"
 header-style: text
 tags:
@@ -10,6 +11,8 @@ tags:
 ---
 
 在Python中同样有两种循环：`for-in`循环和`while`循环
+
+<!-- more -->
 
 #### for-in 循环
 ```python
