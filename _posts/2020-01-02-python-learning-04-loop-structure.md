@@ -14,7 +14,7 @@ tags:
 
 <!-- more -->
 
-#### for-in 循环
+## for-in 循环
 ```python
 """
 用for循环实现1~100求和
@@ -33,7 +33,7 @@ print(sum)
 
 **注意： `range(n)`产生的是`0`至`n-1`的序列！**
 
-#### while 循环
+## while 循环
 
 ```python
 """
@@ -50,7 +50,7 @@ print(sum)
 
 在`while`循环中，可以使用`break`强制结束循环，以及使用`continue`函数直接跳到下一次循环的开始。
 
-#### 循环的嵌套
+## 循环的嵌套
 举个栗子，九九乘法表
 ```python
 """
@@ -64,5 +64,8 @@ for i in range(1, 9 + 1):
 ```
 >关于逗号`,`的作用，可以参考[这篇文章](https://blog.csdn.net/liuzx32/article/details/7831247)，应该是对的
 
+## References
+- [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
+
 ------------
->Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced.I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.
+>Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.

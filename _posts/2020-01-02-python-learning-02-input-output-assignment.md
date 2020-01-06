@@ -12,7 +12,7 @@ tags:
 
 <!-- more -->
 
-#### 赋值
+## 赋值
 ```python
 a = 10
 b = 3
@@ -20,14 +20,14 @@ a += b # 相当于：a = a + b
 a *= a + 2 # 相当于：a = a * (a + 2)
 ```
 
-#### 输入`input`
+## 输入`input`
 ```python
 a = int(input('a = ')) #读取为int类型
 f = float(input('请输入华氏温度: ')) #显示输入提示
 a, b = map(int, input().split()) #读取在同一行的多个数字
 ```
 
-#### 输出`print`
+## 输出`print`
 ```python
 print(a)
 print(a + b)
@@ -42,5 +42,8 @@ for i in range(1, 5+1):
     print (i, end = " ")  #1 2 3 4 5
 ```
 
+## References
+- [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
+
 ------------
->Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced.I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.
+>Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.

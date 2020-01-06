@@ -167,21 +167,25 @@ with open('data.txt', 'r') as f:
 #### 写入文本文件
 
 写文件使用 `write` 方法，如下：
+
 ```python
 with open('E:/Program Datas/PycharmProjects/p1302/data2.txt', 'w', 'w') as f:    # 文件需和python程序在同个盘符下，盘符'E:/'可省略
     f.write('one\n')
     f.write('two')
 ```    
+
 - 如果上述文件已存在，则会清空原内容并覆盖掉；
 - 如果上述路径是正确的（比如存在 上述路径），但是文件不存在（`data2.txt` 不存在），则会新建一个文件，并写入上述内容；
 - 如果上述路径是不正确的（比如将路径写成 `/PROGRAMDATAS/...` ），这时会抛出 `IOError`；
 
 如果我们想往已存在的文件追加内容，可以使用 `'a'` 模式，如下：
+
 ```python
-with open('E:/Program Datas/PycharmProjects/p1302/data2.txt'', 'a') as f:
+with open('E:/Program Datas/PycharmProjects/p1302/data2.txt', 'a') as f:
     f.write('three\n')
     f.write('four')
 ```
+
 ## References
 
 - [Python-100-Days-文件和异常](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md#文件和异常)
@@ -190,4 +194,4 @@ with open('E:/Program Datas/PycharmProjects/p1302/data2.txt'', 'a') as f:
 
 ------------------
 
->Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced.I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.
+>Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.

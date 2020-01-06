@@ -1,0 +1,162 @@
+I"�<!-- more -->
+
+<h2 id="注释">注释</h2>
+
+<ul>
+  <li>单行注释：以<code class="highlighter-rouge"># </code>开头的部分</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="c1"># 这是一条注释
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li>多行注释：同时以<code class="highlighter-rouge">"""</code>或<code class="highlighter-rouge">'''</code>开头和结尾  (单引号与双引号仅有微小区别，可以忽略)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">"下面是多行注释"</span><span class="p">)</span>
+<span class="s">"""
+print("注释")
+print("注释不会编译")
+print("可以看到print的字体颜色改变了")
+"""</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="数据类型">数据类型</h2>
+
+<h4 id="常用数据类型">常用数据类型：</h4>
+
+<ul>
+  <li>整形 int</li>
+  <li>浮点型 float</li>
+  <li>字符串型 ‘hello’ or “hello”  (单引号与双引号仅有微小区别，可以忽略)</li>
+  <li>布尔型 True or False</li>
+</ul>
+
+<h4 id="变量">变量</h4>
+
+<ul>
+  <li>变量命名：建议采用 <strong>全小写加下划线</strong> 的拼写，不能以数字开头，大小写敏感，见名识义。</li>
+  <li>使用<code class="highlighter-rouge">type</code>函数检查变量的类型
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">12.345</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">5j</span>
+<span class="n">d</span> <span class="o">=</span> <span class="s">'hello, world'</span>
+<span class="n">e</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c1"># &lt;class 'int'&gt;
+</span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="c1"># &lt;class 'float'&gt;
+</span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="c1"># &lt;class 'complex'&gt;
+</span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="c1"># &lt;class 'str'&gt;
+</span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">e</span><span class="p">))</span> <span class="c1"># &lt;class 'bool'&gt;
+</span></pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>使用Python内置函数转换变量类型
+    <ul>
+      <li><code class="highlighter-rouge">int()</code>：将一个数值或字符串转换成整数，可以指定进制。</li>
+      <li><code class="highlighter-rouge">float()</code>：将一个字符串转换成浮点数。</li>
+      <li><code class="highlighter-rouge">str()</code>：将指定的对象转换成字符串形式，可以指定编码。</li>
+      <li><code class="highlighter-rouge">chr()</code>：将整数转换成该编码对应的字符串（一个字符）。</li>
+      <li><code class="highlighter-rouge">ord()</code>：将字符串（一个字符）转换成对应的编码（整数）。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="运算符">运算符</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>运算符</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">[]</code> <code class="highlighter-rouge">[:]</code></td>
+      <td>下标，切片</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">**</code></td>
+      <td>指数</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">~</code> <code class="highlighter-rouge">+</code> <code class="highlighter-rouge">-</code></td>
+      <td>按位取反, 正负号</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">*</code> <code class="highlighter-rouge">/</code> <code class="highlighter-rouge">%</code> <code class="highlighter-rouge">//</code></td>
+      <td>乘，除，模，整除</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">+</code> <code class="highlighter-rouge">-</code></td>
+      <td>加，减</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt;&gt;</code> <code class="highlighter-rouge">&lt;&lt;</code></td>
+      <td>右移，左移</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&amp;</code></td>
+      <td>按位与</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">^</code> <code class="highlighter-rouge">\|</code></td>
+      <td>按位异或，按位或</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;=</code> <code class="highlighter-rouge">&lt;</code> <code class="highlighter-rouge">&gt;</code> <code class="highlighter-rouge">&gt;=</code></td>
+      <td>小于等于，小于，大于，大于等于</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">==</code> <code class="highlighter-rouge">!=</code></td>
+      <td>等于，不等于</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">is</code>  <code class="highlighter-rouge">is not</code></td>
+      <td>身份运算符</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">in</code> <code class="highlighter-rouge">not in</code></td>
+      <td>成员运算符</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">not</code> <code class="highlighter-rouge">or</code> <code class="highlighter-rouge">and</code></td>
+      <td>逻辑运算符</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">=</code> <code class="highlighter-rouge">+=</code> <code class="highlighter-rouge">-=</code> <code class="highlighter-rouge">*=</code> <code class="highlighter-rouge">/=</code> <code class="highlighter-rouge">%=</code> <code class="highlighter-rouge">//=</code> <code class="highlighter-rouge">**=</code> <code class="highlighter-rouge">&amp;=</code> <code class="highlighter-rouge">|=</code> <code class="highlighter-rouge">^=</code> <code class="highlighter-rouge">&gt;&gt;=</code> <code class="highlighter-rouge">&lt;&lt;=</code></td>
+      <td>（复合）赋值运算符</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>说明：</strong> 在实际开发中，如果搞不清楚运算符的优先级，可以使用括号来确保运算的执行顺序。</p>
+</blockquote>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></li>
+</ul>
+
+<hr />
+
+<blockquote>
+  <p>Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong> for more information.</p>
+</blockquote>
+:ET

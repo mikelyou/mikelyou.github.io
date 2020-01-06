@@ -10,22 +10,21 @@ header-mask: 0.4
 tags:
   - Python
   - Notes
+excerpt: About this series
 ---
 
 
 ## Statement
 
-This python learning series are my own study notes of various tutorials and articles. This series are posted only for personal studies and communication. The whole series are not allowed to be reproduced, unless there are special statements.
+This python learning series are my own study notes of various tutorials and articles. This series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unless otherwise indicated.
 
 I do not own copyright of some of the content. All references used are allowed to be cited. References are listed at the end of each post. If any post accidentally infringes your copyright, it will be removed shortly after being informed.
 
 This series are not good tutorials. However, I really appreciate it if you notice any mistakes or errors and tell me. Comments are welcomed.
 
-View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
-
 <!-- more -->
 
-## References
+## Main References
 - [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
 - [掘金：文件与文件夹操作](https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-38)
 - [极客学院](http://wiki.jikexueyuan.com/project/explore-python/File-Directory/text_file_io.html)
@@ -51,6 +50,7 @@ View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-
 Above are ABC of python. Other things are difficult, I may stop here and find what to learn.
 - [#07 - File Operations](https://mikelyou.com/2020/01/03/python-learning-07-file-operations/)
 - [#08 - Directory Operations](https://mikelyou.com/2020/01/03/python-learning-08-directory-operations/)
+- [#09 - Simple Application](https://mikelyou.com/2020/01/06/python-learning-09-simple-application/)
 
 To be continued...
 
