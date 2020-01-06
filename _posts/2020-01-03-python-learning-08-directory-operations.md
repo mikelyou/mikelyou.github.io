@@ -7,10 +7,10 @@ author: "Mike Lyou"
 header-style: text
 tags:
   - Python
-  - 学习笔记
+  - Notes
 ---
 
-> 本文为个人学习笔记，原文为 [《Python文件操作，看这篇就足够》](https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-38)，其翻译原文为 [Working With Files in Python](https://realpython.com/working-with-files-in-python/)。本文不允许转载。
+> 本文为个人Notes，原文为 [《Python文件操作，看这篇就足够》](https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-38)，其翻译原文为 [Working With Files in Python](https://realpython.com/working-with-files-in-python/)。本文不允许转载。
 
 <!-- more -->
 
@@ -409,4 +409,4 @@ test2.txt
 归档是将多个文件打包成一个文件的便捷方式。 两种最常见的存档类型是ZIP和TAR。 你编写的Python程序可以创建存档文件，读取存档文件和从存档文件中提取数据。跳过。[&rarr;](https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-26)
 
 ------------
-**Friendly reminder:** This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
+>Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced.I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.

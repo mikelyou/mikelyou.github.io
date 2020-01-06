@@ -9,21 +9,28 @@ header-mask: 0.4
 #header-style: text
 tags:
   - Python
-  - 学习笔记
+  - Notes
 ---
 
 
-**Friendly reminder**:
-This series are my own study notes of several tutorials and articles, which will be listed below. I do not own copyright of some of the content. And I don't think this is good tutorial for others. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
+## Statement
+
+This python learning series are my own study notes of various tutorials and articles. This series are posted only for personal studies and communication. The whole series are not allowed to be reproduced, unless there are special statements.
+
+I do not own copyright of some of the content. All references used are allowed to be cited. References are listed at the end of each post. If any post accidentally infringes your copyright, it will be removed shortly after being informed.
+
+This series are not good tutorials. However, I really appreciate it if you notice any mistakes or errors and tell me. Comments are welcomed.
+
+View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
 
 <!-- more -->
 
-References:
+## References
 - [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
 - [掘金：文件与文件夹操作](https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-38)
 - [极客学院](http://wiki.jikexueyuan.com/project/explore-python/File-Directory/text_file_io.html)
 
-## Tools used:
+## Tools used
 
 - Python 3.8 Win
 - PyCharm
@@ -31,7 +38,7 @@ References:
 - [Ayyz-Vijos](http://pingce.ayyz.cn:9000/vijos/Index.asp)
 - [MarkDown help](https://help.github.com/cn/github/writing-on-github/basic-writing-and-formatting-syntax#ignoring-markdown-formatting)
 
-## Catalog:
+## Catalog
 
 - [#00 - Readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)
 - [#01 - Notes, Variables and Operators](https://mikelyou.com/2020/01/02/python-learning-01-notes-variables-operators/)

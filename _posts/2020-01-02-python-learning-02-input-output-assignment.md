@@ -7,7 +7,7 @@ author: "Mike Lyou"
 header-style: text
 tags:
   - Python
-  - 学习笔记
+  - Notes
 ---
 
 <!-- more -->
@@ -43,4 +43,4 @@ for i in range(1, 5+1):
 ```
 
 ------------
-**Friendly reminder:** This series are my own study notes of **[Python-100-Days](https://github.com/jackfrued/Python-100-Days)**. I do not own copyright of some of the content. Nor is this a good tutorial of Python. I really appreciate it if you notice any mistakes or errors and tell me. Sorry that things copied from [Python-100-Days](https://github.com/jackfrued/Python-100-Days) will not be noted due to huge workload. **The whole series are not allowed to be reproduced**. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)**.
+>Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced.I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.
