@@ -7,14 +7,18 @@ author:     "Mike Lyou"
 header-img: "img/post-bg-2015.jpg"
 tags:
 
-#excerpt: I am hap
+excerpt: Some tips.
 ---
 
 Some tips discoverd. Write down for later usage. If something is good, a new post will be published.
 
 <!-- more -->
 
-> 不要停笔，生活还在继续。
+## Catalog
+{:.no_toc}
+*  
+{:toc}
+
 
 ## Insert catalog
 
@@ -29,8 +33,11 @@ Simply write the following line where you want to display the catalog:
 If you don't want some heading to show. Add the following line below that heading.
 
 ```
-## Catalog： <!--I dont want it appears in itself-->
+## Catalog <!--I dont want it appears in itself-->
 {:.no_toc}
+
+*  
+{:toc}
 ```
 
 Ref:
@@ -39,8 +46,7 @@ Ref:
 
 ## Customized excerpts
 
-The excerpts (or abstract) will appear at the list of posts, and those automatically generated excerpts are usually not beautiful.
-
+The excerpts (or abstract) will appear at the list of posts, and those auto-generated excerpts are not so beautiful.
 Here are two ways to customize the excerpts.
 
 #### Way-1: Adding `excerpt` variable.
@@ -92,6 +98,10 @@ And it will show like this:
 ```
 Write your excerpt here.
 ```
+
+#### Trivia
+
+If you declear `excerpt_separator` at `_config.yml`, and declear `excerpt` at head of posts at the same time, the later one will be in effect.
 
 Ref:
 - [使用Jekyll官方的ReadMore摘要功能](https://blog.coderzh.com/2015/08/15/JekyllReadMore/)

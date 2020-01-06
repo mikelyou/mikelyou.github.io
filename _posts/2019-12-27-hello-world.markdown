@@ -17,7 +17,10 @@ comments: true
 
 > Life is short, write your blog.
 
+<!-- more -->
+
 本文详细介绍了本博客搭建的完整过程，并记录了本人在实际操作中遇到的问题。
+
 <!--more-->
 
 
