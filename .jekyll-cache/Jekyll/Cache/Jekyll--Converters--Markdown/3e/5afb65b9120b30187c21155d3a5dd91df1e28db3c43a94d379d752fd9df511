@@ -1,4 +1,4 @@
-I"�-<p>Some tips discoverd. Write down for later usage. If something is good, a new post will be published.</p>
+I"n.<p>Some tips discoverd. Write down for later usage. If something is good, a new post will be published.</p>
 
 <!-- more -->
 
@@ -105,8 +105,10 @@ valine_appKey: your AppKey
 
 <p>Ref:</p>
 <ul>
+  <li><a href="https://valine.js.org">Valine Official</a></li>
   <li><a href="https://blog.csdn.net/lindexi_gd/article/details/83176116">jekyll 添加 Valine 评论</a> (brief and effective)</li>
-  <li><a href="https://deserts.io/diy-a-comment-system/">Valine: 独立博客评论系统</a> (official?)</li>
+  <li><a href="https://deserts.io/diy-a-comment-system/">Valine: 独立博客评论系统</a></li>
+  <li><a href="https://deserts.io/valine-admin-document/">Valine Admin 配置手册</a></li>
   <li><a href="https://www.oukohou.wang/2018/12/18/notices-for-jekyll-themes-fork/#4-valine评论系统">Valine评论系统</a> (good example)</li>
 </ul>
 

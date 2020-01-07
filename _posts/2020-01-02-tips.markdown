@@ -2,7 +2,7 @@
 layout:     post
 title:      "Tips"
 subtitle:   "一些杂乱的笔记"
-date:       2020-01-02 20:30:00
+date:       2020-01-02 10:30:00
 author:     "Mike Lyou"
 header-img: "img/post-bg-2015.jpg"
 tags:
@@ -86,8 +86,10 @@ and
 where Disqus and netease_comment code appears.
 
 Ref:
+- [Valine Official](https://valine.js.org)
 - [jekyll 添加 Valine 评论](https://blog.csdn.net/lindexi_gd/article/details/83176116) (brief and effective)
-- [Valine: 独立博客评论系统](https://deserts.io/diy-a-comment-system/) (official?)
+- [Valine: 独立博客评论系统](https://deserts.io/diy-a-comment-system/)
+- [Valine Admin 配置手册](https://deserts.io/valine-admin-document/)
 - [Valine评论系统](https://www.oukohou.wang/2018/12/18/notices-for-jekyll-themes-fork/#4-valine评论系统) (good example)
 
 
