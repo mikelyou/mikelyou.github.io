@@ -19,6 +19,14 @@ Some tips discoverd. Write down for later usage. If something is good, a new pos
 *  
 {:toc}
 
+## Back-to-top button
+
+Powered by [vanilla-back-to-top](https://github.com/vfeskov/vanilla-back-to-top/tree/v7.2.1). Thanks for that.
+
+- Included `back-to-top.html` in `default.html`.
+
+- Downloaded `vanilla-back-to-top.min.js`.
+
 
 ## 解决花括号在 Jekyll 被识别成 Liquid 代码的问题
 
