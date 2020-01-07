@@ -12,8 +12,7 @@ Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of th
 ## To-do List
 
 - 谷歌数据
-- Back to top 按钮
-- 浮动目录
+- 浮动目录 is on the go
 
 ## To-write List
 
@@ -24,6 +23,7 @@ Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of th
 
 ## Past Works
 
+- [new feature] back-to-top button
 - [new feature] Valine comments block
 - [new feature] excerpts
 - [batch] upgrated statements in multiple files useing python

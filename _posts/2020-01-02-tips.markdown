@@ -38,7 +38,8 @@ Powered by [vanilla-back-to-top](https://github.com/vfeskov/vanilla-back-to-top/
 更好的方法（？）
 ![](\img\in-post\post-liquid-raw-02.png)
 
-为什么上面直接放图了呢？因为我直接这样写的话 `raw` 和 `endraw` 并不会显示，那么要怎么写才能显示上面的代码呢？（[禁止禁止禁止禁止禁止禁止禁止禁止套娃！](https://zh.moegirl.org/zh-hans/禁止套娃)）
+为什么上面直接放图了呢？因为我直接这样写的话 `raw` 和 `endraw` 并不会显示，  
+那么要怎么写才能显示上面的代码呢？（[禁止禁止禁止禁止禁止禁止禁止禁止套娃！](https://zh.moegirl.org/zh-hans/禁止套娃)）
 
 Ref:
 - [在Jekyll的markdown代码块中转义双大括号](https://stackoom.com/question/1d89y/在Jekyll的markdown代码块中转义双大括号)
