@@ -10,7 +10,7 @@ This repositery is forked from [Hux Blog](https://github.com/Huxpro/huxpro.githu
 Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of this if you like this boilerplate.
 
 ## To-do List
-- 评论区
+- Valine 管理评论和邮件通知
 - 谷歌数据
 - Back to top 按钮
 - 浮动目录
@@ -24,6 +24,7 @@ Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of th
 
 ## Past Works
 
+- [new feature] Valine comments block
 - [new feature] excerpts
 - [batch] upgrated statements in multiple files useing python
 - [post] python file and repositery operations and their application

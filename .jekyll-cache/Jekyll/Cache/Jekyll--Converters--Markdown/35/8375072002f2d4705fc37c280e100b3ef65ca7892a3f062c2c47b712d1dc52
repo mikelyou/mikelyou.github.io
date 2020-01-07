@@ -1,9 +1,10 @@
-I"�<p>Some tips discoverd. Write down for later usage. If something is good, a new post will be published.</p>
+I"�,<p>Some tips discoverd. Write down for later usage. If something is good, a new post will be published.</p>
 
 <!-- more -->
 
 <h2 class="no_toc" id="catalog">Catalog</h2>
 <ul id="markdown-toc">
+  <li><a href="#add-valine-comment-block" id="markdown-toc-add-valine-comment-block">Add Valine comment block</a></li>
   <li><a href="#insert-catalog" id="markdown-toc-insert-catalog">Insert catalog</a></li>
   <li><a href="#customized-excerpts" id="markdown-toc-customized-excerpts">Customized excerpts</a>    <ul>
       <li><a href="#way-1-adding-excerpt-variable" id="markdown-toc-way-1-adding-excerpt-variable">Way-1: Adding <code class="highlighter-rouge">excerpt</code> variable.</a></li>
@@ -14,6 +15,72 @@
   <li><a href="#修复双重滚动条的bug" id="markdown-toc-修复双重滚动条的bug">修复双重滚动条的bug</a></li>
   <li><a href="#如何预览草稿" id="markdown-toc-如何预览草稿">如何预览草稿</a></li>
 </ul>
+
+<h2 id="add-valine-comment-block">Add Valine comment block</h2>
+
+<p>I’ve struggled adding Disqus for a long time, but still nothing achieved. Though not decide to give up Disqus, I found Valine, and sucessfully add it to my blog in only one hour.</p>
+
+<p>In <code class="highlighter-rouge">_config.yml</code> write this</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre># Valine settings
+valine_appId: your AppID
+valine_appKey: your AppKey
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In <code class="highlighter-rouge">_post.html</code> write this</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>
+&lt;!--valine comment function (mikelyou)--&gt;
+&lt;script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"&gt;&lt;/script&gt;
+&lt;script src='//unpkg.com/valine/dist/Valine.min.js'&gt;&lt;/script&gt;
+&lt;div id="comment"&gt;&lt;/div&gt;
+&lt;!--valine comment function end (mikelyou)--&gt;
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>and</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre>
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span><span class="err">载入</span><span class="n">js</span><span class="err">，在</span><span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span><span class="err">之前插入即可</span><span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="n">var</span> <span class="n">valine</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Valine</span><span class="p">();</span>
+    <span class="n">valine</span><span class="o">.</span><span class="n">init</span><span class="p">({</span>
+        <span class="n">el</span><span class="p">:</span><span class="s">'#comment'</span><span class="p">,</span>
+        <span class="n">appId</span><span class="p">:</span><span class="s">'your AppID'</span><span class="p">,</span>
+        <span class="n">appKey</span><span class="p">:</span><span class="s">'your AppKey'</span><span class="p">,</span>
+        <span class="n">notify</span><span class="p">:</span><span class="n">false</span><span class="p">,</span>
+        <span class="n">path</span><span class="p">:</span> <span class="s">'/1990/01/01/tips/'</span><span class="p">,</span>
+        <span class="n">placeholder</span><span class="p">:</span><span class="s">'Write comments here~'</span>
+    <span class="p">})</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span><span class="n">valine</span> <span class="n">comment</span> <span class="n">function</span> <span class="n">end</span><span class="o">--&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>where Disqus and netease_comment code appears.</p>
 
 <h2 id="insert-catalog">Insert catalog</h2>
 

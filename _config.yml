@@ -64,6 +64,9 @@ disqus_username: #mikelyou
 # Netease settings
 netease_comment: false
 
+# Valine settings (mikelyou)
+valine_appId: 4WeosIm2W2Y3oe6W4mxdHpQy-MdYXbMMI
+valine_appKey: lLruq0KJwl4pRcRYvyjsCLPA
 
 
 # Analytics settings

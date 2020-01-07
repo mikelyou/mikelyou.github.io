@@ -20,6 +20,77 @@ Some tips discoverd. Write down for later usage. If something is good, a new pos
 {:toc}
 
 
+## 解决花括号在 Jekyll 被识别成 Liquid 代码的问题
+
+在解决 [#Add Valine comment block](#Add-Valine-comment-block) 时遇到的。
+
+最简单的方法
+![](\img\in-post\post-liquid-raw-01.png)
+
+更好的方法（？）
+![](\img\in-post\post-liquid-raw-02.png)
+
+为什么上面直接放图了呢？因为我直接这样写的话 `raw` 和 `endraw` 并不会显示，那么要怎么写才能显示上面的代码呢？（[禁止禁止禁止禁止禁止禁止禁止禁止套娃！](https://zh.moegirl.org/zh-hans/禁止套娃)）
+
+Ref:
+- [在Jekyll的markdown代码块中转义双大括号](https://stackoom.com/question/1d89y/在Jekyll的markdown代码块中转义双大括号)
+
+
+## Add Valine comment block
+
+I've struggled adding Disqus for a long time, but still nothing achieved. Though not decide to give up Disqus, I found Valine, and sucessfully add it to my blog in only one hour.
+
+In `_config.yml` write this
+```
+# Valine settings
+valine_appId: your AppID
+valine_appKey: your AppKey
+```
+
+In `_post.html` write this
+
+<!-- {% raw %} -->
+```
+{% if site.valine_appId %}
+<!--valine comment function (mikelyou)-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="comment"></div>
+<!--valine comment function end (mikelyou)-->
+{% endif %}
+```
+<!-- {% endraw %} -->
+
+and
+
+{% raw %}
+```
+{% if site.valine_appId %}
+<!--载入js，在</body>之前插入即可-->
+<script>
+    var valine = new Valine();
+    valine.init({
+        el:'#comment',
+        appId:'{{site.valine_appId}}',
+        appKey:'{{site.valine_appKey}}',
+        notify:false,
+        path: '{{ page.url }}',
+        placeholder:'Write comments here~'
+    })
+</script>
+<!--valine comment function end-->
+{% endif %}
+```
+{% endraw %}
+
+where Disqus and netease_comment code appears.
+
+Ref:
+- [jekyll 添加 Valine 评论](https://blog.csdn.net/lindexi_gd/article/details/83176116) (brief and effective)
+- [Valine: 独立博客评论系统](https://deserts.io/diy-a-comment-system/) (official?)
+- [Valine评论系统](https://www.oukohou.wang/2018/12/18/notices-for-jekyll-themes-fork/#4-valine评论系统) (good example)
+
+
 ## Insert catalog
 
 It is eazy to insert catalog in jekyll.
@@ -57,10 +128,13 @@ Adding the following line in `_config.yml`.
 excerpt_separator:  '<!-- more -->'
 ```
 
-Go to `index.html`, change `\{\{ post.content }}` to
+<!-- {% raw %} -->
+Go to `index.html`, change `{{ post.content }}` to
+
 ```
-\{\{ post.excerpt }}  # (Please ignore `\` character)
+{{ post.excerpt }}
 ```
+<!-- {% endraw %} -->
 
 Now we can set the end of auto-generated excerprt by adding `<!-- more -->` in our posts，like this:
 
