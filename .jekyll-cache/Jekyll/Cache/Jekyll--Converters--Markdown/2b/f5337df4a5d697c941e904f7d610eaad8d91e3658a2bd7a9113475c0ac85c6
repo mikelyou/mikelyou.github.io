@@ -1,0 +1,66 @@
+I"$<h2 id="statement">Statement</h2>
+
+<p>This python learning series are my own study notes of various tutorials and articles. This series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unless otherwise indicated.</p>
+
+<p>I do not own copyright of some of the content. All references used are allowed to be cited. References are listed at the end of each post. If any post accidentally infringes your copyright, it will be removed shortly after being informed.</p>
+
+<p>This series are not good tutorials. However, I really appreciate it if you notice any mistakes or errors and tell me. Comments are welcomed.</p>
+
+<!-- more -->
+
+<h2 id="main-references">Main References</h2>
+<ul>
+  <li><a href="https://github.com/jackfrued/Python-100-Days">jackfrued/Python-100-Days</a></li>
+  <li><a href="https://github.com/ethan-funny/explore-python">ethan-funny/explore-python</a></li>
+  <li><a href="https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-38">掘金：文件与文件夹操作</a></li>
+</ul>
+
+<h2 id="tools-used">Tools used</h2>
+
+<ul>
+  <li>Python 3.8 Win</li>
+  <li>PyCharm</li>
+  <li><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a>
+<!-- - [Ayyz-Vijos](http://pingce.ayyz.cn:9000/vijos/Index.asp) --></li>
+  <li><a href="https://help.github.com/cn/github/writing-on-github/basic-writing-and-formatting-syntax#ignoring-markdown-formatting">MarkDown help</a></li>
+</ul>
+
+<h2 id="catalog">Catalog</h2>
+
+<ul>
+  <li><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">#00 - Readme</a></li>
+  <li><a href="https://mikelyou.com/2020/01/02/python-learning-01-notes-variables-operators/">#01 - Notes, Variables and Operators</a></li>
+  <li><a href="https://mikelyou.com/2020/01/02/python-learning-02-input-output-assignment/">#02 - Input, Output and Assignment</a></li>
+  <li><a href="https://mikelyou.com/2020/01/02/python-learning-03-branch-structure/">#03 - Branch Structure</a></li>
+  <li><a href="https://mikelyou.com/2020/01/02/python-learning-04-loop-structure/">#04 - Loop Structure</a></li>
+  <li><a href="https://mikelyou.com/2020/01/02/python-learning-05-function-module/">#05 - Founction and Module</a></li>
+  <li><a href="https://mikelyou.com/2020/01/02/python-learning-06-string-list-tuple-dict-set/">#06 - String, List, Tuple, Dict and Set</a></li>
+</ul>
+
+<p>Above are ABC of python. Other things are difficult, I may stop here and find what to learn.</p>
+<ul>
+  <li><a href="https://mikelyou.com/2020/01/03/python-learning-07-file-operations/">#07 - File Operations</a></li>
+  <li><a href="https://mikelyou.com/2020/01/03/python-learning-08-directory-operations/">#08 - Directory Operations</a></li>
+  <li><a href="https://mikelyou.com/2020/01/06/python-learning-09-simple-application/">#09 - Simple Application</a></li>
+  <li><a href="https://mikelyou.com/2020/01/09/python-learning-10-common-datatype/">#10 - Common Datatype</a></li>
+  <li><a href="https://mikelyou.com/2020/01/09/python-learning-11-funtional-programming/">#11 - Functional Programming</a></li>
+</ul>
+
+<p>To be continued…</p>
+
+<h2 id="interesting-topics">Interesting topics</h2>
+
+<ul>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/12.字符串和正则表达式.md">Python-100-Days/Day01-15/12.字符串和正则表达式</a></li>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/15.图像和办公文档处理.md">Python-100-Days/Day01-15/15.图像和办公文档处理</a></li>
+  <li><a href="Python-100-Days/Day16-20/16-20.Python语言进阶.md">Python-100-Days/Day16-20/16-20.Python语言进阶</a></li>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day36-40/36-38.关系型数据库MySQL.md">Python-100-Days/Day36-40/36-38.关系型数据库MySQL</a></li>
+  <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Python编程惯例.md">Python-100-Days/Python编程惯例</a></li>
+  <li><del>Pygame. (Quit)</del>
+    <ul>
+      <li><a href="https://eyehere.net/2011/python-pygame-novice-professional-index/">用Python和Pygame写游戏-从入门到精通</a>;</li>
+      <li><a href="https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/10.图形用户界面和游戏开发.md">Python-100-Days//Day01-15/10.图形用户界面和游戏开发.md</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

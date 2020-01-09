@@ -25,16 +25,16 @@ This series are not good tutorials. However, I really appreciate it if you notic
 <!-- more -->
 
 ## Main References
-- [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
+- [jackfrued/Python-100-Days](https://github.com/jackfrued/Python-100-Days)
+- [ethan-funny/explore-python](https://github.com/ethan-funny/explore-python)
 - [掘金：文件与文件夹操作](https://juejin.im/post/5c57afb1f265da2dda6924a1#heading-38)
-- [极客学院](http://wiki.jikexueyuan.com/project/explore-python/File-Directory/text_file_io.html)
 
 ## Tools used
 
 - Python 3.8 Win
 - PyCharm
 - [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
-- [Ayyz-Vijos](http://pingce.ayyz.cn:9000/vijos/Index.asp)
+<!-- - [Ayyz-Vijos](http://pingce.ayyz.cn:9000/vijos/Index.asp) -->
 - [MarkDown help](https://help.github.com/cn/github/writing-on-github/basic-writing-and-formatting-syntax#ignoring-markdown-formatting)
 
 ## Catalog
@@ -51,6 +51,8 @@ Above are ABC of python. Other things are difficult, I may stop here and find wh
 - [#07 - File Operations](https://mikelyou.com/2020/01/03/python-learning-07-file-operations/)
 - [#08 - Directory Operations](https://mikelyou.com/2020/01/03/python-learning-08-directory-operations/)
 - [#09 - Simple Application](https://mikelyou.com/2020/01/06/python-learning-09-simple-application/)
+- [#10 - Common Datatype](https://mikelyou.com/2020/01/09/python-learning-10-common-datatype/)
+- [#11 - Functional Programming](https://mikelyou.com/2020/01/09/python-learning-11-funtional-programming/)
 
 To be continued...
 

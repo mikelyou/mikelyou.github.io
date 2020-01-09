@@ -16,7 +16,7 @@ comments: true
 
 <!-- more -->
 
->Note: From this section(\#10), the reference is no longer [Python-100-Days](https://github.com/jackfrued/Python-100-Days), but **[ethan-funny/explore-python](https://github.com/ethan-funny/explore-python)**. This two series may overlap. Depending on the necessity, these two series may be merged into one, and old posts may be deleted.
+>Note: From this section(\#10), the main reference is no longer [Python-100-Days](https://github.com/jackfrued/Python-100-Days), but **[ethan-funny/explore-python](https://github.com/ethan-funny/explore-python)**. This two series may overlap. Depending on the necessity, these two series may be merged into one, and old posts may be deleted.
 
 
 ## Catalog：
