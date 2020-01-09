@@ -7,8 +7,6 @@ author:     "Mike Lyou"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - Blog
-    - Tutorial
-    - Notes
 
 comments: true
 ---

@@ -6,7 +6,8 @@ date:       2020-01-02 10:30:00
 author:     "Mike Lyou"
 header-img: "img/post-bg-2015.jpg"
 tags:
-
+  - Blog
+  
 excerpt: Some tips.
 ---
 
@@ -61,11 +62,13 @@ In `_post.html` write this
 <!-- {% raw %} -->
 ```
 {% if site.valine_appId %}
-<!--valine comment function (mikelyou)-->
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<div id="comment"></div>
-<!--valine comment function end (mikelyou)-->
+  {% if page.comments %}
+  <!--valine comment function (mikelyou)-->
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <div id="comment"></div>
+  <!--valine comment function end (mikelyou)-->
+  {% endif %}
 {% endif %}
 ```
 <!-- {% endraw %} -->
@@ -93,6 +96,13 @@ and
 {% endraw %}
 
 where Disqus and netease_comment code appears.
+
+And we can enable it by insert the following line at the post's head.
+```
+---
+comments: true  # defalut == false
+---
+```
 
 Ref:
 - [Valine Official](https://valine.js.org)
