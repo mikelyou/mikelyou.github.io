@@ -1,0 +1,277 @@
+I"�a<!-- more -->
+
+<blockquote>
+  <p>Note: From this section(#10), the reference is no longer <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a>, but <strong><a href="https://github.com/ethan-funny/explore-python">ethan-funny/explore-python</a></strong>. This two series may overlap. Depending on the necessity, these two series may be merged into one, and old posts may be deleted.</p>
+</blockquote>
+
+<h2 class="no_toc" id="catalog">Catalog：</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#常用数据类型" id="markdown-toc-常用数据类型">常用数据类型</a></li>
+  <li><a href="#通用的序列操作" id="markdown-toc-通用的序列操作">通用的序列操作</a>    <ul>
+      <li><a href="#索引" id="markdown-toc-索引">索引</a></li>
+      <li><a href="#分片" id="markdown-toc-分片">分片</a>        <ul>
+          <li><a href="#访问最后几个元素" id="markdown-toc-访问最后几个元素">访问最后几个元素</a></li>
+          <li><a href="#使用步长" id="markdown-toc-使用步长">使用步长</a></li>
+        </ul>
+      </li>
+      <li><a href="#加" id="markdown-toc-加">加</a></li>
+      <li><a href="#乘" id="markdown-toc-乘">乘</a></li>
+      <li><a href="#in" id="markdown-toc-in">in</a></li>
+    </ul>
+  </li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+</ul>
+
+<h2 id="常用数据类型">常用数据类型</h2>
+
+<p>本节将介绍 Python 中常用的几种数据类型：</p>
+
+<ul>
+  <li>[列表 List][]</li>
+  <li>[元组 Tuple][]</li>
+  <li>[字符串 String][]</li>
+  <li>[字典 Dict][]</li>
+  <li>[集合 Set][]</li>
+</ul>
+
+<p>其中，</p>
+<ul>
+  <li>
+    <p>列表、元组和字符串都属于 <strong>序列</strong> 类型。<br />
+序列（Sequence）是 Python 中最基本的数据结构，其特点是根据索引（index）来获取序列中的元素。序列类型的变量可以进行一些通用的操作。</p>
+  </li>
+  <li>
+    <p>字典属于 <strong>映射</strong> 类型，每个元素由键（key）和值（value）构成；</p>
+  </li>
+  <li>
+    <p>集合是一种特殊的类型，它所包含的元素是不重复的。</p>
+  </li>
+</ul>
+
+<h2 id="通用的序列操作">通用的序列操作</h2>
+
+<h4 id="索引">索引</h4>
+
+<p>序列中的元素可以通过索引获取，索引从 0 开始，-1 则代表序列的最后一个元素，-2 代表倒数第二个元素，以此类推。如下：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>   <span class="c1"># 列表
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nums</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>                 <span class="c1"># 索引 -1 表示最后一个元素
+</span><span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'abcdef'</span>             <span class="c1"># 字符串
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="s">'a'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="s">'b'</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>            <span class="c1"># 元组
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="mi">2</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="分片">分片</h4>
+
+<p><strong>索引</strong> 用于获取序列中的单个元素，而 <strong>分片</strong> 则用于获取序列的部分元素。分片操作需要提供两个索引作为边界，中间用冒号相隔。</p>
+
+<p>这里需要 <strong>特别注意</strong> 的是，分片有两个索引，<strong>第 1 个索引的元素是包含在内的，而第 2 个元素的索引则不包含在内</strong>。比如：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>                   <span class="c1"># 列表分片
+</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'hello, world'</span>             <span class="c1"># 字符串分片
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="s">'hello'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>           <span class="c1"># 元组分片
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<h6 id="访问最后几个元素">访问最后几个元素</h6>
+
+<p>假设需要访问序列的最后 3 个元素，最好的方法是这样：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
+<span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+<span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>也就是说，如果希望分片包含最后一个元素，可将第 2 个索引置为空。</p>
+
+<p>如果要复制整个序列，可以将两个索引都置为空：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nums</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[:]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nums</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h6 id="使用步长">使用步长</h6>
+
+<p>使用分片的时候，步长默认是 1，即逐个访问，我们也可以自定义步长，比如：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># 步长为 1，不写也可以，默认为 1
+</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>    <span class="c1"># 步长为 2，取出 numbers[0], numbers[2]
+</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[::</span><span class="mi">3</span><span class="p">]</span>      <span class="c1"># 等价于 numbers[0:8:3]，取出索引为 0, 3, 6 的元素
+</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>另外，步长也可以是负数，表示从右到左取元素：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>       <span class="c1"># 取出索引为 4, 3, 2, 1 的元素
+</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>       <span class="c1"># 取出索引为 4, 2 的元素
+</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>         <span class="c1"># 从右到左取出所有元素
+</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[::</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>         <span class="c1"># 取出索引为 7, 5, 3, 1 的元素
+</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">6</span><span class="p">::</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>        <span class="c1"># 取出索引为 6, 4, 2, 0 的元素
+</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span><span class="p">[:</span><span class="mi">6</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>        <span class="c1"># 取出索引为 7 的元素
+</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="加">加</h4>
+<p>序列可以进行「加法」操作，如下：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>     <span class="c1"># 「加法」效果其实就是连接在一起
+</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'hello, '</span> <span class="o">+</span> <span class="s">'world!'</span>
+<span class="s">'hello, world!'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s">'abc'</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nb">TypeError</span><span class="p">:</span> <span class="n">can</span> <span class="n">only</span> <span class="n">concatenate</span> <span class="nb">list</span> <span class="p">(</span><span class="ow">not</span> <span class="s">"str"</span><span class="p">)</span> <span class="n">to</span> <span class="nb">list</span>
+<span class="err">这里需要注意的是：两种相同类型的序列才能「加法」操作。</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="乘">乘</h4>
+<p>序列可以进行「乘法」操作，比如：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="s">'abc'</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="s">'abcabcabc'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="in">in</h4>
+<p>为了检查一个值是否在序列中，可以使用 in 运算符，比如：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="s">'he'</span> <span class="ow">in</span> <span class="s">'hello'</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'hl'</span> <span class="ow">in</span> <span class="s">'hello'</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="bp">True</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://github.com/ethan-funny/explore-python">ethan-funny/explore-python</a></li>
+</ul>
+
+<hr />
+<blockquote>
+  <p>Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View <strong><a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a></strong> for more information.</p>
+</blockquote>
+
+<blockquote>
+  <p>Note: From this section(#10), the reference is no longer <a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a>, but <strong><a href="https://github.com/ethan-funny/explore-python">ethan-funny/explore-python</a></strong>. This two series may overlap. Depending on the necessity, these two series may be merged into one, and old posts may be deleted.</p>
+</blockquote>
+:ET
