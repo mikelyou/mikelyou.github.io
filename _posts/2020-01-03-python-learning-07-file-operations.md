@@ -190,7 +190,7 @@ with open('E:/Program Datas/PycharmProjects/p1302/data2.txt', 'a') as f:
 
 - [Python-100-Days-文件和异常](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/11.文件和异常.md#文件和异常)
 - [用Python读写文件，看这篇就够](https://juejin.im/post/5c720ff3f265da2d8e70ebef#heading-18)
-- ~~[极客学院](http://wiki.jikexueyuan.com/project/explore-python/File-Directory/text_file_io.html)(invalid)~~
+- [ethan-funny/explore-python](https://github.com/ethan-funny/explore-python)
 
 ------------------
 

@@ -10,7 +10,6 @@ tags:
   - Template
 
 #excerpt: Some tips.
-comments: true
 ---
 
 <!-- more -->
