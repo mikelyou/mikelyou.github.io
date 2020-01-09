@@ -1,19 +1,22 @@
 ---
 layout: post
-title: "Post Template"
-subtitle: '博文模板'
-date: 2099-01-09 11:00:00
+title: "Python Learning #10 - Sequence"
+subtitle: '序列'
+date: 2020-01-09 11:00:00
 author: "Mike Lyou"
-#header-style: text
-header-img: "img/post-bg-2015.jpg"
+header-style: text
+#header-img: "img/post-bg-2015.jpg"
 tags:
-  - Template
+  - Python
+  - Notes
 
-excerpt: Some tips.
+excerpt: Sequence include list, tuple, string, dict and set.
 comments: true
 ---
 
 <!-- more -->
+
+>Note: From this section(\#10), the reference is no longer [Python-100-Days](https://github.com/jackfrued/Python-100-Days), but **[ethan-funny/explore-python](https://github.com/ethan-funny/explore-python)**. This two series may overlap. Depending on the necessity, these two series may be merged into one, and old posts may be deleted.
 
 
 ## Catalog：
@@ -21,6 +24,16 @@ comments: true
 
 *  
 {:toc}
+
+
+## 序列
+
+#### 何为序列
+
+
+
+#### 序列的通用操作
+
 
 
 
