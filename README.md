@@ -13,17 +13,17 @@ Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of th
 
 - 谷歌数据
 - ~~浮动目录~~
+- python 人名生成器
 
 ## To-write List
 
-- 如何自定义鼠标指针
 - Python 学习
 - Github and Jekyll Markdown
 
 
 ## Past Works
 
-
+- 在`_posts`下子文件夹中的文章也可以正常显示
 - [new feature] back-to-top button
 - [new feature] Valine comments block
 - [new feature] excerpts
