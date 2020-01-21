@@ -5,6 +5,7 @@ subtitle: '函数式编程'
 date: 2020-01-09 16:00:00
 author: "Mike Lyou"
 header-style: text
+copyright-statement: python-series
 #header-img: "img/post-bg-2015.jpg"
 tags:
   - Python
@@ -270,4 +271,3 @@ f = partial(subtraction, 4)  # 4 赋给了 x
 
 
 ------------
->Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.

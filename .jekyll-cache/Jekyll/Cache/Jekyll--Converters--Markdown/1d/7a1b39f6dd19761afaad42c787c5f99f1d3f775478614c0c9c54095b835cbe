@@ -1,0 +1,89 @@
+I"�<p>在Python中同样有两种循环：<code class="highlighter-rouge">for-in</code>循环和<code class="highlighter-rouge">while</code>循环</p>
+
+<!-- more -->
+
+<h2 id="for-in-循环">for-in 循环</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="s">"""
+用for循环实现1~100求和
+"""</span>
+
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">101</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">+=</span> <span class="n">x</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>其中，<code class="highlighter-rouge">range()</code>函数可以更灵活：</p>
+
+<ul>
+  <li><code class="highlighter-rouge">range(101)</code>可以产生一个0到100的整数序列。</li>
+  <li><code class="highlighter-rouge">range(1, 100)</code>可以产生一个1到99的整数序列。</li>
+  <li><code class="highlighter-rouge">range(1, 100, 2)</code>可以产生一个1到99的奇数序列，其中2是步长，即数值序列的增量。</li>
+</ul>
+
+<p><strong>注意： <code class="highlighter-rouge">range(n)</code>产生的是<code class="highlighter-rouge">0</code>至<code class="highlighter-rouge">n-1</code>的序列！</strong></p>
+
+<h2 id="while-循环">while 循环</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="s">"""
+用while循环实现1~100求和
+"""</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span> <span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">sum</span> <span class="o">=</span><span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>在<code class="highlighter-rouge">while</code>循环中，可以使用<code class="highlighter-rouge">break</code>强制结束循环，以及使用<code class="highlighter-rouge">continue</code>函数直接跳到下一次循环的开始。</p>
+
+<h2 id="循环的嵌套">循环的嵌套</h2>
+<p>举个栗子，九九乘法表</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="s">"""
+九九乘法表
+"""</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="si">%</span><span class="s">d*</span><span class="si">%</span><span class="s">d=</span><span class="si">%</span><span class="s">d'</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<blockquote>
+  <p>关于逗号<code class="highlighter-rouge">,</code>的作用，可以参考<a href="https://blog.csdn.net/liuzx32/article/details/7831247">这篇文章</a>，应该是对的</p>
+</blockquote>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></li>
+</ul>
+
+<hr />
+
+:ET

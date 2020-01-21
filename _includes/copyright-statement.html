@@ -1,7 +1,13 @@
 
 {% if page.copyright-statement == 'CC4.0' %}
-  Copyright Statement: All work at this site, unless otherwise noted, are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. You can share them as long as providing the original website link. You do not need to get permission ahead, but it is appreciated if you could notify.
-{% else %}
-<!-- other conditions -->
+  Copyright Statement: This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. You can share this work as long as providing the link to this page. You do not need to get permission ahead, but it is appreciated if you could notify.
+{% endif %}
 
+{% if page.copyright-statement == 'python-series' %}
+  Copyright Statement: This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View <a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a> for more information.
+{% endif %}
+
+{% if page.copyright-statement == None %}
+  <!-- other conditions -->
+  Copyright Statement: All work at this site, unless otherwise noted, are not allowed to be reproduced, all rights reserved. If any post accidentally infringes your copyright, it will be removed shortly after being informed.
 {% endif %}

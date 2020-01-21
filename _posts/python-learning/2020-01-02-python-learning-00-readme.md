@@ -7,6 +7,7 @@ author: "Mike Lyou"
 header-img: "img/post-bg-table.jpg"
 header-mask: 0.4
 #header-style: text
+copyright-statement: python-series
 tags:
   - Python
   - Notes

@@ -1,0 +1,54 @@
+I"$<!-- more -->
+
+<h2 id="赋值">赋值</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">a</span> <span class="o">+=</span> <span class="n">b</span> <span class="c1"># 相当于：a = a + b
+</span><span class="n">a</span> <span class="o">*=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># 相当于：a = a * (a + 2)
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="输入input">输入<code class="highlighter-rouge">input</code></h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'a = '</span><span class="p">))</span> <span class="c1">#读取为int类型
+</span><span class="n">f</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'请输入华氏温度: '</span><span class="p">))</span> <span class="c1">#显示输入提示
+</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="c1">#读取在同一行的多个数字
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="输出print">输出<code class="highlighter-rouge">print</code></h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1">#输出结果会以空格隔开
+</span><span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="si">%.1</span><span class="s">f'</span> <span class="o">%</span> <span class="n">a</span><span class="p">)</span> <span class="c1">#输出float型变量a,保留一位小数
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+<blockquote>
+  <p><a href="https://www.cnblogs.com/fat39/p/7159881.html">Python格式化输出</a></p>
+</blockquote>
+
+<ul>
+  <li>使用<code class="highlighter-rouge">end</code>函数使<code class="highlighter-rouge">print</code>不换行
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+  <span class="k">print</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">" "</span><span class="p">)</span>  <span class="c1">#1 2 3 4 5
+</span></pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://github.com/jackfrued/Python-100-Days">Python-100-Days</a></li>
+</ul>
+
+<hr />
+
+:ET

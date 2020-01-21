@@ -5,6 +5,7 @@ subtitle: '文件夹操作'
 date: 2020-01-04 20:30:00
 author: "Mike Lyou"
 header-style: text
+copyright-statement: python-series
 tags:
   - Python
   - Notes
@@ -413,4 +414,4 @@ test2.txt
 - [Python文件操作，看这篇就足够](https://juejin.im/post/5c57afb1f265da2dda6924a1)
 
 ------------
->Statement:This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View **[python-learning-readme](https://mikelyou.com/2020/01/02/python-learning-00-readme/)** for more information.
+
