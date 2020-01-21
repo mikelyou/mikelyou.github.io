@@ -7,11 +7,11 @@ author:     "Mike Lyou"
 header-img: "img/post-bg-2015.jpg"
 tags:
   - Blog
-  
+
 excerpt: Some tips.
 ---
 
-Some tips discoverd. Write down for later usage. If something is good, a new post will be published.
+Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.
 
 <!-- more -->
 
@@ -19,6 +19,20 @@ Some tips discoverd. Write down for later usage. If something is good, a new pos
 {:.no_toc}
 *  
 {:toc}
+
+## Copyright statement
+
+Since every posts may have different copyright statements. I added the `copyright-statement.html`. By this way, it is easier to make statement and make updates. Detailed changes are as below.
+
+- Added `copyright-statement.html`.
+- Included `copyright-statement.html` in `post.html`.
+- New variable at post head. Example:
+
+```
+copyright-statement: CC4.0
+```
+
+If not stated, it shows nothing by default.
 
 ## Back-to-top button
 

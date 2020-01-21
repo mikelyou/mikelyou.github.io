@@ -23,6 +23,8 @@ Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of th
 
 ## Past Works
 
+- [new] copyright-statement.html
+- [post] mp3tag
 - 在`_posts`下子文件夹中的文章也可以正常显示
 - [new feature] back-to-top button
 - [new feature] Valine comments block

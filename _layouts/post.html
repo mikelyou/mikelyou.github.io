@@ -27,6 +27,9 @@ layout: default
 
 				{{ content }}
 
+                <!-- mikelyou: copyright statement -->
+                {% include copyright-statement.html %}
+
                 <hr style="visibility: hidden;">
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -62,7 +65,7 @@ layout: default
                   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
                   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
                   <div id="comment"></div>
-                  <!--valine comment function end (mikelyou)-->                  
+                  <!--valine comment function end (mikelyou)-->
                 {% endif %}
             </div>
 
