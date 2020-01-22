@@ -1,14 +1,14 @@
 ---
 layout:     post
-title:      "Tips"
+title:      "Hodgepodge"
 subtitle:   "一些杂乱的笔记"
 date:       2020-01-02 10:30:00
 author:     "Mike Lyou"
 header-img: "img/post-bg-2015.jpg"
+excerpt: Some tips.
+mathjax: true
 tags:
   - Blog
-
-excerpt: Some tips.
 ---
 
 Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.
@@ -19,6 +19,35 @@ Some tips discoverd. Write down for later usage. You maybe find something not cl
 {:.no_toc}
 *  
 {:toc}
+
+## How to write math using Latex grammar (mathjax)
+
+It is already embaded in Hux's blog. Add `mathjax: true` to enable it.
+
+Note that this effect is different from `## Atom plugin (irrelavent)`. That one aims to write math directly in atom, and read, has nothing to do with blog.
+
+[temp-post-test-math](https://mikelyou.com/2016/05/19/mathtest/)
+
+## 右键管理（无关话题）
+顺路看到的，顺手收拾了一下右键餐单。
+
+有机会也许可以自己总结一下。目前没有看到可以直接收藏的文章。
+
+参考：
+
+- [自己就是右键管家](https://blog.csdn.net/win_turn/article/details/75212969) （这篇主要讲如何删除`新建`餐单内容）
+- [zhihu](https://www.zhihu.com/question/55836048/answer/695435047)（主要讲主要菜单）
+- [CSDN](https://blog.csdn.net/Sdnu08gis/article/details/99691621)（讲到如何添加新的`新建`）
+
+
+## Atom plugin (irrelavent)
+Added `markdown-preview-plus` to enable writing math qeuations with LaTeX. Eg. $$\mu$$
+
+$$ S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a) $$
+
+Ref: [&rarr;简书](https://www.jianshu.com/p/6b54e2eb9ae2)
+
+By the way, I found another article, which proved irrelavent with my concern. It can make you write pure LaTeX document in `Plan Text`. The article [&rarr;知乎](https://zhuanlan.zhihu.com/p/35929936)
 
 ## Copyright statement
 

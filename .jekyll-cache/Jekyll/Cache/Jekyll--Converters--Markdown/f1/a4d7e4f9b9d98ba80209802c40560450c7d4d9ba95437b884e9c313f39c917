@@ -1,9 +1,11 @@
-I"�6<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
+I"�<<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
 
 <!-- more -->
 
 <h2 class="no_toc" id="catalog">Catalog</h2>
 <ul id="markdown-toc">
+  <li><a href="#右键管理无关话题" id="markdown-toc-右键管理无关话题">右键管理（无关话题）</a></li>
+  <li><a href="#atom-plug-in-irrelavent" id="markdown-toc-atom-plug-in-irrelavent">Atom plug-in (irrelavent)</a></li>
   <li><a href="#copyright-statement" id="markdown-toc-copyright-statement">Copyright statement</a></li>
   <li><a href="#back-to-top-button" id="markdown-toc-back-to-top-button">Back-to-top button</a></li>
   <li><a href="#解决花括号在-jekyll-被识别成-liquid-代码的问题" id="markdown-toc-解决花括号在-jekyll-被识别成-liquid-代码的问题">解决花括号在 Jekyll 被识别成 Liquid 代码的问题</a></li>
@@ -18,6 +20,28 @@
   <li><a href="#修复双重滚动条的bug" id="markdown-toc-修复双重滚动条的bug">修复双重滚动条的bug</a></li>
   <li><a href="#如何预览草稿" id="markdown-toc-如何预览草稿">如何预览草稿</a></li>
 </ul>
+
+<h2 id="右键管理无关话题">右键管理（无关话题）</h2>
+<p>顺路看到的，顺手收拾了一下右键餐单。</p>
+
+<p>有机会也许可以自己总结一下。目前没有看到可以直接收藏的文章。</p>
+
+<p>参考：</p>
+
+<ul>
+  <li><a href="https://blog.csdn.net/win_turn/article/details/75212969">自己就是右键管家</a> （这篇主要讲如何删除<code class="highlighter-rouge">新建</code>餐单内容）</li>
+  <li><a href="https://www.zhihu.com/question/55836048/answer/695435047">zhihu</a>（主要讲主要菜单）</li>
+  <li><a href="https://blog.csdn.net/Sdnu08gis/article/details/99691621">CSDN</a>（讲到如何添加新的<code class="highlighter-rouge">新建</code>）</li>
+</ul>
+
+<h2 id="atom-plug-in-irrelavent">Atom plug-in (irrelavent)</h2>
+<p>Added <code class="highlighter-rouge">markdown-preview-plus</code> to enable writing math qeuations with LaTeX. Eg. <script type="math/tex">\mu</script></p>
+
+<script type="math/tex; mode=display">S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a)</script>
+
+<p>Ref: <a href="https://www.jianshu.com/p/6b54e2eb9ae2">→简书</a></p>
+
+<p>By the way, I found another article, which proved irrelavent with my concern. It can make you write pure LaTeX document in <code class="highlighter-rouge">Plan Text</code>. The article <a href="https://zhuanlan.zhihu.com/p/35929936">→知乎</a></p>
 
 <h2 id="copyright-statement">Copyright statement</h2>
 
