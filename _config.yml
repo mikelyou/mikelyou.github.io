@@ -1,6 +1,6 @@
 # Site settings
 title: Mike Lyou Blog
-SEOTitle: 采叶小火的博客 | Mike Lyou Blog
+SEOTitle: Mike Lyou Blog | 采叶小火的博客 
 header-img: img/home-bg-milky-way.jpg
 email: liuch8120@gmail.com
 description: "这里是 @mikelyou 的个人博客"
@@ -104,11 +104,11 @@ page-mathjax: true
 
 
 # Friends
-friends: [
-    {
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
-    } # ,{
+# friends: [
+#    {
+#        title: "Hux Blog",#
+#        href: "http://huangxuan.me"
+#    } # ,{
 #        title: "Foo",
 #        href: "#"
 #    },{
@@ -121,7 +121,7 @@ friends: [
 #        title: "It helps SEO",
 #        href: "#"
 #    }
-]
+# ]
 
 
 # Mike Lyou's configuration

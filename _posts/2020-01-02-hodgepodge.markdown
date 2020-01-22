@@ -5,8 +5,9 @@ subtitle:   "一些杂乱的笔记"
 date:       2020-01-02 10:30:00
 author:     "Mike Lyou"
 header-img: "img/post-bg-2015.jpg"
-excerpt: Some tips.
+#excerpt: Some tips.
 mathjax: true
+catalog: true
 tags:
   - Blog
 ---
@@ -15,10 +16,17 @@ Some tips discoverd. Write down for later usage. You maybe find something not cl
 
 <!-- more -->
 
-## Catalog
-{:.no_toc}
-*  
-{:toc}
+## Enable Catalog
+
+Trying to add catalog myself for so long, I should found that this function was already achieved in Hux's blog too. (Orz...) It is written in `post.html`
+
+Just add the follwing line can enable catalog, which floats at right side.
+
+By the way, the style of link inside posts is [Enable Catalog](#enable-catalog)
+
+```
+[Enable Catalog](#enable-catalog)
+```
 
 ## How to write math using Latex grammar (mathjax)
 
@@ -26,7 +34,15 @@ It is already embaded in Hux's blog. Add `mathjax: true` to enable it.
 
 Note that this effect is different from `## Atom plugin (irrelavent)`. That one aims to write math directly in atom, and read, has nothing to do with blog.
 
-[temp-post-test-math](https://mikelyou.com/2016/05/19/mathtest/)
+Using the following line
+```
+$$ S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a) $$
+```
+to show
+
+$$ S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a) $$
+
+[temp-post-test-math](https://mikelyou.com/2016/05/19/test-math/)
 
 ## 右键管理（无关话题）
 顺路看到的，顺手收拾了一下右键餐单。
@@ -41,9 +57,13 @@ Note that this effect is different from `## Atom plugin (irrelavent)`. That one 
 
 
 ## Atom plugin (irrelavent)
-Added `markdown-preview-plus` to enable writing math qeuations with LaTeX. Eg. $$\mu$$
+Added `markdown-preview-plus` to enable writing math equations with LaTeX. Eg. $\mu$
 
 $$ S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a) $$
+
+But keep in mind, that this only enables math equations, sentences such as `\begin{equation}` has no function.
+
+If you don't need the equation numbers, just use `$+symbol+$` or `$$the equation$$` to have the same outcomes at both Atom and website.
 
 Ref: [&rarr;简书](https://www.jianshu.com/p/6b54e2eb9ae2)
 
@@ -156,6 +176,8 @@ Ref:
 
 
 ## Insert catalog
+
+Solved in [#Enable Catalog](#enable-catalog). No need to read this part.
 
 It is eazy to insert catalog in jekyll.
 

@@ -5,12 +5,13 @@ subtitle: 'learn to use, learn for use'
 date: 2020-01-06 14:30:00
 author: "Mike Lyou"
 header-img: "img/post-bg-table.jpg"
+copyright-statement: CC4.0
 tags:
   - Python
   - Notes
 ---
 
-After learning the [file Operations](https://mikelyou.com/2020/01/03/python-learning-07-file-operations/) and [directory Operations](https://mikelyou.com/2020/01/03/python-learning-08-directory-operations/), I eventually could use python to do some tasks.
+After learning the [file operations](https://mikelyou.com/2020/01/03/python-learning-07-file-operations/) and [directory operations](https://mikelyou.com/2020/01/03/python-learning-08-directory-operations/), I eventually could use python to do some tasks.
 
 <!-- more -->
 
@@ -67,4 +68,3 @@ This would be a very useful tool. Oh my god, I finally made it!
 ## References
 
 ------------
-
