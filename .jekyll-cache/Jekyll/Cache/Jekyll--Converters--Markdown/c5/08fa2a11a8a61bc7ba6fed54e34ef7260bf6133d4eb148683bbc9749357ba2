@@ -1,4 +1,4 @@
-I"©><p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
+I"Ã?<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
 
 <!-- more -->
 
@@ -7,6 +7,9 @@
 <p>Trying to add catalog myself for so long, I should found that this function was already achieved in Huxâ€™s blog too. (Orzâ€¦) It is written in <code class="highlighter-rouge">post.html</code></p>
 
 <p>Just add the follwing line can enable catalog, which floats at right side.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>catalog: true
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>By the way, the style of link inside posts is <a href="#enable-catalog">Enable Catalog</a></p>
 

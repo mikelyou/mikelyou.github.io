@@ -21,6 +21,10 @@ Some tips discoverd. Write down for later usage. You maybe find something not cl
 Trying to add catalog myself for so long, I should found that this function was already achieved in Hux's blog too. (Orz...) It is written in `post.html`
 
 Just add the follwing line can enable catalog, which floats at right side.
+```
+catalog: true
+```
+
 
 By the way, the style of link inside posts is [Enable Catalog](#enable-catalog)
 

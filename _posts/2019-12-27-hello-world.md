@@ -5,10 +5,9 @@ subtitle:   "从零开始的博客搭建之路"
 date:       2019-12-27 15:51:00
 author:     "Mike Lyou"
 header-img: "img/post-bg-2015.jpg"
+catalog: true
 tags:
     - Blog
-
-comments: true
 ---
 
 
