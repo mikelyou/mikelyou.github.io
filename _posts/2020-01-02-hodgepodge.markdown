@@ -16,6 +16,74 @@ Some tips discoverd. Write down for later usage. You maybe find something not cl
 
 <!-- more -->
 
+## Image caption
+
+I want to write credit when I use images from elsewhere, which includes author and url. This issue was partly solved by [this post](https://superdevresources.com/image-caption-jekyll/).
+
+Includes a new file named `image.html` which presents as below
+
+<!-- {% raw %} -->
+```
+<!-- _includes/image.html -->
+<div class="image-wrapper" >
+    {% if include.url %}
+    <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
+    {% endif %}
+        <img src="{{ site.url }}/{{ include.img }}" alt="{{ include.title }}"/>
+    {% if include.url %}
+    </a>
+    {% endif %}
+    {% if include.caption %}
+        <p class="image-caption">{{ include.caption }}</p>
+    {% endif %}
+</div>
+```
+<!-- {% endraw %} -->
+
+Add new ccs style
+```
+.image-wrapper {
+    text-align: center;
+
+    .image-caption {
+        color: $grey-color;
+        margin-top: $spacing-unit / 3;
+    }
+}
+```
+
+And write in post like This
+<!-- {% raw %} -->
+```
+{% include image.html
+            img="images/myimage.jpg"
+            title="title for image"
+            caption="caption for image"
+            url="http://example.com" %}
+```
+<!-- {% endraw %} -->
+
+Many answers I found think for sure that I know how css files work, but I didn't. Now I kinda understand.
+
+You can find `bootstrap.css` and `bootstrap.min.css` under `/css` directory. If you use theme from others, there may be another two `sometheme.css` and `sometheme.min.css`. You can add the css style directly into one of the `*.css` file, or create a new `sample.css` and add it.
+
+You maybe notice `*.min.css` is hard to read, that is because`*.min.css` file is minified `*.css` file, which removes unassary space and other stuffs. Their functions are identical, but `*.min.css` has better efficiency. If you use theme from others, they usually use `*.min.css` rather than `*.css`. So you when you have made up your `*.css` file, you should use [css minifier](https://cssminifier.com) or other tools to generate a `*.min.css` file.
+
+If you create a new `*.css` file, you should also include it in `head.html`.
+<!-- {% raw %} -->
+```
+<link rel="stylesheet" href="{{ "/css/sample.min.css" | prepend: site.baseurl }}">
+```
+<!-- {% endraw %} -->
+
+Things have'n solved are:
+
+1. Not work for header images.
+2. Need to use Liquid.
+
+
+Here is [another method](https://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll/48137036#48137036), not beautiful though.
+
 ## Enable Catalog
 
 Trying to add catalog myself for so long, I should found that this function was already achieved in Hux's blog too. (Orz...) It is written in `post.html`
@@ -25,6 +93,9 @@ Just add the follwing line can enable catalog, which floats at right side.
 catalog: true
 ```
 
+However, when the catalog is too long, a scroll bar will appear, which is not beautiful.
+
+And the 1,2,3 heading has the same style, 4-6 has the same as well.
 
 By the way, the style of link inside posts is [Enable Catalog](#enable-catalog)
 

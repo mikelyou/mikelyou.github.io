@@ -1,0 +1,171 @@
+I"J<!-- more -->
+
+<!-- # 1
+## 2
+### 3
+#### 4
+##### 5
+###### 6 -->
+
+<h2 id="lec-1---basic-structure-of-electrochemical-cells">Lec 1 - Basic Structure of Electrochemical Cells</h2>
+
+<h4 id="trivia">Trivia</h4>
+
+<script type="math/tex; mode=display">1 𝑒𝑉 \sim 1.6 × 10^{−19} C/electron × 1𝑉 × 6.02 × 10^{23} electron/mole = 96.4 kJ/mole</script>
+
+<p>this value is called Faraday’s constant, $F$.</p>
+
+<h4 id="cell-notation">Cell notation</h4>
+
+<p><img src="\img\in-post\post-e4260-01-cell-notation.png" alt="" />
+<em>caption</em></p>
+
+<!-- Credit: https://superdevresources.com/image-caption-jekyll/ -->
+<div class="image-wrapper">
+    
+    <a href="http://example.com" title="title for image" target="_blank">
+    
+        <img src="http://localhost:4000/\img\in-post\post-e4260-01-cell-notation.png" alt="title for image" />
+    
+    </a>
+    
+    
+        <p class="image-caption">caption for image</p>
+    
+</div>
+
+<p><img src="\img\in-post\post-e4260-01-cell-notation.png" alt="description" title="description1" />
+<strong><em>Image:</em></strong> <em>description</em></p>
+
+<script type="math/tex; mode=display">Z n(s)\left|Z n^{2+}(a q) \| C u^{2+}(a q)\right| C u(s)</script>
+
+<ul>
+  <li>Rules of writing cell notations:
+    <ul>
+      <li>Oxidation on the left, reduction on theright (in galvanic mode).</li>
+      <li>A line as phaseboundary.</li>
+      <li>Double line indicates a salt bridge: two interfaces.</li>
+      <li>Metal electrodes at two ends.</li>
+    </ul>
+  </li>
+  <li>Electrode: $Zn$, $Cu$</li>
+  <li>Electrolyte: $ZnSO_4$ and $CuSO_4$ aqueous solutions</li>
+  <li>
+    <p>Redox pair: $Cu^{2+} /Cu$, $Zn^{2+} /Zn$</p>
+  </li>
+  <li>
+    <p>Anion: negatively charged ion<br />
+Cation: positively chargedion</p>
+  </li>
+  <li>
+    <p><strong>Positive electrode</strong>: <strong>$Cu^{2+} /Cu$</strong> is always at high electrical potential, tend to <strong>lose</strong> electrons.<br />
+<strong>Negative electrode</strong>: <strong>$Zn^{2+} /Zn$</strong> is always at low electrical potential, tend to <strong>gain</strong> electrons.<br />
+Positive and negative electrodes <strong>do NOT change</strong> during charge/discharge</p>
+  </li>
+  <li>
+    <p><strong>Cathode</strong>: where <strong>reduction</strong> (get electrons) occurs.<br />
+<strong>Anode</strong>: where <strong>oxidation</strong>(lose electrons) occurs</p>
+  </li>
+  <li>
+    <p>Cathode and anode will change.<br />
+Positive and negtive will never change.</p>
+  </li>
+  <li><strong>Galvanic cells (discharge)</strong>: use the spontaneous redox chemical reaction to <strong>generate electricity</strong>.<br />
+<strong>Electrolytic Cells (charge)</strong>: use the electricity to force chemical reaction to take place.</li>
+</ul>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{array}{c|c|c}{} & {\text { Positive }\left(\mathrm{Cu} / \mathrm{Cu}^{2+}\right)} & {\text { Negative }\left(\mathrm{Zn} / \mathrm{Zn}^{2+}\right)} \\ \hline \text { Galvanic } & {\text { Cathode }} & {\text { Anode }} \\ \hline \text { Electrolytic } & {\text { Anode }} & {\text { Cathode }}\end{array} %]]></script>
+
+<h4 id="cell-reversibility">Cell Reversibility</h4>
+
+<p>1.Chemical reversibily</p>
+
+<p>In most cases, it is satisfied. For example:</p>
+
+<script type="math/tex; mode=display">Pt | H_2 | H^+ , Cl^- | AgCl | Ag</script>
+
+<p>Reversing the current will reverse the cell reaction.<br />
+  However, the following reaction</p>
+
+<script type="math/tex; mode=display">Zn | ZnSO_4 \| H_2SO_4 | Pt</script>
+
+<p>Reversing the current will change the reaction instead.</p>
+
+<p>2.Thermodynamic reversibily</p>
+
+<p>3.Practical reversibily</p>
+
+<p>If <strong>change of driving force is slow enough</strong> compared to the <strong>kinetics</strong> of the involved reaction so that equilibrium can be established very fast. Systems are called in <strong>practical reversibility</strong>.</p>
+
+<h4 id="cell-voltage-in-more-chemical-way">Cell voltage (in more chemical way)</h4>
+
+<p>Take the $Zn-Cu$ cell as example.</p>
+
+<script type="math/tex; mode=display">C u^{2+}(a q)+Z n(s) \rightarrow C u(s)+Z n^{2+}(a q)</script>
+
+<p>The voltage $E$ is defined as difference of electric potential of two half cells.</p>
+
+<script type="math/tex; mode=display">V = E_+ - E_-</script>
+
+<p>According to the energy conservation,</p>
+
+<script type="math/tex; mode=display">-\Delta G = V \cdot Q = V \cdot n F</script>
+
+<p>where $F = 96485 C/mol$ is Faraday’s Constant.<br />
+Derive $V$ from the above equation, we have</p>
+
+<script type="math/tex; mode=display">V=-\left(G_{Z n^{2+}}+G_{C u}-G_{C u^{2+}}-G_{Z n}\right) / 2 F</script>
+
+<p>Now consider the change of amount of substance during the reaction.<br />
+Assume the amount of substance of component $i$ is $N_i$, the amount of substance change during a period of time is $m$.</p>
+
+<script type="math/tex; mode=display">C u^{2+}(a q)+Z n(s)+C u(s)+Z n^{2+}(a q) \rightarrow C u^{2+}(a q)+Z n(s)+C u(s)+Z n^{2+}(a q)\\
+1 mol + 1 mol + 1 mol + 1 mol \rightarrow (1-m)mol + (1-m)mol + (1+m)mol + (1+m)mol</script>
+
+<p>The change of $G$ is</p>
+
+<script type="math/tex; mode=display">\delta G_{C u^{2+}} = \frac{\partial G}{\partial N_{C u^{2+}}} \delta N =  \mu_{C u^{2+}} \cdot (-m)</script>
+
+<p>and so for other components.<br />
+Plugging in to get</p>
+
+<script type="math/tex; mode=display">V=-\left(\mu_{Z n^{2+}}+\mu_{C u}-\mu_{C u^{2+}}-\mu_{Z n}\right) / 2 F</script>
+
+<p>Knowing that</p>
+
+<script type="math/tex; mode=display">\mu = \mu_0 + RT \ln a , \quad a = \gamma c</script>
+
+<p>where</p>
+
+<p>$\mu$ is chemical potentisl,<br />
+$\mu_0$ is chemical  potential at standered condition $[298 K, 1 atm, a = 1 (~1M)]$<br />
+$a$ is activity coefficient,<br />
+$c$ is concentration,<br />
+$\gamma$ is activity factor.</p>
+
+<p>Plugging in to get</p>
+
+<script type="math/tex; mode=display">V=V^{0}-\frac{R T}{2 F} \ln \frac{a_{Z n 2+} a_{C u}}{a_{C u 2+} a_{Z n}}
+\quad V^{0}=-\frac{\mu_{C u}^{0}+\mu_{Z n^{2+}}^{0}-\mu_{C u^{2+}}^{0}-\mu_{Z n}^{0}}{2 F}</script>
+
+<p>For a general cell reaction</p>
+
+<script type="math/tex; mode=display">O x 1+R e d 2 \leftrightarrow \operatorname{Re} d 1+O x 2</script>
+
+<script type="math/tex; mode=display">V=V^{0}-\frac{R T}{n F} \ln \frac{a_{R e d 1} a_{O x 2}}{a_{O x 1} a_{R e d 2}}=V^{0}-\frac{R T}{n F} \ln Q</script>
+
+<p>This is what known as <strong>Nernst Equation</strong>.<br />
+In which $Q$ is called reaction quotient.</p>
+
+<script type="math/tex; mode=display">Q = \frac{a_{R e d 1} a_{O x 2}}{a_{O x 1} a_{R e d 2}}</script>
+
+<script type="math/tex; mode=display">V^{0}=-\frac{\mu_{R e d 1}^{0}+\mu_{O x 2}^{0}-\mu_{O x 1}^{0}-\mu_{R e d 2}^{0}}{n F}</script>
+
+<p>Further more, we can break Nernst Equation into two <strong>Half Cell Nernst Equations</strong>:</p>
+
+<script type="math/tex; mode=display">V=\left(-\frac{\mu_{R e d 1}^{0}-\mu_{O x 1}^{0}}{n F}-\frac{R T}{n F} \ln \frac{a_{R e d 1}}{a_{O x 1}}\right)-\left(-\frac{\mu_{R e d 2}^{0}-\mu_{O x 2}^{0}}{n F}-\frac{R T}{n F} \ln \frac{a_{R e d 2}}{a_{O x 2}}\right)\\
+=E_+^{(O x 1+n e^{-} \leftrightarrow \operatorname{Red} 1)}  - E_-^{(O x 2+n e^{-} \leftrightarrow \operatorname{Red} 2)}</script>
+
+<h4 id="cell-voltage-in-more-physicial-way">Cell voltage (in more physicial way)</h4>
+:ET
