@@ -153,10 +153,10 @@ Since every posts may have different copyright statements. I added the `copyrigh
 - New variable at post head. Example:
 
 ```
-copyright-statement: CC4.0
+copyright-statement: CC BY-NC
 ```
 
-If not stated, it shows nothing by default.
+If not stated, it shows default statement.
 
 ## Back-to-top button
 

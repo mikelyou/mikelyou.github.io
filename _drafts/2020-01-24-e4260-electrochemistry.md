@@ -182,3 +182,42 @@ V=\left(-\frac{\mu_{R e d 1}^{0}-\mu_{O x 1}^{0}}{n F}-\frac{R T}{n F} \ln \frac
 $$
 
 #### Cell voltage (in more physicial way)
+
+**Voltage** is the difference in **electrochemical potential of electrons ($\bar{\mu}_{e}$)** in two electrodes. Where
+
+$$\bar{\mu}_{e}=\mu_{e}-F \phi$$
+
+In above equation,  
+$\mu_{e}$ is chemical potential (in J/mol),  
+$\phi$ is electrostatic potential (in V)
+
+From above equation, voltage($V$) can be derived as
+
+$$ V=-\left(\bar{\mu}_{e, M 1}-\bar{\mu}_{e, M 2}\right) / F $$
+
+Therefore we know, that voltage includes two parts:  
+- Difference in chemical potential ($\mu_{e}$)
+- Difference in electrostatic potential ($\phi$)
+
+If two metal plates with different **chemical potential** contacts with each other, metal plate with higher chemical potential (called A) has higher electrochemical potential than another (called B), therefore the electrons will flow from A to B. When equilibrium state is reached, the B will have more electrons, thus has higher **electrostatic potential**. As sum of chemical potential and electrostatic potential, A and B have the **same electrochemical potential**, i.e. $V=0$.
+
+Now let us re-consider this reaction:
+
+$$C u^{2+}(a q)+Z n(s)+2 e^{-}(Z n) \leftrightarrow C u(s)+Z n^{2+}(a q)+2 e^{-}(C u)$$
+
+When Electrochemical equilibrium established, we have
+
+$$ \bar{\mu}_{C u 2+}+\bar{\mu}_{Z n}+2 \bar{\mu}_{e, z n}=\bar{\mu}_{C u}+\bar{\mu}_{Z n 2+}+2 \bar{\mu}_{e, C u} $$
+
+Therefore
+
+$$ V=-\frac{\bar{\mu}_{e, C u}-\bar{\mu}_{e, Z n}}{2 F}=-\frac{\bar{\mu}_{C u 2+}+\bar{\mu}_{Z n}-\bar{\mu}_{C u}-\bar{\mu}_{Z n 2+}}{2 F} $$
+
+Since for ions, $\bar{\mu}_{M^{z+}}=\mu_{M^{z+}}+z F \phi$  
+And for neutral metal, $\bar{\mu}_M=\mu_M$
+
+$$ V=-\frac{\mu_{C u 2+}+2 F \phi_{s o l}+\mu_{Z n}-\mu_{C u}-\mu_{Z n 2+}-2 F \phi_{s o l}}{2 F}=-\frac{\mu_{C u 2+}+\mu_{Z n}-\mu_{C u}-\mu_{Z n 2+}}{2 F} $$
+
+Finally, we derived the Nernst Equation
+
+$$ V=V^{0}-\frac{R T}{n F} \ln \frac{a_{Z n 2+} a_{C u}}{a_{C u 2+} a_{Z n}} \quad V^{0}=-\frac{\mu_{C u 2+}^{0}+\mu_{Z n}^{0}-\mu_{C u}^{0}-\mu_{Z n 2+}^{0}}{n F} $$
