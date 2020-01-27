@@ -1,0 +1,153 @@
+I"�<!-- more -->
+
+<blockquote>
+  <p>This post is study note of E4201 course, all rights reserved. I do not own copyright of some contents, if the article unintentionally infringes your copyright, it will be deleted shortly after being informed.</p>
+</blockquote>
+
+<h2 id="lec-1---macroscopic-thermodynamics">Lec 1 - Macroscopic Thermodynamics</h2>
+
+<h3 id="11-three-level-of-thermodynamics">1.1 Three level of thermodynamics</h3>
+<p>There are threed levels of thermodynamics.</p>
+
+<ul>
+  <li>
+    <p>The <strong>macroscopic（宏观） or phenomenological</strong> description.</p>
+
+    <ul>
+      <li>It treat matter as structureless.</li>
+      <li>Macroscopic (equilibrium) thermodynamics describes and only describes equilibrium states.</li>
+    </ul>
+  </li>
+  <li>The <strong>statistical（统计）</strong> description.</li>
+  <li>The <strong>quantum</strong> description.</li>
+</ul>
+
+<h3 id="12-systems-barriers-and-surrounding">1.2 Systems, Barriers and Surrounding</h3>
+
+<ul>
+  <li>System</li>
+  <li>Barriers
+    <ul>
+      <li>Diathermal/adiabatic（绝热） or not</li>
+      <li>Permeable or impermeable</li>
+      <li>Movable or fixed</li>
+    </ul>
+  </li>
+  <li>Surrounding</li>
+</ul>
+
+<h3 id="13-thermodynamic-variables">1.3 Thermodynamic Variables</h3>
+
+<h4 id="defination-and-innerrelation-of-thermodynamic-variables">Defination and innerrelation of thermodynamic Variables</h4>
+
+<script type="math/tex; mode=display">G \equiv U + PV - TS</script>
+
+<script type="math/tex; mode=display">H = U + PV</script>
+
+<script type="math/tex; mode=display">F = U - TS</script>
+
+<script type="math/tex; mode=display">\mu_i = \frac{\partial G}{\partial n_i}</script>
+
+<h4 id="state-variables-and-process-variables">State variables and process Variables</h4>
+
+<ul>
+  <li><strong>State variables(or state functions)</strong>: depends only on condition(or state) of the system. Eg. $V$, $S$, $T$, $U$, $H$, $G$.</li>
+  <li><strong>Process variables</strong>: quantities than only have meaning for changing systems. They are variable depending on the choice of path. Eg. $W$, $Q$.</li>
+</ul>
+
+<h4 id="extensive-and-intensive-state-variables">Extensive and Intensive State Variables</h4>
+
+<p>The state variables can be classified into finer classes.</p>
+
+<ul>
+  <li>
+    <p><strong>Extensive</strong> state variables: depend on system size. Which means double the system will change the variable value. Eg. $V$, $S$, $n$, $U$, $H$, $G$.</p>
+  </li>
+  <li>
+    <p><strong>Intensive</strong> state variables: not depend on system size. Eg. $T$, $P$, $\mu$(chemical potemtial).</p>
+  </li>
+  <li>
+    <p><strong>Normalized extensive variables*</strong>: extensive variables per mole or unit volume. These are in effect <strong>intensive</strong>.</p>
+  </li>
+</ul>
+
+<h4 id="conjugate-variables">Conjugate Variables</h4>
+
+<p>Each extensive variable has a conjugate intensive variable.</p>
+
+<h2 id="lec-2---laws-of-thermodynamics">Lec 2 - Laws of Thermodynamics</h2>
+
+<blockquote>
+  <p>众所周知，热力学三大定律一共有四条（还有第零定律）。</p>
+</blockquote>
+
+<h3 id="21-zeroth-law">2.1 Zeroth Law</h3>
+<p><strong>If two systems are each in equilibrium with a third system, they
+are also in equilibrium with each other</strong>.</p>
+
+<p>It seacribes the equilibrium.</p>
+
+<h3 id="22-first-law">2.2 First law</h3>
+<p><strong>Energy is conserved, it cannot be created or destoryed</strong>.</p>
+
+<script type="math/tex; mode=display">dU=\delta Q + \delta W + \delta W^\prime</script>
+
+<script type="math/tex; mode=display">（能增 = 吸热 + 得工）</script>
+
+<p>Where,</p>
+
+<p>$dU$ means <strong>increase</strong> of internal energy,<br />
+$\delta Q$ means heat transferred <strong>into</strong> system,<br />
+$\delta W = -P dV$ is mechanical work,<br />
+$\delta W^\prime$ is sum of other works.</p>
+
+<p>The first law is law of energy.</p>
+
+<h3 id="23-second-law">2.3 Second law</h3>
+<p>Entropy never decreases.</p>
+
+<script type="math/tex; mode=display">\mathrm{d} S \geqslant \frac{\delta Q}{T}</script>
+
+<p>where equal sign holds only for <strong>reversible process</strong>.</p>
+
+<h3 id="24-third-law">2.4 Third law</h3>
+<p><strong>The entropy of a thermodynamic system in internal equilibrium
+approaches a universal constant (usually taken as zero) as the absolute temperature goes to zero.</strong></p>
+
+<p>Which means entropy of any system at $T=0K$ is zero, no matter what values other system parameters are. It can be expressed as:</p>
+
+<script type="math/tex; mode=display">\left( \frac { \partial U } { \partial S } \right)_ { V, N_{1}, \ldots , N_{r} } = 0</script>
+
+<p>In the above equation, partial value is zero because $S \equiv 0$.</p>
+
+<h4 id="calculation-of-entropy">Calculation of entropy</h4>
+<p>According to the Third Law, absolute value of entropy can be calculated.</p>
+
+<p>For a reversible process</p>
+
+<script type="math/tex; mode=display">\mathrm{d} S = \frac{\delta Q}{T}</script>
+
+<p>and</p>
+
+<script type="math/tex; mode=display">\delta Q=C_{p} d T</script>
+
+<p>Therefore</p>
+
+<script type="math/tex; mode=display">S_T = S_0 + \int_{0}^T \frac{C_p}{T} dT = \int_0^T \frac{C_p}{T} dT</script>
+
+<p>or more practically</p>
+
+<script type="math/tex; mode=display">S_T = S_{298.15} + \int_{298.15}^{T} \frac{C_{p}}{T} d T</script>
+
+<h2 id="lec-3---conditions-of-equilibrium">Lec 3 - Conditions of Equilibrium</h2>
+
+<h3 id="equilibrium-states">Equilibrium States</h3>
+
+<p>Equilibrium states of simple macroscopic systems are characterized by system parameters including</p>
+
+<script type="math/tex; mode=display">\left( U, V, N_1, N_2, \cdots , N_r \right)</script>
+
+<p>If systems are more complex, parameters will be more.</p>
+
+<p>The <strong>equilibrium states</strong> are states in which <strong>entropy is maximized</strong> for the given constraints.</p>
+:ET

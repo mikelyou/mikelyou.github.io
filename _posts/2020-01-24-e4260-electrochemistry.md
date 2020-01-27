@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Electrochemical Materials and Devices"
-subtitle: 'MSAE E4260'
+title: "Electrochemistry"
+subtitle: 'E4260 Study Notes'
 date: 2020-01-24 11:00:00
 author: "Mike Lyou"
-#header-style: text
-header-img: "img/post-bg-2015.jpg"
+header-style: text
+#header-img: "img/post-bg-2015.jpg"
 mathjax: true
 catalog: true
-copyright-statement: default
+copyright-statement:
 #excerpt: Some tips.
 tags:
   - Notes
@@ -25,6 +25,7 @@ tags:
 ##### 5
 ###### 6 -->
 
+> This post is study note of E4260 course, all rights reserved. I do not own copyright of some contents, if the article unintentionally infringes your copyright, it will be deleted shortly after being informed.
 
 ## Lec 1 - Basic Structure of Electrochemical Cells
 

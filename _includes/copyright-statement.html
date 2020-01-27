@@ -1,17 +1,43 @@
+<HR>
 
-{% if page.copyright-statement == 'CC4.0' %}
-  Copyright Statement: This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. You can share this work as long as providing the link to this page. You do not need to get permission ahead, but it is appreciated if you could notify.
+<!--
+See this page if you don't know which to choose
+https://creativecommons.org/share-your-work/licensing-examples/
+-->
+
+{% if page.copyright-statement == 'CC BY' %}
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br/> You can share this work as long as providing the link to this page. You do not need to get permission ahead, but it is appreciated if you could notify.
+{% endif %}
+
+<!-- don't know when to use -->
+<!-- {% if page.copyright-statement == 'CC BY-SA' %}
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+{% endif %} -->
+
+{% if page.copyright-statement == 'CC BY-ND' %}
+  <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+{% endif %}
+
+{% if page.copyright-statement == 'CC BY-NC' %}
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br/> You can share this work non-commercially as long as providing the link to this page. You do not need to get permission ahead, but it is appreciated if you could notify.
+{% endif %}
+
+<!-- don't know when to use -->
+<!-- {% if page.copyright-statement == 'CC BY-NC-SA' %}
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+{% endif %} -->
+
+{% if page.copyright-statement == 'CC BY-NC-ND' %}
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 {% endif %}
 
 {% if page.copyright-statement == 'python-series' %}
   Copyright Statement: This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View <a href="https://mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a> for more information.
 {% endif %}
 
-{% if page.copyright-statement == default %}
-  <!-- other conditions -->
-  Copyright Statement: All work at this site, unless otherwise noted, are not allowed to be reproduced, all rights reserved. If any post accidentally infringes your copyright, it will be removed shortly after being informed.
-{% endif %}
-
 {% if page.copyright-statement == None %}
   <!-- other conditions -->
+  All work at this site, unless otherwise noted, are not allowed to be reproduced, all rights reserved. If any post accidentally infringes your copyright, it will be removed shortly after being informed.
 {% endif %}
+
+<HR>
