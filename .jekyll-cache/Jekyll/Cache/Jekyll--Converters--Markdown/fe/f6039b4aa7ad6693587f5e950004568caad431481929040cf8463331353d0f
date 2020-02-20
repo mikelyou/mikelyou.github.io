@@ -1,0 +1,64 @@
+I"�<blockquote>
+  <p>Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS.</p>
+</blockquote>
+
+<!-- more -->
+
+<h2 id="寻找第三方工具">寻找第三方工具</h2>
+
+<p>从2016年接触印象笔记以来，我逐渐依赖上这款笔记软件。我习惯于用它记录想法，写随笔，也用来保存一些文件，保存一些容易遗忘的数据。</p>
+
+<p>不过随着我的印象笔记里的内容越来越多，很多问题浮现出来：</p>
+
+<ul>
+  <li>搜索延迟较大，2s ~ 5s 不等</li>
+  <li>无法批量编辑，进行小修改会显得很麻烦，比如统一几个笔记的题目格式</li>
+  <li>数据比较封闭，难以使用第三方工具直接修改数据</li>
+</ul>
+
+<p>为了解决上述问题，我开始寻找一个强有力的第三方工具，甚至是印象笔记的替代产品。这样一个工具，我希望它具有以下特征：</p>
+
+<ul>
+  <li>可以使用一些命令，比如：
+    <ul>
+      <li>在笔记内使用<code class="highlighter-rouge">#tag</code>直接添加标签、使用<code class="highlighter-rouge">nb:notebook</code>设定归属笔记本</li>
+      <li>可以批量修改笔记标题、笔记内容</li>
+    </ul>
+  </li>
+  <li>最好可以支持第三方程序（如python）的处理</li>
+  <li>如果是第三方工具，那么应该自由的与印象笔记通信，至少可以互相导入与导出</li>
+  <li>如果是替代产品，在稳定性、安全性、同步速度和价格上都不能太差</li>
+</ul>
+
+<p>当然我还希望有一些其他特征，不过这些并不属于我的核心需求：</p>
+
+<ul>
+  <li>可以导入和导出多种文件格式，如markdown。</li>
+  <li>有可靠的提醒功能、待办事项功能，无论是内置功能还是借助第三方工具。目前的情况是，印象笔记内创建提醒 = 没有提醒，根本不会提醒我。</li>
+</ul>
+
+<h2 id="发现joplin">发现Joplin</h2>
+
+<p>我找到的 <a href="https://github.com/laurent22/joplin">Joplin</a> 这款软件，是一款免费、开源、支持中文的笔记软件和代办清单软件。</p>
+
+<p>乍看很强，也有一些比较好用的功能，但简单尝试之后发现，它不能解决我的问题。所以写这篇文章，记录一下这款软件的使用感受。</p>
+
+<p>Joplin 作为一个笔记软件，在功能上已经可以独立使用了，其优点之一是可以自己选择同步工具，如OneDrive.</p>
+
+<p>不过其也有明显的不足之处：</p>
+
+<ul>
+  <li>印象笔记文件<code class="highlighter-rouge">*.enex</code>可以导入 Joplin, 但 Joplin 内的笔记无法导入印象笔记。这就意味着，我无法在 Joplin 修改笔记后重新放回印象笔记，而只能在 Joplin 中查看。</li>
+  <li>在 Windows 下，如果使用的不是便携版，将会很难更改笔记存储位置，而且默认存储位置在 C盘。（在<a href="https://github.com/laurent22/joplin/issues/42#issuecomment-348338177">这里</a>有处理方法，但我一直弄不成。）</li>
+</ul>
+
+<h2 id="后记">后记</h2>
+
+<p>我不否认这是一款优秀的开源软件，但它确实无法满足我的需求。可能我的需求确实太高，目前根本找不到相应的软件。如果有好心人知道有什么好用的工具或软件，请务必告诉我！非常感谢！</p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://github.com/laurent22/joplin">GitHub/Joplin</a></li>
+  <li><a href="https://staging.yinxiang.com">印象笔记</a></li>
+</ul>
+:ET
