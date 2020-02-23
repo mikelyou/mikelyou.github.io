@@ -189,7 +189,6 @@ Ctrl+C					#关服
 
 2019年12月27日 于Science图书馆
 
-（文章主体框架基本确定，文中细节近期仍可能进行修改。）
 
 ## 致谢
 
@@ -224,4 +223,4 @@ Ctrl+C					#关服
 	- [cmd应用基础扫盲教程](https://lellansin.wordpress.com/2012/12/15/cmd%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80-%E6%89%AB%E7%9B%B2%E6%95%99%E7%A8%8B/) 和 [CMD命令进入某个目录](https://blog.csdn.net/aidenliu/article/details/5390113)
 	- [域名、DNS、IP地址的对应关系](https://www.jianshu.com/p/6323a4f0ada4)
 
-> 本文为 Mike Lyou 本人原创，但文中内容多有借鉴上述参考模板和教程。本文谢绝转载。
+> 本文为 Mike Lyou 本人原创，但文中内容多有借鉴上述参考模板和教程。本文谢绝转载。本文在[简书](https://www.jianshu.com/p/29a1d705f0f5)的页面。

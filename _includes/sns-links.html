@@ -1,5 +1,5 @@
 {% comment %}
-    @param {Boolean} center 
+    @param {Boolean} center
 {% endcomment %}
 
 {% if include.center %}
@@ -34,6 +34,16 @@
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  {% endif %}
+  {% if site.jianshu_username %} <!-- mikelyou -->
+  <li>
+    <a target="_blank" href="https://www.jianshu.com/u/{{ site.jianshu_username }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">简</i>
       </span>
     </a>
   </li>
@@ -74,6 +84,16 @@
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  {% endif %}
+  {% if site.email_address %}<!--to find icons here -> https://fontawesome.com/ -->
+  <li>
+    <a target="_blank" href="mailto:{{ site.email_address }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
       </span>
     </a>
   </li>
