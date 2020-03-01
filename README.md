@@ -11,15 +11,15 @@ Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of th
 
 ## To-do List
 
-- 谷歌数据
+- Friend & Friend Request
+- Hide certain posts from homepage
+- ~~谷歌数据~~
 - ~~浮动目录~~
-- python 人名生成器
+- ~~python 人名生成器~~
 
 ## To-write List
 
-- Python 学习
-- Github and Jekyll Markdown
-
+- RSS
 
 ## Past Works
 
