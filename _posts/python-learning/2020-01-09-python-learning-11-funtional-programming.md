@@ -6,6 +6,7 @@ date: 2020-01-09 16:00:00
 author: "Mike Lyou"
 header-style: text
 copyright-statement: python-series
+hidden: true
 #header-img: "img/post-bg-2015.jpg"
 tags:
   - Python

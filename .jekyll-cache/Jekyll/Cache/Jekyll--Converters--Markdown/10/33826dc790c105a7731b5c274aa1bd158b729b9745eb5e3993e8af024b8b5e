@@ -1,12 +1,12 @@
-I"àR<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
+I"èR<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
 
 <!-- more -->
 
 <h2 id="hide-posts-at-homepage">Hide posts at homepage</h2>
 
-<p>Using <code class="highlighter-rouge">hidden: true</code> at post head can hide the post at homepage, but itâ€™s still aviable at archive, and can be reached through link from neighboring posts.</p>
+<p>Using <code class="highlighter-rouge">hidden: true</code> at post head can hide perticular post at homepage, but itâ€™s still visible at archive, and can be reached through link from neighboring posts.</p>
 
-<p>Using <code class="highlighter-rouge">published: false</code> can totally exclude it from website.</p>
+<p>Using <code class="highlighter-rouge">published: false</code> will totally exclude it from website.</p>
 
 <h2 id="image-caption">Image caption</h2>
 

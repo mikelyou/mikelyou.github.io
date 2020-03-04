@@ -6,6 +6,7 @@ date: 2020-01-02 14:00:00
 author: "Mike Lyou"
 header-style: text
 copyright-statement: python-series
+hidden: true
 tags:
   - Python
   - Notes
@@ -47,4 +48,3 @@ for i in range(1, 5+1):
 - [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
 
 ------------
-

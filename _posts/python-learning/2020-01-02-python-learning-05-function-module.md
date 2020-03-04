@@ -6,6 +6,7 @@ date: 2020-01-02 17:00:00
 author: "Mike Lyou"
 header-style: text
 copyright-statement: python-series
+hidden: true
 tags:
   - Python
   - Notes
@@ -66,4 +67,3 @@ if __name__ == '__main__':
 - [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
 
 ------------
-

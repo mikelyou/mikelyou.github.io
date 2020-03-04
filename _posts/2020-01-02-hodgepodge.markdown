@@ -18,9 +18,9 @@ Some tips discoverd. Write down for later usage. You maybe find something not cl
 
 ## Hide posts at homepage
 
-Using `hidden: true` at post head can hide the post at homepage, but it's still aviable at archive, and can be reached through link from neighboring posts.
+Using `hidden: true` at post head can hide perticular post at homepage, but it's still visible at archive, and can be reached through link from neighboring posts.
 
-Using `published: false` can totally exclude it from website.
+Using `published: false` will totally exclude it from website.
 
 ## Image caption
 

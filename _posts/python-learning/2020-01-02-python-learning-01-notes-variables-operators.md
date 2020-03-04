@@ -6,6 +6,7 @@ date: 2020-01-02 13:00:00
 author: "Mike Lyou"
 header-style: text
 copyright-statement: python-series
+hidden: true
 tags:
   - Python
   - Notes
@@ -90,5 +91,3 @@ print(type(e)) # <class 'bool'>
 - [Python-100-Days](https://github.com/jackfrued/Python-100-Days)
 
 -------------
-
-
