@@ -16,6 +16,12 @@ Some tips discoverd. Write down for later usage. You maybe find something not cl
 
 <!-- more -->
 
+## Hide posts at homepage
+
+Using `hidden: true` at post head can hide the post at homepage, but it's still aviable at archive, and can be reached through link from neighboring posts.
+
+Using `published: false` can totally exclude it from website.
+
 ## Image caption
 
 I want to write credit when I use images from elsewhere, which includes author and url. This issue was partly solved by [this post](https://superdevresources.com/image-caption-jekyll/).
