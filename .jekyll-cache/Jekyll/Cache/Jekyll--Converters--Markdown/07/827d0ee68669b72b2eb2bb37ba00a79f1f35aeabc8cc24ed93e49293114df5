@@ -1,4 +1,4 @@
-I"�R<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
+I"zG<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
 
 <!-- more -->
 
@@ -102,26 +102,48 @@
 
 <h2 id="enable-catalog">Enable Catalog</h2>
 
-<p>Trying to add catalog myself for so long, I should found that this function was already achieved in Hux’s blog too. (Orz…) It is written in <code class="highlighter-rouge">post.html</code></p>
+<p>It’s already embaded in Hux’s blog. (<del>But I’ve finding it for long time Orz…</del>)</p>
 
-<p>Just add the follwing line can enable catalog, which floats at right side.</p>
+<p>Just adding <code class="highlighter-rouge">catalog: true</code> can enable catalog. It is written in <code class="highlighter-rouge">post.html</code>.</p>
+
+<p>Catalog style: floats at the right of the page.</p>
+
+<ul>
+  <li>
+    <p>The 1,2,3 heading has the same style, 4,5,6 has the same style.</p>
+  </li>
+  <li>
+    <p>However, when the catalog is too long, a scroll bar will appear, which is not beautiful.</p>
+  </li>
+</ul>
+
+<p>By the way, the method of adding in-post link is using <code class="highlighter-rouge">[Enable Catalog](#enable-catalog)</code> which looks as <a href="#enable-catalog">Enable Catalog</a>.</p>
+
+<h2 id="insert-catalog"><del>Insert catalog</del></h2>
+
+<p>Solved in <a href="#enable-catalog">#Enable Catalog</a>. No need to read this part.</p>
+
+<p>In jekyll, simply write the following line where you want to display the catalog:</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>catalog: true
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>## Catalog
+{:.no_toc} &lt;!--I dont want it itself appears--&gt;
+
+*  
+{:toc}
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<p>However, when the catalog is too long, a scroll bar will appear, which is not beautiful.</p>
-
-<p>And the 1,2,3 heading has the same style, 4-6 has the same as well.</p>
-
-<p>By the way, the style of link inside posts is <a href="#enable-catalog">Enable Catalog</a></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>[Enable Catalog](#enable-catalog)
-</pre></td></tr></tbody></table></code></pre></div></div>
+<p>Reference: <a href="http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html">给JEKYLL的文章添加目录</a></p>
 
 <h2 id="how-to-write-math-using-latex-grammar-mathjax">How to write math using Latex grammar (mathjax)</h2>
 
-<p>It is already embaded in Hux’s blog. Add <code class="highlighter-rouge">mathjax: true</code> to enable it.</p>
+<p>It is already embaded in Hux’s blog.</p>
+
+<p>Add <code class="highlighter-rouge">mathjax: true</code> to enable it.</p>
 
 <p>Note that this effect is different from <code class="highlighter-rouge">## Atom plugin (irrelavent)</code>. That one aims to write math directly in atom, and read, has nothing to do with blog.</p>
 
@@ -136,6 +158,7 @@
 <p><a href="https://mikelyou.com/2016/05/19/test-math/">temp-post-test-math</a></p>
 
 <h2 id="右键管理无关话题">右键管理（无关话题）</h2>
+
 <p>顺路看到的，顺手收拾了一下右键餐单。</p>
 
 <p>有机会也许可以自己总结一下。目前没有看到可以直接收藏的文章。</p>
@@ -157,7 +180,7 @@
 
 <p>If you don’t need the equation numbers, just use <code class="highlighter-rouge">$+symbol+$</code> or <code class="highlighter-rouge">$$the equation$$</code> to have the same outcomes at both Atom and website.</p>
 
-<p>Ref: <a href="https://www.jianshu.com/p/6b54e2eb9ae2">→简书</a></p>
+<p>Reference: <a href="https://www.jianshu.com/p/6b54e2eb9ae2">→简书</a></p>
 
 <p>By the way, I found another article, which proved irrelavent with my concern. It can make you write pure LaTeX document in <code class="highlighter-rouge">Plan Text</code>. The article <a href="https://zhuanlan.zhihu.com/p/35929936">→知乎</a></p>
 
@@ -203,7 +226,7 @@
 <p>为什么上面直接放图了呢？因为我直接这样写的话 <code class="highlighter-rouge">raw</code> 和 <code class="highlighter-rouge">endraw</code> 并不会显示，<br />
 那么要怎么写才能显示上面的代码呢？（<a href="https://zh.moegirl.org/zh-hans/禁止套娃">禁止禁止禁止禁止禁止禁止禁止禁止套娃！</a>）</p>
 
-<p>Ref:</p>
+<p>Reference:</p>
 <ul>
   <li><a href="https://stackoom.com/question/1d89y/在Jekyll的markdown代码块中转义双大括号">在Jekyll的markdown代码块中转义双大括号</a></li>
 </ul>
@@ -290,7 +313,7 @@ comments: true  # defalut == false
 ---
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<p>Ref:</p>
+<p>Reference:</p>
 <ul>
   <li><a href="https://valine.js.org">Valine Official</a></li>
   <li><a href="https://blog.csdn.net/lindexi_gd/article/details/83176116">jekyll 添加 Valine 评论</a> (brief and effective)</li>
@@ -299,112 +322,38 @@ comments: true  # defalut == false
   <li><a href="https://www.oukohou.wang/2018/12/18/notices-for-jekyll-themes-fork/#4-valine评论系统">Valine评论系统</a> (good example)</li>
 </ul>
 
-<h2 id="insert-catalog">Insert catalog</h2>
-
-<p>Solved in <a href="#enable-catalog">#Enable Catalog</a>. No need to read this part.</p>
-
-<p>It is eazy to insert catalog in jekyll.</p>
-
-<p>Simply write the following line where you want to display the catalog:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>*  
-{:toc}
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>If you don’t want some heading to show. Add the following line below that heading.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>## Catalog &lt;!--I dont want it appears in itself--&gt;
-{:.no_toc}
-
-*  
-{:toc}
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Ref:</p>
-<ul>
-  <li><a href="http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html">给JEKYLL的文章添加目录</a></li>
-</ul>
-
 <h2 id="customized-excerpts">Customized excerpts</h2>
 
-<p>The excerpts (or abstract) will appear at the list of posts, and those auto-generated excerpts are not so beautiful.
-Here are two ways to customize the excerpts.</p>
+<p>The excerpts (or abstract) will appear at the list of posts, and by default it is copied from the first some number of words of the post.</p>
 
-<h4 id="way-1-adding-excerpt-variable">Way-1: Adding <code class="highlighter-rouge">excerpt</code> variable.</h4>
+<p>Here are two ways to customize the excerpts.</p>
 
-<p>Adding the following line in <code class="highlighter-rouge">_config.yml</code>.</p>
+<p><strong>One way is using <code class="highlighter-rouge">excerpt</code> variable.</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>excerpt_separator:  '&lt;!-- more --&gt;'
-</pre></td></tr></tbody></table></code></pre></div></div>
+<ol>
+  <li>
+    <p>Adding the line <code class="highlighter-rouge">excerpt_separator:  '&lt;!-- more --&gt;'</code> in <code class="highlighter-rouge">_config.yml</code>.</p>
+  </li>
+  <li>
+    <p>Go to <code class="highlighter-rouge">index.html</code>, <!--  -->change <code class="highlighter-rouge">{{ post.content }}</code> to <code class="highlighter-rouge">{{ post.excerpt }}</code>. <!--  --></p>
+  </li>
+  <li>
+    <p>Then we can do by adding <code class="highlighter-rouge">&lt;!-- more --&gt;</code> in our posts，and the auto-copied excerpts will stop there.</p>
+  </li>
+</ol>
 
-<!--  -->
-<p>Go to <code class="highlighter-rouge">index.html</code>, change <code class="highlighter-rouge">{{ post.content }}</code> to</p>
+<p><strong>The second way is write it directly in post head.</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>{{ post.excerpt }}
-</pre></td></tr></tbody></table></code></pre></div></div>
-<!--  -->
+<ol>
+  <li>
+    <p>We can use <code class="highlighter-rouge">excerpt: Write your excerpt here.</code> at post head directly.</p>
+  </li>
+  <li>
+    <p>And this will disable auto-generated excerpts.</p>
+  </li>
+</ol>
 
-<p>Now we can set the end of auto-generated excerprt by adding <code class="highlighter-rouge">&lt;!-- more --&gt;</code> in our posts，like this:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre>---
-layout:     post
-title:      "Tips"
-&lt;!-- And Many things --&gt;
-#excerpt: Write your excerpt here.
----
-
-The excerpt.
-
-&lt;!-- more --&gt;
-
-The main content.
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>The excerpt shows at homepage will be:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>The excerpt.
-</pre></td></tr></tbody></table></code></pre></div></div>
-<h4 id="way-2-write-it-directly-in-posts">Way-2: Write it directly in posts.</h4>
-
-<p>You may notice there is an <code class="highlighter-rouge">excerpt</code> variable in the head of the example post above.</p>
-
-<p>We can simply write our excerpts there. And this will <strong>disable auto-generated excerpts</strong>.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>excerpt: Write your excerpt here.
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>And it will show like this:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>Write your excerpt here.
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h4 id="trivia">Trivia</h4>
-
-<p>If you declear <code class="highlighter-rouge">excerpt_separator</code> at <code class="highlighter-rouge">_config.yml</code>, and declear <code class="highlighter-rouge">excerpt</code> at head of posts at the same time, the later one will be in effect.</p>
-
-<p>Ref:</p>
+<p>Reference:</p>
 <ul>
   <li><a href="https://blog.coderzh.com/2015/08/15/JekyllReadMore/">使用Jekyll官方的ReadMore摘要功能</a></li>
   <li><a href="https://moonagic.com/configure-the-jekyll-article-list-summary/">Jekyll文章列表摘要设置</a></li>

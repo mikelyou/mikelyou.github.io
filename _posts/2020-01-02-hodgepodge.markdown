@@ -92,26 +92,39 @@ Here is [another method](https://stackoverflow.com/questions/19331362/using-an-i
 
 ## Enable Catalog
 
-Trying to add catalog myself for so long, I should found that this function was already achieved in Hux's blog too. (Orz...) It is written in `post.html`
+It's already embaded in Hux's blog. (~~But I've finding it for long time Orz...~~)
 
-Just add the follwing line can enable catalog, which floats at right side.
+Just adding `catalog: true` can enable catalog. It is written in `post.html`.
+
+Catalog style: floats at the right of the page.
+
+- The 1,2,3 heading has the same style, 4,5,6 has the same style.
+
+- However, when the catalog is too long, a scroll bar will appear, which is not beautiful.
+
+By the way, the method of adding in-post link is using `[Enable Catalog](#enable-catalog)` which looks as [Enable Catalog](#enable-catalog).
+
+## ~~Insert catalog~~
+
+Solved in [#Enable Catalog](#enable-catalog). No need to read this part.
+
+In jekyll, simply write the following line where you want to display the catalog:
+
 ```
-catalog: true
+## Catalog
+{:.no_toc} <!--I dont want it itself appears-->
+
+*  
+{:toc}
 ```
 
-However, when the catalog is too long, a scroll bar will appear, which is not beautiful.
-
-And the 1,2,3 heading has the same style, 4-6 has the same as well.
-
-By the way, the style of link inside posts is [Enable Catalog](#enable-catalog)
-
-```
-[Enable Catalog](#enable-catalog)
-```
+Reference: [给JEKYLL的文章添加目录](http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html)
 
 ## How to write math using Latex grammar (mathjax)
 
-It is already embaded in Hux's blog. Add `mathjax: true` to enable it.
+It is already embaded in Hux's blog.
+
+Add `mathjax: true` to enable it.
 
 Note that this effect is different from `## Atom plugin (irrelavent)`. That one aims to write math directly in atom, and read, has nothing to do with blog.
 
@@ -126,6 +139,8 @@ $$ S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a) $$
 [temp-post-test-math](https://mikelyou.com/2016/05/19/test-math/)
 
 ## 右键管理（无关话题）
+
+
 顺路看到的，顺手收拾了一下右键餐单。
 
 有机会也许可以自己总结一下。目前没有看到可以直接收藏的文章。
@@ -146,7 +161,7 @@ But keep in mind, that this only enables math equations, sentences such as `\beg
 
 If you don't need the equation numbers, just use `$+symbol+$` or `$$the equation$$` to have the same outcomes at both Atom and website.
 
-Ref: [&rarr;简书](https://www.jianshu.com/p/6b54e2eb9ae2)
+Reference: [&rarr;简书](https://www.jianshu.com/p/6b54e2eb9ae2)
 
 By the way, I found another article, which proved irrelavent with my concern. It can make you write pure LaTeX document in `Plan Text`. The article [&rarr;知乎](https://zhuanlan.zhihu.com/p/35929936)
 
@@ -186,7 +201,7 @@ Powered by [vanilla-back-to-top](https://github.com/vfeskov/vanilla-back-to-top/
 为什么上面直接放图了呢？因为我直接这样写的话 `raw` 和 `endraw` 并不会显示，  
 那么要怎么写才能显示上面的代码呢？（[禁止禁止禁止禁止禁止禁止禁止禁止套娃！](https://zh.moegirl.org/zh-hans/禁止套娃)）
 
-Ref:
+Reference:
 - [在Jekyll的markdown代码块中转义双大括号](https://stackoom.com/question/1d89y/在Jekyll的markdown代码块中转义双大括号)
 
 
@@ -248,7 +263,7 @@ comments: true  # defalut == false
 ---
 ```
 
-Ref:
+Reference:
 - [Valine Official](https://valine.js.org)
 - [jekyll 添加 Valine 评论](https://blog.csdn.net/lindexi_gd/article/details/83176116) (brief and effective)
 - [Valine: 独立博客评论系统](https://deserts.io/diy-a-comment-system/)
@@ -256,95 +271,29 @@ Ref:
 - [Valine评论系统](https://www.oukohou.wang/2018/12/18/notices-for-jekyll-themes-fork/#4-valine评论系统) (good example)
 
 
-## Insert catalog
-
-Solved in [#Enable Catalog](#enable-catalog). No need to read this part.
-
-It is eazy to insert catalog in jekyll.
-
-Simply write the following line where you want to display the catalog:
-```
-*  
-{:toc}
-```
-
-If you don't want some heading to show. Add the following line below that heading.
-
-```
-## Catalog <!--I dont want it appears in itself-->
-{:.no_toc}
-
-*  
-{:toc}
-```
-
-Ref:
-- [给JEKYLL的文章添加目录](http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html)
-
-
 ## Customized excerpts
 
-The excerpts (or abstract) will appear at the list of posts, and those auto-generated excerpts are not so beautiful.
+The excerpts (or abstract) will appear at the list of posts, and by default it is copied from the first some number of words of the post.
+
 Here are two ways to customize the excerpts.
 
-#### Way-1: Adding `excerpt` variable.
+**One way is using `excerpt` variable.**
 
-Adding the following line in `_config.yml`.
+1. Adding the line `excerpt_separator:  '<!-- more -->'` in `_config.yml`.
 
-```
-excerpt_separator:  '<!-- more -->'
-```
+2. Go to `index.html`, <!-- {% raw %} -->change `{{ post.content }}` to `{{ post.excerpt }}`. <!-- {% endraw %} -->
 
-<!-- {% raw %} -->
-Go to `index.html`, change `{{ post.content }}` to
+3. Then we can do by adding `<!-- more -->` in our posts，and the auto-copied excerpts will stop there.
 
-```
-{{ post.excerpt }}
-```
-<!-- {% endraw %} -->
 
-Now we can set the end of auto-generated excerprt by adding `<!-- more -->` in our posts，like this:
+**The second way is write it directly in post head.**
 
-```
----
-layout:     post
-title:      "Tips"
-<!-- And Many things -->
-#excerpt: Write your excerpt here.
----
+1. We can use `excerpt: Write your excerpt here.` at post head directly.
 
-The excerpt.
+2. And this will disable auto-generated excerpts.
 
-<!-- more -->
 
-The main content.
-```
-
-The excerpt shows at homepage will be:
-```
-The excerpt.
-```
-#### Way-2: Write it directly in posts.
-
-You may notice there is an `excerpt` variable in the head of the example post above.
-
-We can simply write our excerpts there. And this will **disable auto-generated excerpts**.
-
-```
-excerpt: Write your excerpt here.
-```
-
-And it will show like this:
-
-```
-Write your excerpt here.
-```
-
-#### Trivia
-
-If you declear `excerpt_separator` at `_config.yml`, and declear `excerpt` at head of posts at the same time, the later one will be in effect.
-
-Ref:
+Reference:
 - [使用Jekyll官方的ReadMore摘要功能](https://blog.coderzh.com/2015/08/15/JekyllReadMore/)
 - [Jekyll文章列表摘要设置](https://moonagic.com/configure-the-jekyll-article-list-summary/)
 
