@@ -16,6 +16,102 @@ Some tips discoverd. Write down for later usage. You maybe find something not cl
 
 <!-- more -->
 
+## Details about MathJax (Lable and Cite Equations)
+
+During the writing of thermodynamics study notes, I came up with the need to label a bunch of equations and cite them in derivations. And after some strugle, I found a way to lable and cite equations.
+
+Below is a simple example, below is a equation, with auto-generated equation-number:
+
+\begin{equation}
+  c_P - c_V = \frac{\alpha^2 TV}{\kappa_T N}
+  \tag{2.16}
+  \label{eq-example}
+\end{equation}
+
+And we can cite \eqref{eq-example} in lines.
+
+Here is what we write:
+```
+\begin{equation}
+  c_P - c_V = \frac{\alpha^2 TV}{\kappa_T N}
+  \label{eq-example}
+\end{equation}
+
+And we can cite \eqref{eq-example} in lines.
+```
+
+If this is what you need too, you can continue reading.
+
+With the default configuration of Hux's blog, we can use the following ways to write equations:
+
+- Using `$ x^2 + y^2 = R^2 $` will shows $x^2+y^2=R^2$.
+
+- Using `$$ x^2 + y^2 = R^2 $$` will generate equation in a single line:
+
+$$ x^2 + y^2 = R^2 $$
+
+- Using the following line will generate with equation-number.   
+(Here using `\begin{align} \end{align}` is same as `\begin{equation} \end{equation}`.)
+
+```
+\begin{equation}
+   x^2 + y^2 = R^2
+\end{equation}
+```
+
+\begin{equation}
+   x^2 + y^2 = R^2
+\end{equation}
+
+- Using `\begin{equation\*} \end{equation\*}` will not generate equation-number.
+
+\begin{equation\*}
+   x^2 + y^2 = R^2
+\end{equation\*}
+
+- We can customize equation-number by adding `\tag{eq-aaaaaa}` between `$ $`, `$$ $$` or `\begin{equation} \end{equation}`.
+
+\begin{equation}
+   x^2 + y^2 = R^2
+   \tag{eq-aaaaaa}
+\end{equation}
+
+- We can cite a equation using `\ref{eq-aaaaaa}` or `\eqref{1}` to cite without brackets or with brackets. (Here no example because I've changed confuguration, see below)
+
+Then problem comes. If we use the auto-generated equation-number, we have to look for their numbers before each citation, which will be very boring when an article is very long, and the number will change if we insert new equation between. But if we lable all of them, it would be another tiring work.
+
+If you are familiar with LaTeX writing, you may use `\label{yourlabel}` to label an equation, by doing so, we can cite equations using their label names, and enjoy the convinience of automatical equation numbering.
+
+There are only one change in configuration: adding `useLabelIds: true` in `mathjax_support.html` (you may ignore other differences)
+
+```
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+```
+
+By doing so, we can use `label` instead of `tag` to cite equations (and will disable `tag` at the same time). Now we can use `\label{yourlabel}` to add labels to equations, and cite equations using `\eqref{yourlabel}`.
+
+```
+\begin{equation}
+  c_P - c_V = \frac{\alpha^2 TV}{\kappa_T N}
+  \tag{2.16}              <!--useless-->
+  \label{eq-example}
+\end{equation}
+```
+
+This is the example equation at the very begining. And let's use `\eqref{eq-example}` to cite \eqref{eq-example}. And now using  `\eqref{2.16}` to cite \eqref{2.16} will give you something like `???`.
+
+
+References and More Reading:  
+[1] [MathJax 让你爱上数学公式](https://zhiqiang.org/it/mathjax-make-mathematics-beautiful.html)  
+[2] [Mathjax: TeX Input Processor Options](https://docs.mathjax.org/en/latest/options/input/tex.html?highlight=uselabelid)  
+[3] [Hux Blod: Add MathJax Support](https://github.com/Huxpro/huxpro.github.io/pull/80)
+
 ## Hide posts at homepage
 
 Using `hidden: true` at post head can hide perticular post at homepage, but it's still visible at archive, and can be reached through link from neighboring posts.

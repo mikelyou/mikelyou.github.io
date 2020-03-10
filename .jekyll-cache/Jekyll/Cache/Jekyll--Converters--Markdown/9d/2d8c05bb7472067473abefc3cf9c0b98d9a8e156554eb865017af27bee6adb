@@ -1,6 +1,20 @@
-I"zG<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
+I"¯I<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
 
 <!-- more -->
+
+<h2 id="details-about-mathjax-lable-and-cite-equations">Details about MathJax (Lable and Cite Equations)</h2>
+
+<p>During the writing of thermodynamics study notes, I came up with the need to label a bunch of equations and cite them in derivations. And after some strugle, I found a way to lable and cite equations.</p>
+
+<p>For example, below is a equation, with auto-generated equation-number:</p>
+
+<p>\begin{align}
+  c_P - c_V = \frac{\alpha^2 TV}{\kappa_T N}
+  \tag{2.16}
+  \label{eq-example}
+\end{align}</p>
+
+<p>And we can cite \eqref{eq-example} in lines.</p>
 
 <h2 id="hide-posts-at-homepage">Hide posts at homepage</h2>
 

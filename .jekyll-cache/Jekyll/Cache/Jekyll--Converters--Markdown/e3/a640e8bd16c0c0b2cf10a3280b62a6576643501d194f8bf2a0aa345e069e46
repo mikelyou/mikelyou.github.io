@@ -1,0 +1,502 @@
+I"_[<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
+
+<!-- more -->
+
+<h2 id="details-about-mathjax-lable-and-cite-equations">Details about MathJax (Lable and Cite Equations)</h2>
+
+<p>During the writing of thermodynamics study notes, I came up with the need to label a bunch of equations and cite them in derivations. And after some strugle, I found a way to lable and cite equations.</p>
+
+<p>Below is a simple example, below is a equation, with auto-generated equation-number:</p>
+
+<p>\begin{equation}
+  c_P - c_V = \frac{\alpha^2 TV}{\kappa_T N}
+  \tag{2.16}
+  \label{eq-example}
+\end{equation}</p>
+
+<p>And we can cite \eqref{eq-example} in lines. If this is what you need too, you can continue reading.</p>
+
+<p>With the default configuration of Hux’s blog, we can use the following ways to write equations:</p>
+
+<ul>
+  <li>
+    <p>Using <code class="highlighter-rouge">$ x^2 + y^2 = R^2 $</code> will shows $x^2+y^2=R^2$.</p>
+  </li>
+  <li>
+    <p>Using <code class="highlighter-rouge">$$ x^2 + y^2 = R^2 $$</code> will generate equation in a single line:</p>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display">x^2 + y^2 = R^2</script>
+
+<ul>
+  <li>Using the following line will generate with equation-number. <br />
+(Here using <code class="highlighter-rouge">\begin{align} \end{align}</code> is same as <code class="highlighter-rouge">\begin{equation} \end{equation}</code>.)</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>\begin{equation}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+\end{equation}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>\begin{equation}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+\end{equation}</p>
+
+<ul>
+  <li>Using <code class="highlighter-rouge">\begin{equation\*} \end{equation\*}</code> will not generate equation-number.</li>
+</ul>
+
+<p>\begin{equation*}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+\end{equation*}</p>
+
+<ul>
+  <li>We can customize equation-number by adding <code class="highlighter-rouge">\tag{eq-aaaaaa}</code> between <code class="highlighter-rouge">$ $</code>, <code class="highlighter-rouge">$$ $$</code> or <code class="highlighter-rouge">\begin{equation} \end{equation}</code>.</li>
+</ul>
+
+<p>\begin{equation}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+   \tag{eq-026}
+\end{equation}</p>
+
+<ul>
+  <li>We can cite a equation using <code class="highlighter-rouge">\ref{eq-aaaaaa}</code> or <code class="highlighter-rouge">\eqref{1}</code> to cite without brackets or with brackets. (Here no example because I’ve changed confuguration, see below)</li>
+</ul>
+
+<p>Then problem comes. If we use the auto-generated equation-number, we have to look for their numbers before each citation, which will be very boring when an article is very long, and the number will change if we insert new equation between. But if we lable all of them, it would be another tiring work.</p>
+
+<p>If you are familiar with LaTeX writing, you may use <code class="highlighter-rouge">\label{yourlabel}</code> to label an equation, by doing so, we can cite equations using their label names, and enjoy the convinience of automatical equation numbering.</p>
+
+<p>There are only one change in configuration: adding <code class="highlighter-rouge">useLabelIds: true</code> in <code class="highlighter-rouge">mathjax_support.html</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>&lt;script type="text/x-mathjax-config"&gt;
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+&lt;/script&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>By doing so, we can use <code class="highlighter-rouge">label</code> instead of <code class="highlighter-rouge">tag</code> to cite equations.<br />
+(While, we can still using the <code class="highlighter-rouge">tag</code> to cite, but doing so will disable auto-generated number.)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>\begin{equation}
+  c_P - c_V = \frac{\alpha^2 TV}{\kappa_T N}
+  \tag{2.16}
+  \label{eq-example}
+\end{equation}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This is the example equation at the very begining. And let’s use <code class="highlighter-rouge">\eqref{2.16}</code> to cite \eqref{2.16}, and use <code class="highlighter-rouge">\eqref{eq-example}</code> to cite \eqref{eq-example} again.</p>
+
+<p>If this are other differences with yours, you may ignore it. <del>unless you find it doesn’t work</del></p>
+
+<p>And now we can use <code class="highlighter-rouge">\label{yourlabel}</code> to add labels to equations.</p>
+
+<h2 id="hide-posts-at-homepage">Hide posts at homepage</h2>
+
+<p>Using <code class="highlighter-rouge">hidden: true</code> at post head can hide perticular post at homepage, but it’s still visible at archive, and can be reached through link from neighboring posts.</p>
+
+<p>Using <code class="highlighter-rouge">published: false</code> will totally exclude it from website.</p>
+
+<h2 id="image-caption">Image caption</h2>
+
+<p>I want to write credit when I use images from elsewhere, which includes author and url. This issue was partly solved by <a href="https://superdevresources.com/image-caption-jekyll/">this post</a>.</p>
+
+<p>Includes a new file named <code class="highlighter-rouge">image.html</code> which presents as below</p>
+
+<!--  -->
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre>&lt;!-- _includes/image.html --&gt;
+&lt;div class="image-wrapper" &gt;
+    {% if include.url %}
+    &lt;a href="{{ include.url }}" title="{{ include.title }}" target="_blank"&gt;
+    {% endif %}
+        &lt;img src="{{ site.url }}/{{ include.img }}" alt="{{ include.title }}"/&gt;
+    {% if include.url %}
+    &lt;/a&gt;
+    {% endif %}
+    {% if include.caption %}
+        &lt;p class="image-caption"&gt;{{ include.caption }}&lt;/p&gt;
+    {% endif %}
+&lt;/div&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+<!--  -->
+
+<p>Add new ccs style</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>.image-wrapper {
+    text-align: center;
+
+    .image-caption {
+        color: $grey-color;
+        margin-top: $spacing-unit / 3;
+    }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>And write in post like This
+<!--  --></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>{% include image.html
+            img="images/myimage.jpg"
+            title="title for image"
+            caption="caption for image"
+            url="http://example.com" %}
+</pre></td></tr></tbody></table></code></pre></div></div>
+<!--  -->
+
+<p>Many answers I found think for sure that I know how css files work, but I didn’t. Now I kinda understand.</p>
+
+<p>You can find <code class="highlighter-rouge">bootstrap.css</code> and <code class="highlighter-rouge">bootstrap.min.css</code> under <code class="highlighter-rouge">/css</code> directory. If you use theme from others, there may be another two <code class="highlighter-rouge">sometheme.css</code> and <code class="highlighter-rouge">sometheme.min.css</code>. You can add the css style directly into one of the <code class="highlighter-rouge">*.css</code> file, or create a new <code class="highlighter-rouge">sample.css</code> and add it.</p>
+
+<p>You maybe notice <code class="highlighter-rouge">*.min.css</code> is hard to read, that is because<code class="highlighter-rouge">*.min.css</code> file is minified <code class="highlighter-rouge">*.css</code> file, which removes unassary space and other stuffs. Their functions are identical, but <code class="highlighter-rouge">*.min.css</code> has better efficiency. If you use theme from others, they usually use <code class="highlighter-rouge">*.min.css</code> rather than <code class="highlighter-rouge">*.css</code>. So you when you have made up your <code class="highlighter-rouge">*.css</code> file, you should use <a href="https://cssminifier.com">css minifier</a> or other tools to generate a <code class="highlighter-rouge">*.min.css</code> file.</p>
+
+<p>If you create a new <code class="highlighter-rouge">*.css</code> file, you should also include it in <code class="highlighter-rouge">head.html</code>.
+<!--  --></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>&lt;link rel="stylesheet" href="{{ "/css/sample.min.css" | prepend: site.baseurl }}"&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+<!--  -->
+
+<p>Things have’n solved are:</p>
+
+<ol>
+  <li>Not work for header images.</li>
+  <li>Need to use Liquid.</li>
+</ol>
+
+<p>Here is <a href="https://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll/48137036#48137036">another method</a>, not beautiful though.</p>
+
+<h2 id="enable-catalog">Enable Catalog</h2>
+
+<p>It’s already embaded in Hux’s blog. (<del>But I’ve finding it for long time Orz…</del>)</p>
+
+<p>Just adding <code class="highlighter-rouge">catalog: true</code> can enable catalog. It is written in <code class="highlighter-rouge">post.html</code>.</p>
+
+<p>Catalog style: floats at the right of the page.</p>
+
+<ul>
+  <li>
+    <p>The 1,2,3 heading has the same style, 4,5,6 has the same style.</p>
+  </li>
+  <li>
+    <p>However, when the catalog is too long, a scroll bar will appear, which is not beautiful.</p>
+  </li>
+</ul>
+
+<p>By the way, the method of adding in-post link is using <code class="highlighter-rouge">[Enable Catalog](#enable-catalog)</code> which looks as <a href="#enable-catalog">Enable Catalog</a>.</p>
+
+<h2 id="insert-catalog"><del>Insert catalog</del></h2>
+
+<p>Solved in <a href="#enable-catalog">#Enable Catalog</a>. No need to read this part.</p>
+
+<p>In jekyll, simply write the following line where you want to display the catalog:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>## Catalog
+{:.no_toc} &lt;!--I dont want it itself appears--&gt;
+
+*  
+{:toc}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Reference: <a href="http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html">给JEKYLL的文章添加目录</a></p>
+
+<h2 id="how-to-write-math-using-latex-grammar-mathjax">How to write math using Latex grammar (mathjax)</h2>
+
+<p>It is already embaded in Hux’s blog.</p>
+
+<p>Add <code class="highlighter-rouge">mathjax: true</code> to enable it.</p>
+
+<p>Note that this effect is different from <code class="highlighter-rouge">## Atom plugin (irrelavent)</code>. That one aims to write math directly in atom, and read, has nothing to do with blog.</p>
+
+<p>Using the following line</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$$ S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a) $$
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>to show</p>
+
+<script type="math/tex; mode=display">S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a)</script>
+
+<p><a href="https://mikelyou.com/2016/05/19/test-math/">temp-post-test-math</a></p>
+
+<h2 id="右键管理无关话题">右键管理（无关话题）</h2>
+
+<p>顺路看到的，顺手收拾了一下右键餐单。</p>
+
+<p>有机会也许可以自己总结一下。目前没有看到可以直接收藏的文章。</p>
+
+<p>参考：</p>
+
+<ul>
+  <li><a href="https://blog.csdn.net/win_turn/article/details/75212969">自己就是右键管家</a> （这篇主要讲如何删除<code class="highlighter-rouge">新建</code>餐单内容）</li>
+  <li><a href="https://www.zhihu.com/question/55836048/answer/695435047">zhihu</a>（主要讲主要菜单）</li>
+  <li><a href="https://blog.csdn.net/Sdnu08gis/article/details/99691621">CSDN</a>（讲到如何添加新的<code class="highlighter-rouge">新建</code>）</li>
+</ul>
+
+<h2 id="atom-plugin-irrelavent">Atom plugin (irrelavent)</h2>
+<p>Added <code class="highlighter-rouge">markdown-preview-plus</code> to enable writing math equations with LaTeX. Eg. $\mu$</p>
+
+<script type="math/tex; mode=display">S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a)</script>
+
+<p>But keep in mind, that this only enables math equations, sentences such as <code class="highlighter-rouge">\begin{equation}</code> has no function.</p>
+
+<p>If you don’t need the equation numbers, just use <code class="highlighter-rouge">$+symbol+$</code> or <code class="highlighter-rouge">$$the equation$$</code> to have the same outcomes at both Atom and website.</p>
+
+<p>Reference: <a href="https://www.jianshu.com/p/6b54e2eb9ae2">→简书</a></p>
+
+<p>By the way, I found another article, which proved irrelavent with my concern. It can make you write pure LaTeX document in <code class="highlighter-rouge">Plan Text</code>. The article <a href="https://zhuanlan.zhihu.com/p/35929936">→知乎</a></p>
+
+<h2 id="copyright-statement">Copyright statement</h2>
+
+<p>Since every posts may have different copyright statements. I added the <code class="highlighter-rouge">copyright-statement.html</code>. By this way, it is easier to make statement and make updates. Detailed changes are as below.</p>
+
+<ul>
+  <li>Added <code class="highlighter-rouge">copyright-statement.html</code>.</li>
+  <li>Included <code class="highlighter-rouge">copyright-statement.html</code> in <code class="highlighter-rouge">post.html</code>.</li>
+  <li>New variable at post head. Example:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>copyright-statement: CC BY-NC
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>If not stated, it shows default statement.</p>
+
+<h2 id="back-to-top-button">Back-to-top button</h2>
+
+<p>Powered by <a href="https://github.com/vfeskov/vanilla-back-to-top/tree/v7.2.1">vanilla-back-to-top</a>. Thanks for that.</p>
+
+<ul>
+  <li>
+    <p>Included <code class="highlighter-rouge">back-to-top.html</code> in <code class="highlighter-rouge">default.html</code>.</p>
+  </li>
+  <li>
+    <p>Downloaded <code class="highlighter-rouge">vanilla-back-to-top.min.js</code>.</p>
+  </li>
+</ul>
+
+<h2 id="解决花括号在-jekyll-被识别成-liquid-代码的问题">解决花括号在 Jekyll 被识别成 Liquid 代码的问题</h2>
+
+<p>在解决 <a href="#Add-Valine-comment-block">#Add Valine comment block</a> 时遇到的。</p>
+
+<p>最简单的方法
+<img src="\img\in-post\post-liquid-raw-01.png" alt="" /></p>
+
+<p>更好的方法（？）
+<img src="\img\in-post\post-liquid-raw-02.png" alt="" /></p>
+
+<p>为什么上面直接放图了呢？因为我直接这样写的话 <code class="highlighter-rouge">raw</code> 和 <code class="highlighter-rouge">endraw</code> 并不会显示，<br />
+那么要怎么写才能显示上面的代码呢？（<a href="https://zh.moegirl.org/zh-hans/禁止套娃">禁止禁止禁止禁止禁止禁止禁止禁止套娃！</a>）</p>
+
+<p>Reference:</p>
+<ul>
+  <li><a href="https://stackoom.com/question/1d89y/在Jekyll的markdown代码块中转义双大括号">在Jekyll的markdown代码块中转义双大括号</a></li>
+</ul>
+
+<h2 id="add-valine-comment-block">Add Valine comment block</h2>
+
+<p>I’ve struggled adding Disqus for a long time, but still nothing achieved. Though not decide to give up Disqus, I found Valine, and sucessfully add it to my blog in only one hour.</p>
+
+<p>In <code class="highlighter-rouge">_config.yml</code> write this</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre># Valine settings
+valine_appId: your AppID
+valine_appKey: your AppKey
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In <code class="highlighter-rouge">_post.html</code> write this</p>
+
+<!--  -->
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>{% if site.valine_appId %}
+  {% if page.comments %}
+  &lt;!--valine comment function (mikelyou)--&gt;
+  &lt;script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"&gt;&lt;/script&gt;
+  &lt;script src='//unpkg.com/valine/dist/Valine.min.js'&gt;&lt;/script&gt;
+  &lt;div id="comment"&gt;&lt;/div&gt;
+  &lt;!--valine comment function end (mikelyou)--&gt;
+  {% endif %}
+{% endif %}
+</pre></td></tr></tbody></table></code></pre></div></div>
+<!--  -->
+
+<p>and</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre>{% if site.valine_appId %}
+&lt;!--载入js，在&lt;/body&gt;之前插入即可--&gt;
+&lt;script&gt;
+    var valine = new Valine();
+    valine.init({
+        el:'#comment',
+        appId:'{{site.valine_appId}}',
+        appKey:'{{site.valine_appKey}}',
+        notify:false,
+        path: '{{ page.url }}',
+        placeholder:'Write comments here~'
+    })
+&lt;/script&gt;
+&lt;!--valine comment function end--&gt;
+{% endif %}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>where Disqus and netease_comment code appears.</p>
+
+<p>And we can enable it by insert the following line at the post’s head.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>---
+comments: true  # defalut == false
+---
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Reference:</p>
+<ul>
+  <li><a href="https://valine.js.org">Valine Official</a></li>
+  <li><a href="https://blog.csdn.net/lindexi_gd/article/details/83176116">jekyll 添加 Valine 评论</a> (brief and effective)</li>
+  <li><a href="https://deserts.io/diy-a-comment-system/">Valine: 独立博客评论系统</a></li>
+  <li><a href="https://deserts.io/valine-admin-document/">Valine Admin 配置手册</a></li>
+  <li><a href="https://www.oukohou.wang/2018/12/18/notices-for-jekyll-themes-fork/#4-valine评论系统">Valine评论系统</a> (good example)</li>
+</ul>
+
+<h2 id="customized-excerpts">Customized excerpts</h2>
+
+<p>The excerpts (or abstract) will appear at the list of posts, and by default it is copied from the first some number of words of the post.</p>
+
+<p>Here are two ways to customize the excerpts.</p>
+
+<p><strong>One way is using <code class="highlighter-rouge">excerpt</code> variable.</strong></p>
+
+<ol>
+  <li>
+    <p>Adding the line <code class="highlighter-rouge">excerpt_separator:  '&lt;!-- more --&gt;'</code> in <code class="highlighter-rouge">_config.yml</code>.</p>
+  </li>
+  <li>
+    <p>Go to <code class="highlighter-rouge">index.html</code>, <!--  -->change <code class="highlighter-rouge">{{ post.content }}</code> to <code class="highlighter-rouge">{{ post.excerpt }}</code>. <!--  --></p>
+  </li>
+  <li>
+    <p>Then we can do by adding <code class="highlighter-rouge">&lt;!-- more --&gt;</code> in our posts，and the auto-copied excerpts will stop there.</p>
+  </li>
+</ol>
+
+<p><strong>The second way is write it directly in post head.</strong></p>
+
+<ol>
+  <li>
+    <p>We can use <code class="highlighter-rouge">excerpt: Write your excerpt here.</code> at post head directly.</p>
+  </li>
+  <li>
+    <p>And this will disable auto-generated excerpts.</p>
+  </li>
+</ol>
+
+<p>Reference:</p>
+<ul>
+  <li><a href="https://blog.coderzh.com/2015/08/15/JekyllReadMore/">使用Jekyll官方的ReadMore摘要功能</a></li>
+  <li><a href="https://moonagic.com/configure-the-jekyll-article-list-summary/">Jekyll文章列表摘要设置</a></li>
+</ul>
+
+<h2 id="修复双重滚动条的bug">修复双重滚动条的bug</h2>
+<p>因为Hux自己的博客一直在修改，稳定的模板现在已经比他的博客落后很多个版本，而在这过程中发现甚至已经解决的问题依然存在在模板里。</p>
+
+<p>这时候，有两种方法都可以尝试：一、看看Hux本人最新的模板添加了什么内容，看看版本更新日志，如果版本差异太大，考虑直接复制新模板；二、查看issue里有没有同样的问题。</p>
+
+<p>双重滚动条的问题就在<a href="https://github.com/Huxpro/huxpro.github.io/issues/123">#issues</a>被解决过了，解决方法也很简单。</p>
+
+<h2 id="如何预览草稿">如何预览草稿</h2>
+
+<p>这里直接参见<a href="http://jekyllcn.com/docs/drafts/">官方文档</a>。如果看不太懂，我来翻译一下：</p>
+
+<ul>
+  <li>第一步：你需要在网站根目录下创建一个名为<code class="highlighter-rouge">_drafts</code>文件夹（因为<code class="highlighter-rouge">_posts</code>也是在根目录下的，所以<code class="highlighter-rouge">_drafts</code>理应与<code class="highlighter-rouge">_posts</code>同级），把草稿放入这个文件夹下。</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>|-- _posts/
+|-- _drafts/
+|   |-- a-draft-post.md
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>第二步：运行<code class="highlighter-rouge">jekyll serve --drafts</code>即可（或<code class="highlighter-rouge">jekyll build --drafts</code>）</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>jekyll serve            # 普通的 jekyll 服务器搭建
+jekyll serve --drafts   # 显示草稿的 jekyll 服务器搭建
+</pre></td></tr></tbody></table></code></pre></div></div>
+:ET

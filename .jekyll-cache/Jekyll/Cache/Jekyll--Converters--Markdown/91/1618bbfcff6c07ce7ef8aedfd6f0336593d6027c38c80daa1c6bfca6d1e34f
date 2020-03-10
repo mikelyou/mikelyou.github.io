@@ -1,0 +1,40 @@
+I"�
+<!-- more -->
+
+<h2 class="no_toc" id="catalog">Catalog：</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#批量清除-exif-信息" id="markdown-toc-批量清除-exif-信息">批量清除 EXIF 信息</a></li>
+  <li><a href="#尝试探索-i_optionstxt" id="markdown-toc-尝试探索-i_optionstxt">尝试探索 <code class="highlighter-rouge">i_options.txt</code></a></li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+</ul>
+
+<h2 id="批量清除-exif-信息">批量清除 EXIF 信息</h2>
+
+<p>我们需要在 DropIt 配置文件中新增一个协议，配置如下：</p>
+
+<ol>
+  <li>名称：<code class="highlighter-rouge">批量清除 EXIF 信息</code></li>
+  <li>规则：<code class="highlighter-rouge">*.bmp;*.gif;*.hdr;*.ico;*.jpeg;*.jpg;*.png;*.psd;*.tif;*.tiff;</code></li>
+  <li>操作：<code class="highlighter-rouge">打开方式</code></li>
+  <li>目标程序：<code class="highlighter-rouge">"C:\Program Files\IrfanView\i_view64.exe" "%File%"/jpg_rotate=(0,1,0,1,0,0,1,0)/cmdexit</code></li>
+</ol>
+
+<p>说明一下最后这段命令的意思：<code class="highlighter-rouge">"C:\Program Files\IrfanView\i_view64.exe"</code> 是 IrfanView 的安装目录，如果你使用的是绿色版，需要修改到它的位置。<code class="highlighter-rouge">"%File%"</code> 是 DropIt 内置的变量，意思是「不包含扩展名的文件名」，这些内置变量是可以直接选择的，不用记住。<code class="highlighter-rouge">/jpg_rotate=(0,1,0,1,0,0,1,0)</code> 是 IrfanView 的提供选项，0 和 1 分别代表不同选项的开关。第 7 项的 1 是「清除全部标记」，第 8 项的 0 是「不保留 EXIF」。其他选项的意思可以在 <code class="highlighter-rouge">i_options.txt</code> 中查到，这里不做赘述。<code class="highlighter-rouge">cmdexit</code> 是指执行完操作后，自动关闭窗口。</p>
+
+<p>保存这条协议，把图片拖到 DropIt 的图标上，即可实现批量清除图片 EXIF 了。这个操作会覆盖原图，所以在尝试执行前对照片做好备份。</p>
+
+<p>Ref: <a href="https://sspai.com/post/45532">用 DropIt 打造全自动的 Windows 文件管理体系</a></p>
+
+<h2 id="尝试探索-i_optionstxt">尝试探索 <code class="highlighter-rouge">i_options.txt</code></h2>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://sspai.com/post/45532">用 DropIt 打造全自动的 Windows 文件管理体系</a></li>
+</ul>
+
+<hr />
+<blockquote>
+  <p>Statement:This note is posted only for personal studies and communication, and not allowed to be reproduced unless otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed.</p>
+</blockquote>
+:ET

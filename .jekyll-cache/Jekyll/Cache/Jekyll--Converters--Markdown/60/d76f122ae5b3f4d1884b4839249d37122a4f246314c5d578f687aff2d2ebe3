@@ -1,6 +1,114 @@
-I"xG<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
+I"Y[<p>Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.</p>
 
 <!-- more -->
+
+<h2 id="details-about-mathjax-lable-and-cite-equations">Details about MathJax (Lable and Cite Equations)</h2>
+
+<p>During the writing of thermodynamics study notes, I came up with the need to label a bunch of equations and cite them in derivations. And after some strugle, I found a way to lable and cite equations.</p>
+
+<p>Below is a simple example, below is a equation, with auto-generated equation-number:</p>
+
+<p>\begin{equation}
+  c_P - c_V = \frac{\alpha^2 TV}{\kappa_T N}
+  \tag{2.16}
+  \label{eq-example}
+\end{equation}</p>
+
+<p>And we can cite \eqref{eq-example} in lines. If this is what you need too, you can continue reading.</p>
+
+<p>With the default configuration of Hux’s blog, we can use the following ways to write equations:</p>
+
+<ul>
+  <li>
+    <p>Using <code class="highlighter-rouge">$ x^2 + y^2 = R^2 $</code> will shows $x^2+y^2=R^2$.</p>
+  </li>
+  <li>
+    <p>Using <code class="highlighter-rouge">$$ x^2 + y^2 = R^2 $$</code> will generate equation in a single line:</p>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display">x^2 + y^2 = R^2</script>
+
+<ul>
+  <li>Using the following line will generate with equation-number. <br />
+(Here using <code class="highlighter-rouge">\begin{align} \end{align}</code> is same as <code class="highlighter-rouge">\begin{equation} \end{equation}</code>.)</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>\begin{equation}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+\end{equation}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>\begin{equation}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+\end{equation}</p>
+
+<ul>
+  <li>Using <code class="highlighter-rouge">\begin{equation\*} \end{equation\*}</code> will not generate equation-number.</li>
+</ul>
+
+<p>\begin{equation*}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+\end{equation*}</p>
+
+<ul>
+  <li>We can customize equation-number by adding <code class="highlighter-rouge">\tag{eq-026}</code> between <code class="highlighter-rouge">$ $</code>, <code class="highlighter-rouge">$$ $$</code> or <code class="highlighter-rouge">\begin{equation} \end{equation}</code>.</li>
+</ul>
+
+<p>\begin{equation}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+   \tag{eq-026}
+\end{equation}</p>
+
+<ul>
+  <li>We can cite a equation using <code class="highlighter-rouge">\ref{eq-026}</code> or <code class="highlighter-rouge">\eqref{1}</code> to cite without brackets or with brackets. (Here no example because I’ve changed confuguration, see below)</li>
+</ul>
+
+<p>Then problem comes. If we use the auto-generated equation-number, we have to look for their numbers before each citation, which will be very boring when an article is very long, and the number will change if we insert new equation between. But if we lable all of them, it would be another tiring work.</p>
+
+<p>If you are familiar with LaTeX writing, you may use <code class="highlighter-rouge">\label{yourlabel}</code> to label an equation, by doing so, we can cite equations using their label names, and enjoy the convinience of automatical equation numbering.</p>
+
+<p>There are only one change in configuration: adding <code class="highlighter-rouge">useLabelIds: true</code> in <code class="highlighter-rouge">mathjax_support.html</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>&lt;script type="text/x-mathjax-config"&gt;
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+&lt;/script&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>By doing so, we can use <code class="highlighter-rouge">label</code> instead of <code class="highlighter-rouge">tag</code> to cite equations.<br />
+(While, we can still using the <code class="highlighter-rouge">tag</code> to cite, but doing so will disable auto-generated number.)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>\begin{equation}
+  c_P - c_V = \frac{\alpha^2 TV}{\kappa_T N}
+  \tag{2.16}
+  \label{eq-example}
+\end{equation}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This is the example equation at the very begining. And let’s use <code class="highlighter-rouge">\eqref{2.16}</code> to cite \eqref{2.16}, and use <code class="highlighter-rouge">\eqref{eq-example}</code> to cite \eqref{eq-example} again.</p>
+
+<p>If this are other differences with yours, you may ignore it. <del>unless you find it doesn’t work</del></p>
+
+<p>And now we can use <code class="highlighter-rouge">\label{yourlabel}</code> to add labels to equations.</p>
 
 <h2 id="hide-posts-at-homepage">Hide posts at homepage</h2>
 
@@ -331,14 +439,11 @@ comments: true  # defalut == false
 <p><strong>One way is using <code class="highlighter-rouge">excerpt</code> variable.</strong></p>
 
 <ol>
-  <li>Adding the line <code class="highlighter-rouge">excerpt_separator:  '&lt;!-- more --&gt;'</code> in <code class="highlighter-rouge">_config.yml</code>.</li>
-</ol>
-
-<!--  -->
-<ol>
   <li>
-    <p>Go to <code class="highlighter-rouge">index.html</code>, change <code class="highlighter-rouge">{{ post.content }}</code> to <code class="highlighter-rouge">{{ post.excerpt }}</code>.
-<!--  --></p>
+    <p>Adding the line <code class="highlighter-rouge">excerpt_separator:  '&lt;!-- more --&gt;'</code> in <code class="highlighter-rouge">_config.yml</code>.</p>
+  </li>
+  <li>
+    <p>Go to <code class="highlighter-rouge">index.html</code>, <!--  -->change <code class="highlighter-rouge">{{ post.content }}</code> to <code class="highlighter-rouge">{{ post.excerpt }}</code>. <!--  --></p>
   </li>
   <li>
     <p>Then we can do by adding <code class="highlighter-rouge">&lt;!-- more --&gt;</code> in our posts，and the auto-copied excerpts will stop there.</p>
