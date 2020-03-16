@@ -1,4 +1,4 @@
-I"�m<!-- more -->
+I"�o<!-- more -->
 
 <!--
 **注意：这是一个临时笔记，编辑过后应及时保存到本地。**
@@ -13,8 +13,6 @@
 <blockquote>
   <p>This note is still being editing, so you may see some poorly written parts. Let me know if you notice any errors or typos, thanks so much.</p>
 </blockquote>
-
-<h1 id="thermodynamics">Thermodynamics</h1>
 
 <h2 id="1---macroscopic-thermodynamics">1 - Macroscopic Thermodynamics</h2>
 
@@ -75,14 +73,16 @@
 
 <h4 id="conjugate-variables">Conjugate Variables</h4>
 
-<p>Each extensive variable has a conjugate intensive variable.</p>
+<p>Many extensive variable has a conjugate intensive variable. $(S,T),(-P,V),(\mu,N)$</p>
+
+<p>$\color{blue}{\text{(needs extention)}}$</p>
 
 <hr />
 
 <h2 id="2---laws-of-thermodynamics">2 - Laws of Thermodynamics</h2>
 
 <blockquote>
-  <p>众所周知，热力学三大定律一共有四条（还有第零定律）。</p>
+  <p><del>众所周知，热力学三大定律一共有四条（还有第零定律）。</del></p>
 </blockquote>
 
 <h3 id="21-zeroth-law">2.1 Zeroth Law</h3>
@@ -143,8 +143,6 @@ approaches a universal constant (usually taken as zero) as the absolute temperat
 
 <script type="math/tex; mode=display">S_T = S_{298.15} + \int_{298.15}^{T} \frac{C_{p}}{T} d T</script>
 
-<hr />
-
 <h2 id="3---conditions-of-equilibrium">3 - Conditions of Equilibrium</h2>
 
 <h3 id="equilibrium-states">Equilibrium States</h3>
@@ -157,81 +155,65 @@ approaches a universal constant (usually taken as zero) as the absolute temperat
 
 <p>The <strong>equilibrium states</strong> are states in which <strong>entropy is maximized</strong> for the given constraints.</p>
 
-<h2 id="1-of-ims-classes">#1 of Im’s classes</h2>
-
-<h3 id="g-as-a-dunction-of-temperature">$G$ as a dunction of temperature</h3>
-
-<script type="math/tex; mode=display">\because C_{P}=\left(\frac{\partial Q}{\partial T}\right)_ {P}=\left(\frac{\partial H}{\partial T}\right)_ {P}</script>
-
-<script type="math/tex; mode=display">\therefore H=H_0 +\int C_ P dT</script>
-
-<script type="math/tex; mode=display">S=\int_0^T d S=\int_0^T \frac{d Q}{T}=\int_0^T \frac{C_P}{T} d T</script>
-
-<script type="math/tex; mode=display">G=H-TS</script>
-
-<p><script type="math/tex">% <![CDATA[
-\left(\frac{\partial G}{\partial T}\right)_ P =-S < 0 %]]></script>
-<script type="math/tex">% <![CDATA[
-\left(\frac{\partial^{2} G}{\partial T^{2}}\right)_ {P}=-\left(\frac{\partial S}{\partial T}\right)_ {P}=-\frac{C_{P}}{T} < 0 %]]></script></p>
-
-<p>We should be able to draw sketches about $H$, $S$, $G$.</p>
-
-<p>Need to add picture later.</p>
-
-<h3 id="order-of-phase-transitionstrasnformations">Order of Phase Transitions(Trasnformations)</h3>
-
-<p>Ehrenfest’s defination:</p>
-
-<p>For s $n$-th order transformation, $\large \frac{\partial^{n-1} G}{\partial T^{n-1}}$ is continious, and
-$\large \frac{\partial^{n} G}{\partial T^{n}}$ is discontinious.</p>
-
-<h3 id="thermodynamic-driving-force-of-transformation">Thermodynamic Driving Force of Transformation</h3>
-<p><script type="math/tex">\large \color{red} {\text{Need to do}}</script></p>
+<p>$\color{blue}{\text{(needs extention)}}$</p>
 
 <h2 id="5---second-derivatives-of-fundamental-equation-maxwell-relations-stability">5 - Second Derivatives of Fundamental Equation, Maxwell Relations, Stability</h2>
 
-<h3 id="useful-second-derivatives">Useful Second Derivatives</h3>
+<h3 id="51-useful-second-derivatives">5.1 Useful Second Derivatives</h3>
 
 <p>These <del>four</del> five useful second derivatives should be remembered. They can sometimes serve as known values.</p>
 
 <ol>
-  <li>
-    <p>Cofficient of thermal expansion
-<script type="math/tex">\alpha \equiv \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_ {P} = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_ {P, N} ~ K^{-1}</script></p>
-  </li>
-  <li>
-    <p>Isothermal compressibility
-<script type="math/tex">\kappa_T~\text{or}~\beta  \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {T} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {T, N} ~atm^{-1}</script></p>
-  </li>
-  <li>
-    <p>Adiabatic compressibility
-<script type="math/tex">\kappa_S \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {S} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {S, N} ~atm^{-1}</script></p>
-  </li>
-  <li>
-    <p>Molar heat capacity at constant pressure
-<script type="math/tex">c_P \equiv T \left(\frac{\partial s}{\partial T}\right)_ {P} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {P, N} ~J\cdot mol^{-1} \cdot K^{-1}</script></p>
-  </li>
-  <li>
-    <p>Molar heat capacity at constant volume
-<script type="math/tex">c_V \equiv T \left(\frac{\partial s}{\partial T}\right)_ {V} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {V, N} ~J\cdot mol^{-1} \cdot K^{-1}</script></p>
-  </li>
+  <li>Cofficient of thermal expansion</li>
 </ol>
+
+<script type="math/tex; mode=display">\alpha \equiv \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_ {P} = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_ {P, N} ~ K^{-1}</script>
+
+<ol>
+  <li>Isothermal compressibility</li>
+</ol>
+
+<script type="math/tex; mode=display">\kappa_T~\text{or}~\beta  \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {T} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {T, N} ~atm^{-1}</script>
+
+<ol>
+  <li>Adiabatic compressibility</li>
+</ol>
+
+<script type="math/tex; mode=display">\kappa_S \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {S} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {S, N} ~atm^{-1}</script>
+
+<ol>
+  <li>Molar heat capacity at constant pressure</li>
+</ol>
+
+<script type="math/tex; mode=display">c_P \equiv T \left(\frac{\partial s}{\partial T}\right)_ {P} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {P, N} ~J\cdot mol^{-1} \cdot K^{-1}</script>
+
+<ol>
+  <li>Molar heat capacity at constant volume</li>
+</ol>
+
+<script type="math/tex; mode=display">c_V \equiv T \left(\frac{\partial s}{\partial T}\right)_ {V} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {V, N} ~J\cdot mol^{-1} \cdot K^{-1}</script>
 
 <p>Ps. We can notice that they are partial derivatives of $V$ and $S$ with respect to $T$ and $V$ multiplied by other functions.</p>
 
 <blockquote>
-  <p><strong>Attention:</strong> Not confuse $c_V$ with $C_V$ (which we nearly won’t see).
-$c_V$ is <em>molar heat capacity</em>: $\Delta Q = n c_V \Delta T$ (where $n$ is mole number);
-$C_V$ is <em>specific heat</em>: $\Delta Q = m c_V \Delta T$ (where $m$ is mass)
-They are related by  Avogadro number $N_A$
-<script type="math/tex">c_V =  C_V / N_A</script></p>
+  <p><strong>Attention:</strong> Not confuse $c_V$ with $C_V$ (which we nearly won’t see).</p>
+
+  <p>$c_V$ is <em>molar heat capacity</em>: $\Delta Q = n c_V \Delta T$ (where $n$ is mole number);</p>
+
+  <p>$C_V$ is <em>specific heat</em>: $\Delta Q = m c_V \Delta T$ (where $m$ is mass)</p>
+
+  <p>They are related by  Avogadro number $N_A$</p>
+
+  <script type="math/tex; mode=display">c_V =  C_V / N_A</script>
 </blockquote>
 
-<p>Additional relations (should be able to <a href="http://showard.sdsmt.edu/MET320/Cp-Cv.pdf">derive them</a>):
-<script type="math/tex">c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}</script>
-<script type="math/tex">\kappa_{T}=\kappa_{S}+\frac{T V \alpha^{2}}{N c_{P}}</script></p>
+<p>Additional relations (should be able to <a href="http://showard.sdsmt.edu/MET320/Cp-Cv.pdf">derive them</a>):</p>
 
-<h6 id="derive-c_pc_vfract-v-alpha2n-kappa_t">Derive $c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}$</h6>
+<script type="math/tex; mode=display">c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}</script>
+
+<script type="math/tex; mode=display">\kappa_{T}=\kappa_{S}+\frac{T V \alpha^{2}}{N c_{P}}</script>
+
+<h4 id="derive-c_pc_vfract-v-alpha2n-kappa_t">Derive $c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}$</h4>
 <p>By defination, we have</p>
 
 <script type="math/tex; mode=display">c_P - c_V = \frac{T}{N} \cdot \left[\left(\frac{\partial S}{\partial T}\right)_ {P, N} -\left(\frac{\partial S}{\partial T}\right)_ {V, N} \right]</script>
@@ -262,10 +244,13 @@ They are related by  Avogadro number $N_A$
 
 <p>Q.E.D	(What is <a href="https://en.wikipedia.org/wiki/Q.E.D.">Q.E.D</a>?)</p>
 
-<h3 id="maxwell-relations">Maxwell Relations</h3>
-<h6 id="how-to-derive-them">How to derive them</h6>
-<p>Derivation of Maxwell relations is simple. As an example, we have
-<script type="math/tex">dU=T dS - PdV + \mu dN</script></p>
+<h3 id="52-maxwell-relations">5.2 Maxwell Relations</h3>
+
+<h4 id="how-to-derive-them">How to derive them</h4>
+
+<p>Derivation of Maxwell relations is simple. As an example, we have</p>
+
+<script type="math/tex; mode=display">dU=T dS - PdV + \mu dN</script>
 
 <p>And</p>
 
@@ -275,30 +260,36 @@ They are related by  Avogadro number $N_A$
 
 <script type="math/tex; mode=display">-\left(\frac{\partial P}{\partial S}\right)_ {V, N_{1}, N_{2}, \ldots}=\left(\frac{\partial T}{\partial V}\right)_ {S, N_{1}, N_{2}, \ldots}</script>
 
-<h6 id="how-to-remember">How to remember:</h6>
+<h4 id="how-to-remember">How to remember:</h4>
+
 <ol>
-  <li>
-    <p>Each pair of conjugate functions, e.g. $(S,T)$, sits at diagonal position.
-<script type="math/tex">-\left(\frac{\partial  \color{green}{P}}{\partial \color{red}{S}}\right)_ {V, N}=\left(\frac{\partial  \color{red}{T}}{\partial \color{green}{V}}\right)_ {S, N}</script></p>
-  </li>
-  <li>
-    <p>If $P$ involved, add a negative sign.<br />
-Because the conjugate $(-P,V)$ has a negative sign.
-<script type="math/tex">\color{red}- \left(\frac{\partial P}{\partial {S}}\right)_ { {V}, N}=\left(\frac{\partial T}{\partial {V}}\right)_ { {S}, N}</script></p>
-  </li>
-  <li>
-    <p>If not all denominator are intensive (or all molecule are extensive) (e.g.$\partial T/ \partial V$), each exception gives one negative sign.
-<script type="math/tex">\color{red}{-}\left(\frac{\partial \color{red}{S}}{\partial N}\right)_ {T, V}=\left(\frac{\partial \mu}{\partial \color{red}{T}}\right)_ {V, N}</script></p>
-  </li>
-  <li>
-    <p>Each molecule is the constant of the derivitiave across the equal sign.
-<script type="math/tex">-\left(\frac{\partial P}{\partial \color{red}{S}}\right)_ {\color{red}{V}, N}=\left(\frac{\partial T}{\partial \color{red}{V}}\right)_ {\color{red}{S}, N}</script></p>
-  </li>
+  <li>Each pair of conjugate functions, e.g. $(S,T)$, sits at diagonal position.</li>
 </ol>
+
+<script type="math/tex; mode=display">-\left(\frac{\partial  \color{green}{P}}{\partial \color{red}{S}}\right)_ {V, N}=\left(\frac{\partial  \color{red}{T}}{\partial \color{green}{V}}\right)_ {S, N}</script>
+
+<ol>
+  <li>If $P$ involved, add a negative sign.<br />
+Because the conjugate $(-P,V)$ has a negative sign.</li>
+</ol>
+
+<script type="math/tex; mode=display">\color{red}- \left(\frac{\partial P}{\partial {S}}\right)_ { {V}, N}=\left(\frac{\partial T}{\partial {V}}\right)_ { {S}, N}</script>
+
+<ol>
+  <li>If not all denominator are intensive (or all molecule are extensive) (e.g.$\partial T/ \partial V$), each exception gives one negative sign.</li>
+</ol>
+
+<script type="math/tex; mode=display">\color{red}{-}\left(\frac{\partial \color{red}{S}}{\partial N}\right)_ {T, V}=\left(\frac{\partial \mu}{\partial \color{red}{T}}\right)_ {V, N}</script>
+
+<ol>
+  <li>Each molecule is the constant of the derivitiave across the equal sign.</li>
+</ol>
+
+<script type="math/tex; mode=display">-\left(\frac{\partial P}{\partial \color{red}{S}}\right)_ {\color{red}{V}, N}=\left(\frac{\partial T}{\partial \color{red}{V}}\right)_ {\color{red}{S}, N}</script>
 
 <p>You can find your own way to remember this, which is easiest to remember for you is the best.</p>
 
-<h3 id="jacobian">Jacobian</h3>
+<h3 id="53-jacobian">5.3 Jacobian</h3>
 
 <p>See the supplymentary document on Jacobians to help understand, which is more mathematical. Here we just list the results, which is enough for solving problems.</p>
 
@@ -311,23 +302,26 @@ Because the conjugate $(-P,V)$ has a negative sign.
 
 <p>Jacobians is very useful when we have e.g. $G,S$ as constant, and we want to bring it to demoninators, so that we can either expand them or get the useful second derivatives.</p>
 
-<h3 id="reduce-the-derivatives-ep4">Reduce the Derivatives (EP4)</h3>
+<h3 id="54-reduce-the-derivatives-ep4">5.4 Reduce the Derivatives (EP4)</h3>
 
-<p>General rules:</p>
+<p><strong>General rules:</strong></p>
 
 <ol>
-  <li>
-    <p>Try to put extensive variables at molecule, and intensive variables at denominator. For example:
-<script type="math/tex">\left( \frac{\partial P}{\partial U} \right) _ {G,N} 	\rightarrow \left[ \left( \frac{\partial U}{\partial P} \right) _ {G,N} \right] ^ {-1}</script></p>
-  </li>
-  <li>
-    <p>Try to put expandable functions $(U,F,H,G)$ at molecule and expand them.
-<script type="math/tex">\because dU=T dS-P dV +\mu dN</script>
-<script type="math/tex">\therefore \left[\left(\frac{\partial U}{\partial P}\right)_ {G,N}\right]^{-1} = \left[T\left(\frac{\partial S}{\partial P}\right)_ {G, N}-P\left(\frac{\partial V}{\partial P}\right)_ {G, N}\right]^{-1}</script></p>
-  </li>
-  <li>
-    <p>Make use of the <strong>jacobians</strong> and <strong>Maxwell relationships</strong> when you need.</p>
-  </li>
+  <li>Try to put extensive variables at molecule, and intensive variables at denominator. For example:</li>
+</ol>
+
+<script type="math/tex; mode=display">\left( \frac{\partial P}{\partial U} \right) _ {G,N} 	\rightarrow \left[ \left( \frac{\partial U}{\partial P} \right) _ {G,N} \right] ^ {-1}</script>
+
+<ol>
+  <li>Try to put expandable functions $(U,F,H,G)$ at molecule and expand them.</li>
+</ol>
+
+<script type="math/tex; mode=display">\because dU=T dS-P dV +\mu dN</script>
+
+<script type="math/tex; mode=display">\therefore \left[\left(\frac{\partial U}{\partial P}\right)_ {G,N}\right]^{-1} = \left[T\left(\frac{\partial S}{\partial P}\right)_ {G, N}-P\left(\frac{\partial V}{\partial P}\right)_ {G, N}\right]^{-1}</script>
+
+<ol>
+  <li>Make use of the <strong>jacobians</strong> and <strong>Maxwell relationships</strong> when you need.</li>
 </ol>
 
 <script type="math/tex; mode=display">\left(\frac{\partial S}{\partial P}\right)_ {G, N} = \frac{\left(\frac{\partial G}{\partial P}\right)_ {S, N}}{\left(\frac{\partial G}{\partial S}\right)_ {P, N}}</script>
@@ -335,27 +329,31 @@ Because the conjugate $(-P,V)$ has a negative sign.
 <script type="math/tex; mode=display">\left(\frac{\partial S}{\partial P}\right)_ {T, N}=\left(\frac{\partial V}{\partial T}\right)_ {P, N}=-\alpha V</script>
 
 <ol>
-  <li>
-    <p>Be sure to remember all <del>four</del>  five second derivatives clearly.
-<script type="math/tex">\alpha, \kappa_T ~(\text{or}~ \beta),\kappa_S, c_V, c_P</script></p>
-  </li>
-  <li>
-    <p>Plug in all results back and simplify it.</p>
-  </li>
+  <li>Be sure to remember all <del>four</del>  five second derivatives clearly.</li>
 </ol>
 
-<p>Ps. Not to confuse with this two:</p>
+<script type="math/tex; mode=display">\alpha, \kappa_T ~(\text{or}~ \beta),\kappa_S, c_V, c_P</script>
 
-<p><script type="math/tex">\left(\frac{\partial \color{red}{T}}{\partial X}\right)_ {\color{red}{T}, N} \equiv 0</script>
-<script type="math/tex">\left(\frac{\partial \color{red}{T}}{\partial \color{red}{T}}\right)_ {X, N} \equiv 1</script></p>
+<ol>
+  <li>Plug in all results back and simplify it.</li>
+</ol>
 
-<h3 id="stability">Stability</h3>
+<blockquote>
+  <p>Ps. Not to confuse with this two:</p>
+
+  <script type="math/tex; mode=display">\left(\frac{\partial \color{red}{T}}{\partial X}\right)_ {\color{red}{T}, N} \equiv 0, \quad
+\left(\frac{\partial \color{red}{T}}{\partial \color{red}{T}}\right)_ {X, N} \equiv 1</script>
+</blockquote>
+
+<h3 id="55-stability">5.5 Stability</h3>
+<p>…</p>
 
 <h2 id="9---multicomponent-homogeneous-nonreacting-systems-solution">9 - Multicomponent Homogeneous Nonreacting Systems: <em>Solution</em></h2>
 
-<h3 id="partial-molar-properties-pmp">Partial Molar Properties (PMP)</h3>
+<h3 id="91-partial-molar-properties-pmp">9.1 Partial Molar Properties (PMP)</h3>
 
 <p>Consider a multcomponent homogeneous system, with $c$ different components, each has mole number of $n_k ~ (k=1,2,…,c)$.</p>
+
 <blockquote>
   <p><strong>Attention:</strong>$~ ~ ~$ $n_k$ is mole number, not confuse with $N_k$ which is partical number. <script type="math/tex">N_k= n_k \cdot N_A(\text{Avogadro number}).</script></p>
 </blockquote>
@@ -382,7 +380,7 @@ Because the conjugate $(-P,V)$ has a negative sign.
 
 <script type="math/tex; mode=display">\boxed{\sum_{n_{k}=1}^{c} n_{k} d\overline{B_{k}} =0}</script>
 
-<h3 id="ims-class">Im’s Class</h3>
+<h3 id="92-solution-ims-class">9.2 Solution (Im’s Class)</h3>
 
 <p>Consider a solution made of two components:</p>
 
@@ -396,8 +394,9 @@ Because the conjugate $(-P,V)$ has a negative sign.
 
 <p>In which $G^o$ is Gibbs free energy of pure matter $\color{red}{(needs~ varify)}$, $\overline{G_A}$ is partial molar Gibbs free energy. They are both chemical potential, but little different.</p>
 
-<p><script type="math/tex">G^o=\mu_A^o</script>
-<script type="math/tex">\overline{G_A}=\frac{\partial G_{solution}}{\partial n_A}=\mu_A</script></p>
+<script type="math/tex; mode=display">G^o=\mu_A^o</script>
+
+<script type="math/tex; mode=display">\overline{G_A}=\frac{\partial G_{solution}}{\partial n_A}=\mu_A</script>
 
 <blockquote>
   <p><strong>Attention:</strong>
@@ -441,11 +440,11 @@ In multicomponent system $\mu_i = \partial G / \partial n_i $ for component $i$.
 
 <script type="math/tex; mode=display">G_{sol} = H_{sol} - T \cdot S_{sol}</script>
 
-<script type="math/tex; mode=display">G_{sol} = x_A \overline G_A + x_B \overline G_B \tag{*}</script>
+<script type="math/tex; mode=display">G_{sol} = x_A \overline G_A + x_B \overline G_B \tag{* }</script>
 
-<script type="math/tex; mode=display">G_{sol} = \Delta G_{mix} + G_{seperate}</script>
+<script type="math/tex; mode=display">G_{sol} = \Delta G_{mix} + G_ {seperate}</script>
 
-<p>Now we can construct the curve of $G_{sol}$ for the first step.</p>
+<p>Now we can construct the curve of $G_ {sol}$ for the first step.</p>
 
 <table>
   <tbody>
@@ -456,7 +455,9 @@ In multicomponent system $\mu_i = \partial G / \partial n_i $ for component $i$.
   </tbody>
 </table>
 
-<p>From $(*)$ we can derive</p>
+<hr />
+
+<p>From $(* )$ we can derive</p>
 
 <script type="math/tex; mode=display">\frac{dG_{sol}}{dx_B} = - \overline G_A + \overline G_B</script>
 
@@ -475,6 +476,7 @@ In multicomponent system $\mu_i = \partial G / \partial n_i $ for component $i$.
   </tbody>
 </table>
 
+<hr />
 <p>Plugging in activity $a$</p>
 
 <script type="math/tex; mode=display">\overline G_A = G_A^o +RT \ln a_A  = \mu_A</script>
@@ -515,7 +517,7 @@ Then we can conclude $\Delta G_{mix} = RT \left(x_A \ln a_A + x_B  \ln a_B \righ
   </tbody>
 </table>
 
-<h3 id="binary-dilute-solution">Binary Dilute solution</h3>
+<h3 id="93-binary-dilute-solution">9.3 Binary Dilute solution</h3>
 <p>The solvent obeys Raoult’s Law</p>
 
 <script type="math/tex; mode=display">\lim_{X_A \rightarrow 1} a_A = X_A</script>
@@ -530,7 +532,7 @@ Then we can conclude $\Delta G_{mix} = RT \left(x_A \ln a_A + x_B  \ln a_B \righ
 
 <!--E:\GitHub\mikelyou.github.io\img\in-post\post-thermodynamics\binary_dilute_solution.jpg-->
 
-<h3 id="ideal-solution">Ideal Solution</h3>
+<h3 id="94-ideal-solution">9.4 Ideal Solution</h3>
 <p>Assumption of ideal solution:
 <script type="math/tex">\boxed{ a_A = x_A, a_B = x_B} \quad (\text{i.e. } \gamma_A =\gamma_B =1)</script></p>
 
@@ -565,7 +567,7 @@ Then we can conclude $\Delta G_{mix} = RT \left(x_A \ln a_A + x_B  \ln a_B \righ
   </tbody>
 </table>
 
-<h3 id="regular-solution">Regular Solution</h3>
+<h3 id="95-regular-solution">9.5 Regular Solution</h3>
 
 <p>The difference of regular solution to ideal solution is, the ehthalpy of regular solution is nonzero. $\color{red}{\text{needs varification}}$</p>
 
@@ -581,9 +583,11 @@ Then we can conclude $\Delta G_{mix} = RT \left(x_A \ln a_A + x_B  \ln a_B \righ
 <p>Regular solution will simplify to ideal solution when $\Omega = 0$</p>
 
 <blockquote>
-  <p><em>*Attention: Nomenclature **
-In Im’s class, $\Omega$  is *regular solution parameter</em>, $\Omega = N_a \cdot z \left[ \epsilon_{AB} - \frac{1}{2} (\epsilon_{AA}+\epsilon_{BB})\right]$, $\omega$ is <em>configurational entropy</em>, $\omega = \frac{(N_A+N_A)!}{N_A! N_B!}$ .
-While in Barmak’s class, the regular solution parameter is $a_0$, and configurational entropy is $\Omega$. Pay attention to this.</p>
+  <p><strong>Attention: Nomenclature</strong></p>
+
+  <p>In Im’s class, $\Omega$  is <strong>regular solution parameter</strong>, $\Omega = N_a \cdot z \left[ \epsilon_{AB} - \frac{1}{2} (\epsilon_{AA}+\epsilon_{BB})\right]$, $\omega$ is <strong>configurational entropy</strong>, $\omega = \frac{(N_A+N_A)!}{N_A! N_B!}$ .</p>
+
+  <p>While in Barmak’s class, the regular solution parameter is $a_0$, and configurational entropy is $\Omega$. Pay attention to this.</p>
 </blockquote>
 
 <hr />
@@ -601,7 +605,7 @@ While in Barmak’s class, the regular solution parameter is $a_0$, and configur
 
 <p><img src="./regular_solution.jpg" alt="Alt text" /></p>
 
-<h3 id="nonregularsubregular-or-real-solution">Nonregular(Subregular or Real) Solution</h3>
+<h3 id="96-nonregularsubregular-or-real-solution">9.6 Nonregular(Subregular or Real) Solution</h3>
 
 <p>For component $A$, we have</p>
 
@@ -621,4 +625,34 @@ While in Barmak’s class, the regular solution parameter is $a_0$, and configur
 \Delta V_{mix}^{xs,~real} = \Delta V_{mix}</script>
 
 <p><img src="./nonregular_solution.jpg" alt="Alt text" /></p>
+
+<h2 id="x---unclassfied-notes-from-ims-class">X - Unclassfied Notes from Im’s class</h2>
+
+<h3 id="g-as-a-dunction-of-temperature">$G$ as a dunction of temperature</h3>
+
+<script type="math/tex; mode=display">\because C_{P}=\left(\frac{\partial Q}{\partial T}\right)_ {P}=\left(\frac{\partial H}{\partial T}\right)_ {P}</script>
+
+<script type="math/tex; mode=display">\therefore H=H_0 +\int C_ P dT</script>
+
+<script type="math/tex; mode=display">S=\int_0^T d S=\int_0^T \frac{d Q}{T}=\int_0^T \frac{C_P}{T} d T</script>
+
+<script type="math/tex; mode=display">G=H-TS</script>
+
+<p><script type="math/tex">% <![CDATA[
+\left(\frac{\partial G}{\partial T}\right)_ P =-S < 0 %]]></script>
+<script type="math/tex">% <![CDATA[
+\left(\frac{\partial^{2} G}{\partial T^{2}}\right)_ {P}=-\left(\frac{\partial S}{\partial T}\right)_ {P}=-\frac{C_{P}}{T} < 0 %]]></script></p>
+
+<p>We should be able to draw sketches about $H$, $S$, $G$.</p>
+
+<p>Need to add picture later.</p>
+
+<h3 id="order-of-phase-transitionstrasnformations">Order of Phase Transitions(Trasnformations)</h3>
+
+<p>Ehrenfest’s defination:</p>
+
+<p>For s $n$-th order transformation, $\large \frac{\partial^{n-1} G}{\partial T^{n-1}}$ is continious, and $\large \frac{\partial^{n} G}{\partial T^{n}}$ is discontinious.</p>
+
+<h3 id="thermodynamic-driving-force-of-transformation">Thermodynamic Driving Force of Transformation</h3>
+<p><script type="math/tex">\large \color{red} {\text{Need to do}}</script></p>
 :ET

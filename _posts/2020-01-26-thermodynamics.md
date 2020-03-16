@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Thermodynamics"
-subtitle: 'E4201 Study Notes'
+subtitle: 'E4201 and E4202 Study Notes'
 date: 2020-01-26 11:00:00
 author: "Mike Lyou"
 header-style: text
@@ -9,6 +9,7 @@ header-style: text
 mathjax: true
 catalog: true
 copyright-statement:
+hidden: true
 #excerpt: Some tips.
 tags:
   - Notes
@@ -141,7 +142,6 @@ or more practically
 
 $$ S_T = S_{298.15} + \int_{298.15}^{T} \frac{C_{p}}{T} d T $$
 
-***
 
 ## 3 - Conditions of Equilibrium
 
@@ -166,33 +166,46 @@ $\color{blue}{\text{(needs extention)}}$
 These ~~four~~ five useful second derivatives should be remembered. They can sometimes serve as known values.
 
 1. Cofficient of thermal expansion
+
 $$ \alpha \equiv \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_ {P} = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_ {P, N} ~ K^{-1}$$
 
 2. Isothermal compressibility
+
 $$ \kappa_T~\text{or}~\beta  \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {T} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {T, N} ~atm^{-1} $$
 
 3. Adiabatic compressibility
+
 $$ \kappa_S \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {S} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {S, N} ~atm^{-1} $$
 
 4. Molar heat capacity at constant pressure
+
 $$ c_P \equiv T \left(\frac{\partial s}{\partial T}\right)_ {P} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {P, N} ~J\cdot mol^{-1} \cdot K^{-1}$$
 
 5. Molar heat capacity at constant volume
+
 $$ c_V \equiv T \left(\frac{\partial s}{\partial T}\right)_ {V} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {V, N} ~J\cdot mol^{-1} \cdot K^{-1}$$
 
 Ps. We can notice that they are partial derivatives of $V$ and $S$ with respect to $T$ and $V$ multiplied by other functions.
 
+
+
 >**Attention:** Not confuse $c_V$ with $C_V$ (which we nearly won't see).
+>
 >$c_V$ is *molar heat capacity*: $\Delta Q = n c_V \Delta T$ (where $n$ is mole number);
+>
 >$C_V$ is *specific heat*: $\Delta Q = m c_V \Delta T$ (where $m$ is mass)
+>
 >They are related by  Avogadro number $N_A$
+>
 >$$c_V =  C_V / N_A$$
 
 Additional relations (should be able to [derive them](http://showard.sdsmt.edu/MET320/Cp-Cv.pdf)):
+
 $$c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}$$
+
 $$\kappa_{T}=\kappa_{S}+\frac{T V \alpha^{2}}{N c_{P}}$$
 
-#### Derive $\boxed{c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}}$
+#### Derive $c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}$
 By defination, we have
 
 $$ c_P - c_V = \frac{T}{N} \cdot \left[\left(\frac{\partial S}{\partial T}\right)_ {P, N} -\left(\frac{\partial S}{\partial T}\right)_ {V, N} \right] $$
@@ -224,8 +237,11 @@ $$ c_P - c_V = \frac{T}{N}  \cdot \frac{\alpha}{\kappa_T} \cdot \alpha V = \frac
 Q.E.D	(What is [Q.E.D](https://en.wikipedia.org/wiki/Q.E.D.)?)
 
 ### 5.2 Maxwell Relations
+
 #### How to derive them
+
 Derivation of Maxwell relations is simple. As an example, we have
+
 $$ dU=T dS - PdV + \mu dN $$
 
 And
@@ -237,17 +253,22 @@ Therefore, we have
 $$ -\left(\frac{\partial P}{\partial S}\right)_ {V, N_{1}, N_{2}, \ldots}=\left(\frac{\partial T}{\partial V}\right)_ {S, N_{1}, N_{2}, \ldots} $$
 
 #### How to remember:
+
 1. Each pair of conjugate functions, e.g. $(S,T)$, sits at diagonal position.
+
 $$ -\left(\frac{\partial  \color{green}{P}}{\partial \color{red}{S}}\right)_ {V, N}=\left(\frac{\partial  \color{red}{T}}{\partial \color{green}{V}}\right)_ {S, N} $$
 
 2. If $P$ involved, add a negative sign.  
 Because the conjugate $(-P,V)$ has a negative sign.
+
 $$ \color{red}- \left(\frac{\partial P}{\partial {S}}\right)_ { {V}, N}=\left(\frac{\partial T}{\partial {V}}\right)_ { {S}, N} $$
 
 3. If not all denominator are intensive (or all molecule are extensive) (e.g.$\partial T/ \partial V$), each exception gives one negative sign.
+
 $$\color{red}{-}\left(\frac{\partial \color{red}{S}}{\partial N}\right)_ {T, V}=\left(\frac{\partial \mu}{\partial \color{red}{T}}\right)_ {V, N}$$
 
 4. Each molecule is the constant of the derivitiave across the equal sign.
+
 $$ -\left(\frac{\partial P}{\partial \color{red}{S}}\right)_ {\color{red}{V}, N}=\left(\frac{\partial T}{\partial \color{red}{V}}\right)_ {\color{red}{S}, N} $$
 
 You can find your own way to remember this, which is easiest to remember for you is the best.
@@ -270,10 +291,13 @@ Jacobians is very useful when we have e.g. $G,S$ as constant, and we want to bri
 **General rules:**
 
 1. Try to put extensive variables at molecule, and intensive variables at denominator. For example:
+
 $$ \left( \frac{\partial P}{\partial U} \right) _ {G,N} 	\rightarrow \left[ \left( \frac{\partial U}{\partial P} \right) _ {G,N} \right] ^ {-1}$$
 
 2. Try to put expandable functions $(U,F,H,G)$ at molecule and expand them.
+
 $$ \because dU=T dS-P dV +\mu dN $$
+
 $$ \therefore \left[\left(\frac{\partial U}{\partial P}\right)_ {G,N}\right]^{-1} = \left[T\left(\frac{\partial S}{\partial P}\right)_ {G, N}-P\left(\frac{\partial V}{\partial P}\right)_ {G, N}\right]^{-1} $$  
 
 3. Make use of the **jacobians** and **Maxwell relationships** when you need.  
@@ -283,18 +307,19 @@ $$ \left(\frac{\partial S}{\partial P}\right)_ {G, N} = \frac{\left(\frac{\parti
 $$ \left(\frac{\partial S}{\partial P}\right)_ {T, N}=\left(\frac{\partial V}{\partial T}\right)_ {P, N}=-\alpha V $$
 
 4. Be sure to remember all ~~four~~  five second derivatives clearly.
+
 $$\alpha, \kappa_T ~(\text{or}~ \beta),\kappa_S, c_V, c_P $$
 
 5. Plug in all results back and simplify it.
 
 >Ps. Not to confuse with this two:
-
+>
 >$$
 \left(\frac{\partial \color{red}{T}}{\partial X}\right)_ {\color{red}{T}, N} \equiv 0, \quad
 \left(\frac{\partial \color{red}{T}}{\partial \color{red}{T}}\right)_ {X, N} \equiv 1
 $$
 
-### Stability
+### 5.5 Stability
 ...
 
 ## 9 - Multicomponent Homogeneous Nonreacting Systems: _Solution_
@@ -302,6 +327,7 @@ $$
 ### 9.1 Partial Molar Properties (PMP)
 
 Consider a multcomponent homogeneous system, with $c$ different components, each has mole number of $n_k ~ (k=1,2,...,c)$.
+
 > **Attention:**$~ ~ ~$ $n_k$ is mole number, not confuse with $N_k$ which is partical number. $$N_k= n_k \cdot N_A(\text{Avogadro number}).$$
 
 For an extensive thermodynamic property $\left(\mathrm{B}^{\prime}=\mathrm{U}^{\prime}, \mathrm{S}^{\prime}, \mathrm{V}^{\prime}, \mathrm{H}^{\prime}, \mathrm{G}^{\prime}, . .\right)$,
@@ -341,6 +367,7 @@ $$G_{~solution\\(or~after)}=n_A \overline{G_A}+n_B \overline{G_B}$$
 In which $G^o$ is Gibbs free energy of pure matter $\color{red}{(needs~ varify)}$, $\overline{G_A}$ is partial molar Gibbs free energy. They are both chemical potential, but little different.
 
 $$G^o=\mu_A^o $$
+
 $$\overline{G_A}=\frac{\partial G_{solution}}{\partial n_A}=\mu_A $$
 
 >**Attention:**
@@ -383,17 +410,17 @@ Likewise
 
 $$G_{sol} = H_{sol} - T \cdot S_{sol}$$
 
-$$G_{sol} = x_A \overline G_A + x_B \overline G_B \tag{*}$$
+$$G_{sol} = x_A \overline G_A + x_B \overline G_B \tag{* }$$
 
-$$G_{sol} = \Delta G_{mix} + G_{seperate}$$
+$$G_{sol} = \Delta G_{mix} + G_ {seperate}$$
 
-Now we can construct the curve of $G_{sol}$ for the first step.
+Now we can construct the curve of $G_ {sol}$ for the first step.
 
-![Alt text|center](./free_energy_solution_01.jpg)
+![Alt text |center](./free_energy_solution_01.jpg)
 
 ***
 
-From $(*)$ we can derive
+From $(* )$ we can derive
 
 $$\frac{dG_{sol}}{dx_B} = - \overline G_A + \overline G_B$$
 
@@ -490,8 +517,10 @@ $$\begin{aligned}
 
 Regular solution will simplify to ideal solution when $\Omega = 0$
 
-> **Attention: Nomenclature **
-> In Im's class, $\Omega$  is *regular solution parameter*, $\Omega = N_a \cdot z \left[ \epsilon_{AB} - \frac{1}{2} (\epsilon_{AA}+\epsilon_{BB})\right]$, $\omega$ is *configurational entropy*, $\omega = \frac{(N_A+N_A)!}{N_A! N_B!}$ .
+> **Attention: Nomenclature**
+>
+> In Im's class, $\Omega$  is **regular solution parameter**, $\Omega = N_a \cdot z \left[ \epsilon_{AB} - \frac{1}{2} (\epsilon_{AA}+\epsilon_{BB})\right]$, $\omega$ is **configurational entropy**, $\omega = \frac{(N_A+N_A)!}{N_A! N_B!}$ .
+>
 > While in Barmak's class, the regular solution parameter is $a_0$, and configurational entropy is $\Omega$. Pay attention to this.
 
 ***
@@ -553,6 +582,7 @@ $$S=\int_0^T d S=\int_0^T \frac{d Q}{T}=\int_0^T \frac{C_P}{T} d T$$
 $$G=H-TS$$
 
 $$\left(\frac{\partial G}{\partial T}\right)_ P =-S < 0$$
+
 $$\left(\frac{\partial^{2} G}{\partial T^{2}}\right)_ {P}=-\left(\frac{\partial S}{\partial T}\right)_ {P}=-\frac{C_{P}}{T} < 0$$
 
 We should be able to draw sketches about $H$, $S$, $G$.

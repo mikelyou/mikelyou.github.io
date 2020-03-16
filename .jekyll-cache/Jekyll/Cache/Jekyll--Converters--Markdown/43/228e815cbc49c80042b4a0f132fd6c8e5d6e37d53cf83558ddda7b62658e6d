@@ -1,6 +1,4 @@
-I"Co<!-- more -->
-
-<p>@(b0-学习)[Temporary]</p>
+I"�o<!-- more -->
 
 <!--
 **注意：这是一个临时笔记，编辑过后应及时保存到本地。**
@@ -14,8 +12,6 @@
 
 <blockquote>
   <p>This note is still being editing, so you may see some poorly written parts. Let me know if you notice any errors or typos, thanks so much.</p>
-
-  <h1 id="thermodynamics">Thermodynamics</h1>
 </blockquote>
 
 <h2 id="1---macroscopic-thermodynamics">1 - Macroscopic Thermodynamics</h2>
@@ -170,36 +166,55 @@ approaches a universal constant (usually taken as zero) as the absolute temperat
 <p>These <del>four</del> five useful second derivatives should be remembered. They can sometimes serve as known values.</p>
 
 <ol>
-  <li>
-    <p>Cofficient of thermal expansion
-<script type="math/tex">\alpha \equiv \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_ {P} = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_ {P, N} ~ K^{-1}</script></p>
-  </li>
-  <li>
-    <p>Isothermal compressibility
-<script type="math/tex">\kappa_T~\text{or}~\beta  \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {T} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {T, N} ~atm^{-1}</script></p>
-  </li>
-  <li>
-    <p>Adiabatic compressibility
-<script type="math/tex">\kappa_S \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {S} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {S, N} ~atm^{-1}</script></p>
-  </li>
-  <li>
-    <p>Molar heat capacity at constant pressure
-<script type="math/tex">c_P \equiv T \left(\frac{\partial s}{\partial T}\right)_ {P} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {P, N} ~J\cdot mol^{-1} \cdot K^{-1}</script></p>
-  </li>
-  <li>
-    <p>Molar heat capacity at constant volume
-<script type="math/tex">c_V \equiv T \left(\frac{\partial s}{\partial T}\right)_ {V} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {V, N} ~J\cdot mol^{-1} \cdot K^{-1}</script></p>
-  </li>
+  <li>Cofficient of thermal expansion</li>
 </ol>
+
+<script type="math/tex; mode=display">\alpha \equiv \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_ {P} = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_ {P, N} ~ K^{-1}</script>
+
+<ol>
+  <li>Isothermal compressibility</li>
+</ol>
+
+<script type="math/tex; mode=display">\kappa_T~\text{or}~\beta  \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {T} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {T, N} ~atm^{-1}</script>
+
+<ol>
+  <li>Adiabatic compressibility</li>
+</ol>
+
+<script type="math/tex; mode=display">\kappa_S \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {S} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {S, N} ~atm^{-1}</script>
+
+<ol>
+  <li>Molar heat capacity at constant pressure</li>
+</ol>
+
+<script type="math/tex; mode=display">c_P \equiv T \left(\frac{\partial s}{\partial T}\right)_ {P} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {P, N} ~J\cdot mol^{-1} \cdot K^{-1}</script>
+
+<ol>
+  <li>Molar heat capacity at constant volume</li>
+</ol>
+
+<script type="math/tex; mode=display">c_V \equiv T \left(\frac{\partial s}{\partial T}\right)_ {V} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {V, N} ~J\cdot mol^{-1} \cdot K^{-1}</script>
 
 <p>Ps. We can notice that they are partial derivatives of $V$ and $S$ with respect to $T$ and $V$ multiplied by other functions.</p>
 
 <blockquote>
-  <p><strong>Attention:</strong> Not confuse $c_V$ with $C_V$ (which we nearly won’t see).
-$c_V$ is <em>molar heat capacity</em>: $\Delta Q = n c_V \Delta T$ (where $n$ is mole number);
-$C_V$ is <em>specific heat</em>: $\Delta Q = m c_V \Delta T$ (where $m$ is mass)
-They are related by  Avogadro number $N_A$
-<script type="math/tex">c_V =  C_V / N_A</script></p>
+  <p><strong>Attention:</strong> Not confuse $c_V$ with $C_V$ (which we nearly won’t see).</p>
+</blockquote>
+
+<blockquote>
+  <p>$c_V$ is <em>molar heat capacity</em>: $\Delta Q = n c_V \Delta T$ (where $n$ is mole number);</p>
+</blockquote>
+
+<blockquote>
+  <p>$C_V$ is <em>specific heat</em>: $\Delta Q = m c_V \Delta T$ (where $m$ is mass)</p>
+</blockquote>
+
+<blockquote>
+  <p>They are related by  Avogadro number $N_A$</p>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">c_V =  C_V / N_A</script>
 </blockquote>
 
 <p>Additional relations (should be able to <a href="http://showard.sdsmt.edu/MET320/Cp-Cv.pdf">derive them</a>):
