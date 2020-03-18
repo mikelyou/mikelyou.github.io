@@ -17,8 +17,6 @@ tags:
 ---
 
 
-
-
 > 本文简单介绍了三个印象笔记的第三方应用：Joplin, Tusk 与马克飞象。
 
 <!-- more -->
@@ -48,6 +46,9 @@ tags:
 
 - 可以导入和导出 **多种文件格式**，如markdown。
 - 有可靠的 **提醒功能**、**待办事项功能**，无论是内置功能还是借助第三方工具。目前的情况是，印象笔记内创建提醒 = 没有提醒，根本不会提醒我。
+
+下面是我发现的一些其他第三方应用或工具。
+
 ## 马克飞象
 
 [马克飞象](https://maxiang.io/)是印象笔记官方推荐的一款第三方工具，是专为印象笔记打造的 Markdown 编辑器。
@@ -79,7 +80,6 @@ Tusk 本身只作为官方客户端的替代品，使用时依然需要登录印
 无法导出中文笔记。这是一大硬伤，直接迫使我放弃这款软件。大家可以前往其 [GitHub 页面](https://github.com/klaussinani/tusk) 对其开发做出贡献。
 
 
-
 ## Joplin
 
 我找到的 **[Joplin](https://github.com/laurent22/joplin)** 这款软件，是一款 **免费、开源、支持中文** 的笔记软件和代办清单软件。
@@ -98,9 +98,23 @@ Tusk 本身只作为官方客户端的替代品，使用时依然需要登录印
 - 在 Windows 下，如果使用的不是便携版，将会很难更改笔记存储位置，而且默认存储位置在 C盘。（在[这里](https://github.com/laurent22/joplin/issues/42#issuecomment-348338177)有处理方法，但我一直弄不成。）
 
 
+## 未体验列表
 
+下面是我发现的一些其他第三方应用或工具，但因为没有相关需求没有进行尝试，在此列举以供读者或自己未来查询。
+
+- [geeknote](https://github.com/VitaliyRodnenko/geeknote) :Geeknote is a command line client for Evernote that can be use on Linux, FreeBSD and OS X. Written in Python.
+
+- [leanote](https://github.com/leanote/leanote)：一款受Evernote启发并提供比Everote更丰富体验的笔记和分享软件
+
+- [evernote-alfred](https://github.com/buginux/evernote-alfred)：使用Alfred搜索印象笔记
 
 
 ## 后记
 
-可能我的需求确实太高，目前根本找不到相应的软件。如果有好心人知道有什么好用的工具或软件，请务必告诉我！非常感谢！
+适合自己的工具才是最好的。我们在选择一个工具时，要考虑它是否能提高我的工作效率，投入的时间成本是否值得。
+
+印象笔记由于拥有数量庞大的用户群体，相关的软件和工具在未来一段时间内依然会不断发展。希望你能够找到自己需要的那一款。如果你发现比较好的软件，请务必告诉我，非常感谢！
+
+由于本文具有一定的时效性，我没有添加更多的图片和详细说明。如果有人阅读这篇文章，觉得有帮助的话，我再补充一下内容。
+
+>本文首发于：https://mikelyou.com/2020/02/19/evernote-third-party-apps/ 转载请保留此链接，并且希望您能够告知我将此文转载于何处。
