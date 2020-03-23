@@ -1,0 +1,157 @@
+I"�#<!-- more -->
+
+<blockquote>
+  <p>This is a study note of <em>Group Theory and Quantum Mechanics</em>.
+It is not complete and maybe never will be. I write this just because I have written it neatly on papers and it looks good. So I decided to turn it into a more convenient and explicit electronic version. It’s converted from picture using OCR, so there may be some typo I didn’t notice.
+Don’t try to ask me questions. I don’t know.</p>
+</blockquote>
+
+<h2 id="2-abstract-group-theory">2 Abstract Group Theory</h2>
+
+<h4 id="21-definition-of-groups">2.1 Definition of Groups</h4>
+
+<p>A <strong>group</strong> is a set of elements that satisfy group multiplication, therefore must satisfy:</p>
+
+<ol>
+  <li><strong>Closed</strong>. The product of two elements is in the set. ie $A B=C$</li>
+  <li><strong>Associative</strong>. $A(B C)=(A B) C$</li>
+  <li><strong>Identity</strong>. Unitary element must in set. $E A=A E=A$</li>
+  <li><strong>Inverse</strong>. There is an inverse of each element. $A^{-1} A=A A^{-1}=E$</li>
+</ol>
+
+<p>The number of elements $h$ is called <strong>order</strong>.</p>
+
+<p>If group multiplication is <strong>commutative</strong>, i.e. $A B=B A$ the group is called  <strong>Abelian Group</strong>.</p>
+
+<h4 id="22-rearrangement-theorem">2.2 Rearrangement Theorem</h4>
+
+<p>In the multiplication table, each element appears in each column or row <strong>once and only once</strong>.</p>
+
+<h4 id="23-subgroups-ard-cosets">2.3 Subgroups ard Cosets</h4>
+
+<p><strong>A subgroup</strong> is a subset of a larger group, and itself is a group.</p>
+
+<p>Let $\mathscr{S}=E, S_2, S_3, \cdots, S_{g}$ be a subgroup of a larger group $\mathscr{G}$ of order $h$.</p>
+
+<p>Then we call the set of $g$ elements $EX, S_2X, S_3X, \cdots, S_{g}X$ a <strong>right coset</strong> $\mathscr{S}X$, if $X$ not in $\mathscr{S}$. Similary, we can define left coset $X \mathscr{S}$</p>
+
+<p>$\rightarrow$ cosets cannot be subgroups, since they cannot have identity element $E$.</p>
+
+<p>$\rightarrow$ A coset $\mathscr{S}X$ contains no common elements with subgroup $\mathscr{S}$</p>
+
+<p>$\rightarrow$ Two right (or left) cosets of subgroup $\mathscr{S}$ in $\mathscr{G}$ <strong>either are identical or have no common elements</strong>.</p>
+
+<p>The order $g$ of a subgroup $\mathscr{S}$ must be an integer divisor of the order $h$ of entire group $\mathscr{G}$, i.e. $h/g=l,$ where $l$ is called the index of the subgroup  $\mathscr{S}$ in $\mathscr{G}$</p>
+
+<blockquote>
+  <p>Proof:</p>
+
+  <p>Each of the $h$ elements of $\mathscr{G}$ must appear either in $\mathscr{S}$ or in  $\mathscr{S}X$, for some $X$. Thus each element must appear in one of the sets $\mathscr{S},\mathscr{S}X_2,\mathscr{S}X_3,\cdots, \mathscr{S}X_l$. And we know there are no common elements within these $l$ sets. Hense, the $l$ sets averagely divide $\mathscr{G}$, i.e. $h=l \times g$</p>
+</blockquote>
+
+<blockquote>
+  <p>Ps. $\mathscr{S}$ is letter $S$, the LaTeX code is <code class="highlighter-rouge">$\mathscr{S}$</code>. Similary, $\mathscr{G},\mathscr{K},\mathscr{R}$ are $G,K,R$ respectively.</p>
+</blockquote>
+
+<h4 id="24-conjugate-elements-and-class-structure">2.4 Conjugate Elements and Class Structure</h4>
+
+<p>An element $B$ is said to <strong>be conjugate to</strong> $A$ if</p>
+
+<script type="math/tex; mode=display">B=XAX^{-1}</script>
+
+<p>where $X$ is some mumber of the group.</p>
+
+<p>$\rightarrow$ If $B$ is conjugate to $A$, then $A$ is conjugate to $B$. Since $A=X^{-1} B X$</p>
+
+<p>$\rightarrow$ If $B$ and $C$ are both conjugates to $A$, then $B$ and $C$ are conjugate to each other.</p>
+
+<p>The collection of all mutually conjugate elements is called <strong>a class</strong>.</p>
+
+<p>$\rightarrow$ In Abelian groups, each element is in a class by itself. Since $X A X^{-1}=A X^{-1} X=A$, i.e. element $A$ can only be conjugated to itself.</p>
+
+<h4 id="25-normal-divisors-and-factor-groups">2.5 Normal Divisors and Factor Groups</h4>
+
+<p>If a subgroup $\mathscr{S}$ of a larger group $\mathscr{G}$ consists entirely of complete classes, it is called an <strong>invariant subgroup</strong> or <strong>normal divisors</strong>, ie if $A$ in $\mathscr{G}$, then all $X A X^{-1}$ in $\mathscr{G}$.</p>
+
+<p>Now introduce the <em>notion of complex</em>.</p>
+
+<blockquote>
+  <p>$\mathscr{K}=\left(K_{1}, K_{2}, \cdots, K_{n}\right)$ is a colllection of group elements disregarding order.</p>
+
+  <p>$\mathscr{K} X=\left(K_1 X, K_2 X, \cdots, K_{n} X\right)$</p>
+
+  <p>$\mathscr{K}\mathscr{R}=\left(K, R_{1}, K_{1} R_{2},\cdots, K_{n} R_{m}\right)$</p>
+
+  <p>Elements are considered to be included only once, regardless of how often they are generated.</p>
+</blockquote>
+
+<p>Then we can state our argument using complexes.</p>
+
+<ul>
+  <li>
+    <p>$\mathscr{S}\mathscr{S}=\mathscr{S}$ closure of groups.</p>
+  </li>
+  <li>
+    <p>$X^{-1}\mathscr{S}X=\mathscr{S}$  for invariant subgroup $\mathscr{S}$ and all $X$ in $\mathscr{G}$</p>
+  </li>
+  <li>
+    <p>$\mathscr{S}X=X\mathscr{S}$ left and right cosets of an invariant subgroup are identical.</p>
+  </li>
+</ul>
+
+<p>In <code class="highlighter-rouge">Sec.02-3</code> we prove that there are a finite number $(l-1)$ of distinct cosets for any subgroup $\mathscr{S}$. The collection of $\mathscr{S}$ ard the $(l-1)$ distinct cosets can themselves be regarded as elements of a new group.</p>
+
+<p>This group $\mathscr{S},\mathscr{S}X_2,\mathscr{S}X_3,\cdots, \mathscr{S}X_l$ is called <strong>the factor group</strong> of $\mathscr{G}$ with respect to the <strong>normal divisor</strong> $\mathscr{S}$. In this factor group, $\mathscr{S}$ forms the unit element, since</p>
+
+<script type="math/tex; mode=display">\mathscr{S}\mathscr{K}_i = \mathscr{S} (\mathscr{S} {K}_i) = (\mathscr{S}\mathscr{S}) {K}_i = \mathscr{S} K_i =\mathscr{K}_i</script>
+
+<h4 id="26-isomorphy-and-homomorphy">2.6 Isomorphy and homomorphy</h4>
+
+<p>Two groups are said to be i<strong>somorphy</strong> if there exist a one-to-one correspondence between the elements $A, B,\cdots$ of one group and elements $A^{\prime}, B^{\prime},\cdots$ of the other group, such that $A B=C$ implies $A^{\prime} B^{\prime}=C^{\prime},$ and vice versa.</p>
+
+<p>$\rightarrow$ Tuo groups are isomorphy when they have the same multiplication table.</p>
+
+<p>Two groups are said to be <strong>homomorphy</strong> if there exist a correspondence between two groups that $A \leftrightarrow A_{1}^{\prime} A_{2}^{\prime}, \cdots, \quad B \leftrightarrow B_{1}^{\prime}, B_{2}^{\prime}, \ldots, \quad C \leftrightarrow C_{1}^{\prime}, C_{2}^{\prime}, \ldots \quad$ such that $A B=C$ implies $A_i^\prime B_j^\prime $will be a number of the set $C_{k}^{\prime}$</p>
+
+<p>In general, a <strong>homomorphism</strong> is a many-to-one correspondence.
+It specializes to <strong>isomorphism</strong> if the correspondence is one-to-one.</p>
+
+<h4 id="27-class-multiplication">2.7 Class Multiplication</h4>
+
+<p>! In this section, $\mathscr{R} = \mathscr{K} $ implies that each element appear as often in $\mathscr{R}$ as in $\mathscr{K}$.</p>
+
+<blockquote>
+  <p>?</p>
+</blockquote>
+
+<h2 id="3-theory-of-group-representation">3 Theory of Group Representation</h2>
+
+<h4 id="31-representation-of-an-abstract-group">3.1 Representation of an abstract group</h4>
+
+<p>A <em>rep</em> of an abstract group is in general any group composed of concrete mathematical entities which is <strong>homomorphic</strong> to the abstract group. However, we are interested in <strong>square matrices</strong>, i.e we associate each group element $A \leftrightarrow \hat{\Gamma}(A)$ with a matrix such that</p>
+
+<script type="math/tex; mode=display">\hat{\Gamma}(A) \hat{\Gamma}(B)=\hat{\Gamma}(A B)</script>
+
+<p>$\rightarrow$ Clearly, $\hat{\Gamma}(E)=\hat{E}$ or $\hat{1}$</p>
+
+<p>$\rightarrow$ number of rows or columns of the matrix is called the <strong>dimensionality</strong> of the representation.</p>
+
+<p>If each matrix is different, then the two groups are isomorphic (rather then only homomorphic), and the representation is said to be <strong>true or faithful</strong>.</p>
+
+<p>If several elements correspond to a single matrix, then all elements corresponding to the unit matrix $\hat{E}$ form an <strong>invariant subgroup</strong> of the full group. And elements corresponding to other matrices rather than $\hat{E}$ form the <strong>distinct cosets</strong> of that invariant group. And these matrices form a true representation of the <strong>factor group</strong> of this invariant subgroup.</p>
+
+<p>If a similarity transformation leaves matrix equations unchanged, i.e.</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+\hat{\Gamma}(A) &=\hat{S}^{-1} \Gamma(A) \hat{S}\\
+\downarrow \\
+\hat{\Gamma} (A) \hat{\Gamma} (B) &= \left[\hat{S}^{-1}\Gamma (A) \hat{S} \right] \left[\hat{S}^{-1}\Gamma (B) \hat{S} \right] =\hat{S}^{-1} \hat{\Gamma} (A)\hat{\Gamma} (B)\hat{S} = \hat{\Gamma} (AB)
+\end{aligned} %]]></script>
+
+<p>then the transformed matrics $\hat{\Gamma}^{\prime}$ form a representation, as long as $\Gamma$ do, ie they are <strong>equivalent</strong>.</p>
+
+<blockquote>
+  <p>Reference: Tinkham, M. <em>Group Theory and Quantum Mechanics</em>.</p>
+</blockquote>
+:ET
