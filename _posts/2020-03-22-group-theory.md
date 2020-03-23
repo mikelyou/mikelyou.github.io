@@ -9,7 +9,7 @@ header-style: text
 mathjax: true
 catalog: true
 copyright-statement: CC BY-NC
-hidden:
+hidden: true
 excerpt: This is a study note of Group Theory and Quantum Mechanics.
 tags:
   - Note
