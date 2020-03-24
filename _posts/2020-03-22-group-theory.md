@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Group Theory and Quantum Mechanics"
-subtitle: ''
+subtitle: 'A simple and uncomplete summary'
 date: 2020-03-22 23:16:00
 author: "Mike Lyou"
 header-style: text
@@ -12,7 +12,7 @@ copyright-statement: CC BY-NC
 hidden: true
 excerpt: This is a study note of Group Theory and Quantum Mechanics.
 tags:
-  - Note
+  - Notes
   - Group Theory
 ---
 

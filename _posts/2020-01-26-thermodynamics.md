@@ -19,6 +19,7 @@ tags:
 <!-- more -->
 
 
+
 <!--
 **注意：这是一个临时笔记，编辑过后应及时保存到本地。**
 **注意：本文的最新版本在印象笔记，由马克飞象编辑，请不要编辑这个文件，请前往马克飞象进行编辑。**
@@ -28,7 +29,6 @@ tags:
 > This post is Mike Lyou's study notes of Materials course E4201 and E4202. I do not own the copyright of some contents, if the article unintentionally infringes your copyright, it will be deleted shortly after being informed. All rights reserved.
 
 > This note is still being editing, so you may see some poorly written parts. Let me know if you notice any errors or typos, thanks so much.
-
 
 
 
@@ -56,7 +56,7 @@ There are threed levels of thermodynamics.
 
 ### 1.3 Thermodynamic Variables
 
-#### State variables and process Variables
+#### State variables and Process Variables
 
 - **State variables(or state functions)**: depends only on condition(or state) of the system. Eg. $V$, $S$, $T$, $U$, $H$, $G$.
 - **Process variables**: quantities than only have meaning for changing systems. They are variable depending on the choice of path. Eg. $W$, $Q$.
@@ -69,15 +69,12 @@ The state variables can be classified into finer classes.
 
 - **Intensive** state variables: not depend on system size. Eg. $T$, $P$, $\mu$(chemical potemtial).
 
-- **Normalized extensive variables\***: extensive variables per mole or unit volume. These are in effect **intensive**. Eg. $v$, $s$.
+- **Normalized extensive variables** *: extensive variables per mole or unit volume. These are in effect **intensive**. Eg. $v$, $s$.
 
-#### Conjugate Variables
+$\rightarrow$ We're more interested in intensive variables
 
-Many extensive variable has a conjugate intensive variable. $(S,T),(-P,V),(\mu,N)$
+$\rightarrow$ Many **(Every?)** extensive variable has a **conjugate** intensive variable.  Common pairs are $(S,T)$, $(-P,V)$ and $(\mu,N)$. $\rightarrow$ See [First Derivatives of Fundamental Equation](#first-derivatives-of-fundamental-equation) for why they are conjugate.
 
-See [First Derivatives of Fundamental Equation](#first-derivatives-of-fundamental-equation)
-
-$\color{blue}{\text{(needs extention)}}$
 
 ***
 ## 2 - Laws of Thermodynamics
