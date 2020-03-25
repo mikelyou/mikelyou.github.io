@@ -91,7 +91,7 @@ Now introduce the _notion of complex_.
 >
 >$\mathscr{K} X=\left(K_1 X, K_2 X, \cdots, K_{n} X\right)$
 >
->$\mathscr{K}\mathscr{R}=\left(K, R_{1}, K_{1} R_{2},\cdots, K_{n} R_{m}\right)$
+>$\mathscr{K}\mathscr{R}=\left(K_1 R_{1}, K_{1} R_{2},\cdots, K_{n} R_{m}\right)$
 >
 >Elements are considered to be included only once, regardless of how often they are generated.
 

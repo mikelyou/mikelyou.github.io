@@ -1,0 +1,1107 @@
+I"��<!-- more -->
+
+<p>@(b0-学习)[Temporary]</p>
+
+<!--
+**注意：这是一个临时笔记，编辑过后应及时保存到本地。**
+**注意：本文的最新版本在印象笔记，由马克飞象编辑，请不要编辑这个文件，请前往马克飞象进行编辑。**
+**注意：本文在博客的版本可能是过时的，且只能单方向的由印象笔记更新至此。**
+-->
+
+<blockquote>
+  <p>This post is Mike Lyou’s study notes of Materials course E4201 and E4202. I do not own the copyright of some contents, if the article unintentionally infringes your copyright, it will be deleted shortly after being informed. All rights reserved.</p>
+</blockquote>
+
+<blockquote>
+  <p>This note is still being editing, so you may see some poorly written parts. Let me know if you notice any errors or typos, thanks so much.</p>
+</blockquote>
+
+<h1 id="thermodynamics">Thermodynamics</h1>
+
+<h2 id="1---macroscopic-thermodynamics">1 - Macroscopic Thermodynamics</h2>
+
+<h3 id="11-three-levels-of-thermodynamics">1.1 Three levels of thermodynamics</h3>
+<p>There are three levels of thermodynamics.</p>
+
+<ul>
+  <li>
+    <p>The <strong>macroscopic（宏观） or phenomenological</strong> description.</p>
+
+    <ul>
+      <li>It treats the matter as structureless.</li>
+      <li>Macroscopic (equilibrium) thermodynamics describes and only describes equilibrium states.</li>
+    </ul>
+  </li>
+  <li>The <strong>statistical（统计）</strong> description.</li>
+  <li>The <strong>quantum</strong> description.</li>
+</ul>
+
+<h3 id="12-systems-barriers-and-surrounding">1.2 Systems, Barriers and Surrounding</h3>
+
+<ul>
+  <li>System</li>
+  <li>Barriers
+    <ul>
+      <li>Diathermal（透热） or adiabatic（绝热）</li>
+      <li>Permeable or impermeable</li>
+      <li>Movable or fixed</li>
+    </ul>
+  </li>
+  <li>Surrounding</li>
+</ul>
+
+<h3 id="13-thermodynamic-variables">1.3 Thermodynamic Variables</h3>
+
+<h4 id="state-variables-and-process-variables">State variables and Process Variables</h4>
+
+<ul>
+  <li><strong>State variables(or state functions)</strong>: depends only on condition(or state) of the system. Eg. $V$, $S$, $T$, $U$, $H$, $G$.</li>
+  <li><strong>Process variables</strong>: quantities than only have meaning for changing systems. They are variable depending on the choice of path. Eg. $W$, $Q$.</li>
+</ul>
+
+<h4 id="extensive-and-intensive-state-variables">Extensive and Intensive State Variables</h4>
+
+<p>The state variables can be classified into finer classes.</p>
+
+<ul>
+  <li>
+    <p><strong>Extensive</strong> state variables: depend on system size. Which means double the system will change the variable value. Eg. $V$, $S$, $n$, $U$, $H$, $G$.</p>
+  </li>
+  <li>
+    <p><strong>Intensive</strong> state variables: not depend on system size. Eg. $T$, $P$, $\mu$(chemical potemtial).</p>
+  </li>
+  <li>
+    <p><strong>Normalized extensive variables</strong> *: extensive variables per mole or unit volume. These are in effect <strong>intensive</strong>. Eg. $v$, $s$.</p>
+  </li>
+</ul>
+
+<p>$\rightarrow$ We’re more interested in intensive variables</p>
+
+<p>$\rightarrow$ Many <strong>(Every?)</strong> extensive variable has a <strong>conjugate</strong> intensive variable.  Common pairs are $(S,T)$, $(-P,V)$ and $(\mu,N)$. $\rightarrow$ See <a href="#first-derivatives-of-fundamental-equation">First Derivatives of Fundamental Equation</a> for why they are conjugate.</p>
+
+<hr />
+<h2 id="2---laws-of-thermodynamics">2 - Laws of Thermodynamics</h2>
+
+<blockquote>
+  <p><del>众所周知，热力学三大定律一共有四条（还有第零定律）。</del></p>
+</blockquote>
+
+<h3 id="21-zeroth-law">2.1 Zeroth Law</h3>
+<p><strong>If two systems are each in equilibrium with a third system, they
+are also in equilibrium with each other</strong>.</p>
+
+<p>It describes the equilibrium.</p>
+
+<h3 id="22-first-law">2.2 First law</h3>
+<p><strong>Energy is conserved, it cannot be created or destroyed</strong>.</p>
+
+<script type="math/tex; mode=display">dU=\delta Q + \delta W + \delta W^\prime</script>
+
+<script type="math/tex; mode=display">（能增 = 吸热 + 得工）</script>
+
+<p>Where,</p>
+
+<p>$dU$ means <strong>increase</strong> of internal energy,<br />
+$\delta Q$ means heat transferred <strong>into</strong> system,<br />
+$\delta W = -P dV$ is mechanical work,<br />
+$\delta W^\prime$ is sum of other works.</p>
+
+<p>The first law is the law of energy.</p>
+
+<h3 id="23-second-law">2.3 Second law</h3>
+<p>Entropy never decreases.</p>
+
+<script type="math/tex; mode=display">\mathrm{d} S \geqslant \frac{\delta Q}{T}</script>
+
+<p>where equal sign holds only for <strong>reversible process</strong>.</p>
+
+<h3 id="24-third-law">2.4 Third law</h3>
+<p><strong>The entropy of a thermodynamic system in internal equilibrium
+approaches a universal constant (usually taken as zero) as the absolute temperature goes to zero.</strong></p>
+
+<p>Which means entropy of any system at $T=0K$ is zero, no matter what values other system parameters are. It can be expressed as:</p>
+
+<script type="math/tex; mode=display">\left( \frac { \partial U } { \partial S } \right)_ { V, N_{1}, \ldots , N_{r} } = 0</script>
+
+<p>In the above equation, partial value is zero because $S \equiv 0$.</p>
+
+<h4 id="calculation-of-entropy">Calculation of entropy</h4>
+<p>According to the Third Law, the absolute value of entropy can be calculated.</p>
+
+<p>For a reversible process</p>
+
+<script type="math/tex; mode=display">\mathrm{d} S = \frac{\delta Q}{T}</script>
+
+<p>and</p>
+
+<script type="math/tex; mode=display">\delta Q=C_{p} d T</script>
+
+<p>Therefore</p>
+
+<script type="math/tex; mode=display">S_T = S_0 + \int_{0}^T \frac{C_p}{T} dT = \int_0^T \frac{C_p}{T} dT</script>
+
+<p>or more practically</p>
+
+<script type="math/tex; mode=display">S_T = S_{298.15} + \int_{298.15}^{T} \frac{C_{p}}{T} d T</script>
+
+<h2 id="3---conditions-of-equilibrium">3 - Conditions of Equilibrium</h2>
+
+<h3 id="31-equilibrium-states">3.1 Equilibrium States</h3>
+
+<p>Equilibrium states of simple macroscopic systems are characterized by system parameters including$\left( U, V, N_1, N_2, \cdots , N_r \right) $. If systems are more complex, parameters will be more.</p>
+
+<p>The <strong>equilibrium states</strong> are states in which <strong>entropy is maximized</strong> for the given constraints.</p>
+
+<h3 id="32-the-fundamental-relation">3.2 The Fundamental Relation</h3>
+
+<p>The relation that gives the entropy as a function of the extensive parameters is known as <strong>the fundamental relation (in the entropic representation)</strong>, which is</p>
+
+<script type="math/tex; mode=display">\boxed{S=S \left( U,V,N_1,N_2,\cdots N_r \right)}</script>
+
+<p>This relation is very useful.</p>
+
+<ul>
+  <li>
+    <p>If the fundamental relation of a system is known, <strong>all conceivable thermodynamic information</strong> about the system is ascertainable from it.</p>
+  </li>
+  <li>
+    <p>In other words, the information contained in the fundamental relation is <strong>thermodynamically all-inclusive</strong>.</p>
+  </li>
+</ul>
+
+<h3 id="33-entropy-of-a-composite-system">3.3 Entropy of a Composite System</h3>
+
+<p>The entropy of a composite system has three important properties:</p>
+
+<p><strong>1. Additive over constituent subsystems</strong></p>
+
+<p>The entropy of a composite system is additive over the constituent subsystems, where the entropy of each subsystem is a function of the extensive parameters of that subsystem alone:</p>
+
+<script type="math/tex; mode=display">S=\sum_{\alpha} S^{(\alpha)} = \sum_{\alpha} S^{(\alpha)}\left(U^{(\alpha)}, V^{(\alpha)}, N_{1}^{(\alpha)}, \ldots, N_{r}^{(\alpha)}\right)</script>
+
+<p>The additive propertiey requires, that the entropy of a simple system is a homogeneous first-order function of the extensive parameters, or equavalent denoted as:</p>
+
+<script type="math/tex; mode=display">S\left(\lambda U, \lambda V, \lambda N_{1}, \dots, \lambda N_{r}\right)=\lambda S\left(U, V, N_{1}, \dots, N_{r}\right)</script>
+
+<p><strong>2.  Monotonically increase with respect to the energy</strong></p>
+
+<p>The monotonic property inplies that the partial derivative is positive.
+<script type="math/tex">\left(\frac{\partial S}{\partial U}\right)_{V, N_{1}, \cdots, N_{r}}>0</script></p>
+
+<p>We can know additionally, from this relation, that temperature is non-negative.</p>
+
+<script type="math/tex; mode=display">T \equiv \left(\frac{\partial U}{\partial S}\right)_{V, N_{1}, \cdots, N_{r}} = \left(\frac{\partial S}{\partial U}\right)_{V, N_{1}, \cdots, N_{r}} ^{-1}>0</script>
+
+<p><strong>3.  Continuous and differentiable</strong>
+The continuity, differentiability and monotonic properties together, imply that the entropy function can be inverted with respect to the energy. And the internal energy is single-valued, continuous and differentiable.</p>
+
+<!--
+$$S=S\left(U, V, N_{1}, \cdots, N_{r}\right) \rightarrow U=U\left(S, V, N_{1}, \cdots ,N_{r}\right)$$
+-->
+
+<script type="math/tex; mode=display">\boxed{U=U\left(S, V, N_{1}, \cdots ,N_{r}\right)}</script>
+
+<p>Above is called <strong>the fundamental relation (in the energy representation)</strong>.</p>
+
+<p>Both of the two is the fundamental relation while in different forms, and each contains <strong>all</strong> thermodynamic information about the system.</p>
+
+<script type="math/tex; mode=display">S=S\left(U, V, N_{1}, \cdots, N_{r}\right) \leftrightarrow U=U\left(S, V, N_{1}, \cdots ,N_{r}\right)</script>
+
+<p>Because we are more interested in progress and changes in extensive parameters, we are more concerned with <strong>the energy representaton</strong>.</p>
+
+<p>$\color{blue}{\text{(needs extention)}}$</p>
+
+<h3 id="34-first-derivatives-of-fundamental-equation">3.4 First Derivatives of Fundamental Equation</h3>
+
+<p>Computing the first differential</p>
+
+<script type="math/tex; mode=display">d U=\left(\frac{\partial U}{\partial S}\right)_{V, N_{1}, \cdots, N_{r}} d S+\left(\frac{\partial U}{\partial V}\right)_{S, N_{1}, \cdots, N_{r}} d V+\sum_{j=1}^{r}\left(\frac{\partial U}{\partial N_{j}}\right)_{S, V_{N}, N_{r \neq j}} d N_{j}</script>
+
+<p>From the first differential we can obtain the first derivatives, which are defined as temperature $T$, pressure $P$, and chemical potential $\mu_j$.</p>
+
+<script type="math/tex; mode=display">\left(\frac{\partial U}{\partial S}\right)_{V, N_{1}, \cdots, N_{r}} \equiv T	\\
+\color{red}-\left(\frac{\partial U}{\partial V}\right)_{S, N_{1}, \cdots, N_{r}} \equiv P \\
+\left(\frac{\partial U}{\partial N_j}\right)_{S, N_{1}, \cdots, N_{r\neq j}} \equiv \mu_j</script>
+
+<blockquote>
+  <p>Notice that these partial derivatives are just the conjugate intensive functions of the corresponding extensive functions in the energetic representation.</p>
+</blockquote>
+
+<p>Plugging them back, we have</p>
+
+<script type="math/tex; mode=display">d U=\color{blue}{T d S}-\color{green}{P d V}+\sum_{j=1}^{r}\mu_{j} d N_{j}</script>
+
+<p>Compare with the statement of the first law</p>
+
+<script type="math/tex; mode=display">dU=\color{blue}{\delta Q }+ \color{green}{\delta W_{mechanical}}+ \delta W_{chemical}</script>
+
+<p>$\color{blue}{\text{(result of the first law, or not?)}}$</p>
+
+<h3 id="35-equation-of-state">3.5 Equation of State</h3>
+
+<p>Temperature, pressure and electrochemical potentials are partial derivatives of a function of $(\mathrm{S}, \mathrm{V}, \mathrm{N}<em>{1}, \cdots \mathrm{N}</em>{\mathrm{r}})$ and consequently are also functions of of $(\mathrm{S}, \mathrm{V}, \mathrm{N}<em>{1}, \cdots \mathrm{N}</em>{\mathrm{r}})$.</p>
+
+<p>Thus, we have</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+&T=T\left(S, V, N_{1}, \dots, N_{r}\right)\\
+&P=P\left(S, V, N_{1}, \dots, N_{r}\right)\\
+&\mu_{j}=\mu_{j}\left(S, V, N_{1}, \dots, N_{r}\right)
+\end{aligned} %]]></script>
+
+<p>These relations are called <strong>the equations of state</strong>. They express the intensive parameters in terms of extensive parameters.</p>
+
+<p>Knowledge of a single equation of state does not constitute complete knowledge of the thermodynamic properties of the system, but <strong>knowledge of all the equations of state does</strong>.</p>
+
+<p>Since the fundamental equation is homogeneous first order, it must be true that the
+equations of state are homogeneous zero order. We can represent this as</p>
+
+<script type="math/tex; mode=display">T\left(\lambda S, \lambda V, \lambda N_{1}, \ldots, \lambda N_{r}\right)=T\left(S, V, N_{1}, \ldots, N_{r}\right)</script>
+
+<p>The temperature of all systems is equal to the temperature of all subsystems (at equilibrium), this is the property an intensive function should have.</p>
+
+<h3 id="36-conditions-of-equilibrium">3.6 Conditions of Equilibrium</h3>
+
+<p>From the single fact that <strong>entropy is maximized for the given constraints</strong>, we can get several important implications.</p>
+
+<p><img src="./1584381231912.png" alt="Alt text" /></p>
+
+<h4 id="361-equilibrium-of-temperature">3.6.1 Equilibrium of Temperature</h4>
+
+<p>Now we have an isolated, composite system consisting of two simple systems. Two subsystems are separated by a wall that is <strong>rigid, impermeable, but allow the flow of heat.</strong></p>
+
+<p>Given the condition, we know that the volumes and mole numbers of each system are fixed. The only variables are <strong>energies of two subsystems</strong>, with the constrain of energy conservation</p>
+
+<script type="math/tex; mode=display">U^{(1)}+U^{(2)}=\text { constant } \quad \text{or} \quad dU^{(1)}+dU^{(2)}=0</script>
+
+<p><strong>When the system has reached equilibrium</strong>, according to the definition of equilibrium, <strong>the entropy should reach its maximum</strong>. That is, a virtual transfer of energy from system 1 to system 2 will produce no change of entropy, i.e.</p>
+
+<script type="math/tex; mode=display">dS=0</script>
+
+<p>The entropy of the system is</p>
+
+<script type="math/tex; mode=display">S=S^{(1)}\left(U^{(1)}, V^{(1)} , N_{j}^{(1)}\right)+S^{(2)}\left(U^{(2)}, V^{(2)} , N_{j}^{(2)} \right)</script>
+
+<blockquote>
+  <p>For better readability, here we use $N_j$ to represent $ N_{1},N_2,\cdots ,N_{r}$.</p>
+</blockquote>
+
+<p>Since volumes and mole numbers are fixed, we can reresent the difference of entropy as</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+d S&=\left(\frac{\partial S^{(1)}}{\partial U^{(1)}}\right)_{V^{(1)},N_{j}^{(1)}} d U^{(1)}+\left(\frac{\partial S^{(2)}}{\partial U^{(2)}}\right)_{V^{(2)},  N_{j}^{(2)}} d U^{(2)}\\
+&=\frac{1}{T^{(1)}} d U^{(1)}+\frac{1}{T^{(2)}} d U^{(2)}\\
+&=\left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right) d U^{(1)}
+\end{aligned} %]]></script>
+
+<p>Therefore</p>
+
+<!--$$\because dS=0 \quad \therefore T^{(1)}=T^{(2)}$$-->
+
+<script type="math/tex; mode=display">dS=0 \quad \Longrightarrow \quad T^{(1)}=T^{(2)}</script>
+
+<p>Q.E.D.</p>
+
+<h4 id="362-equilibrium-of-pressure">3.6.2 Equilibrium of Pressure</h4>
+
+<p>Similarly, if we have an isolated, composite system consisting of two simple systems. Two subsystems are separated by a wall that is <strong>impermeable, but moveable, and  allow the flow of heat.</strong></p>
+
+<p>Upon this condition, the variables become <strong>energies and volumes</strong> of two subsystems. The only constants are mole numbers. And we can write</p>
+
+<script type="math/tex; mode=display">U^{(1)}+U^{(2)}=\text { constant } \quad \text{or} \quad dU^{(1)}+dU^{(2)}=0</script>
+
+<script type="math/tex; mode=display">V^{(1)}+V^{(2)}=\text { constant } \quad \text{or} \quad dV^{(1)}+dV^{(2)}=0</script>
+
+<p>When the whole system has reached equilibrium, we have $dS=0$, and it can be expanded as</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+d S&=\left(\frac{\partial S^{(1)}}{\partial U^{(1)}}\right)_{V^{(1)},N_{j}^{(1)}} d U^{(1)} + \left(\frac{\partial S^{(1)}}{\partial V^{(1)}}\right)_{U^{(1)},N_{j}^{(1)}} d V^{(1)} \\
+& +\left(\frac{\partial S^{(2)}}{\partial U^{(2)}}\right)_{V^{(2)},  N_{j}^{(2)}} d U^{(2)} + \left(\frac{\partial S^{(2)}}{\partial V^{(2)}}\right)_{U^{(2)},  N_{j}^{(2)}} d V^{(2)}\\
+&=\frac{1}{T^{(1)}} d U^{(1)} + \frac{P^{(1)}}{T^{(1)}} d V^{(1)} + \frac{1}{T^{(2)}} d U^{(2)} + \frac{P^{(2)}}{T^{(2)}} d V^{(2)}\\
+&=\left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right) d U^{(1)} + \left(\frac{P^{(1)}}{T^{(1)}}-\frac{P^{(2)}}{T^{(2)}}\right) d V^{(1)}
+\end{aligned} %]]></script>
+
+<p>Now we know $dS=0$, then it must be true that</p>
+
+<script type="math/tex; mode=display">\left(\frac{1}{T^{(1)}}-\frac{1}{T^{(2)}}\right) = 0, \quad \left(\frac{P^{(1)}}{T^{(1)}}-\frac{P^{(2)}}{T^{(2)}}\right) = 0</script>
+
+<p>Therefore</p>
+
+<script type="math/tex; mode=display">dS=0 \quad \Longrightarrow \quad T^{(1)}=T^{(2)}  \quad \Longrightarrow \quad P^{(1)}=P^{(2)}</script>
+
+<p>Q.E.D.</p>
+
+<blockquote>
+  <p>Ps1. Here we can prove wrong a possible mistake, which I have made before, that <strong>$dV^{(1)}+dV^{(2)}$ alone cannot derive the conclusion $P^{(1)}=P^{(2)}$</strong>.</p>
+
+  <p>Ps2. We can prove $(\partial S / \partial V)_ {U,N_j} \equiv P/T$ using <a href="#53-jacobian">jacobian</a>.</p>
+</blockquote>
+
+<h4 id="363-equilibrium-of-chemical-potential">3.6.3 Equilibrium of Chemical Potential</h4>
+<p><del>I dont wanna prove it since its similar to previous two.</del></p>
+
+<h3 id="37-entropy-maximum-principle-and-energy-minimum-principle">3.7 Entropy Maximum Principle and Energy Minimum Principle</h3>
+
+<blockquote>
+  <p>…</p>
+</blockquote>
+
+<h3 id="38-the-euler-equation">3.8 The Euler Equation</h3>
+<blockquote>
+  <p>Ps. The pronunciation of Euler should be /ˈɔɪlər/. See <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">wikipedia</a> for more.</p>
+</blockquote>
+
+<blockquote>
+  <p>…</p>
+</blockquote>
+
+<h3 id="39-the-gibbs-duhem-relation">3.9 The Gibbs-Duhem Relation</h3>
+
+<blockquote>
+  <p>…</p>
+</blockquote>
+
+<h2 id="4---legendre-transformations-thermodynamic-potentials-and-the-extremum-principle">4 - Legendre Transformations, Thermodynamic Potentials and the Extremum Principle</h2>
+
+<p>Experimentally, we do not have an “entropymeter” to measure entropy, but instead we have the very useful and simple “thermometer” to measure temperature.</p>
+
+<p>Also, experimentally it is often easier to do experiments at constant pressure rather than constant volume.</p>
+
+<p>In other words, <strong>we would like the intensive</strong>, rather than the extensive, parameter(s) to be the independent variable(s).</p>
+
+<h3 id="41-legendre-transform">4.1 Legendre Transform</h3>
+
+<p>For function $Y$ with a single independent variable $X$</p>
+
+<script type="math/tex; mode=display">\boxed{\begin{array}{c}
+Y=Y(X) \\
+P={d Y}/{d X} \\
+\psi=-P X+Y \\
+\psi=\psi(P)
+\end{array}}</script>
+
+<p>And $\psi=\psi(P)$ is the Legendre transformed function of $Y=Y(X) $</p>
+
+<script type="math/tex; mode=display">Y=Y(X) \quad \rightarrow \quad \psi=\psi(P)</script>
+
+<p>Using the energy representation, the Legendre transformed functions are the thermodynamic potentials:</p>
+
+<script type="math/tex; mode=display">F=U-TS</script>
+
+<script type="math/tex; mode=display">H=U+PV</script>
+
+<script type="math/tex; mode=display">G=U-TS+PV</script>
+
+<script type="math/tex; mode=display">\Xi\quad?</script>
+
+<h3 id="the-extremum-principle">The Extremum Principle</h3>
+
+<p>Here we will show, that <strong>the extremum principle for the thermodynamic potentials is one wherein the potential is minimized</strong> (for the given constraints).</p>
+
+<p>Consider a composite system in <strong>diathermal contact</strong> with a heat reservoir (reversible heat source).</p>
+
+<p>In the equilibrium state, the total internal energy of the composite system + the reservoir will reach its minimum:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+&d\left(U+U^{r}\right)=0\\
+&d^{2}\left(U+U^{r}\right)=d^{2} U>0
+\end{aligned} %]]></script>
+
+<p>Also, the total entropy will reach its maximum:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+&d\left(S+S^{r}\right)=0\\
+&d^{2}\left(S+S^{r}\right)=d^{2} U<0
+\end{aligned} %]]></script>
+
+<p>If the composite system is simple and comprises two subsystems 1 and 2, then we have</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+d\left(U+U^{r}\right) &=T^{(1)} d S^{(1)}+T^{(2)} d S^{(2)}+T^{r} d S^{r} \\
+&=T^{(1)} d S^{(1)}+T^{(2)} d S^{(2)}-T^{r} d\left(S^{(1)}+S^{(2)}\right)=0\\
+\therefore T^{(1)}=T^{(2)}&=T^{r}
+\end{aligned} %]]></script>
+
+<p>Therefore, we can write</p>
+
+<script type="math/tex; mode=display">d\left(U+U^{r}\right)=d U+T^{r} d S^{r}=d U-T^{r} d S=0</script>
+
+<script type="math/tex; mode=display">d \left(U-T^{r}  S\right)=0 \tag{1}</script>
+
+<p>In addition, we can get this methematically:</p>
+
+<script type="math/tex; mode=display">d^2 \left(U-T^{r}  S\right) = d^2U>0 \tag{2}</script>
+
+<p>Combining $(1)(2)$ we see, the minimum of inner energy or maximum of entropy also indicate the minimum of Helmholtz potential at equilibrium</p>
+
+<script type="math/tex; mode=display">F= U - T^r  S</script>
+
+<p>Since the temperature of each subsystem is qual to temperature of reservoir, we can write it as</p>
+
+<script type="math/tex; mode=display">dF= d\left(U - T  S\right)=0 \quad \text{(at equilibrium)}</script>
+
+<p>Known as <strong>Helmholtz Potential Minimum Principle</strong>.</p>
+
+<p>Similarly, we can derive other principles:</p>
+
+<ul>
+  <li>
+    <details><summary>Enthalpy minimum principle</summary>
+&gt;...
+</details>
+  </li>
+</ul>
+<p>&lt;/details&gt;</p>
+
+<ul>
+  <li>
+    <details><summary>Gibbs free energy minimum principle
+&gt;...
+</summary></details>
+  </li>
+</ul>
+<p>&lt;/summary&gt;</p>
+
+<h3 id="thermodynamics-potentials-process-and-work">Thermodynamics Potentials, Process and Work</h3>
+
+<p>Take Helmholtz free energy as our example again. We showed that $dF=0$ at equilibrium.</p>
+
+<p>However, for any process that takes a system from an initial state to a final state, we can write for a small change in the state of the system</p>
+
+<script type="math/tex; mode=display">d F=d U-T d S-S d T</script>
+
+<p>Using the combination of first and second law</p>
+
+<script type="math/tex; mode=display">d U=T d S+\delta W_{\text{mechanical}}+\delta W_{\text{other}}</script>
+
+<p>We can write</p>
+
+<script type="math/tex; mode=display">d F=-S d T+\delta W_{\text{mechanical}}+\delta W_{\text{other}}</script>
+
+<p>Therefore we can arrive at the conclusion:</p>
+
+<p>For <strong>isothermal(等热) processes</strong>, the <strong>Helmholtz free energy</strong> reports the <strong>total (reversible) work</strong> done on the system.</p>
+
+<p>Similar for enthalpy $H$ and Gibbs free energy $G$ (E4201-hw8-2).</p>
+
+<h2 id="5---second-derivatives-of-fundamental-equation-maxwell-relations-stability">5 - Second Derivatives of Fundamental Equation, Maxwell Relations, Stability</h2>
+
+<h3 id="51-useful-second-derivatives">5.1 Useful Second Derivatives</h3>
+
+<p>These <del>four</del> five useful second derivatives should be remembered. They can sometimes serve as known values.</p>
+
+<ol>
+  <li>Coefficient of thermal expansion</li>
+</ol>
+
+<script type="math/tex; mode=display">\alpha \equiv \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_ {P} = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_ {P, N} ~ K^{-1}</script>
+
+<ol>
+  <li>Isothermal compressibility</li>
+</ol>
+
+<script type="math/tex; mode=display">\kappa_T~\text{or}~\beta  \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {T} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {T, N} ~atm^{-1}</script>
+
+<ol>
+  <li>Adiabatic compressibility</li>
+</ol>
+
+<script type="math/tex; mode=display">\kappa_S \equiv -\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_ {S} = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_ {S, N} ~atm^{-1}</script>
+
+<ol>
+  <li>Molar heat capacity at constant pressure</li>
+</ol>
+
+<script type="math/tex; mode=display">c_P \equiv T \left(\frac{\partial s}{\partial T}\right)_ {P} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {P, N} ~J\cdot mol^{-1} \cdot K^{-1}</script>
+
+<ol>
+  <li>Molar heat capacity at constant volume</li>
+</ol>
+
+<script type="math/tex; mode=display">c_V \equiv T \left(\frac{\partial s}{\partial T}\right)_ {V} = \frac{T}{N} \left(\frac{\partial S}{\partial T}\right)_ {V, N} ~J\cdot mol^{-1} \cdot K^{-1}</script>
+
+<p>Ps. We can notice that they are partial derivatives of $V$ and $S$ with respect to $T$ and $V$ multiplied by other functions.</p>
+
+<blockquote>
+  <p><strong>Attention:</strong> Not confuse $c_V$ with $C_V$ (which we nearly won’t see).</p>
+
+  <p>$c_V$ is <em>molar heat capacity</em>: $\Delta Q = n c_V \Delta T$ (where $n$ is mole number);</p>
+
+  <p>$C_V$ is <em>specific heat</em>: $\Delta Q = m c_V \Delta T$ (where $m$ is mass)</p>
+
+  <p>They are related by  Avogadro number $N_{avo}$</p>
+
+  <script type="math/tex; mode=display">c_V =  C_V / N_{avo}</script>
+</blockquote>
+
+<p>Additional relations (should be able to <a href="http://showard.sdsmt.edu/MET320/Cp-Cv.pdf">derive them</a>):</p>
+
+<script type="math/tex; mode=display">c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}</script>
+
+<script type="math/tex; mode=display">\kappa_{T}=\kappa_{S}+\frac{T V \alpha^{2}}{N c_{P}}</script>
+
+<h4 id="derive-c_pc_vfract-v-alpha2n-kappa_t">Derive $c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}$</h4>
+
+<details>
+<summary>Click to expand</summary>
+
+By definition, we have
+
+$$ c_P - c_V = \frac{T}{N} \cdot \left[\left(\frac{\partial S}{\partial T}\right)_ {P, N} -\left(\frac{\partial S}{\partial T}\right)_ {V, N} \right] $$
+
+Plugging in the total differential of $S=S(V,T)$
+
+$$ dS = \left(\frac{\partial S}{\partial T}\right)_ {V,N} dT + \left(\frac{\partial S}{\partial V}\right)_ {T,N} dV$$
+
+We have
+
+$$ \left(\frac{\partial S}{\partial T}\right)_ {P,N} = \left(\frac{\partial S}{\partial T}\right)_ {V,N} \cdot 1  + \left(\frac{\partial S}{\partial V}\right)_ {T,N} \left(\frac{\partial V}{\partial T}\right)_ {P,N} $$
+
+$$ \left(\frac{\partial S}{\partial T}\right)_ {V,N} = \left(\frac{\partial S}{\partial T}\right)_ {V,N} \cdot 1  + 0 $$
+
+And therefore
+
+$$ c_P - c_V = \frac{T}{N} \cdot \left[\left(\frac{\partial S}{\partial V}\right)_ {T,N} \left(\frac{\partial V}{\partial T}\right)_ {P,N} \right]$$
+
+Simplify two derivatives inside
+
+$$ \left(\frac{\partial S}{\partial V}\right)_ {T,N} = \color{red}{+}\left(\frac{\partial P}{\partial T}\right)_ {V,N} = - \frac{\left(\frac{\partial V}{\partial T}\right)_ {P,N}}{\left(\frac{\partial V}{\partial P}\right)_ {T,N}} = -\frac{\alpha V}{-\kappa_T V} = \frac{\alpha}{\kappa_T}$$
+
+$$ \left(\frac{\partial V}{\partial T}\right)_ {P,N} = \alpha V$$
+
+Plugging in to have
+
+$$ c_P - c_V = \frac{T}{N}  \cdot \frac{\alpha}{\kappa_T} \cdot \alpha V = \frac{\alpha^2 TV}{\kappa_T N}$$
+
+Q.E.D	(What is [Q.E.D](https://en.wikipedia.org/wiki/Q.E.D.)?)
+
+</details>
+
+<h3 id="52-maxwell-relations">5.2 Maxwell Relations</h3>
+
+<h4 id="how-to-derive-them">How to derive them</h4>
+
+<p>Derivation of Maxwell relations is simple. As an example, we have</p>
+
+<script type="math/tex; mode=display">dU=T dS - PdV + \mu dN</script>
+
+<p>And</p>
+
+<script type="math/tex; mode=display">\frac{\partial^{2} U}{\partial S \partial V}=\frac{\partial^{2} U}{\partial V \partial S}</script>
+
+<p>Therefore, we have</p>
+
+<script type="math/tex; mode=display">-\left(\frac{\partial P}{\partial S}\right)_ {V, N_{1}, N_{2}, \ldots}=\left(\frac{\partial T}{\partial V}\right)_ {S, N_{1}, N_{2}, \ldots}</script>
+
+<h4 id="how-to-remember">How to remember:</h4>
+
+<ol>
+  <li>Each pair of conjugate functions, e.g. $(S,T)$, sits at diagonal position.</li>
+</ol>
+
+<script type="math/tex; mode=display">-\left(\frac{\partial  \color{green}{P}}{\partial \color{red}{S}}\right)_ {V, N}=\left(\frac{\partial  \color{red}{T}}{\partial \color{green}{V}}\right)_ {S, N}</script>
+
+<ol>
+  <li>If $P$ involved, add a negative sign.<br />
+Because the conjugate $(-P,V)$ has a negative sign.</li>
+</ol>
+
+<script type="math/tex; mode=display">\color{red}- \left(\frac{\partial P}{\partial {S}}\right)_ { {V}, N}=\left(\frac{\partial T}{\partial {V}}\right)_ { {S}, N}</script>
+
+<ol>
+  <li>If not all denominators are intensive (or all molecule are extensive) (e.g.$\partial T/ \partial V$), each exception gives one negative sign.</li>
+</ol>
+
+<script type="math/tex; mode=display">\color{red}{-}\left(\frac{\partial \color{red}{S}}{\partial N}\right)_ {T, V}=\left(\frac{\partial \mu}{\partial \color{red}{T}}\right)_ {V, N}</script>
+
+<ol>
+  <li>Each molecule is the constant of the derivative across the equal sign.</li>
+</ol>
+
+<script type="math/tex; mode=display">-\left(\frac{\partial P}{\partial \color{red}{S}}\right)_ {\color{red}{V}, N}=\left(\frac{\partial T}{\partial \color{red}{V}}\right)_ {\color{red}{S}, N}</script>
+
+<p>You can find your own way to remember this, which is easiest to remember for you is the best.</p>
+
+<h3 id="53-jacobian">5.3 Jacobian</h3>
+
+<p>See the supplementary document on Jacobians to help understand, which is more mathematical. Here we just list the results, which is enough for solving problems.</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\boxed{\begin{aligned}
+\left(\frac{\partial X}{\partial Y}\right)_ {Z} &=1 /\left(\frac{\partial Y}{\partial X}\right)_ {Z} \\
+\left(\frac{\partial X}{\partial Y}\right)_ {Z} &=\left(\frac{\partial X}{\partial W}\right)_ {Z} /\left(\frac{\partial Y}{\partial W}\right)_ {z} \\
+\left(\frac{\partial X}{\partial Y}\right)_ {Z} &= \color{red}{-}\left(\frac{\partial Z}{\partial Y}\right)_ {X} /\left(\frac{\partial Z}{\partial X}\right)_ {Y}	\end{aligned}
+} %]]></script>
+
+<p>Jacobians is very useful when we have e.g. $G,S$ as constant, and we want to bring it to denominators, so that we can either expand them or get the useful second derivatives.</p>
+
+<h3 id="54-reduce-the-derivatives-ep4">5.4 Reduce the Derivatives (EP4)</h3>
+
+<p><strong>General rules:</strong></p>
+
+<ol>
+  <li>Try to put extensive variables at molecule, and intensive variables at denominator. For example:</li>
+</ol>
+
+<script type="math/tex; mode=display">\left( \frac{\partial P}{\partial U} \right) _ {G,N} 	\rightarrow \left[ \left( \frac{\partial U}{\partial P} \right) _ {G,N} \right] ^ {-1}</script>
+
+<ol>
+  <li>Try to put expandable functions $(U,F,H,G)$ at molecule and expand them.</li>
+</ol>
+
+<script type="math/tex; mode=display">\because dU=T dS-P dV +\mu dN</script>
+
+<script type="math/tex; mode=display">\therefore \left[\left(\frac{\partial U}{\partial P}\right)_ {G,N}\right]^{-1} = \left[T\left(\frac{\partial S}{\partial P}\right)_ {G, N}-P\left(\frac{\partial V}{\partial P}\right)_ {G, N}\right]^{-1}</script>
+
+<ol>
+  <li>Make use of the <strong>jacobians</strong> and <strong>Maxwell relationships</strong> when you need it.</li>
+</ol>
+
+<script type="math/tex; mode=display">\left(\frac{\partial S}{\partial P}\right)_ {G, N} = \frac{\left(\frac{\partial G}{\partial P}\right)_ {S, N}}{\left(\frac{\partial G}{\partial S}\right)_ {P, N}}</script>
+
+<script type="math/tex; mode=display">\left(\frac{\partial S}{\partial P}\right)_ {T, N}=\left(\frac{\partial V}{\partial T}\right)_ {P, N}=-\alpha V</script>
+
+<ol>
+  <li>Be sure to remember all <del>four</del>  five second derivatives clearly.</li>
+</ol>
+
+<script type="math/tex; mode=display">\alpha, \kappa_T ~(\text{or}~ \beta),\kappa_S, c_V, c_P</script>
+
+<ol>
+  <li>Plug in all results back and simplify it.</li>
+</ol>
+
+<blockquote>
+  <p>Ps. Not to confuse with this two:</p>
+
+  <script type="math/tex; mode=display">\left(\frac{\partial \color{red}{T}}{\partial X}\right)_ {\color{red}{T}, N} \equiv 0, \quad
+\left(\frac{\partial \color{red}{T}}{\partial \color{red}{T}}\right)_ {X, N} \equiv 1</script>
+</blockquote>
+
+<h3 id="55-stability">5.5 Stability</h3>
+<p>…</p>
+
+<h2 id="9---multicomponent-homogeneous-nonreacting-systems-solution">9 - Multicomponent Homogeneous Nonreacting Systems: <em>Solution</em></h2>
+
+<h3 id="91-partial-molar-properties-pmp">9.1 Partial Molar Properties (PMP)</h3>
+
+<p>Consider a multcomponent homogeneous system, with $c$ different components, each has mole number of $n_k ~ (k=1,2,…,c)$.</p>
+
+<blockquote>
+  <p><strong>Attention:</strong>$~ ~ ~$ $n_k$ is mole number, not confuse with $N_k$ which is partical number. <script type="math/tex">N_k= n_k \cdot N_{avo}(\text{Avogadro number}).</script></p>
+</blockquote>
+
+<p>For an extensive thermodynamic property $\left(\mathrm{B}^{\prime}=\mathrm{U}^{\prime}, \mathrm{S}^{\prime}, \mathrm{V}^{\prime}, \mathrm{H}^{\prime}, \mathrm{G}^{\prime}, . .\right)$,</p>
+
+<script type="math/tex; mode=display">d B^{\prime}=\left(\frac{\partial B^{\prime}}{\partial T}\right)_ {P, n_{k}} d T+\left(\frac{\partial B^{\prime}}{\partial P}\right)_ {T, n_{k}} d P+\sum_{k=1}^{c} \color{red}{ \left(\frac{\partial B^{\prime}}{\partial n_{k}}\right)_ {T, P, n_{j}   \neq n_{k}} } d n_{k}</script>
+
+<p>The partial molar property $B$ for component $k$ is then</p>
+
+<script type="math/tex; mode=display">\overline{B_{k}} \equiv\left(\frac{\partial B^{\prime}}{\partial n_{k}}\right)_ {T, P, n_{j} \neq n_{k}} \quad(k=1,2, \ldots,c)</script>
+
+<hr />
+
+<p>At constant temperature and pressure, we have</p>
+
+<script type="math/tex; mode=display">d B_{T, P}^{\prime}=\sum_{n_{k}=1}^{c} \overline{B_{k}} d n_{k}</script>
+
+<p>From full differential of $dB^\prime$ we know</p>
+
+<script type="math/tex; mode=display">d B^{\prime}=\sum_{k=1}^{c}\left[\overline{B_{k}} d n_{k}+n_{k} d \overline{B_{k}}\right]</script>
+
+<p>Combining above two equations, we get the <strong>Gibbs-Duhem Equation(Relation)</strong>:</p>
+
+<script type="math/tex; mode=display">\boxed{\sum_{n_{k}=1}^{c} n_{k} d\overline{B_{k}} =0}</script>
+
+<h3 id="92-solution-ims-class">9.2 Solution (Im’s Class)</h3>
+
+<p>Consider a solution made of two components:</p>
+
+<script type="math/tex; mode=display">\boxed{n_A \text{pure}A} + \boxed{n_B \text{ pure}B} \rightarrow \boxed{(n_A+n_B) ~(A+B\text{ solution})}</script>
+
+<p>The Gibbs free energy before and after mixing are:</p>
+
+<script type="math/tex; mode=display">G_{~seperate\\(or~before)}=n_A G_A^o+n_B G_B^o</script>
+
+<script type="math/tex; mode=display">G_{~solution\\(or~after)}=n_A \overline{G_A}+n_B \overline{G_B}</script>
+
+<p>In which $G^o$ is Gibbs free energy of pure matter $\color{red}{(needs~ varify)}$, $\overline{G_A}$ is partial molar Gibbs free energy. They are both chemical potential, but little different.</p>
+
+<script type="math/tex; mode=display">G^o=\mu_A^o</script>
+
+<script type="math/tex; mode=display">\overline{G_A}=\frac{\partial G_{solution}}{\partial n_A}=\mu_A</script>
+
+<blockquote>
+  <p><strong>Attention:</strong>
+Only in unary system $\mu \equiv g \equiv G$ (here $g=G/N$) .
+In multicomponent system $\mu_i = \partial G / \partial n_i $ for component $i$.</p>
+</blockquote>
+
+<p>We can write the Gibbs-Duhem Equation</p>
+
+<script type="math/tex; mode=display">n_A d\overline{G_A}+n_B d\overline{G_B}=0</script>
+
+<p>For 1 mole solution, substituting in</p>
+
+<script type="math/tex; mode=display">x_A=\frac{n_A}{n_A+n_B} \quad x_B=\frac{n_B}{n_A+n_B}</script>
+
+<p>We have:</p>
+
+<script type="math/tex; mode=display">\boxed{ x_A d\overline{G_A}+x_B d\overline{G_B}=0 }</script>
+
+<p>And</p>
+
+<script type="math/tex; mode=display">\boxed{ G_{~seperate(or~before)}=x_A G_A^o+x_B G_B^o}</script>
+
+<script type="math/tex; mode=display">\boxed{ G_{~solution(or~after)}=x_A \overline{G_A}+x_B \overline{G_B}}</script>
+
+<hr />
+
+<p>Now consider the Gibbs free energy change $\Delta G_{mix}$ before and after mixing, which should be:</p>
+
+<script type="math/tex; mode=display">\Delta G_{mix} =  G_{solution} - G_{seperate}</script>
+
+<p>And then we can derive the following relations:</p>
+
+<script type="math/tex; mode=display">\Delta G_{mix} =  \Delta H_{mix} - T \Delta S_{mix}</script>
+
+<p>or</p>
+
+<script type="math/tex; mode=display">\Delta G_{mix} =  x_A  \Delta \overline G_{mix, A}+x_B  \Delta \overline G_{mix, B} = x_A (\overline{G_A}-G_A^o) + x_B (\overline{G_B}-G_B^o)</script>
+
+<p>Likewise</p>
+
+<script type="math/tex; mode=display">G_{sol} = H_{sol} - T \cdot S_{sol}</script>
+
+<script type="math/tex; mode=display">G_{sol} = x_A \overline G_A + x_B \overline G_B \tag{* }</script>
+
+<script type="math/tex; mode=display">G_{sol} = \Delta G_{mix} + G_ {seperate}</script>
+
+<p>Now we can construct the curve of $G_ {sol}$ for the first step.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![Alt text</td>
+      <td>center](./free_energy_solution_01.jpg)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>From $(* )$ we can derive</p>
+
+<script type="math/tex; mode=display">\frac{dG_{sol}}{dx_B} = - \overline G_A + \overline G_B</script>
+
+<p>And the tangent line at point $\left( x_B^\prime, G_{sol}\right)$ is then $G^\prime = G_{sol} +  (x_B-x_B^\prime) \frac{dG_{sol}}{dx_B} $. Therefore we have the partial molar Gibbs free energy of $A$ and $B$:</p>
+
+<script type="math/tex; mode=display">\overline G_B = G_{sol} + (1-x_B)\frac{dG_{sol}}{dx_B}</script>
+
+<script type="math/tex; mode=display">\overline G_A = G_{sol} + ~ ~ ~ ~ ~ x_B   \cdot \color{red}{-}\frac{dG_{sol}}{dx_B}</script>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![Alt text</td>
+      <td>center](./free_energy_solution_02.jpg)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<p>Plugging in activity $a$</p>
+
+<script type="math/tex; mode=display">\overline G_A = G_A^o +RT \ln a_A  = \mu_A</script>
+
+<p>where
+<script type="math/tex">a_A = \gamma _A \cdot x_A = \frac{f_A}{f_A^o} \approx \frac{P_A}{P_A^o}</script></p>
+
+<p>In which, $\gamma_A$ is activity coefficient, $x_A$ is mole fraction of $A$.</p>
+
+<blockquote>
+  <p>This part seems to have collision with Prof. Barmak’s lecture, see <a href="">Lec 9 Page 9</a>.</p>
+</blockquote>
+
+<p>Then we can expand $(*)$ to</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}G_{sol} ~&= x_A \overline G_A + x_B \overline G_B \\
+&=x_A G_A^o +x_A RT \ln a_A + x_B G_B^o +x_B RT \ln a_B\\
+&=\color{red}{\left(x_A G_A^o +x_B G_B^o \right) }+ \color{green}{RT \left(x_A \ln a_A + x_B  \ln a_B \right)}\\
+&=\color{red}{G_{sep}}\text{(known)}+ \color{green}{\Delta G_{mix}}\text{(conclusion)}
+\end{aligned} %]]></script>
+
+<!--
+As we already know $G_{sep}=\left(x_A G_A^o +x_B G_B^o \right)$
+Then we can conclude $\Delta G_{mix} = RT \left(x_A \ln a_A + x_B  \ln a_B \right)$
+-->
+<p>Then</p>
+
+<script type="math/tex; mode=display">\Delta \overline G_{mix, A} \equiv \frac{\partial \Delta G_{mix}}{\partial x_A} = RT \ln a_A = \overline G_A -G_A^o\\
+\Delta \overline G_{mix, B} \equiv \frac{\partial \Delta G_{mix}}{\partial x_B} = RT \ln a_B = \overline G_B -G_B^o</script>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![Alt text</td>
+      <td>center](./free_energy_solution_03.jpg)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="93-binary-dilute-solution">9.3 Binary Dilute solution</h3>
+<p>The solvent obeys Raoult’s Law</p>
+
+<script type="math/tex; mode=display">\lim_{X_A \rightarrow 1} a_A = X_A</script>
+
+<p>The solute obeys Henry’s Law</p>
+
+<script type="math/tex; mode=display">\lim_{X_B \rightarrow 0} a_B = \gamma^o X_B \\(\gamma^o:\text{Henry's Law constant})</script>
+
+<p>Here is an illustration from Prof. Barmak’s Lecture.</p>
+
+<p><img src="./binary_dilute_solution.jpg" alt="" /></p>
+
+<!--E:\GitHub\mikelyou.github.io\img\in-post\post-thermodynamics\binary_dilute_solution.jpg-->
+
+<h3 id="94-ideal-solution">9.4 Ideal Solution</h3>
+<p>Assumption of ideal solution:
+<script type="math/tex">\boxed{ a_A = x_A, a_B = x_B} \quad (\text{i.e. } \gamma_A =\gamma_B =1)</script></p>
+
+<blockquote>
+  <p>This assumption is derivated from ideal gas mixture, see <a href="">Barmak’s Lec 9 Page 10</a>.</p>
+</blockquote>
+
+<p>Upon this very simple assumption, we can derive</p>
+
+<script type="math/tex; mode=display">\Delta G_{mix}^{ideal} = RT \left[ x_A \ln x_A + x_B  \ln x_B \right] \propto T\\
+\Delta V_{mix}^{ideal} =\left(\frac{\partial \Delta G_{mix}^{ideal}}{\partial P}\right)_{T, x_B}=0\\
+\Delta U_{mix}^{ideal} =\Delta H_{mix}^{ideal} = \left[\frac{\partial (\Delta G_{mix}^{ideal}/T)}{\partial (1/T)}\right]_{P, x_B} =0</script>
+
+<p>Noticing that $\Delta H_{mix}^{ideal}=0$, we can conclude that $\Delta G_{mix}^{ideal} = -T \Delta S_{mix}^{ideal}$, i.e.</p>
+
+<script type="math/tex; mode=display">\Delta S_{mix}^{ideal} = -R \left[ x_A \ln x_A + x_B  \ln x_B \right]</script>
+
+<p>Here are two fine graphs:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![Alt text</td>
+      <td>500x0</td>
+      <td>center](./ideal_solution.jpg)</td>
+    </tr>
+    <tr>
+      <td>![Alt text</td>
+      <td>500x0</td>
+      <td>center](./ideal_solution_2.jpg)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="95-regular-solution">9.5 Regular Solution</h3>
+
+<p>The difference of regular solution to ideal solution is, the enthalpy of regular solution is nonzero. $\color{red}{\text{needs varification}}$</p>
+
+<p>Here we directly give the results:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+\Delta G_{mix}^{reg} &= \Omega x_A x_B + RT \left[ x_A \ln x_A + x_B  \ln x_B \right] \\
+\Delta S_{mix}^{reg} &= \color{white}{zzzzzzzzzz}RT \left[ x_A \ln x_A + x_B  \ln x_B \right] =\Delta S_{mix}^{ideal}\\
+\Delta H_{mix}^{reg} &= \Omega x_A x_B  \color{white}{zzzzzzzzzzzzzzzzzzzzzzzzzzzzz} \left(\Delta H_{mix}^{ideal} = 0 \right)
+\end{aligned} %]]></script>
+
+<p>Regular solution will simplify to ideal solution when $\Omega = 0$</p>
+
+<blockquote>
+  <p><strong>Attention: Nomenclature</strong></p>
+
+  <p>In Im’s class, $\Omega$  is <strong><a href="#regular-solution-parameter">regular solution parameter</a></strong>, $\Omega = N_a \cdot z \left[ \epsilon_{AB} - \frac{1}{2} (\epsilon_{AA}+\epsilon_{BB})\right]$, $\omega$ is <strong>configurational entropy</strong>, $\omega = \frac{(N_A+N_A)!}{N_A! N_B!}$ .</p>
+
+  <p>While in Barmak’s class, the regular solution parameter is $a_0$, and configurational entropy is $\Omega$. Pay attention to this.</p>
+</blockquote>
+
+<hr />
+<p>Using the “excess terms”, which means the difference with ideal solution</p>
+
+<script type="math/tex; mode=display">\Delta G_{mix}^{xs} = \Delta G_{mix} - \Delta G_{mix}^{ideal}	\\
+\Delta H_{mix}^{xs} = \Delta H_{mix} - \Delta H_{mix}^{ideal}	\\
+\Delta S_{mix}^{xs} = \Delta S_{mix} - \Delta S_{mix}^{ideal}</script>
+
+<p>For regular solution, we can prove that</p>
+
+<script type="math/tex; mode=display">\Delta G_{mix}^{xs,~reg} = \Omega ~ x_A x_B	\\
+\Delta H_{mix}^{xs,~reg} = \Omega ~ x_A x_B	\\
+\Delta S_{mix}^{xs,~reg} = 0 	\color{white}{zzzzzz}</script>
+
+<p><img src="./regular_solution.jpg" alt="Alt text" /></p>
+
+<h4 id="regular-solution-parameter">Regular Solution Parameter</h4>
+
+<!--[Regular Solution Parameter](#regular-solution-parameter) -->
+
+<details>
+<summary>Click to expand</summary>
+
+Consider **1 mole** solid solution made of atoms A and B, with mole fraction of $x_A$ and $x_B$. And we want to investigate the enthalpy change during the mixing process $\Delta H_{mix}$
+
+$$\Delta H_{mix} = H_{\text{solution}} - H_{\text{initial}}$$
+
+Because solid solution is a condensed system, the enthalpy is approximately equal to energy, which can be expressed in terms of bound energies:
+
+$$\Delta H_{mix}  \approx E_{\text{solution}} - E_{\text{initial}} \tag{1}$$
+
+For intial state,
+
+$$E_{\text{initial}} = x_A E_A^o + x_B E_B^o$$
+
+where $E_A^o$ is energy of 1 mole pure A, and $E_B^o$ is energy of 1 mole pure B:
+
+$$E_A^o = \frac{ N_{avo}Z}{2} \epsilon_{AA} \quad E_B^o = \frac{ N_{avo}Z}{2} \epsilon_{BB}$$
+
+in which, $N_{avo}$ is Avogadro's number, $Z$ is coordination number(number of nearest neighbors), and **we assume the coordination number is same for A, B and AB solution.** $\epsilon_{AA}$ and $\epsilon_{BB}$ are bound energies of A-A bound and B-B bound.
+
+Therefore the total energy before mixing is
+
+$$E_{\text{initial}} =   \left[ x_A \epsilon_{AA} +x_B \epsilon_{BB} \right] \frac{ N_{avo}Z}{2} \tag{2}$$
+
+For solid solution
+
+$$E_{\text{solution}} = P_{AA}\epsilon_{AA} + P_{BB}\epsilon_{BB} + P_{AB}\epsilon_{AB} $$
+
+where $P_{AA}, P_{BB},P_{AB}$ are numbers of A-A, B-B and A-B bounds.
+
+Because of  an important assumption of regular solution, that **atoms are mixed randomly**, we have
+
+$$ P_{AA} =  \frac{ N_{avo}Z}{2}$$
+
+$$ P_{BB} = x_B x_B \frac{ N_{avo}Z}{2}$$
+
+<!--$$ P_{AB} = x_A x_B \frac{ N_{avo}Z}{2} + x_B x_A \frac{ N_{avo}Z}{2} = 2 x_A x_B \frac{ N_{avo}Z}{2}$$-->
+
+$$ P_{AB} = 2 \cdot x_A x_B \frac{ N_{avo}Z}{2}$$
+
+Then substitute to get total energy after mixing
+
+$$E_{\text{solution}} = \left[ x_A^2 \epsilon_{AA} +x_B^2 \epsilon_{BB}  + 2 x_A x_B \epsilon_{AB}\right] \frac{ N_{avo}Z}{2} \tag{3}$$
+
+Plugging $(2)(3)$ into $(1)$
+
+$$\begin{aligned}
+\Delta H_{mix}  &amp;\approx \frac{ N_{avo}Z}{2} \left[	 (x_A \epsilon_{AA} +x_B \epsilon_{BB} ) -(x_A^2 \epsilon_{AA} +x_B^2 \epsilon_{BB}  + 2 x_A x_B \epsilon_{AB}) \right]\\
+&amp;= \frac{ N_{avo}Z}{2} x_A x_B\left[	2 \epsilon_{AB} - \epsilon_{AA} - \epsilon_{BB}\right]	\\
+&amp;= \Omega x_A x_B
+\end{aligned}$$
+
+where
+
+$$\Omega =  N_{avo}Z\left[ \epsilon_{AB} - \frac{1}{2}(\epsilon_{AA} - \epsilon_{BB})\right]$$
+
+</details>
+
+<h3 id="96-nonregularsubregular-or-real-solution">9.6 Nonregular(Subregular or Real) Solution</h3>
+
+<p>For component $A$, we have</p>
+
+<script type="math/tex; mode=display">\Delta \overline G_{mix,~A}^{xs,~real} = \Delta \overline G_{mix,~A}^{real} - \Delta G_{mix,~A}^{ideal} = RT \ln \gamma_A</script>
+
+<p>Therefore for the whole solution, we have</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+\Delta G_{mix}^{xs,~real} &= \Delta G_{mix}^{~real} - \Delta G_{mix}^{ideal} = RT \left[ x_A \ln \gamma_A + x_B \ln \gamma_B\right]	\\
+\Delta G_{mix}^{xs}&= \Delta H_{mix}^{xs} - T \Delta S_{mix}^{xs}
+\end{aligned} %]]></script>
+
+<p>Since we already know $\Delta H_{mix}^{ideal} = 0$,  $\Delta V_{mix}^{ideal} = 0$, then we know</p>
+
+<script type="math/tex; mode=display">\Delta H_{mix}^{xs,~real} = \Delta H_{mix}\\
+\Delta V_{mix}^{xs,~real} = \Delta V_{mix}</script>
+
+<p><img src="./nonregular_solution.jpg" alt="Alt text" /></p>
+
+<h2 id="x---unclassfied-notes-from-ims-class">X - Unclassfied Notes from Im’s class</h2>
+
+<h3 id="g-as-a-function-of-temperature">$G$ as a function of temperature</h3>
+
+<script type="math/tex; mode=display">\because C_{P}=\left(\frac{\partial Q}{\partial T}\right)_ {P}=\left(\frac{\partial H}{\partial T}\right)_ {P}</script>
+
+<script type="math/tex; mode=display">\therefore H=H_0 +\int C_ P dT</script>
+
+<script type="math/tex; mode=display">S=\int_0^T d S=\int_0^T \frac{d Q}{T}=\int_0^T \frac{C_P}{T} d T</script>
+
+<script type="math/tex; mode=display">G=H-TS</script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left(\frac{\partial G}{\partial T}\right)_ P =-S < 0 %]]></script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left(\frac{\partial^{2} G}{\partial T^{2}}\right)_ {P}=-\left(\frac{\partial S}{\partial T}\right)_ {P}=-\frac{C_{P}}{T} < 0 %]]></script>
+
+<p>We should be able to draw sketches about $H$, $S$, $G$.</p>
+
+<p>Need to add picture later.</p>
+
+<h3 id="order-of-phase-transitionstransformations">Order of Phase Transitions(Transformations)</h3>
+
+<p>Ehrenfest’s defination:</p>
+
+<p>For s $n$-th order transformation, $\large \frac{\partial^{n-1} G}{\partial T^{n-1}}$ is continious, and $\large \frac{\partial^{n} G}{\partial T^{n}}$ is discontinious.</p>
+
+<h3 id="thermodynamic-driving-force-of-transformation">Thermodynamic Driving Force of Transformation</h3>
+<p><script type="math/tex">\large \color{red} {\text{Need to do}}</script></p>
+
+<h3 id="gibbs-phase-rule">Gibbs Phase Rule</h3>
+
+<p>Generally, <strong>the freedom of a system $F$</strong>, equals the numbers of variables minus numbers of independent relations. We can write it informally as</p>
+
+<script type="math/tex; mode=display">F = N_{\text{variables}} - N_{\text{relations}} \tag{1 }</script>
+
+<p>Consider a system composed of <strong>$C$ components</strong> and has <strong>$P$ phases</strong>.</p>
+
+<p>In order to describe the composition of particular phase $\phi$,  we need $(C-1)$ variables</p>
+
+<script type="math/tex; mode=display">x_i^\phi \quad (i=1,2,\cdots,C-1;\phi=\alpha,\beta,\delta,\cdots)</script>
+
+<blockquote>
+  <p>Here we don’t need the $C$-th variables, since it’s independent and can be determined via $\sum x_i^\phi = 1$.</p>
+</blockquote>
+
+<p>Then for all $P$ phases we have $P(C-1)$ variables.</p>
+
+<p>In addition, we treat <strong>temperature and pressure</strong> as variable for common thermodynamics systems, therefore there are two more variables. And in sum, we have</p>
+
+<script type="math/tex; mode=display">N_{\text{variables}} = P (C-1) + 2 \tag{2}</script>
+
+<p>As for the numbers of relations, we know that chemical potential of every component in each phase is equal in equilibrium, i.e.</p>
+
+<script type="math/tex; mode=display">\mu_i^\alpha = \mu_i^\beta = \mu_i^\delta = \cdots \quad (i=1,2,\cdots,C)</script>
+
+<p>In sum</p>
+
+<script type="math/tex; mode=display">N_{\text{relations}}  = C (P-1) \tag{3}</script>
+
+<p>Plugging $(2)(3)$ back to $(1)$, we have</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+F &=  P (C-1) + 2 -  C (P-1)\\
+&= C-P+2
+\end{aligned} %]]></script>
+
+<p><strong>The Gibbs Phase Rule</strong></p>
+
+<script type="math/tex; mode=display">\boxed{F=C-P+2}</script>
+
+<p>If we are investigating <strong>condensed systems</strong>, the pressure can be considered fixed, therefore we have another representation</p>
+
+<script type="math/tex; mode=display">F=C-P+1</script>
+:ET
