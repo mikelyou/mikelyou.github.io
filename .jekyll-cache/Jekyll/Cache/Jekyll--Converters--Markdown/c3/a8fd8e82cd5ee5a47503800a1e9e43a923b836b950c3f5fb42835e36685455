@@ -1,4 +1,4 @@
-I"hÀ<!-- more -->
+I"ÞÉ<!-- more -->
 
 <p>@(b0-å­¦ä¹ )[Temporary]</p>
 
@@ -459,6 +459,7 @@ d\left(U+U^{r}\right) &=T^{(1)} d S^{(1)}+T^{(2)} d S^{(2)}+T^{r} d S^{r} \\
 <summary>Gibbs free energy minimum principle</summary>
 ...
 </details>
+
 <h3 id="43-thermodynamics-potentials-process-and-work">4.3 Thermodynamics Potentials, Process and Work</h3>
 
 <p>Take Helmholtz free energy as our example again. We showed that $dF=0$ at equilibrium.</p>
@@ -677,6 +678,66 @@ Because the conjugate $(-P,V)$ has a negative sign.</li>
 
 <h3 id="55-stability">5.5 Stability</h3>
 <p>â€¦</p>
+
+<h2 id="6---unary-heterogeneous-systems">6 - Unary Heterogeneous Systems</h2>
+
+<p>Unary: single component</p>
+
+<p>Heterogeneous: more than one phase.</p>
+
+<h3 id="phase">Phase</h3>
+
+<p>A <strong>phase</strong> is a physically distinct region of a system.</p>
+
+<p>Different crystal structure means different phase, including <em>allotropes</em> (single component) and <em>polymorphs</em> (multicomponents).</p>
+
+<h3 id="phase-diagrams">Phase Diagrams</h3>
+
+<p><strong>Phase diagrams</strong> can tell us which phase id stable for a system under certain condition. Sometimes write for short as $\mathrm{PD}$ or $\mathrm{\Phi D}$.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![@PD of SiO2</td>
+      <td>center</td>
+      <td>300x0](./1585260821906.png)</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>2nd order phase cannot co-exist, but 1st order phase can.</p>
+</blockquote>
+
+<h3 id="the-clausius-clapeyron-equation">The Clausius-Clapeyron Equation</h3>
+
+<p>A equilibrium line, where $\alpha$ and $\beta$ phases are in equilibrium, the $G, \mu, P,T$ must be equal, and therefore their viaration too $dG,d \mu, dP,dT$.</p>
+
+<p>Then we have</p>
+
+<script type="math/tex; mode=display">\because d \mu^{\alpha}=d \mu^{\beta}</script>
+
+<script type="math/tex; mode=display">\therefore  -S^{\alpha} d T+V^{\alpha} d P=-S^{\beta} d T+V^{\beta} d P</script>
+
+<script type="math/tex; mode=display">\therefore \frac{d P}{d T}=\frac{\Delta S^{\alpha \rightarrow \beta}}{\Delta V^{\alpha \rightarrow \beta}}</script>
+
+<p>Because</p>
+
+<script type="math/tex; mode=display">\Delta S^{\alpha \rightarrow \beta}=\frac{\Delta H^{\alpha \rightarrow \beta}}{T}</script>
+
+<p>If one of $\alpha$ and $\beta$ phases is gas phase, the volume of gas is much larger then condensed phase, using the ideal gas model</p>
+
+<script type="math/tex; mode=display">\Delta V^{\alpha \rightarrow {g}}=V^{g}-V^{\alpha} \approx V^{g}=\frac{R T}{P}</script>
+
+<p>Plugging in</p>
+
+<script type="math/tex; mode=display">\frac{d P}{d T}=\frac{\Delta H^{\alpha \rightarrow \beta}}{RT^2/P}</script>
+
+<p>Simplify it, we finally arrive at a very usefulrelation</p>
+
+<script type="math/tex; mode=display">\frac{d \ln P}{d T}=\frac{\Delta H^{\alpha \rightarrow \beta}}{RT^2}</script>
+
+<p><a href="">EP5.2</a></p>
 
 <h2 id="9---multicomponent-homogeneous-nonreacting-systems-solution">9 - Multicomponent Homogeneous Nonreacting Systems: <em>Solution</em></h2>
 
@@ -982,7 +1043,7 @@ $$ P_{AB} = 2 \cdot x_A x_B \frac{ N_{avo}Z}{2}$$
 
 Then substitute to get total energy after mixing
 
-$$E_{\text{solution}} = \left[ x_A^2 \epsilon_{AA} +x_B^2 \epsilon_{BB}  + 2 x_A x_B \epsilon_{AB}\right] \frac{ N_{avo}Z}{2} \tag{3}$$
+$$E_{\text{solution}} = \left[ x_A^2 \epsilon_{AA} +x_B^2 \epsilon_{BB}  + 2 x_A x_B \epsilon_{AB}\right] \frac{ N_{avo}Z}{2} \tag{ 3}$$
 
 Plugging $(2)(3)$ into $(1)$
 
@@ -1095,4 +1156,6 @@ F &=  P (C-1) + 2 -  C (P-1)\\
 <p>If we are investigating <strong>condensed systems</strong>, the pressure can be considered fixed, therefore we have another representation</p>
 
 <script type="math/tex; mode=display">F=C-P+1</script>
+
+<p>$\rightarrow$ â†’ <a href="http://www.che.uc.edu/jensen/w.%20b.%20jensen/reprints/079.%20Phase%20Rule.pdf">Application of chemical reaction</a></p>
 :ET

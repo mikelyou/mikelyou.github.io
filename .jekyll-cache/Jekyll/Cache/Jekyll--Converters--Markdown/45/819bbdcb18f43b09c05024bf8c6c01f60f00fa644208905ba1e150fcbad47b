@@ -1,4 +1,4 @@
-I"�T<blockquote>
+I"�T<blockquote>
   <p>Life is short, write your blog.</p>
 </blockquote>
 
@@ -156,7 +156,7 @@
 
 <h2 id="如何更新博客">如何更新博客</h2>
 
-<p>现在博客已经搭建成功，我们已经可以通过在网页编辑<code class="highlighter-rouge">username.github.io</code>仓库内的内容来更新博客了（可以尝试一下）。但是大家一般不推荐在网页端操作，而是采用下面的方法：<strong>通过搭建本地服务器，在修改的同时随时预览网页，确认无误后一次性提交更新。</strong> 这样的好处在于，可以及时预览编辑产生的效果，且不会产生大量修改记录。第一次可能会觉得很复杂，但熟悉操作后就会比在网页操作方便很多。</p>
+<p>现在博客已经搭建成功，那么如何把自己想要呈现的内容发布到博客上呢？我们需要使用jekyll生成网站。采用下面的方法：<strong>通过搭建本地服务器，在修改的同时随时预览网页，确认无误后一次性提交更新。</strong> 这样的好处在于，可以及时预览编辑产生的效果，且不会产生大量修改记录。第一次可能会觉得很复杂，但熟悉操作后就会比在网页操作方便很多。</p>
 
 <p>具体步骤如下：</p>
 
@@ -253,6 +253,6 @@ Ctrl+C					#关服
 </ul>
 
 <blockquote>
-  <p>本文为 Mike Lyou 本人原创，但文中内容多有借鉴上述参考模板和教程。本文谢绝转载。本文亦在<a href="https://www.jianshu.com/p/29a1d705f0f5">简书</a>发表。</p>
+  <p>本文为 Mike Lyou 本人原创，但文中内容多有借鉴上述参考模板和教程。本文谢绝转载。本文亦在<a href="https://www.jianshu.com/p/29a1d705f0f5">简书</a>和<a href="https://zhuanlan.zhihu.com/p/114318240">知乎专栏</a>发表。</p>
 </blockquote>
 :ET

@@ -630,6 +630,57 @@ $$
 ### 5.5 Stability
 ...
 
+## 6 - Unary Heterogeneous Systems
+
+Unary: single component
+
+Heterogeneous: more than one phase.
+
+### Phase
+
+A **phase** is a physically distinct region of a system.
+
+Different crystal structure means different phase, including _allotropes_ (single component) and _polymorphs_ (multicomponents).
+
+### Phase Diagrams
+
+**Phase diagrams** can tell us which phase id stable for a system under certain condition. Sometimes write for short as $\mathrm{PD}$ or $\mathrm{\Phi D}$.
+
+![@PD of SiO2|center|300x0](./1585260821906.png)
+
+> 2nd order phase cannot co-exist, but 1st order phase can.
+
+### The Clausius-Clapeyron Equation
+
+A equilibrium line, where $\alpha$ and $\beta$ phases are in equilibrium, the $G, \mu, P,T$ must be equal, and therefore their viaration too $dG,d \mu, dP,dT$.
+
+Then we have
+
+$$\because d \mu^{\alpha}=d \mu^{\beta}$$
+
+$$\therefore  -S^{\alpha} d T+V^{\alpha} d P=-S^{\beta} d T+V^{\beta} d P$$
+
+$$\therefore \frac{d P}{d T}=\frac{\Delta S^{\alpha \rightarrow \beta}}{\Delta V^{\alpha \rightarrow \beta}}$$
+
+Because
+
+$$\Delta S^{\alpha \rightarrow \beta}=\frac{\Delta H^{\alpha \rightarrow \beta}}{T}$$
+
+If one of $\alpha$ and $\beta$ phases is gas phase, the volume of gas is much larger then condensed phase, using the ideal gas model
+
+$$\Delta V^{\alpha \rightarrow {g}}=V^{g}-V^{\alpha} \approx V^{g}=\frac{R T}{P}$$
+
+Plugging in
+
+$$ \frac{d P}{d T}=\frac{\Delta H^{\alpha \rightarrow \beta}}{RT^2/P}$$
+
+
+Simplify it, we finally arrive at a very usefulrelation
+
+$$ \frac{d \ln P}{d T}=\frac{\Delta H^{\alpha \rightarrow \beta}}{RT^2}$$
+
+[EP5.2]()
+
 ## 9 - Multicomponent Homogeneous Nonreacting Systems: _Solution_
 
 ### 9.1 Partial Molar Properties (PMP)
@@ -1011,3 +1062,5 @@ $$\boxed{F=C-P+2}$$
 If we are investigating **condensed systems**, the pressure can be considered fixed, therefore we have another representation
 
 $$F=C-P+1$$
+
+$\rightarrow$ &rarr; [Application of chemical reaction](http://www.che.uc.edu/jensen/w.%20b.%20jensen/reprints/079.%20Phase%20Rule.pdf)
