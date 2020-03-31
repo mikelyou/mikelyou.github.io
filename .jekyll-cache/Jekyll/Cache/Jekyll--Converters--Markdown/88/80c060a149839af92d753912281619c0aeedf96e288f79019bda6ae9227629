@@ -1,35 +1,17 @@
-I"„#<p>This article briefly introduced the common usage of command line.
-<!-- more -->
-â€”â€”â€”</p>
+I"Œ<p>This article briefly introduced the common usage of command line.
+<!-- more --></p>
 
 <p>During the building of my blog, I encountered the <strong>command line</strong>. Though solved the tasks at that time, I know nearly nothing about the command line. So today I am going to figure out what the basic command line can do for me.</p>
 
 <p>Due to huge workload and little importance, not grapghs to illustrate.</p>
 
-<h2 class="no_toc" id="catalog">Catalog</h2>
+<!--
+## Catalog
+ {:.no_toc}
 
-<ul id="markdown-toc">
-  <li><a href="#introduction-to-command-line" id="markdown-toc-introduction-to-command-line">Introduction to command line</a></li>
-  <li><a href="#access-the-command-line" id="markdown-toc-access-the-command-line">Access the command line</a></li>
-  <li><a href="#common-commands-about-directories-and-files" id="markdown-toc-common-commands-about-directories-and-files">Common Commands about directories and files</a>    <ul>
-      <li><a href="#cd" id="markdown-toc-cd">cd</a></li>
-      <li><a href="#dir" id="markdown-toc-dir">dir</a></li>
-      <li><a href="#mkdir" id="markdown-toc-mkdir">mkdir</a></li>
-      <li><a href="#rmdir" id="markdown-toc-rmdir">rmdir</a></li>
-      <li><a href="#del" id="markdown-toc-del">del</a></li>
-      <li><a href="#help" id="markdown-toc-help">help</a></li>
-    </ul>
-  </li>
-  <li><a href="#common-commands-about-windows-systems" id="markdown-toc-common-commands-about-windows-systems">Common commands about Windows systems</a>    <ul>
-      <li><a href="#ping" id="markdown-toc-ping">ping</a></li>
-      <li><a href="#ipconfig" id="markdown-toc-ipconfig">ipconfig</a></li>
-      <li><a href="#systeminfo" id="markdown-toc-systeminfo">systeminfo</a></li>
-      <li><a href="#shutdown" id="markdown-toc-shutdown">shutdown</a></li>
-    </ul>
-  </li>
-  <li><a href="#save-commands-as-batch-file" id="markdown-toc-save-commands-as-batch-file">Save commands as batch file</a></li>
-  <li><a href="#references" id="markdown-toc-references">References</a></li>
-</ul>
+*  catalog
+{:toc}
+-->
 
 <h2 id="introduction-to-command-line">Introduction to command line</h2>
 
