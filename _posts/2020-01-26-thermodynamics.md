@@ -30,9 +30,9 @@ tags:
 -->
 
 > This post is Mike Lyou's study notes of Materials course E4201 and E4202. I do not own the copyright of some contents, if the article unintentionally infringes your copyright, it will be deleted shortly after being informed. All rights reserved.
-
+>
 > This note is still being editing, so you may see some poorly written parts. Let me know if you notice any errors or typos, thanks so much.
-
+>
 > This note is written in English, together with some Chinese notations for nomeclatures.
 
 # Thermodynamics
@@ -1091,15 +1091,15 @@ Electrical potential of two phases: $\phi^\alpha, \phi^\varepsilon$
 
         $$d m_{C u}=0=d n_{C u}^{\alpha}+d n_{C u^{2+}}^{\varepsilon}$$
 
-        $$d q_{t o t}=0=d q^{\alpha}+d q^{\varepsilon}=(-1) F d n_{e}^{\alpha}+(+2) F d n_{C u^{2}}^{\varepsilon}$$
+        $$d q_{t o t}=0=d q^{\alpha}+d q^{\varepsilon}=(-1) F d n_{e}^{\alpha}+(+2) F d n_{C u^{2+}}^{\varepsilon}$$
 
         Additional isolation constraints:
 
         $$d V_{s y s}^{\prime}=0=d V^{\prime \alpha}+d V^{\prime \varepsilon} $$
 
-        $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\varphi^{\alpha} d q^{\alpha}+\varphi^{\varepsilon} d q^{\varepsilon} |$$
+        $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha} d q^{\alpha}+\phi^{\varepsilon} d q^{\varepsilon} $$
 
-        $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\varphi^{\alpha}\left(-F d n_{e}^{\alpha}\right)+\varphi^{\varepsilon}\left(z^{+} F d n_{C u^{2+}}^{\varepsilon}\right)$$
+        $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha}\left(-F d n_{e}^{\alpha}\right)+\phi^{\varepsilon}\left(z^{+} F d n_{C u^{2+}}^{\varepsilon}\right)$$
 
         Use all expressions to arrive at:
 
@@ -1144,7 +1144,7 @@ $$\begin{aligned}
 
 Combining the up four relations, we find
 
-$$\boxed{[\mu_{Z n}^{\beta}-\mu_{Zn^{2+}}^{\varepsilon}] - [\mu_{Cu}^{\alpha}-\mu_{Cu^{2+}}^{\varepsilon}] = -2 F\left(\varphi^{\beta}-\varphi^{\alpha}\right)}$$
+$$\boxed{[\mu_{Z n}^{\beta}-\mu_{Zn^{2+}}^{\varepsilon}] - [\mu_{Cu}^{\alpha}-\mu_{Cu^{2+}}^{\varepsilon}] = -2 F\left(\phi^{\beta}-\phi^{\alpha}\right)}$$
 
 And overall cell reaction is
 
@@ -1156,7 +1156,7 @@ $$Z n^{\beta}+\left(C u^{2+}\right)^{\varepsilon}=C u^{\alpha}+\left(Z n^{2+}\ri
 >
 >1.Write the **affinities** for the **reduction reactions**
 >
->$$A^{\beta}-A^{\alpha}=-2 F\left(\varphi^{\beta}-\varphi^{\alpha}\right)$$
+>$$A^{\beta}-A^{\alpha}=-2 F\left(\phi^{\beta}-\phi^{\alpha}\right)$$
 >
 >2.The **electromotive force (emf)** for the cell is then the potential of the **right** electrode **minus** that for the **left**.
 >
