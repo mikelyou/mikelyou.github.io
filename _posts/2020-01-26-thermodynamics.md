@@ -9,7 +9,7 @@ header-style: text
 mathjax: true
 catalog: true
 copyright-statement:
-hidden: true
+hidden: false
 #excerpt: Some tips.
 tags:
   - Notes
@@ -19,6 +19,9 @@ tags:
 <!-- more -->
 
 @(b0-学习)[Temporary]
+
+[TOC]
+
 
 <!--
 **注意：这是一个临时笔记，编辑过后应及时保存到本地。**
@@ -30,6 +33,8 @@ tags:
 
 > This note is still being editing, so you may see some poorly written parts. Let me know if you notice any errors or typos, thanks so much.
 
+> This note is written in English, together with some Chinese notations for nomeclatures.
+
 # Thermodynamics
 
 
@@ -38,12 +43,12 @@ tags:
 ### 1.1 Three levels of thermodynamics
 There are three levels of thermodynamics.
 
-- The **macroscopic（宏观） or phenomenological** description.
+- The **macroscopic or phenomenological** description.
 
   - It treats the matter as structureless.
   - Macroscopic (equilibrium) thermodynamics describes and only describes equilibrium states.
 
-- The **statistical（统计）** description.
+- The **statistical** description.
 - The **quantum** description.
 
 ### 1.2 Systems, Barriers and Surrounding
@@ -990,6 +995,241 @@ $$
 $$
 
 ![Alt text](./nonregular_solution.jpg)
+
+## 14 - Electrochemistry
+
+> Barmak's electrochemistry may be different from E4260.
+
+
+### 14.1 Equilibrium in Weak Electrolytres
+
+$$c_{k}=[k]=\frac{X_{k}}{V}$$
+
+where $c_k$ is molar concentration, $[k]$ is molarity (mole number of component $k$ per liter of solution), $X_k$ is mole fraction of component $k$, $V$ is molar volume of solution.
+
+$$a_{k}=f_{k} c_{k}=f_{k}[k]$$
+
+$$f_k = \gamma_k V$$
+
+$a_k$ is avtivity of $k$, $\gamma_k$ is activity coefficient.
+
+To fing the condition for equilibrium, we have to consider all reactions in the solution.
+
+For water,
+
+$$H_{2} O=H^{+}+O H^{-}$$
+
+$$A_{w}=\left(\mu_{H^{+}}+\mu_{O H^{-}}\right)-\mu_{H_{2}O} \quad\text{(affinity)}$$
+
+$$\Delta G_{w}^{o}=-R T \ln K_{w}$$
+
+$$K_{w}=\frac{a_{H^{+}} a_{O H^{-}}}{a_{H_{2} O}}$$
+
+
+By the way, $\mathrm{pH}$ is defined by
+
+$$\mathrm{pH}=-\log a_{H^+} = -\log [H^+]$$
+
+$$\mathrm{pOH}=-\log a_{OH^-} = -\log [OH^-]$$
+
+$$\mathrm{pH} + \mathrm{pOH} = 14 \quad \text{(at room temperature)}$$
+For compound,
+
+$$M_{u} X_{v}=u M^{z+}+v X^{z-}$$
+
+$$A_{C}=\left(u \mu_{+}+v \mu_{-}\right)-\mu_{U}$$
+
+$$\Delta G_{C}^{o}=-R T \ln K_{C}$$
+
+$$K_{C}=\frac{a_{+}^{u} a_{-}^{v}}{a_{U}}=\frac{f_{+}^{u} f_{-}^{v}}{f_{U}} \frac{\left[M^{z+}\right]^{u}\left[X^{z-}\right]^{u}}{\left[M_{u} X_{v}\right]}$$
+
+$$K_{C}=K_{f} \frac{\left[M^{z+}\right]^{u}\left[X^{z-}\right]^{u}}{\left[M_{u} X_{v}\right]}$$
+
+
+We usually define the reference state so that in dilute solution, $K_f=1$.
+
+For weak electrolytes, introduce the **degree of dissociation**, $\alpha$ ($\alpha \ll 1$ for week electrolytes) and the total concentration of the electrolyte compound added to make the solution, $c_C$
+
+$$\begin{aligned}
+&\left[M^{z+}\right]=u \alpha c_{c} ; \quad\left[X^{z-}\right]=v \alpha c_{c} ; \quad\left[M_{u} X_{v}\right]=(1-\alpha) c_{c}\\
+&K_{C}=\frac{\left(u \alpha c_{C}\right)^{u}\left(v \alpha c_{C}\right)^{v}}{(1-\alpha) c_{C}}=u^{u} v^{v} \frac{\alpha^{(u+v)} c_{C}^{(u+v-1)}}{(1-\alpha)}
+\end{aligned}$$
+
+### 14.2 Equilibrium in Strong Electrolytres
+
+In dilute solutions, strong electrolytes are fully dissociated, i.e. $\alpha=1$
+
+### 14.3 Equilibrium in a Two-Phase System Involving an Electrolyte
+
+![Alt text](./1585780259104.png)
+
+The reaction is: $C u^{\alpha}=\left(C u^{2+}\right)^{\varepsilon}+2\left(e^{-}\right)^{\alpha}$
+
+Components in $\alpha$ phase: $C u, e^{-}  $
+
+Components in $\varepsilon$ phase: $\left(C u^{2+}\right)^{\varepsilon},\left(C l^{-}\right)^{\varepsilon}, C u C l_{2}, H^{+}, O H^{-}, H_{2} O$
+
+Electrical potential of two phases: $\phi^\alpha, \phi^\varepsilon$
+
+
+
+<details>
+<summary>After a long derivation &darr;</summary>
+  <table border="1">
+    <tr>
+      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
+    </tr>
+    <tr>
+      <td>
+        $$d S^{\prime \alpha}=\frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P^{\alpha}}{T^{\alpha}} d V^{\prime \alpha}-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha} d n_{C u}^{\alpha}+\mu_{e}^{\alpha} d n_{e}^{\alpha}\right]$$
+
+        $$d S^{\prime \varepsilon}=\frac{1}{T^{\varepsilon}} d U^{\prime \varepsilon}+\frac{P^{\varepsilon}}{T^{\varepsilon}} d V^{\prime \varepsilon}-\frac{1}{T^{\varepsilon}} \mu_{C u^{2+}}^{\varepsilon} d n_{C u^{2+}}^{\varepsilon}$$
+
+        $$d S_{s y s}^{\prime}=d S^{\prime \alpha}+d S^{\prime \varepsilon}$$
+
+        Isolation constraints:
+
+        $$d m_{C u}=0=d n_{C u}^{\alpha}+d n_{C u^{2+}}^{\varepsilon}$$
+
+        $$d q_{t o t}=0=d q^{\alpha}+d q^{\varepsilon}=(-1) F d n_{e}^{\alpha}+(+2) F d n_{C u^{2}}^{\varepsilon}$$
+
+        Additional isolation constraints:
+
+        $$d V_{s y s}^{\prime}=0=d V^{\prime \alpha}+d V^{\prime \varepsilon} $$
+
+        $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\varphi^{\alpha} d q^{\alpha}+\varphi^{\varepsilon} d q^{\varepsilon} |$$
+
+        $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\varphi^{\alpha}\left(-F d n_{e}^{\alpha}\right)+\varphi^{\varepsilon}\left(z^{+} F d n_{C u^{2+}}^{\varepsilon}\right)$$
+
+        Use all expressions to arrive at:
+
+        $$d S_{\text {sys,isolated }}^{\prime}=\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{\varepsilon}}\right) d U^{\prime \alpha}+\left(\frac{P^{\alpha}}{T^{\alpha}}-\frac{P^{\varepsilon}}{T^{\varepsilon}}\right) d V^{\prime \alpha} \quad $$
+
+        $$-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2}+}^{\varepsilon}+2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)\right] d n_{C u}^{\alpha}$$
+
+        $$T^{\alpha}=T^{\varepsilon}, \quad P^{\alpha}=P^{\varepsilon}$$
+      </td>
+    </tr>
+  </table>
+</details>
+
+We eventually arrive at this:
+
+$$\mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2+}}^{\varepsilon}=-2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)$$
+
+The application of this relation is obtaining $\phi^{\alpha}-\phi^{\varepsilon}$ by measuring $\mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2+}}^{\varepsilon}$.
+
+
+### 14.4 Equilibrium in an Electrochemical Cell
+
+![Alt text](./1585851378476.png)
+
+Take $\mathrm{Cu-Zn}$ battery as a concrete example.
+
+The reactions are
+
+$$\begin{aligned}
+&\left(C u^{2+}\right)^{\varepsilon}+2\left(e^{-}\right)^{\alpha}=C u^{\alpha}\\
+&\left(Z n^{2+}\right)^{\eta}+2\left(e^{-}\right)^{\beta}=Z n^{\beta}
+\end{aligned}$$
+
+Conditions of equilibrium
+
+$$\begin{aligned}
+&\mu_{C u}^{\alpha}-\left(2 \mu_{e}^{\alpha}+\mu_{C u^{2+}}^{\varepsilon}\right) =-2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)\\
+&\mu_{Zn}^{\beta}-\left(2 \mu_{e}^{\beta}+\mu_{Z n^{2+}}^{\eta}\right)=-2 F\left(\phi^{\beta}-\phi^{\eta}\right)\\
+&\phi^{\varepsilon}=\phi^{\eta} \quad \text{(After connecting the salt bridge)}\\
+&\mu_e^\beta = \mu_e^\alpha \quad \text{(After connecting the external cuicuit)}
+\end{aligned}$$
+
+Combining the up four relations, we find
+
+$$\boxed{[\mu_{Z n}^{\beta}-\mu_{Zn^{2+}}^{\varepsilon}] - [\mu_{Cu}^{\alpha}-\mu_{Cu^{2+}}^{\varepsilon}] = -2 F\left(\varphi^{\beta}-\varphi^{\alpha}\right)}$$
+
+And overall cell reaction is
+
+$$Z n^{\beta}+\left(C u^{2+}\right)^{\varepsilon}=C u^{\alpha}+\left(Z n^{2+}\right)^{\varepsilon} $$
+
+### 14.5 Conditions for Equilibrium in a General Galvanic Cell
+
+>Convention for E4201 class:
+>
+>1.Write the **affinities** for the **reduction reactions**
+>
+>$$A^{\beta}-A^{\alpha}=-2 F\left(\varphi^{\beta}-\varphi^{\alpha}\right)$$
+>
+>2.The **electromotive force (emf)** for the cell is then the potential of the **right** electrode **minus** that for the **left**.
+>
+>3.Rules of writing cell notations (copied from E4260 notes):
+  - Oxidation on the left, reduction on theright (in galvanic mode).
+  - A line as phaseboundary.
+  - Double line indicates a salt bridge: two interfaces.
+  - Metal electrodes at two ends.
+>
+>$$Z n(s)\left|Z n^{2+}(a q) \| C u^{2+}(a q)\right| C u(s) \quad \text{(E4260)}$$
+>
+>$$Z n^{\beta}\left|Z n C l_{2} \| C u C l_{2}\right| C u^{\alpha} \quad \text{(E4201)}$$
+
+$$A_{\text {cell}}=\Delta G_{\text {cell}}^{o}+R T \ln Q_{\text {cell}}$$
+
+$$E_{c e l l}=\phi^{\beta}-\phi^{\alpha}$$
+
+$$\Delta G_{\text {cell}}^{o}=-z F E_{\text {cell}}^{o}$$
+
+$$E_{c e l l}=E_{c e l l}^{o}-\frac{R T}{z F} \ln Q_{c e l l}=E_{c e l l}^{o}-\frac{2.303 R T}{z F} \log Q_{c e l l}$$
+
+$$E_{c e l l}^{o}=\frac{R T}{z F} \ln K$$
+
+### 14.6 Temperature Dependence of the Electromotive Force for a Cell
+
+$$\begin{array}{l}
+\Delta S^{o}=-\left(\frac{\partial \Delta G^{o}}{\partial T}\right)_{P, n_{k}}=+z F\left(\frac{\partial E^{o}}{\partial T}\right)_{P, n_{k}} \\
+\Delta H^{o}=\Delta G^{o}+T \Delta S^{o}=z F\left[E^{o}+T\left(\frac{\partial E^{o}}{\partial T}\right)_{P, n_{k}}\right]
+\end{array}$$
+
+> ~~So?~~
+
+### 14.7 The Standard Hydrogen Electrode (SHE)
+
+> (From E4260) **Normal hydrogen electrode (NHE)** $E^o=0$
+
+For convience, we usually use **standerd hydrogen electrode (SHE)** instead of **NHE**.
+
+### 14.8 Pourbaix Diagrams
+
+![Alt text](./1585854642156.png)
+
+At upper region, **oxygen** is liberated from water; at bottom region, **hydrogen** is liberated from water.
+
+![Alt text](./1585854760266.png)
+
+Above **a line**, **oxygen** is liberated from water; below **b line**, **hydrogen** is liberated from water.
+
+Vertival line relates with reactions that no electrons involved.
+
+Hrizontal line relateds with reactions that no $\mathrm{H^+}$ involved.
+
+![Alt text](./1585854749405.png)
+
+**Water lines a and b fall within the neutral gold**, Au, region. It is consistent with our common knowledge that gold is stable.
+
+## 17 Thermodynamics of Stressed Systems
+
+> This section overlaps greatly with E4215, and there is little colition between two courses. What is discussed is much more simple.
+
+### 17.1 Properties
+I f we just consider **linear** properties,
+
+$$R=R_{0}+\left.\frac{\partial R}{\partial F}\right|_{F=0} F=R_{0}+\mathbf{P} F \text { with } \mathbf{P}=\left.\frac{\partial R}{\partial F}\right|_{F=0}$$
+
+where $R$ is response, $F$ is field, $P$ is propertiy.
+
+If $R_0 = 0$, no remnant response, e.g., conductivity.
+If $R_0 \neq 0$, permanent property, e.g., net magnetization in a ferromagnetic material.
+
+We only talk about isotropic materials, and not going to talk about anistropic.
+
+看课件吧
 
 ## X - Unclassfied Notes from Im's class
 
