@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "如何使网页变为黑白页面"
-subtitle: ''
+subtitle: '灰度滤镜'
 date: 2020-04-04 10:00:00
 author: "Mike Lyou"
 header-style: text
@@ -12,6 +12,8 @@ copyright-statement: CC BY-NC
 hidden:
 excerpt: 深切哀悼全国各族人民对抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞
 tags:
+ - HTML
+ - CSS
 ---
 
 <style type="text/css"> html{filter: grayscale(100%); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); -webkit-filter: grayscale(1);}</style>

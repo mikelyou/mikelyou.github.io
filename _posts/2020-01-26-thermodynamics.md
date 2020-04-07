@@ -1081,7 +1081,7 @@ Electrical potential of two phases: $\phi^\alpha, \phi^\varepsilon$
     </tr>
     <tr>
       <td>
-        $$d S^{\prime \alpha}=\frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P^{\alpha}}{T^{\alpha}} d V^{\prime \alpha}-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha} d n_{C u}^{\alpha}+\mu_{e}^{\alpha} d n_{e}^{\alpha}\right]$$
+		        $$d S^{\prime \alpha}=\frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P^{\alpha}}{T^{\alpha}} d V^{\prime \alpha}-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha} d n_{C u}^{\alpha}+\mu_{e}^{\alpha} d n_{e}^{\alpha}\right]$$
 
         $$d S^{\prime \varepsilon}=\frac{1}{T^{\varepsilon}} d U^{\prime \varepsilon}+\frac{P^{\varepsilon}}{T^{\varepsilon}} d V^{\prime \varepsilon}-\frac{1}{T^{\varepsilon}} \mu_{C u^{2+}}^{\varepsilon} d n_{C u^{2+}}^{\varepsilon}$$
 
@@ -1212,6 +1212,133 @@ Hrizontal line relateds with reactions that no $\mathrm{H^+}$ involved.
 ![Alt text](./1585854749405.png)
 
 **Water lines a and b fall within the neutral gold**, Au, region. It is consistent with our common knowledge that gold is stable.
+
+## 15 Point Defects in Metals
+
+### 15.1 Defect Types
+
+1. 0-D, point defects
+2. 1-D, line defects (dislocations)
+3. 2-D, planar defects (surfaces, grain boundaries, interphase interfaces)
+4. 3-D, volume defects (voids)
+
+### 15.2 Vacancies in Elemental Materials
+
+**Formation of vacancies** requires expenditure of **energy to break bonds**, but results in **increased entropy**.
+
+**Vacancies are entropically stabilized** and, as a result, there are always some vacancies present when a material is in equilibrium, i.e., **vacancies are equilibrium defects.**
+
+### 15.3 Conditions for Equilibrium in a Crystal with Vacancies
+
+<details>
+<summary>After a long derivation &darr;</summary>
+  <table border="1">
+    <tr>
+      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
+    </tr>
+    <tr>
+     <td>
+
+Consider a system composed of a homogeneous crystalline phase (α) and it vapor (g)
+
+Variation of the entropy of this combined
+system is given by
+
+$$\begin{aligned}
+d S_{s y s}=& \frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P}{T^\alpha} d V^{\prime \alpha}-\frac{1}{T^\alpha} \sum_{k=1}^{c} \mu_{k}^{\alpha} d n_{k}^{\alpha}-\frac{1}{T} \mu_{v}^{\alpha} d n_{v}^{\alpha} \\
+& \frac{1}{T^{g}} d U^{\prime g}+\frac{P}{T^{g}} d V^{\prime g}-\frac{1}{T^{g}} \sum_{k=1}^{c} \mu_{k}^{g} d n_{k}^{g}
+\end{aligned}$$
+
+For the composite system isolated from its surroundings, we will
+have:
+
+$$\begin{array}{l}
+d U_{s y s}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime g} \\
+d V_{s y s}^{\prime}=0=d V^{\prime \alpha}+d V^{\prime g} \\
+d n_{k, s y s}=0=d n_{k}^{\alpha}+d n_{k}^{g}
+\end{array}$$
+
+Note that number of atomic sites and vacancies are not constrained in isolated system, since we can move an atom from the interior to its surface and vice versa.
+
+Insert the isolation conditions into the entropy variation for the system to arrive at
+
+$$d S_{\text {sys,isolated }}=\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{g}}\right) d U^{\prime\alpha}+\left(\frac{P^{\alpha}}{T^\alpha}-\frac{P^g}{T^g}\right) d V^{\prime \alpha}-\sum_{k=1}^{c}\left(\frac{\mu_{k}^{\alpha}}{T^\alpha}-\frac{\mu_{k}^{g}}{T^{g}}\right) d n_{k}^{\alpha}-\frac{\mu_{v}^{\alpha}}{T^\alpha} d n_{v}^{\alpha}$$
+
+In this equation, $n_\nu$ is an independent variable because atomic sites may be created or annihilated with no other changes in the system.
+
+At =m, entropy is maximized, and so in addition to the familiar conditions for equality of temperature, pressure and chemical potentials of the components of the solid phase, α, and the vapor phase, we will have
+
+
+   </td>
+   </tr>
+  </table>
+</details>
+
+
+$$\mu_\nu^\alpha = 0$$
+
+Which means in a crystal at =m, the chemical potential of vacancies is zero.
+
+### 15.4 Vacancy Concentration in Elemental Crystal at Equilibrium
+
+
+### 15.5 Experimental Proof of Vacancies
+
+Measure relative change in length, $∆L/L$ and relative change in lattice parameter, $∆a/a$, as a function of temperature
+
+Thermal expansion contributes to both change in length and change in lattice parameter.
+
+Creation of vacancies contributes to change in length, but not to the change in lattice parameter.
+
+Mono-Vacancy concentration is proportional to
+
+$$3\left(\frac{\Delta L}{L}-\frac{\Delta a}{a}\right)$$
+
+![Alt text](./1586220944017.png)
+
+>R. O. Simmons and R. W. Balluffi, Phys. Rev. 117, 52-60 (1960).
+
+### 15.6 Self Interstitials and Frenkel Defects
+
+**Self Interstitials**: follow the same line of reasoning, but here take atom from surface and insert into an interstitial site.
+
+Note that formation energy of self-interstitial is 2- 4 times that for the vacancy. Therefore, **the concentration of self-interstitials is many orders of magnitude smaller than for vacancies.**
+
+Like vacancies, self-interstitials are intrinsic point defects and their presence results in a volume change (reduction) relative to that for thermal expansion.
+
+**A Frenkel defec**t is a vacancy-interstitial pair
+
+### 15.7 Solutes and Impurities
+
+Element or elements dissolved in the host are solutes (when wanted) or impurities (when not wanted)
+
+- Substitutional
+- Interstitial
+
+Are extrinsic defects.
+
+Their =m concentration is determined by alloy thermodynamics.
+
+>The following content is from Beiley's class.
+
+Impurities can be further classified into two types: **substitutional** (usually for larger atoms) and **imputities** (usually for smaller stoms).
+
+**Hume-Rothery rules**: Conditions usually satisfied for complete solid solubility
+
+1. Same crystal structure for pure A and pure B
+2. Difference in atomic radii $r_A$, $r_B$ small (max 10%)
+3. No difference in electronegativities
+
+### A Summary
+
+
+
+![Alt text](./1586221448794.png)
+
+http://www.substech.com/dokuwiki/lib/exe/fetch.php?w=&h=&cache=cache&media=point_defects.png
+
+## 16 Point Defects in Ionic Compounds
+
 
 ## 17 Thermodynamics of Stressed Systems
 
