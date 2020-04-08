@@ -128,7 +128,16 @@ $$
 
 In the above equation, partial value is zero because $S \equiv 0$.
 
-####  Calculation of entropy
+
+<details>
+<summary><b>Calculation of entropy &darr;</b></summary>
+  <table border="1">
+    <tr>
+      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
+    </tr>
+    <tr>
+      <td>
+
 According to the Third Law, the absolute value of entropy can be calculated.
 
 For a reversible process
@@ -146,6 +155,11 @@ $$S_T = S_0 + \int_{0}^T \frac{C_p}{T} dT = \int_0^T \frac{C_p}{T} dT $$
 or more practically
 
 $$ S_T = S_{298.15} + \int_{298.15}^{T} \frac{C_{p}}{T} d T $$
+
+      </td>
+    </tr>
+  </table>
+</details>
 
 
 ## 3 - Conditions of Equilibrium
@@ -512,10 +526,14 @@ $$c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}$$
 
 $$\kappa_{T}=\kappa_{S}+\frac{T V \alpha^{2}}{N c_{P}}$$
 
-#### Derive $c_{P}=c_{V}+\frac{T V \alpha^{2}}{N \kappa_{T}}$
-
 <details>
-<summary>Click to expand</summary>
+<summary><b>Derivation of Cp - Cv</b> &darr;</summary>
+  <table border="1">
+    <tr>
+      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
+    </tr>
+    <tr>
+      <td>
 
 By definition, we have
 
@@ -547,7 +565,11 @@ $$ c_P - c_V = \frac{T}{N}  \cdot \frac{\alpha}{\kappa_T} \cdot \alpha V = \frac
 
 Q.E.D	(What is [Q.E.D](https://en.wikipedia.org/wiki/Q.E.D.)?)
 
+      </td>
+    </tr>
+  </table>
 </details>
+
 
 ### 5.2 Maxwell Relations
 
@@ -641,13 +663,13 @@ Unary: single component
 
 Heterogeneous: more than one phase.
 
-### Phase
+### 6.1 Phase
 
 A **phase** is a physically distinct region of a system.
 
 Different crystal structure means different phase, including _allotropes_ (single component) and _polymorphs_ (multicomponents).
 
-### Phase Diagrams
+### 6.2 Phase Diagrams
 
 **Phase diagrams** can tell us which phase id stable for a system under certain condition. Sometimes write for short as $\mathrm{PD}$ or $\mathrm{\Phi D}$.
 
@@ -655,7 +677,7 @@ Different crystal structure means different phase, including _allotropes_ (singl
 
 > 2nd order phase cannot co-exist, but 1st order phase can.
 
-### The Clausius-Clapeyron Equation
+### 6.3 The Clausius-Clapeyron Equation
 
 A equilibrium line, where $\alpha$ and $\beta$ phases are in equilibrium, the $G, \mu, P,T$ must be equal, and therefore their viaration too $dG,d \mu, dP,dT$.
 
@@ -906,12 +928,18 @@ $$
 
 ![Alt text](./regular_solution.jpg)
 
-#### Regular Solution Parameter
+
 
 <!--[Regular Solution Parameter](#regular-solution-parameter) -->
 
 <details>
-<summary>Click to expand</summary>
+<summary><b>Regular Solution Parameter &darr;</b></summary>
+  <table border="1">
+    <tr>
+      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
+    </tr>
+    <tr>
+      <td>
 
 Consider **1 mole** solid solution made of atoms A and B, with mole fraction of $x_A$ and $x_B$. And we want to investigate the enthalpy change during the mixing process $\Delta H_{mix}$
 
@@ -967,8 +995,10 @@ where
 
 $$\Omega =  N_{avo}Z\left[ \epsilon_{AB} - \frac{1}{2}(\epsilon_{AA} - \epsilon_{BB})\right]$$
 
+      </td>
+    </tr>
+  </table>
 </details>
-
 
 ### 9.6 Nonregular(Subregular or Real) Solution
 
@@ -1306,7 +1336,7 @@ Note that formation energy of self-interstitial is 2- 4 times that for the vacan
 
 Like vacancies, self-interstitials are intrinsic point defects and their presence results in a volume change (reduction) relative to that for thermal expansion.
 
-**A Frenkel defec**t is a vacancy-interstitial pair
+**A Frenkel defect** is a vacancy-interstitial pair
 
 ### 15.7 Solutes and Impurities
 
@@ -1329,7 +1359,7 @@ Impurities can be further classified into two types: **substitutional** (usually
 2. Difference in atomic radii $r_A$, $r_B$ small (max 10%)
 3. No difference in electronegativities
 
-### A Summary
+### 15.8 A Summary
 
 
 
