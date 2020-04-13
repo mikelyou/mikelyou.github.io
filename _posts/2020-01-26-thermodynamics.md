@@ -82,7 +82,7 @@ $\rightarrow$ We're more interested in intensive variables
 $\rightarrow$ Many **(Every?)** extensive variable has a **conjugate** intensive variable.  Common pairs are $(S,T)$, $(-P,V)$ and $(\mu,N)$. $\rightarrow$ See [First Derivatives of Fundamental Equation](#first-derivatives-of-fundamental-equation) for why they are conjugate.
 
 
-***
+
 ## 2 - Laws of Thermodynamics
 
 > ~~众所周知，热力学三大定律一共有四条（还有第零定律）。~~
@@ -280,6 +280,8 @@ The temperature of all systems is equal to the temperature of all subsystems (at
 From the single fact that **entropy is maximized for the given constraints**, we can get several important implications.
 
 ![Alt text](./1584381231912.png)
+
+![](/img/in-post/post-thermodynamics/condition_of equilibrium.jpg)
 
 #### 3.6.1 Equilibrium of Temperature
 
@@ -675,6 +677,8 @@ Different crystal structure means different phase, including _allotropes_ (singl
 
 ![@PD of SiO2|center|300x0](./1585260821906.png)
 
+![](/img/in-post/post-thermodynamics/phase_diagram_silica.png)
+
 > 2nd order phase cannot co-exist, but 1st order phase can.
 
 ### 6.3 The Clausius-Clapeyron Equation
@@ -804,6 +808,8 @@ Now we can construct the curve of $G_ {sol}$ for the first step.
 
 ![Alt text |center](./free_energy_solution_01.jpg)
 
+![](/img/in-post/post-thermodynamics/free_energy_solution_01.jpg)
+
 ***
 
 From $(* )$ we can derive
@@ -817,6 +823,8 @@ $$\overline G_B = G_{sol} + (1-x_B)\frac{dG_{sol}}{dx_B} $$
 $$\overline G_A = G_{sol} + ~ ~ ~ ~ ~ x_B   \cdot \color{red}{-}\frac{dG_{sol}}{dx_B} $$
 
 ![Alt text|center](./free_energy_solution_02.jpg)
+
+![](/img/in-post/post-thermodynamics/free_energy_solution_02.jpg)
 
 ***
 Plugging in activity $a$
@@ -849,6 +857,7 @@ $$\Delta \overline G_{mix, A} \equiv \frac{\partial \Delta G_{mix}}{\partial x_A
 
 ![Alt text|center](./free_energy_solution_03.jpg)
 
+![](/img/in-post/post-thermodynamics/free_energy_solution_03.jpg)
 
 ### 9.3 Binary Dilute solution
 The solvent obeys Raoult's Law
@@ -866,6 +875,8 @@ Here is an illustration from Prof. Barmak's Lecture.
 
 [binary_dilute_solution]: ./binary_dilute_solution.jpg
 <!--E:\GitHub\mikelyou.github.io\img\in-post\post-thermodynamics\binary_dilute_solution.jpg-->
+
+![](/img/in-post/post-thermodynamics/binary_dilute_solution.jpg)
 
 ### 9.4 Ideal Solution
 Assumption of ideal solution:
@@ -887,6 +898,10 @@ Here are two fine graphs:
 
 ![Alt text|500x0|center](./ideal_solution.jpg)
 ![Alt text|500x0|center](./ideal_solution_2.jpg)
+
+![](/img/in-post/post-thermodynamics/ideal_solution.jpg)
+
+![](/img/in-post/post-thermodynamics/ideal_solution_2.jpg)
 
 
 ### 9.5 Regular Solution
@@ -928,7 +943,7 @@ $$
 
 ![Alt text](./regular_solution.jpg)
 
-
+![](/img/in-post/post-thermodynamics/regular_solution.jpg)
 
 <!--[Regular Solution Parameter](#regular-solution-parameter) -->
 
@@ -1026,6 +1041,8 @@ $$
 
 ![Alt text](./nonregular_solution.jpg)
 
+![](/img/in-post/post-thermodynamics/nonregular_solution.jpg)
+
 ## 14 - Electrochemistry
 
 > Barmak's electrochemistry may be different from E4260.
@@ -1093,6 +1110,8 @@ In dilute solutions, strong electrolytes are fully dissociated, i.e. $\alpha=1$
 
 ![Alt text](./1585780259104.png)
 
+![](/img/in-post/post-thermodynamics/copper_solid_in_copper_chloride_solution.jpg)
+
 The reaction is: $C u^{\alpha}=\left(C u^{2+}\right)^{\varepsilon}+2\left(e^{-}\right)^{\alpha}$
 
 Components in $\alpha$ phase: $C u, e^{-}  $
@@ -1153,6 +1172,8 @@ The application of this relation is obtaining $\phi^{\alpha}-\phi^{\varepsilon}$
 ### 14.4 Equilibrium in an Electrochemical Cell
 
 ![Alt text](./1585851378476.png)
+
+![](/img/in-post/post-thermodynamics/copper_zinc_battery.png)
 
 Take $\mathrm{Cu-Zn}$ battery as a concrete example.
 
@@ -1229,9 +1250,13 @@ For convience, we usually use **standerd hydrogen electrode (SHE)** instead of *
 
 ![Alt text](./1585854642156.png)
 
+![](/img/in-post/post-thermodynamics/pourbaix_diagram.png)
+
 At upper region, **oxygen** is liberated from water; at bottom region, **hydrogen** is liberated from water.
 
 ![Alt text](./1585854760266.png)
+
+![](/img/in-post/post-thermodynamics/pourbaix_diagram_copper.png)
 
 Above **a line**, **oxygen** is liberated from water; below **b line**, **hydrogen** is liberated from water.
 
@@ -1240,6 +1265,8 @@ Vertival line relates with reactions that no electrons involved.
 Hrizontal line relateds with reactions that no $\mathrm{H^+}$ involved.
 
 ![Alt text](./1585854749405.png)
+
+![](/img/in-post/post-thermodynamics/pourbaix_diagram_gold.png)
 
 **Water lines a and b fall within the neutral gold**, Au, region. It is consistent with our common knowledge that gold is stable.
 
@@ -1326,6 +1353,8 @@ $$3\left(\frac{\Delta L}{L}-\frac{\Delta a}{a}\right)$$
 
 ![Alt text](./1586220944017.png)
 
+![](/img/in-post/post-thermodynamics/experimental_proof_of_vacancies.png)
+
 >R. O. Simmons and R. W. Balluffi, Phys. Rev. 117, 52-60 (1960).
 
 ### 15.6 Self Interstitials and Frenkel Defects
@@ -1367,6 +1396,8 @@ Impurities can be further classified into two types: **substitutional** (usually
 
 http://www.substech.com/dokuwiki/lib/exe/fetch.php?w=&h=&cache=cache&media=point_defects.png
 
+![](/img/in-post/post-thermodynamics/point_defeccts_of_crystals.png)
+
 ## 16 Point Defects in Ionic Compounds
 
 ### 16.1 Defect Type
@@ -1380,6 +1411,8 @@ Defects in ionic compounds can be ionic or electronic:
 Usually, point defects **in metals** are electrically **neutral** whereas i**n ionic compounds** point defects are **electrically charged**.
 
 ![Alt text](./1586726499409.png)
+
+![](/img/in-post/post-thermodynamics/point_defeccts_of_ionic_compounds.png)
 
 &rarr; The high mobility of the ionic defects in certain compounds makes them suitable
 candidates as solid electrolytes for batteries and fuel cells.
