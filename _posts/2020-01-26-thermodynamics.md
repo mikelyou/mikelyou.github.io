@@ -1369,6 +1369,45 @@ http://www.substech.com/dokuwiki/lib/exe/fetch.php?w=&h=&cache=cache&media=point
 
 ## 16 Point Defects in Ionic Compounds
 
+### 16.1 Defect Type
+
+Defects in ionic compounds can be ionic or electronic:
+
+- **Ionic defects**: **Occupy atomic positions in the crystal**, which can be vacancies, interstitial ions, substitutional ions, impurities, or ions on the wrong sites (antisite defects)
+
+- **Electronic defects**: **Deviations from a ground state electron orbital configuration** give rise to such defects when valence electrons are excited into higher energy orbitals/levels and lead to formation of electron or holes.
+
+Usually, point defects **in metals** are electrically **neutral** whereas i**n ionic compounds** point defects are **electrically charged**.
+
+![Alt text](./1586726499409.png)
+
+&rarr; The high mobility of the ionic defects in certain compounds makes them suitable
+candidates as solid electrolytes for batteries and fuel cells.
+
+### 16.2 Kröger-Vink Notation
+
+[wikipedia](https://en.wikipedia.org/wiki/Kr%C3%B6ger%E2%80%93Vink_notation)
+
+Because points defects in ionic compounds are usually charged, we need a set of notations to indicate this charge. Therefore we here introduce the Kröger-Vink Notation.
+
+The Kröger-Vink notation allows us to identify:
+
+- the defect type
+- the site on which the defect is located
+- the effective charge of the defect relative to the charge on the given site in a perfect crystal (or in a chosen reference crystal)
+
+
+General form is:
+
+$$M_S^C$$
+
+In which,
+
+$M$ corresponds to **structure element**, can be atoms (e.g. Si, Ni), vacancies ($v$), interstitials ($i$), electrons ($e$) or electron holes ($h$).
+
+$S$ indicates the l**attice site that the species occupies**, including interstitials.
+
+$C$ corresponds to **the electronic charge** of the species relative to the site that it occupies. Prime ($\prime$) denotes negative charge, dot ($\cdot$) denotes positive charge, star ($*$) denotes neutrality, two dots indicate double positive charge.
 
 ## 17 Thermodynamics of Stressed Systems
 
