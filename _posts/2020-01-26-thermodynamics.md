@@ -398,7 +398,7 @@ $$H=U+PV$$
 
 $$G=U-TS+PV$$
 
-$$\Xi\quad?$$
+$$\Xi = K = U - TS - \Sigma \mu N = -PV$$
 
 ### 4.2 The Extremum Principle
 
@@ -417,7 +417,7 @@ Also, the total entropy will reach its maximum:
 
 $$\begin{aligned}
 &d\left(S+S^{r}\right)=0\\
-&d^{2}\left(S+S^{r}\right)=d^{2} U<0
+&d^{2}\left(S+S^{r}\right)=d^{2} S<0
 \end{aligned}$$
 
 If the composite system is simple and comprises two subsystems 1 and 2, then we have
@@ -1133,29 +1133,29 @@ Electrical potential of two phases: $\phi^\alpha, \phi^\varepsilon$
 		        $$d S^{\prime \alpha}=\frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P^{\alpha}}{T^{\alpha}} d V^{\prime \alpha}-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha} d n_{C u}^{\alpha}+\mu_{e}^{\alpha} d n_{e}^{\alpha}\right]$$
 
         $$d S^{\prime \varepsilon}=\frac{1}{T^{\varepsilon}} d U^{\prime \varepsilon}+\frac{P^{\varepsilon}}{T^{\varepsilon}} d V^{\prime \varepsilon}-\frac{1}{T^{\varepsilon}} \mu_{C u^{2+}}^{\varepsilon} d n_{C u^{2+}}^{\varepsilon}$$
-
+    
         $$d S_{s y s}^{\prime}=d S^{\prime \alpha}+d S^{\prime \varepsilon}$$
-
+    
         Isolation constraints:
-
+    
         $$d m_{C u}=0=d n_{C u}^{\alpha}+d n_{C u^{2+}}^{\varepsilon}$$
-
+    
         $$d q_{t o t}=0=d q^{\alpha}+d q^{\varepsilon}=(-1) F d n_{e}^{\alpha}+(+2) F d n_{C u^{2+}}^{\varepsilon}$$
-
+    
         Additional isolation constraints:
-
+    
         $$d V_{s y s}^{\prime}=0=d V^{\prime \alpha}+d V^{\prime \varepsilon} $$
-
+    
         $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha} d q^{\alpha}+\phi^{\varepsilon} d q^{\varepsilon} $$
-
+    
         $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha}\left(-F d n_{e}^{\alpha}\right)+\phi^{\varepsilon}\left(z^{+} F d n_{C u^{2+}}^{\varepsilon}\right)$$
-
+    
         Use all expressions to arrive at:
-
+    
         $$d S_{\text {sys,isolated }}^{\prime}=\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{\varepsilon}}\right) d U^{\prime \alpha}+\left(\frac{P^{\alpha}}{T^{\alpha}}-\frac{P^{\varepsilon}}{T^{\varepsilon}}\right) d V^{\prime \alpha} \quad $$
-
+    
         $$-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2}+}^{\varepsilon}+2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)\right] d n_{C u}^{\alpha}$$
-
+    
         $$T^{\alpha}=T^{\varepsilon}, \quad P^{\alpha}=P^{\varepsilon}$$
       </td>
     </tr>
@@ -1421,13 +1421,13 @@ candidates as solid electrolytes for batteries and fuel cells.
 
 [wikipedia](https://en.wikipedia.org/wiki/Kr%C3%B6ger%E2%80%93Vink_notation)
 
-Because points defects in ionic compounds are usually charged, we need a set of notations to indicate this charge. Therefore we here introduce the Kröger-Vink Notation.
+Because points defects in ionic compounds are usually charged, we need a set of notations to indicate this charge. Therefore we here introduce the **Kröger-Vink Notation**.
 
 The Kröger-Vink notation allows us to identify:
 
-- the defect type
-- the site on which the defect is located
-- the effective charge of the defect relative to the charge on the given site in a perfect crystal (or in a chosen reference crystal)
+- the **defect type**
+- the **site** on which the defect is located
+- the **effective charge** of the defect relative to the charge on the given site in a perfect crystal (or in a chosen reference crystal)
 
 
 General form is:
@@ -1438,9 +1438,35 @@ In which,
 
 $M$ corresponds to **structure element**, can be atoms (e.g. Si, Ni), vacancies ($v$), interstitials ($i$), electrons ($e$) or electron holes ($h$).
 
-$S$ indicates the l**attice site that the species occupies**, including interstitials.
+$S$ indicates the **lattice site that the species occupies**, including interstitials.
 
-$C$ corresponds to **the electronic charge** of the species relative to the site that it occupies. Prime ($\prime$) denotes negative charge, dot ($\cdot$) denotes positive charge, star ($*$) denotes neutrality, two dots indicate double positive charge.
+$C$ corresponds to **the electronic charge** of the species relative to the site that it occupies. **Prime ($\prime$)** denotes negative charge, **dot ($\cdot$)** denotes positive charge, **star ($* $)** denotes neutrality, two dots indicate double positive charge.
+
+Examples in $\mathrm{NaCl}: \mathrm{Na^+ Cl^-}$
+
+|                  **Kröger-Vink Notation**                  |                         **Meaning**                          |
+| :--------------------------------------------------------: | :----------------------------------------------------------: |
+|  $\mathrm{Na}_\mathrm{Na}^*$,$\mathrm{Cl}_\mathrm{Cl}^*$   |                Atroms in NaCl perfect crystal                |
+|        $v_\mathrm{Na}^\prime$,$v_\mathrm{Cl}^\cdot$        | Vacancies <br />(A vacancy on the sodium site has a charge of -1 relative to the sodium site in the perfect crystal) |
+|        $\mathrm{Na}_i^\cdot$,$\mathrm{Cl}_i^\prime$        |                        Interstitials                         |
+| $\mathrm{Ca}_\mathrm{Na}^\cdot$,$\mathrm{K}_\mathrm{Na}^*$ |               Aliovalent and isovalent (what?)               |
+
+
+
+Examples in $\mathrm{Y_2O_3}: \mathrm{Y^{3+} O^{2-}}$
+
+|                   **Kröger-Vink Notation**                   |                 **Meaning**                 |
+| :----------------------------------------------------------: | :-----------------------------------------: |
+|      $\mathrm{Y}_\mathrm{Y}^*,\mathrm{O}_\mathrm{O}^*$       | Atroms in perfect $\mathrm{Y_2O_3}$ crystal |
+| $v_\mathrm{Y}^{\prime\prime\prime},v_\mathrm{O}^{\cdot\cdot}$ |                  Vacancies                  |
+|     $\mathrm{Y}_i^{\cdots},\mathrm{O}_i^{\prime\prime}$      |                Interstitials                |
+|               $\mathrm{Mg}_\mathrm{Y}^\prime$                |                 Aliovalent                  |
+
+### 16.3 Defect Reactions
+
+
+
+
 
 ## 17 Thermodynamics of Stressed Systems
 
@@ -1449,7 +1475,7 @@ $C$ corresponds to **the electronic charge** of the species relative to the site
 ### 17.1 Properties
 I f we just consider **linear** properties,
 
-$$R=R_{0}+\left.\frac{\partial R}{\partial F}\right|_{F=0} F=R_{0}+\mathbf{P} F \text { with } \mathbf{P}=\left.\frac{\partial R}{\partial F}\right|_{F=0}$$
+$$R=R_{0}+\left.\frac{\partial R}{\partial F}\right|_ {F=0} F=R_{0}+\mathbf{P} F \text { with } \mathbf{P}=\left.\frac{\partial R}{\partial F}\right|_ {F=0}$$
 
 where $R$ is response, $F$ is field, $P$ is propertiy.
 
