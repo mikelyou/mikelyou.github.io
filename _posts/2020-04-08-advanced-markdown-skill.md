@@ -22,7 +22,19 @@ tags:
 
 **谁适用阅读本文**： 已经可以闭着眼写markdown的人 或 写markdown像写纯文本一样熟练自由的人。
 
-**如果你还不熟悉 markdown 语法**，推荐以下几个很好的教程：[菜鸟教程](https://www.runoob.com/markdown/md-tutorial.html)、[GitHub Markdown语法](https://help.github.com/cn/github/writing-on-github/basic-writing-and-formatting-syntax#ignoring-markdown-formatting)、[思否SegmentFault](https://segmentfault.com/markdown)（推荐这个，可玩性较高）。~~别人已经写得很好了，我就没必要再写啦~~
+## Markdown 入门
+
+**如果你还不熟悉 markdown 语法**，推荐以下几个很好的教程：
+
+- [菜鸟教程](https://www.runoob.com/markdown/md-tutorial.html)
+
+- [GitHub Markdown语法](https://help.github.com/cn/github/writing-on-github/basic-writing-and-formatting-syntax#ignoring-markdown-formatting)
+
+- [思否SegmentFault](https://segmentfault.com/markdown)（推荐这个，可玩性较高）
+
+  
+
+~~别人已经写得很好了，我就没必要再写啦~~
 
 
 ## 在 Markdown 中使用 HTML 元素
@@ -59,7 +71,7 @@ tags:
 啊啦~被你发现啦！
 </details>
 
-我喜欢搭配表格使用，这样可以清晰的现实哪些是折叠部分的内容：
+我喜欢搭配表格使用，这样可以清晰的现实哪些是折叠部分的内容（不过在markdown编辑器中似乎无法正常显示）：
 
 ```html
 <details>
@@ -152,6 +164,45 @@ $$y = m * n$$
 小明买了$m$ 跟铅笔，每根 $n$ 元， 那么他一共花了这么多元
 
 $$y = m * n$$
+
+## 好用的小工具
+
+- [拷贝猫](https://chrome.google.com/webstore/detail/copycat/khbjeknhjcdbijopmdbnjpncellpbjhf?hl=zh-CN)： 浏览器插件，可以方便地将网页内容以 markdown 或 html 格式复制下来，抄笔记利器。
+- [Mathpix](https://mathpix.com/)：识别图片或手写公式，自动生成 LaTeX 代码，抄公式利器。
+
+## 其他细节和注意事项
+
+markdown编辑器千千万万，每个都有些区别。比如是否支持公式、是否需要空一行才能换行、有些粗体和斜体的写法不一样、在一个编辑器里插入的图片会在另一个地方编译为表格...
+
+
+
+我总结出一个经验：不清楚要不要多空一行的时候，**要舍得用空行！**
+
+
+
+有些编译器中，空一行（也就是指按一次<kbd>Enter</kbd> ）并不会换行，从而导致排版变丑，如果后面一行是双美元（`$$`）扩住的公式就更丑了，公式会贴在文字那一行。
+
+
+
+单独成行的公式，双美元复合最好单独占一行，不要和公式内容挤在一行。不要在双美元那一行添加任何符号，比如引用`>`之类的，会导致奇怪的错误。正确的方法如下：
+
+```latex
+$$
+C d C l_{2} \stackrel{N a C l}{\longrightarrow} C d_{N a}^{\bullet}+2 C l_{C l}^{*}+\mathbf{v}_{N a}^{\prime}
+$$
+```
+
+
+
+~~不要这样~~（虽然区别不大，但建议不要）：
+
+```latex
+$$C d C l_{2} \stackrel{N a C l}{\longrightarrow} C d_{N a}^{\bullet}+2 C l_{C l}^{*}+\mathbf{v}_{N a}^{\prime}$$
+```
+
+
+
+不要为了让文章行数少一点，就不舍得用空行。空行可以减少很多意想不到的麻烦，很多时候是与想象不同的格式排版，少数情况出现奇怪的bug。
 
 ***
 
