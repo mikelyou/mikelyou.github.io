@@ -1287,9 +1287,11 @@ Electrical potential of two phases: $\phi^\alpha, \phi^\varepsilon$
 </details>
 
 We eventually arrive at this:
+
 $$
 \mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2+}}^{\varepsilon}=-2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)
 $$
+
 The application of this relation is obtaining $\phi^{\alpha}-\phi^{\varepsilon}$ by measuring $\mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2+}}^{\varepsilon}$.
 
 
@@ -1300,13 +1302,16 @@ The application of this relation is obtaining $\phi^{\alpha}-\phi^{\varepsilon}$
 Take $\mathrm{Cu-Zn}$ battery as a concrete example.
 
 The reactions are
+
 $$
 \begin{aligned}
 &\left(C u^{2+}\right)^{\varepsilon}+2\left(e^{-}\right)^{\alpha}=C u^{\alpha}\\
 &\left(Z n^{2+}\right)^{\eta}+2\left(e^{-}\right)^{\beta}=Z n^{\beta}
 \end{aligned}
 $$
+
 Conditions of equilibrium
+
 $$
 \begin{aligned}
 &\mu_{C u}^{\alpha}-\left(2 \mu_{e}^{\alpha}+\mu_{C u^{2+}}^{\varepsilon}\right) =-2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)\\
@@ -1315,14 +1320,19 @@ $$
 &\mu_e^\beta = \mu_e^\alpha \quad \text{(After connecting the external cuicuit)}
 \end{aligned}
 $$
+
 Combining the up four relations, we find
+
 $$
 \boxed{[\mu_{Z n}^{\beta}-\mu_{Zn^{2+}}^{\varepsilon}] - [\mu_{Cu}^{\alpha}-\mu_{Cu^{2+}}^{\varepsilon}] = -2 F\left(\phi^{\beta}-\phi^{\alpha}\right)}
 $$
+
 And overall cell reaction is
+
 $$
 Z n^{\beta}+\left(C u^{2+}\right)^{\varepsilon}=C u^{\alpha}+\left(Z n^{2+}\right)^{\varepsilon}
 $$
+
 ### 14.5 Conditions for Equilibrium in a General Galvanic Cell
 
 >Convention for E4201 class:
@@ -1342,6 +1352,7 @@ $$
 >$$Z n(s)\left|Z n^{2+}(a q) \| C u^{2+}(a q)\right| C u(s) \quad \text{(E4260)}$$
 >
 >$$Z n^{\beta}\left|Z n C l_{2} \| C u C l_{2}\right| C u^{\alpha} \quad \text{(E4201)}$$
+>
 $$
 A_{\text {cell}}=\Delta G_{\text {cell}}^{o}+R T \ln Q_{\text {cell}}
 $$
@@ -1361,13 +1372,16 @@ $$
 $$
 E_{c e l l}^{o}=\frac{R T}{z F} \ln K
 $$
+
 ### 14.6 Temperature Dependence of the Electromotive Force for a Cell
+
 $$
 \begin{array}{l}
 \Delta S^{o}=-\left(\frac{\partial \Delta G^{o}}{\partial T}\right)_{P, n_{k}}=+z F\left(\frac{\partial E^{o}}{\partial T}\right)_{P, n_{k}} \\
 \Delta H^{o}=\Delta G^{o}+T \Delta S^{o}=z F\left[E^{o}+T\left(\frac{\partial E^{o}}{\partial T}\right)_{P, n_{k}}\right]
 \end{array}
 $$
+
 > ~~So?~~
 
 ### 14.7 The Standard Hydrogen Electrode (SHE)
@@ -1536,8 +1550,6 @@ candidates as solid electrolytes for batteries and fuel cells.
 
 ### 16.2 Kröger-Vink Notation
 
-[wikipedia](https://en.wikipedia.org/wiki/Kr%C3%B6ger%E2%80%93Vink_notation)
-
 Because points defects in ionic compounds are usually charged, we need a set of notations to indicate this charge. Therefore we here introduce the **Kröger-Vink Notation**.
 
 The Kröger-Vink notation allows us to identify:
@@ -1546,24 +1558,27 @@ The Kröger-Vink notation allows us to identify:
 - the **site** on which the defect is located
 - the **effective charge** of the defect relative to the charge on the given site in a perfect crystal (or in a chosen reference crystal)
 
+General form is: 
 
-General form is: $M_S^C$
+$$
+M_S^C
+$$
 
 In which,
 
-$M$ corresponds to **structure element**, can be atoms (e.g. Si, Ni), vacancies ($v$), interstitials ($i$), electrons ($e$) or electron holes ($h$).
+- $M$ corresponds to **structure element**, can be atoms (e.g. Si, Ni), vacancies ($v$), interstitials ($i$), electrons ($e$) or electron holes ($h$).
 
-$S$ indicates the **lattice site that the species occupies**, including interstitials.
+- $S$ indicates the **lattice site that the species occupies**, including interstitials.
 
-$C$ corresponds to **the electronic charge** of the species relative to the site that it occupies. **Prime ($\prime$)** denotes negative charge, **dot ($\bullet$)** denotes positive charge, **star ($* $)** denotes neutrality, two dots indicate double positive charge.
+- $C$ corresponds to **the electronic charge** of the species relative to the site that it occupies. **Prime**($\prime$) denotes negative charge, **dot** ($\bullet$) denotes positive charge, **star**  ($ \ast $)denotes neutrality, two dots indicate double positive charge.
 
 Examples in $\mathrm{NaCl}: \mathrm{Na^+ Cl^-}$
 
 |                   **Kröger-Vink Notation**                   |                         **Meaning**                          |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| $\mathrm{Na}_\mathrm{Na}^\ast$,$\mathrm{Cl}_\mathrm{Cl}^\ast$ |                Atroms in NaCl perfect crystal                |
-|        $v_\mathrm{Na}^\prime$,$v_\mathrm{Cl}^\bullet$        | Vacancies <br />(A vacancy on the sodium site has a charge of -1 relative to the sodium site in the perfect crystal) |
-|        $\mathrm{Na}_i^\bullet$,$\mathrm{Cl}_i^\prime$        |                        Interstitials                         |
+| $\mathrm{Na}_\mathrm{Na}^\ast$ ,$\mathrm{Cl}_\mathrm{Cl}^\ast$ |                Atroms in NaCl perfect crystal                |
+|        $v_\mathrm{Na}^\prime$ , $v_\mathrm{Cl}^\bullet$        | Vacancies <br />(A vacancy on the sodium site has a charge of -1 relative to the sodium site in the perfect crystal) |
+|        $\mathrm{Na}_i^\bullet$ ,$\mathrm{Cl}_i^\prime$        |                        Interstitials                         |
 | $\mathrm{Ca}_\mathrm{Na}^\bullet$,$\mathrm{K}_\mathrm{Na}^\ast$ |               Aliovalent and isovalent (what?)               |
 
 
@@ -1592,6 +1607,7 @@ Both ionic and electronic defect compensations are possible and are determined b
 #### 16.3.1 Schottky Defect
 
 **For Schottky Defect (or Schottky Disorder)**, defect reactions write as
+
 $$
 \mathrm{MX} \rightarrow v_M^\prime + v_X^\bullet
 $$
@@ -1603,9 +1619,11 @@ $$
 $$
 \mathrm{M_2 X_3} \rightarrow 2 v_M^{\prime\prime\prime} + 3 v_X^{\bullet\bullet}
 $$
+
 #### 16.3.2 Frenkel Defect
 
 **For Frenkel Defect (or Frenkel Disorder),** defect reactions write as:
+
 $$
 \mathrm{M_M^\ast} \rightarrow v_M^{\prime\prime} + M_i^{\bullet\bullet}
 $$
@@ -1613,14 +1631,17 @@ $$
 $$
 \mathrm{O_O^\ast} \rightarrow v_O^{\bullet\bullet} + O_i^{\prime\prime}
 $$
+
 When oxygen interstitial forms, the defect is sometimes called <u>anti-Frenkel</u>.
 
 <img src="C:\Users\采叶\AppData\Roaming\Typora\typora-user-images\image-20200416150056399.png" alt="image-20200416150056399" style="zoom:25%;" />
 
 #### 16.3.3 **Electronic Defects**
+
 $$
 0 \rightarrow e^\prime + h^\bullet
 $$
+
 An promoted electron and a hole left behind come out of nothing.
 
 ### 16.4 Stoichiometry and Nonstoichiometry
@@ -1630,30 +1651,40 @@ For *stoichiometric compounds*, elements occur in **simple integer ratios** (tha
 Note that <u>Schottky and Frenkel defects</u> do <u>not</u> disturb the stoichiometric ratios. Example: Fe<sub>1-y</sub>O.
 
 The subscript 1-y denotes non-stoichiometry, which is achieved through the generation of point defects. There are two ways to write the defect reaction:
+
 $$
-\frac{1}{2} O_{2} \rightarrow O_{O}^{*}+{v}_{F e}^{\prime \prime}+2 h^\bullet
+\frac{1}{2} O_{2} \rightarrow O_{O}^{\ast}+{v}_{F e}^{\prime \prime}+2 h^\bullet
 $$
 
 $$
-2 Fe_{Fe}^{*}+\frac{1}{2} {O}_{2} \rightarrow {O}_{{O}}^{*}+{v}_{{Fe}}^{\prime \prime}+2 {Fe}_{{Fe}}^\bullet
+2 Fe_{Fe}^{\ast}+\frac{1}{2} {O}_{2} \rightarrow {O}_{{O}}^{\ast}+{v}_{{Fe}}^{\prime \prime}+2 {Fe}_{{Fe}}^\bullet
 $$
+
 Consider specifically the prototype MO metal oxide, there are four types of non-stoichiometry:
 
-- Oxygen deficiency MO<sub>1-x</sub>
+- **Oxygen deficiency** MO<sub>1-x</sub>
 
-  $$\frac{1}{2} O_{2}(g) \rightleftharpoons O_{o}^{*}+v_{M}^{\prime \prime}+2 h^\bullet$$
+$$
+\frac{1}{2} O_{2}(g) \rightleftharpoons O_{o}^{*}+v_{M}^{\prime \prime}+2 h^\bullet
+$$
 
-- Metal excess M<sub>1+y</sub>O
+- **Metal excess** M<sub>1+y</sub>O
 
-  $$  M_{M}^{*}+O_{o}^{*} \rightleftharpoons M_{i}^{\bullet\bullet}+2 e^{\prime}+\frac{1}{2} O_{2}(g) $$
+$$
+M_{M}^{*}+O_{o}^{*} \rightleftharpoons M_{i}^{\bullet\bullet}+2 e^{\prime}+\frac{1}{2} O_{2}(g)
+$$
 
-- Oxygen excess MO<sub>1+x</sub>
+- **Oxygen excess** MO<sub>1+x</sub>
 
-  $$  \frac{1}{2} O_{2}(g) \rightleftharpoons O_{i}^{\prime \prime}+2 h^\bullet  $$
+$$
+\frac{1}{2} O_{2}(g) \rightleftharpoons O_{i}^{\prime \prime}+2 h^\bullet 
+$$
 
-- Metal deficiency M<sub>1-y</sub>O
+- **Metal deficiency** M<sub>1-y</sub>O
 
-  $$  \frac{1}{2} O_{2}(g) \rightleftharpoons O_{o}^{*}+v_{M}^{\prime \prime}+2 h^\bullet  $$
+$$
+\frac{1}{2} O_{2}(g) \rightleftharpoons O_{o}^{*}+v_{M}^{\prime \prime}+2 h^\bullet  
+$$
 
 The first two types result in n-type semiconductors, the second two types result in ptype semiconductors.
 
@@ -1665,11 +1696,124 @@ Two examples:
 
 - Cadmium chloride dissolved into sodium chloride
 
-  $$C d C l_{2} \stackrel{N a C l}{\longrightarrow} C d_{N a}^{\bullet}+2 C l_{C l}^{*}+\mathbf{v}_{N a}^{\prime}$$
+$$
+C d C l_{2} \stackrel{N a C l}{\longrightarrow} C d_{N a}^{\bullet}+2 C l_{C l}^{*}+\mathbf{v}_{N a}^{\prime}
+$$
 
 - Alumina dissolved in magnesia
 
-  $$A l_{2} O_{3} \stackrel{M g O}{\longrightarrow} 2 A l_{M g}^{\bullet}+3 O_{O}^{*}+\mathrm{v}_{M g}^{\prime \prime}$$
+$$
+A l_{2} O_{3} \stackrel{M g O}{\longrightarrow} 2 A l_{M g}^{\bullet}+3 O_{O}^{*}+\mathrm{v}_{M g}^{\prime \prime}
+$$
+
+
+
+Alternative defect reactions, using specific example of R<sub>2</sub>O<sub>3</sub> dissolved in MO:
+
+- Electronic compensation
+
+$$
+R_{2} O_{3} \rightleftharpoons 2 R_{M}^{\bullet}+2 O_{O}^{\ast}+\frac{1}{2} O_{2}+2 e^{\prime} \\
+\text{or equivalently}\\
+2 h^{\bullet}+R_{2} O_{3} \rightleftharpoons 2 R_{M}^{\bullet}+2 O_{O}^{\ast}+\frac{1}{2} O_{2}
+$$
+
+-  For a metal deficient oxide, create more metal vacancies
+
+$$
+R_{2} O_{3} \rightleftharpoons 2 R_{M}^{\bullet}+3 O_{o}^{\ast}+\mathrm{v}_{M}^{\prime \prime}
+$$
+
+- For an oxygen deficient oxide, reduce number of oxygen vacancies
+
+$$
+v_{o}^{\bullet \bullet}+R_{2} O_{3} \rightleftharpoons 2 R_{M}^{\bullet}+3 O_{o}^{\ast}
+$$
+
+All three (or four) equations is same in nature, but can better describe different situation.
+
+### Mole Fraction of Intrinsic Point Defects
+
+For a general defect chemical reaction:
+
+$$
+aA + bB= cC +dD
+$$
+
+The equlibrium constant is expressed as
+
+$$
+\begin{align}
+K=\frac{a_{C}^{c} a_{D}^{d}}{a_{A}^{a} a_{B}^{b}}=\exp \left(-\frac{\Delta G}{k_{B} T}\right) &=\exp \left(\frac{\Delta S}{k_{B}}\right) \exp \left(-\frac{\Delta H}{k_{B} T}\right)\\
+&= K_0 \exp \left(-\frac{\Delta H}{k_{B} T}\right)
+\end{align}
+$$
+
+In general for a pure ionic compound of the formula unit M<sub>m</sub>X<sub>n</sub>:
+
+- Mole fraction of Schottky defect concentration
+
+$$
+X_{S}=\exp \left[-\frac{\Delta G_{S}}{(m+n) k_{B} T}\right]
+$$
+
+- Mole fraction of Frenkel defect concentration
+
+$$
+X_{F}=\exp \left[-\frac{\Delta G_{F}}{2 k_{B} T}\right]
+$$
+
+&uarr; here The factor of two is a result of having a vacancy-interstitial pair.
+
+However, for defect reactions in ionic compounds, the equilibrium constant is usually written using concentrations. So we need to change mole fraction to concentration:
+
+$$
+\text{Number of formula units per unit volume} =\frac{\text { Avogadro's number }\left(\frac{\#}{\text { mol }}\right) \times \text { density }\left(\frac{\mathrm{g}}{\mathrm{cm}^{3}}\right)}{\text { molecular weight }\left(\frac{\mathrm{g}}{\mathrm{mol}}\right)} X_{S}
+$$
+
+### Intrinsic Electronic Defects
+
+For a pure or intrinsic compound (semiconductor or insulator), **concentrations of electrons** ($n$) **and holes** ($p$) are respectively:
+
+$$
+n=N_{c} \exp \left[-\left(\frac{E_{c}-E_{F}}{k_{B} T}\right)\right] \quad , N_{c}=2\left[\frac{2 \pi m_{e}^{\ast} k_{B} T}{h^{2}}\right]^{3 / 2}
+$$
+
+$$
+p=N_{v} \exp \left[-\left(\frac{E_{F}-E_{v}}{k_{B} T}\right)\right] \quad , N_{v}=2\left[\frac{2 \pi m_{h}^{\ast} k_{B} T}{h^{2}}\right]^{3 / 2}
+$$
+
+Where $N_c$ and $N_v$ are **effective conduction and valence band densities**, and $m_e^\ast$ and $m_h^\ast$ are **effective masses** for electrons and holes respectively.
+
+Electron and hole concentrations in a pure or intrinsic compound are equal:
+
+$$
+0 \rightleftharpoons e^{\prime}+h^{\bullet}\\
+n = p\\
+K_{i}=n p\\
+n=p=K_{i}^{\frac{1}{2}}
+$$
+
+The Fermi energy is defined as:
+
+$$
+E_{F}=\frac{E_{c}+E_{v}}{2}+\frac{3}{4} k_{B} T \ln \left(\frac{m_{h}^{*}}{m_{e}^{*}}\right)
+$$
+
+$$
+n=p=K_{i}^{\frac{1}{2}} = \left(N_{c} N_{v}\right)^{1 / 2} \exp \left(-\frac{E_{g}}{2 k_{B} T}\right), \quad E_g \equiv E_c -E_v
+$$
+
+### [N.B.](https://en.wikipedia.org/wiki/Nota_bene) – Mole Fraction, Concentration
+
+In the next set of slides, we will write all the defect reactions using the fraction of each of the entities as the fraction of the sites in the corresponding “sublattice”, i.e., sites occupied by the given atom.
+
+For example, the following denotes the “concentration” of metal vacancies as the ratio of the vacant metal sites to the total number of metal sites:
+
+$$
+\left[\mathrm{v}_{M}\right]=\frac{n_{\mathrm{vM}}}{n_{S M}}
+$$
+
 
 ## 17 Thermodynamics of Stressed
 
@@ -1679,6 +1823,7 @@ Two examples:
 
 ### 17.1 Properties
 I f we just consider **linear** properties,
+
 $$
 R=R_{0}+\left.\frac{\partial R}{\partial F}\right|_ {F=0} F=R_{0}+\mathbf{P} F \text { with } \mathbf{P}=\left.\frac{\partial R}{\partial F}\right|_ {F=0}
 $$
