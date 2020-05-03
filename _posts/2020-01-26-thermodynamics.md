@@ -1476,6 +1476,30 @@ Which means in a crystal at =m, the chemical potential of vacancies is zero.
 
 ### 15.4 Vacancy Concentration in Elemental Crystal at Equilibrium
 
+To calculate this, we can consider the non-perfect crystal as a dilute solution, with atoms as solvent and vacancies as solute. Then the chemical potential of any component is partial molar Gibbs free energy, write as:
+$$
+\mu_v^\alpha = \overline G_v^\alpha = \overline H_v^\alpha-T(\overline S_v^{xs,\alpha}+S_v^{ideal,\alpha})=0
+$$
+
+$$
+S_v^{ideal,\alpha} = -k \ln X_v^\alpha
+$$
+
+Therefore the concentration of vacancy is:
+
+$$
+X_v^\alpha = \exp \left[\frac{\bar{S}_{v}^{x s, \alpha}}{k}\right] \exp \left[-\frac{\bar{H}_{v}^{\alpha}}{k T}\right]
+$$
+
+or
+
+$$
+\boxed{X_v^\alpha = \exp \left[\frac{\Delta S_v^f}{k}\right] \exp \left[-\frac{\Delta H_v^f}{k T}\right]}
+$$
+
+Where $\Delta S_v^f$ is formation entropy of vacancies, and $\Delta H_v^f$ is formation enthalpy of vacancies.
+
+![](img/in-post/post-thermodynamics/concentration_of_vacancies.jpg)
 
 ### 15.5 Experimental Proof of Vacancies
 
