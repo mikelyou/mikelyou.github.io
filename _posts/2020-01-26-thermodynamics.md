@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Thermodynamics"
-subtitle: 'E4201 and E4202 Study Notes'
+subtitle: ''
 date: 2020-01-26 11:00:00
 author: "Mike Lyou"
 header-style: text
@@ -18,19 +18,7 @@ tags:
 
 <!-- more -->
 
-
-
-[TOC]
-
-<!--
-**注意：这是一个临时笔记，编辑过后应及时保存到本地。**
-**注意：本文的最新版本在印象笔记，由马克飞象编辑，请不要编辑这个文件，请前往马克飞象进行编辑。**
-**注意：本文在博客的版本可能是过时的，且只能单方向的由印象笔记更新至此。**
--->
-
-
-
-<!-- 上面的注释已失效，请无视。 现在这篇文章仅在此处更新和保存。-->
+<!-- 现在这篇文章仅在此处更新和保存。-->
 
 ## Before the Main Contents
 
