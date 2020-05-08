@@ -85,7 +85,7 @@ are also in equilibrium with each other**.
 
 It describes the equilibrium.
 
-### 2.2 First law
+### 2.2 First Law
 **Energy is conserved, it cannot be created or destroyed**.
 
 $$
@@ -101,7 +101,7 @@ $\delta W^\prime$ is sum of other works.
 
 The first law is the law of energy.
 
-### 2.3 Second law
+### 2.3 Second Law
 Entropy never decreases.
 
 $$
@@ -111,7 +111,7 @@ $$
 
 where equal sign holds only for **reversible process**.
 
-### 2.4 Third law
+### 2.4 Third Law
 **The entropy of a thermodynamic system in internal equilibrium
 approaches a universal constant (usually taken as zero) as the absolute temperature goes to zero.**
 
@@ -123,15 +123,8 @@ $$
 
 In the above equation, partial value is zero because $S \equiv 0$.
 
+#### 2.4.1 Calculation of entropy
 
-<details>
-<summary><b>Calculation of entropy &darr;</b></summary>
-  <table border="1">
-    <tr>
-      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
-    </tr>
-    <tr>
-      <td>
 
 According to the Third Law, the absolute value of entropy can be calculated.
 
@@ -159,10 +152,7 @@ $$
 S_T = S_{298.15} + \int_{298.15}^{T} \frac{C_{p}}{T} d T 
 $$
 
-      </td>
-    </tr>
-  </table>
-</details>
+
 
 
 ## 3 Conditions of Equilibrium
@@ -451,6 +441,8 @@ $$
 \Xi = K = U - TS - \Sigma \mu N = -PV
 $$
 
+Where $\Xi$ is **grand potential**, equals Kramer potential $K$ (can be seen in [HW10]() and [Lec18-page12]()).
+
 ### 4.2 The Extremum Principle
 
 Here we will show, that **the extremum principle for the thermodynamic potentials is one wherein the potential is minimized** (for the given constraints).
@@ -615,14 +607,8 @@ $$
 \kappa_{T}=\kappa_{S}+\frac{T V \alpha^{2}}{N c_{P}}
 $$
 
-<details>
-<summary><b>Derivation of Cp - Cv</b> &darr;</summary>
-  <table border="1">
-    <tr>
-      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
-    </tr>
-    <tr>
-      <td>
+#### 5.1.1 Derivation of Cp - Cv
+
 
 By definition, we have
 
@@ -670,8 +656,8 @@ $$
 
 Q.E.D	(What is [Q.E.D](https://en.wikipedia.org/wiki/Q.E.D.)?)
 
-      </td>
-    </tr>
+
+
   </table>
 </details>
 
@@ -682,34 +668,48 @@ Q.E.D	(What is [Q.E.D](https://en.wikipedia.org/wiki/Q.E.D.)?)
 
 Derivation of Maxwell relations is simple. As an example, we have
 
-$$ dU=T dS - PdV + \mu dN $$
+$$
+dU=T dS - PdV + \mu dN
+$$
 
 And
 
-$$ \frac{\partial^{2} U}{\partial S \partial V}=\frac{\partial^{2} U}{\partial V \partial S} $$
+$$
+\frac{\partial^{2} U}{\partial S \partial V}=\frac{\partial^{2} U}{\partial V \partial S} 
+$$
 
 Therefore, we have
 
-$$ -\left(\frac{\partial P}{\partial S}\right)_ {V, N_{1}, N_{2}, \ldots}=\left(\frac{\partial T}{\partial V}\right)_ {S, N_{1}, N_{2}, \ldots} $$
+$$
+-\left(\frac{\partial P}{\partial S}\right)_ {V, N_{1}, N_{2}, \ldots}=\left(\frac{\partial T}{\partial V}\right)_ {S, N_{1}, N_{2}, \ldots} 
+$$
 
 #### How to remember:
 
 1. Each pair of conjugate functions, e.g. $(S,T)$, sits at diagonal position.
 
-$$ -\left(\frac{\partial  \color{green}{P}}{\partial \color{red}{S}}\right)_ {V, N}=\left(\frac{\partial  \color{red}{T}}{\partial \color{green}{V}}\right)_ {S, N} $$
+$$
+-\left(\frac{\partial  \color{green}{P}}{\partial \color{red}{S}}\right)_ {V, N}=\left(\frac{\partial  \color{red}{T}}{\partial \color{green}{V}}\right)_ {S, N} 
+$$
 
 2. If $P$ involved, add a negative sign.  
 Because the conjugate $(-P,V)$ has a negative sign.
 
-$$ \color{red}- \left(\frac{\partial P}{\partial {S}}\right)_ { {V}, N}=\left(\frac{\partial T}{\partial {V}}\right)_ { {S}, N} $$
+$$
+\color{red}- \left(\frac{\partial P}{\partial {S}}\right)_ { {V}, N}=\left(\frac{\partial T}{\partial {V}}\right)_ { {S}, N} 
+$$
 
 3. If not all denominators are intensive (or all molecule are extensive) (e.g.$\partial T/ \partial V$), each exception gives one negative sign.
 
-$$\color{red}{-}\left(\frac{\partial \color{red}{S}}{\partial N}\right)_ {T, V}=\left(\frac{\partial \mu}{\partial \color{red}{T}}\right)_ {V, N}$$
+$$
+\color{red}{-}\left(\frac{\partial \color{red}{S}}{\partial N}\right)_ {T, V}=\left(\frac{\partial \mu}{\partial \color{red}{T}}\right)_ {V, N}
+$$
 
 4. Each molecule is the constant of the derivative across the equal sign.
 
-$$ -\left(\frac{\partial P}{\partial \color{red}{S}}\right)_ {\color{red}{V}, N}=\left(\frac{\partial T}{\partial \color{red}{V}}\right)_ {\color{red}{S}, N} $$
+$$
+-\left(\frac{\partial P}{\partial \color{red}{S}}\right)_ {\color{red}{V}, N}=\left(\frac{\partial T}{\partial \color{red}{V}}\right)_ {\color{red}{S}, N} 
+$$
 
 You can find your own way to remember this, which is easiest to remember for you is the best.
 
@@ -734,23 +734,35 @@ Jacobians is very useful when we have e.g. $G,S$ as constant, and we want to bri
 
 1. Try to put extensive variables at molecule, and intensive variables at denominator. For example:
 
-$$ \left( \frac{\partial P}{\partial U} \right) _ {G,N} 	\rightarrow \left[ \left( \frac{\partial U}{\partial P} \right) _ {G,N} \right] ^ {-1}$$
+$$
+\left( \frac{\partial P}{\partial U} \right) _ {G,N} 	\rightarrow \left[ \left( \frac{\partial U}{\partial P} \right) _ {G,N} \right] ^ {-1}
+$$
 
 2. Try to put expandable functions $(U,F,H,G)$ at molecule and expand them.
 
-$$ \because dU=T dS-P dV +\mu dN $$
+$$
+\because dU=T dS-P dV +\mu dN 
+$$
 
-$$ \therefore \left[\left(\frac{\partial U}{\partial P}\right)_ {G,N}\right]^{-1} = \left[T\left(\frac{\partial S}{\partial P}\right)_ {G, N}-P\left(\frac{\partial V}{\partial P}\right)_ {G, N}\right]^{-1} $$  
+$$
+\therefore \left[\left(\frac{\partial U}{\partial P}\right)_ {G,N}\right]^{-1} = \left[T\left(\frac{\partial S}{\partial P}\right)_ {G, N}-P\left(\frac{\partial V}{\partial P}\right)_ {G, N}\right]^{-1} 
+$$
 
 3. Make use of the **jacobians** and **Maxwell relationships** when you need it.  
 
-$$ \left(\frac{\partial S}{\partial P}\right)_ {G, N} = \frac{\left(\frac{\partial G}{\partial P}\right)_ {S, N}}{\left(\frac{\partial G}{\partial S}\right)_ {P, N}} $$
+$$
+\left(\frac{\partial S}{\partial P}\right)_ {G, N} = \frac{\left(\frac{\partial G}{\partial P}\right)_ {S, N}}{\left(\frac{\partial G}{\partial S}\right)_ {P, N}} 
+$$
 
-$$ \left(\frac{\partial S}{\partial P}\right)_ {T, N}=\left(\frac{\partial V}{\partial T}\right)_ {P, N}=-\alpha V $$
+$$
+\left(\frac{\partial S}{\partial P}\right)_ {T, N}=\left(\frac{\partial V}{\partial T}\right)_ {P, N}=-\alpha V 
+$$
 
 4. Be sure to remember all ~~four~~  five second derivatives clearly.
 
-$$\alpha, \kappa_T ~(\text{or}~ \beta),\kappa_S, c_V, c_P $$
+$$
+\alpha, \kappa_T ~(\text{or}~ \beta),\kappa_S, c_V, c_P 
+$$
 
 5. Plug in all results back and simplify it.
 
@@ -788,29 +800,43 @@ A equilibrium line, where $\alpha$ and $\beta$ phases are in equilibrium, the $G
 
 Then we have
 
-$$\because d \mu^{\alpha}=d \mu^{\beta}$$
+$$
+\because d \mu^{\alpha}=d \mu^{\beta}
+$$
 
-$$\therefore  -S^{\alpha} d T+V^{\alpha} d P=-S^{\beta} d T+V^{\beta} d P$$
+$$
+\therefore  -S^{\alpha} d T+V^{\alpha} d P=-S^{\beta} d T+V^{\beta} d P
+$$
 
-$$\therefore \frac{d P}{d T}=\frac{\Delta S^{\alpha \rightarrow \beta}}{\Delta V^{\alpha \rightarrow \beta}}$$
+$$
+\therefore \frac{d P}{d T}=\frac{\Delta S^{\alpha \rightarrow \beta}}{\Delta V^{\alpha \rightarrow \beta}}
+$$
 
 Because
 
-$$\Delta S^{\alpha \rightarrow \beta}=\frac{\Delta H^{\alpha \rightarrow \beta}}{T}$$
+$$
+\Delta S^{\alpha \rightarrow \beta}=\frac{\Delta H^{\alpha \rightarrow \beta}}{T}
+$$
 
 If one of $\alpha$ and $\beta$ phases is gas phase, the volume of gas is much larger then condensed phase, using the ideal gas model
 
-$$\Delta V^{\alpha \rightarrow {g}}=V^{g}-V^{\alpha} \approx V^{g}=\frac{R T}{P}$$
+$$
+\Delta V^{\alpha \rightarrow {g}}=V^{g}-V^{\alpha} \approx V^{g}=\frac{R T}{P}
+$$
 
 Plugging in
 
-$$ \frac{d P}{d T}=\frac{\Delta H^{\alpha \rightarrow \beta}}{RT^2/P}$$
+$$
+\frac{d P}{d T}=\frac{\Delta H^{\alpha \rightarrow \beta}}{RT^2/P}
+$$
 
 
 Simplify it, we finally arrive at a very usefulrelation
+
 $$
 \frac{d \ln P}{d T}=\frac{\Delta H^{\alpha \rightarrow \beta}}{RT^2}
 $$
+
 [EP5.2]()
 
 ## 9 Multicomponent Homogeneous Nonreacting Systems: _Solution_
@@ -822,34 +848,47 @@ Consider a multcomponent homogeneous system, with $c$ different components, each
 > **Attention:**$~ ~ ~$ $n_k$ is mole number, not confuse with $N_k$ which is partical number. $$N_k= n_k \cdot N_{avo}(\text{Avogadro number}).$$
 
 For an extensive thermodynamic property $\left(\mathrm{B}^{\prime}=\mathrm{U}^{\prime}, \mathrm{S}^{\prime}, \mathrm{V}^{\prime}, \mathrm{H}^{\prime}, \mathrm{G}^{\prime}, . .\right)$,
+
 $$
 d B^{\prime}=\left(\frac{\partial B^{\prime}}{\partial T}\right)_ {P, n_{k}} d T+\left(\frac{\partial B^{\prime}}{\partial P}\right)_ {T, n_{k}} d P+\sum_{k=1}^{c} \color{red}{ \left(\frac{\partial B^{\prime}}{\partial n_{k}}\right)_ {T, P, n_{j}   \neq n_{k}} } d n_{k}
 $$
+
 The partial molar property $B$ for component $k$ is then
+
 $$
 \overline{B_{k}} \equiv\left(\frac{\partial B^{\prime}}{\partial n_{k}}\right)_ {T, P, n_{j} \neq n_{k}} \quad(k=1,2, \ldots,c)
 $$
+
 ***
 
 At constant temperature and pressure, we have
+
 $$
 d B_{T, P}^{\prime}=\sum_{n_{k}=1}^{c} \overline{B_{k}} d n_{k}
 $$
+
 From full differential of $dB^\prime$ we know
+
 $$
 d B^{\prime}=\sum_{k=1}^{c}\left[\overline{B_{k}} d n_{k}+n_{k} d \overline{B_{k}}\right]
 $$
+
 Combining above two equations, we get the **Gibbs-Duhem Equation(Relation)**:
+
 $$
 \boxed{\sum_{n_{k}=1}^{c} n_{k} d\overline{B_{k}} =0}
 $$
+
 ### 9.2 Solution (Im's Class)
 
 Consider a solution made of two components:
+
 $$
 \boxed{n_A \text{pure}A} + \boxed{n_B \text{ pure}B} \rightarrow \boxed{(n_A+n_B) ~(A+B\text{ solution})}
 $$
+
 The Gibbs free energy before and after mixing are:
+
 $$
 G_{~seperate\\(or~before)}=n_A G_A^o+n_B G_B^o
 $$
@@ -857,31 +896,41 @@ $$
 $$
 G_{~solution\\(or~after)}=n_A \overline{G_A}+n_B \overline{G_B}
 $$
+
 In which $G^o$ is Gibbs free energy of pure matter $\color{red}{(needs~ varify)}$, $\overline{G_A}$ is partial molar Gibbs free energy. They are both chemical potential, but little different.
+
 $$
 G^o=\mu_A^o 
 $$
 
 $$
-\overline{G_A}=\frac{\partial G_{solution}}{\partial n_A}=\mu_A 
+\overline{G_A}=\frac{\partial G_{solution}}{\partial n_A}=\mu_A
 $$
+
 >**Attention:**
 >Only in unary system $\mu \equiv g \equiv G$ (here $g=G/N$) .
 >In multicomponent system $\mu_i = \partial G / \partial n_i $ for component $i$.
 
 We can write the Gibbs-Duhem Equation
+
 $$
 n_A d\overline{G_A}+n_B d\overline{G_B}=0
 $$
+
 For 1 mole solution, substituting in
+
 $$
 x_A=\frac{n_A}{n_A+n_B} \quad x_B=\frac{n_B}{n_A+n_B}
 $$
+
 We have:
+
 $$
 \boxed{ x_A d\overline{G_A}+x_B d\overline{G_B}=0 }
 $$
+
 And
+
 $$
 \boxed{ G_{~seperate(or~before)}=x_A G_A^o+x_B G_B^o}
 $$
@@ -889,21 +938,29 @@ $$
 $$
 \boxed{ G_{~solution(or~after)}=x_A \overline{G_A}+x_B \overline{G_B}}
 $$
+
 ***
 
 Now consider the Gibbs free energy change $\Delta G_{mix}$ before and after mixing, which should be:
+
 $$
 \Delta G_{mix} =  G_{solution} - G_{seperate}
 $$
+
 And then we can derive the following relations:
+
 $$
 \Delta G_{mix} =  \Delta H_{mix} - T \Delta S_{mix}
 $$
+
 or
+
 $$
 \Delta G_{mix} =  x_A  \Delta \overline G_{mix, A}+x_B  \Delta \overline G_{mix, B} = x_A (\overline{G_A}-G_A^o) + x_B (\overline{G_B}-G_B^o)
 $$
+
 Likewise
+
 $$
 G_{sol} = H_{sol} - T \cdot S_{sol}
 $$
@@ -915,17 +972,21 @@ $$
 $$
 G_{sol} = \Delta G_{mix} + G_ {seperate}
 $$
+
 Now we can construct the curve of $G_ {sol}$ for the first step.
 
 ![](/img/in-post/post-thermodynamics/free_energy_solution_01.jpg)
 
 ***
 
-From $(* )$ we can derive
+From $( * )$ we can derive
+
 $$
 \frac{dG_{sol}}{dx_B} = - \overline G_A + \overline G_B
 $$
+
 And the tangent line at point $\left( x_B^\prime, G_{sol}\right)$ is then $G^\prime = G_{sol} +  (x_B-x_B^\prime) \frac{dG_{sol}}{dx_B} $. Therefore we have the partial molar Gibbs free energy of $A$ and $B$:
+
 $$
 \overline G_B = G_{sol} + (1-x_B)\frac{dG_{sol}}{dx_B} 
 $$
@@ -933,22 +994,29 @@ $$
 $$
 \overline G_A = G_{sol} + ~ ~ ~ ~ ~ x_B   \cdot \color{red}{-}\frac{dG_{sol}}{dx_B} 
 $$
+
 ![](/img/in-post/post-thermodynamics/free_energy_solution_02.jpg)
 
 ***
+
 Plugging in activity $a$
+
 $$
 \overline G_A = G_A^o +RT \ln a_A  = \mu_A
 $$
+
 where
+
 $$
 a_A = \gamma _A \cdot x_A = \frac{f_A}{f_A^o} \approx \frac{P_A}{P_A^o}
 $$
+
 In which, $\gamma_A$ is activity coefficient, $x_A$ is mole fraction of $A$.
 
 >This part seems to have collision with Prof. Barmak's lecture, see [Lec 9 Page 9]().
 
-Then we can expand $(*)$ to
+Then we can expand $( * )$ to
+
 $$
 \begin{aligned}G_{sol} ~&= x_A \overline G_A + x_B \overline G_B \\
 &=x_A G_A^o +x_A RT \ln a_A + x_B G_B^o +x_B RT \ln a_B\\
@@ -956,26 +1024,35 @@ $$
 &=\color{red}{G_{sep}}\text{(known)}+ \color{green}{\Delta G_{mix}}\text{(conclusion)}
 \end{aligned}
 $$
+
 <!--
 As we already know $G_{sep}=\left(x_A G_A^o +x_B G_B^o \right)$
 Then we can conclude $\Delta G_{mix} = RT \left(x_A \ln a_A + x_B  \ln a_B \right)$
 -->
+
 Then
+
 $$
 \Delta \overline G_{mix, A} \equiv \frac{\partial \Delta G_{mix}}{\partial x_A} = RT \ln a_A = \overline G_A -G_A^o\\
 \Delta \overline G_{mix, B} \equiv \frac{\partial \Delta G_{mix}}{\partial x_B} = RT \ln a_B = \overline G_B -G_B^o
 $$
+
 ![](/img/in-post/post-thermodynamics/free_energy_solution_03.jpg)
 
 ### 9.3 Binary Dilute solution
+
 The solvent obeys Raoult's Law
+
 $$
 \lim_{X_A \rightarrow 1} a_A = X_A
 $$
+
 The solute obeys Henry's Law
+
 $$
 \lim_{X_B \rightarrow 0} a_B = \gamma^o X_B \\(\gamma^o:\text{Henry's Law constant})
 $$
+
 Here is an illustration from Prof. Barmak's Lecture.
 
 
@@ -987,22 +1064,29 @@ Here is an illustration from Prof. Barmak's Lecture.
 ![](/img/in-post/post-thermodynamics/binary_dilute_solution.jpg)
 
 ### 9.4 Ideal Solution
+
 Assumption of ideal solution:
+
 $$
 \boxed{ a_A = x_A, a_B = x_B} \quad (\text{i.e. } \gamma_A =\gamma_B =1)
 $$
+
 >This assumption is derivated from ideal gas mixture, see [Barmak's Lec 9 Page 10]().
 
 Upon this very simple assumption, we can derive
+
 $$
 \Delta G_{mix}^{ideal} = RT \left[ x_A \ln x_A + x_B  \ln x_B \right] \propto T\\
 \Delta V_{mix}^{ideal} =\left(\frac{\partial \Delta G_{mix}^{ideal}}{\partial P}\right)_{T, x_B}=0\\
 \Delta U_{mix}^{ideal} =\Delta H_{mix}^{ideal} = \left[\frac{\partial (\Delta G_{mix}^{ideal}/T)}{\partial (1/T)}\right]_{P, x_B} =0
 $$
-Noticing that $\Delta H_{mix}^{ideal}=0$, we can conclude that $\Delta G_{mix}^{ideal} = -T \Delta S_{mix}^{ideal}$, i.e.
+
+Noticing that $\Delta H_ {mix}^{ideal}=0$, we can conclude that $\Delta G_{mix}^{ideal} = -T \Delta S_ {mix}^{ideal}$, i.e.
+
 $$
 \Delta S_{mix}^{ideal} = -R \left[ x_A \ln x_A + x_B  \ln x_B \right]
 $$
+
 Here are two fine graphs:
 
 ![](/img/in-post/post-thermodynamics/ideal_solution.jpg)
@@ -1015,6 +1099,7 @@ Here are two fine graphs:
 The difference of regular solution to ideal solution is, the enthalpy of regular solution is nonzero. $\color{red}{\text{needs varification}}$
 
 Here we directly give the results:
+
 $$
 \begin{aligned}
 \Delta G_{mix}^{reg} &= \Omega x_A x_B + RT \left[ x_A \ln x_A + x_B  \ln x_B \right] \\
@@ -1022,6 +1107,7 @@ $$
 \Delta H_{mix}^{reg} &= \Omega x_A x_B  \color{white}{zzzzzzzzzzzzzzzzzzzzzzzzzzzzz} \left(\Delta H_{mix}^{ideal} = 0 \right)
 \end{aligned}
 $$
+
 Regular solution will simplify to ideal solution when $\Omega = 0$
 
 > **Attention: Nomenclature**
@@ -1031,30 +1117,29 @@ Regular solution will simplify to ideal solution when $\Omega = 0$
 > While in Barmak's class, the regular solution parameter is $a_0$, and configurational entropy is $\Omega$. Pay attention to this.
 
 ***
+
 Using the "excess terms", which means the difference with ideal solution
+
 $$
 \Delta G_{mix}^{xs} = \Delta G_{mix} - \Delta G_{mix}^{ideal}	\\
 \Delta H_{mix}^{xs} = \Delta H_{mix} - \Delta H_{mix}^{ideal}	\\
 \Delta S_{mix}^{xs} = \Delta S_{mix} - \Delta S_{mix}^{ideal}
 $$
+
 For regular solution, we can prove that
+
 $$
 \Delta G_{mix}^{xs,~reg} = \Omega ~ x_A x_B	\\
 \Delta H_{mix}^{xs,~reg} = \Omega ~ x_A x_B	\\
 \Delta S_{mix}^{xs,~reg} = 0 	\color{white}{zzzzzz}
 $$
+
 ![](/img/in-post/post-thermodynamics/regular_solution.jpg)
 
 <!--[Regular Solution Parameter](#regular-solution-parameter) -->
 
-<details>
-<summary><b>Regular Solution Parameter &darr;</b></summary>
-  <table border="1">
-    <tr>
-      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
-    </tr>
-    <tr>
-      <td>
+#### 9.5.1 Regular Solution Parameter
+
 
 Consider **1 mole** solid solution made of atoms A and B, with mole fraction of $x_A$ and $x_B$. And we want to investigate the enthalpy change during the mixing process $\Delta H_{mix}$
 $$
@@ -1112,41 +1197,45 @@ where
 $$
 \Omega =  N_{avo}Z\left[ \epsilon_{AB} - \frac{1}{2}(\epsilon_{AA} - \epsilon_{BB})\right]
 $$
-      </td>
-    </tr>
-  </table>
-</details>
-
 ### 9.6 Nonregular(Subregular or Real) Solution
 
 For component $A$, we have
+
 $$
 \Delta \overline G_{mix,~A}^{xs,~real} = \Delta \overline G_{mix,~A}^{real} - \Delta G_{mix,~A}^{ideal} = RT \ln \gamma_A
 $$
+
 Therefore for the whole solution, we have
+
 $$
 \begin{aligned}
 \Delta G_{mix}^{xs,~real} &= \Delta G_{mix}^{~real} - \Delta G_{mix}^{ideal} = RT \left[ x_A \ln \gamma_A + x_B \ln \gamma_B\right]	\\
 \Delta G_{mix}^{xs}&= \Delta H_{mix}^{xs} - T \Delta S_{mix}^{xs}
 \end{aligned}
 $$
+
 Since we already know $\Delta H_{mix}^{ideal} = 0$,  $\Delta V_{mix}^{ideal} = 0$, then we know
+
 $$
 \Delta H_{mix}^{xs,~real} = \Delta H_{mix}\\
 \Delta V_{mix}^{xs,~real} = \Delta V_{mix}
 $$
+
 ![](/img/in-post/post-thermodynamics/nonregular_solution.jpg)
 
 ## 14 Electrochemistry
 
-> Barmak's electrochemistry may be different from E4260.
+> Pro. Barmak's electrochemistry may be different from E4260. If there are any difference, use the version of Pro. Barmak's.
 
 
 ### 14.1 Equilibrium in Weak Electrolytres
+
 $$
 c_{k}=[k]=\frac{X_{k}}{V}
 $$
+
 where $c_k$ is molar concentration, $[k]$ is molarity (mole number of component $k$ per liter of solution), $X_k$ is mole fraction of component $k$, $V$ is molar volume of solution.
+
 $$
 a_{k}=f_{k} c_{k}=f_{k}[k]
 $$
@@ -1154,11 +1243,13 @@ $$
 $$
 f_k = \gamma_k V
 $$
+
 $a_k$ is avtivity of $k$, $\gamma_k$ is activity coefficient.
 
 To fing the condition for equilibrium, we have to consider all reactions in the solution.
 
 For water,
+
 $$
 H_{2} O=H^{+}+O H^{-}
 $$
@@ -1176,6 +1267,7 @@ K_{w}=\frac{a_{H^{+}} a_{O H^{-}}}{a_{H_{2} O}}
 $$
 
 By the way, $\mathrm{pH}$ is defined by
+
 $$
 \mathrm{pH}=-\log a_{H^+} = -\log [H^+]
 $$
@@ -1187,7 +1279,9 @@ $$
 $$
 \mathrm{pH} + \mathrm{pOH} = 14 \quad \text{(at room temperature)}
 $$
+
 For compound,
+
 $$
 M_{u} X_{v}=u M^{z+}+v X^{z-}
 $$
@@ -1207,15 +1301,18 @@ $$
 $$
 K_{C}=K_{f} \frac{\left[M^{z+}\right]^{u}\left[X^{z-}\right]^{u}}{\left[M_{u} X_{v}\right]}
 $$
+
 We usually define the reference state so that in dilute solution, $K_f=1$.
 
 For weak electrolytes, introduce the **degree of dissociation**, $\alpha$ ($\alpha \ll 1$ for week electrolytes) and the total concentration of the electrolyte compound added to make the solution, $c_C$
+
 $$
 \begin{aligned}
 &\left[M^{z+}\right]=u \alpha c_{c} ; \quad\left[X^{z-}\right]=v \alpha c_{c} ; \quad\left[M_{u} X_{v}\right]=(1-\alpha) c_{c}\\
 &K_{C}=\frac{\left(u \alpha c_{C}\right)^{u}\left(v \alpha c_{C}\right)^{v}}{(1-\alpha) c_{C}}=u^{u} v^{v} \frac{\alpha^{(u+v)} c_{C}^{(u+v-1)}}{(1-\alpha)}
 \end{aligned}
 $$
+
 ### 14.2 Equilibrium in Strong Electrolytres
 
 In dilute solutions, strong electrolytes are fully dissociated, i.e. $\alpha=1$
@@ -1232,50 +1329,39 @@ Components in $\varepsilon$ phase: $\left(C u^{2+}\right)^{\varepsilon},\left(C 
 
 Electrical potential of two phases: $\phi^\alpha, \phi^\varepsilon$
 
+**After a long derivation** &darr;
+
+$$d S^{\prime \alpha}=\frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P^{\alpha}}{T^{\alpha}} d V^{\prime \alpha}-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha} d n_{C u}^{\alpha}+\mu_{e}^{\alpha} d n_{e}^{\alpha}\right]$$
+
+$$d S^{\prime \varepsilon}=\frac{1}{T^{\varepsilon}} d U^{\prime \varepsilon}+\frac{P^{\varepsilon}}{T^{\varepsilon}} d V^{\prime \varepsilon}-\frac{1}{T^{\varepsilon}} \mu_{C u^{2+}}^{\varepsilon} d n_{C u^{2+}}^{\varepsilon}$$
+
+$$d S_{s y s}^{\prime}=d S^{\prime \alpha}+d S^{\prime \varepsilon}$$
+
+Isolation constraints:
+
+$$d m_{C u}=0=d n_{C u}^{\alpha}+d n_{C u^{2+}}^{\varepsilon}$$
+
+$$d q_{t o t}=0=d q^{\alpha}+d q^{\varepsilon}=(-1) F d n_{e}^{\alpha}+(+2) F d n_{C u^{2+}}^{\varepsilon}$$
+
+Additional isolation constraints:
+
+$$d V_{s y s}^{\prime}=0=d V^{\prime \alpha}+d V^{\prime \varepsilon} $$
+
+$$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha} d q^{\alpha}+\phi^{\varepsilon} d q^{\varepsilon} $$
+
+$$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha}\left(-F d n_{e}^{\alpha}\right)+\phi^{\varepsilon}\left(z^{+} F d n_{C u^{2+}}^{\varepsilon}\right)$$
+
+Use all expressions to arrive at:
+
+$$d S_{\text {sys,isolated }}^{\prime}=\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{\varepsilon}}\right) d U^{\prime \alpha}+\left(\frac{P^{\alpha}}{T^{\alpha}}-\frac{P^{\varepsilon}}{T^{\varepsilon}}\right) d V^{\prime \alpha} \quad $$
+
+$$-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2}+}^{\varepsilon}+2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)\right] d n_{C u}^{\alpha}$$
+
+$$T^{\alpha}=T^{\varepsilon}, \quad P^{\alpha}=P^{\varepsilon}$$
 
 
-<details>
-<summary>After a long derivation &darr;</summary>
-  <table border="1">
-    <tr>
-      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
-    </tr>
-    <tr>
-      <td>
-		        $$d S^{\prime \alpha}=\frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P^{\alpha}}{T^{\alpha}} d V^{\prime \alpha}-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha} d n_{C u}^{\alpha}+\mu_{e}^{\alpha} d n_{e}^{\alpha}\right]$$
 
-        $$d S^{\prime \varepsilon}=\frac{1}{T^{\varepsilon}} d U^{\prime \varepsilon}+\frac{P^{\varepsilon}}{T^{\varepsilon}} d V^{\prime \varepsilon}-\frac{1}{T^{\varepsilon}} \mu_{C u^{2+}}^{\varepsilon} d n_{C u^{2+}}^{\varepsilon}$$
-    
-        $$d S_{s y s}^{\prime}=d S^{\prime \alpha}+d S^{\prime \varepsilon}$$
-    
-        Isolation constraints:
-    
-        $$d m_{C u}=0=d n_{C u}^{\alpha}+d n_{C u^{2+}}^{\varepsilon}$$
-    
-        $$d q_{t o t}=0=d q^{\alpha}+d q^{\varepsilon}=(-1) F d n_{e}^{\alpha}+(+2) F d n_{C u^{2+}}^{\varepsilon}$$
-    
-        Additional isolation constraints:
-    
-        $$d V_{s y s}^{\prime}=0=d V^{\prime \alpha}+d V^{\prime \varepsilon} $$
-    
-        $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha} d q^{\alpha}+\phi^{\varepsilon} d q^{\varepsilon} $$
-    
-        $$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha}\left(-F d n_{e}^{\alpha}\right)+\phi^{\varepsilon}\left(z^{+} F d n_{C u^{2+}}^{\varepsilon}\right)$$
-    
-        Use all expressions to arrive at:
-    
-        $$d S_{\text {sys,isolated }}^{\prime}=\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{\varepsilon}}\right) d U^{\prime \alpha}+\left(\frac{P^{\alpha}}{T^{\alpha}}-\frac{P^{\varepsilon}}{T^{\varepsilon}}\right) d V^{\prime \alpha} \quad $$
-    
-        $$-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2}+}^{\varepsilon}+2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)\right] d n_{C u}^{\alpha}$$
-    
-        $$T^{\alpha}=T^{\varepsilon}, \quad P^{\alpha}=P^{\varepsilon}$$
-      </td>
-    </tr>
-  </table>
-</details>
-
-We eventually arrive at this:
-
+**&darr;We eventually arrive at this:**
 $$
 \mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2+}}^{\varepsilon}=-2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)
 $$
@@ -1323,24 +1409,27 @@ $$
 
 ### 14.5 Conditions for Equilibrium in a General Galvanic Cell
 
->Convention for E4201 class:
->
->1.Write the **affinities** for the **reduction reactions**
->
->$$A^{\beta}-A^{\alpha}=-2 F\left(\phi^{\beta}-\phi^{\alpha}\right)$$
->
->2.The **electromotive force (emf)** for the cell is then the potential of the **right** electrode **minus** that for the **left**.
->
->3.Rules of writing cell notations (copied from E4260 notes):
-  - Oxidation on the left, reduction on theright (in galvanic mode).
-  - A line as phaseboundary.
-  - Double line indicates a salt bridge: two interfaces.
-  - Metal electrodes at two ends.
->
->$$Z n(s)\left|Z n^{2+}(a q) \| C u^{2+}(a q)\right| C u(s) \quad \text{(E4260)}$$
->
->$$Z n^{\beta}\left|Z n C l_{2} \| C u C l_{2}\right| C u^{\alpha} \quad \text{(E4201)}$$
->
+Several conventions in this class:
+
+1. Write the **affinities** for the **reduction reactions**
+
+$$
+A^{\beta}-A^{\alpha}=-2 F\left(\phi^{\beta}-\phi^{\alpha}\right)
+$$
+
+2. The **electromotive force (emf)** for the cell is then the potential of the **right** electrode **minus** that for the **left**.
+
+3. Rules of writing cell notations (copied from E4260 notes):
+
+    - Oxidation on the left, reduction on theright (in galvanic mode).
+    - A line as phaseboundary.
+    - Double line indicates a salt bridge: two interfaces.
+    - Metal electrodes at two ends.
+
+$$
+Z n^{\beta}\left|Z n C l_{2} \| C u C l_{2}\right| C u^{\alpha}
+$$
+
 $$
 A_{\text {cell}}=\Delta G_{\text {cell}}^{o}+R T \ln Q_{\text {cell}}
 $$
@@ -1413,58 +1502,54 @@ Hrizontal line relateds with reactions that no H<sup>+</sup> involved.
 
 ### 15.3 Conditions for Equilibrium in a Crystal with Vacancies
 
-<details>
-<summary>After a long derivation &darr;</summary>
-  <table border="1">
-    <tr>
-      <th><a href="https://www.runoob.com/html/html-quicklist.html">如何使用html元素添加表格</a></th>
-    </tr>
-    <tr>
-     <td>
+**After a long derivation**
+
 
 Consider a system composed of a homogeneous crystalline phase (α) and it vapor (g)
 
 Variation of the entropy of this combined
 system is given by
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 d S_{s y s}=& \frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P}{T^\alpha} d V^{\prime \alpha}-\frac{1}{T^\alpha} \sum_{k=1}^{c} \mu_{k}^{\alpha} d n_{k}^{\alpha}-\frac{1}{T} \mu_{v}^{\alpha} d n_{v}^{\alpha} \\
 & \frac{1}{T^{g}} d U^{\prime g}+\frac{P}{T^{g}} d V^{\prime g}-\frac{1}{T^{g}} \sum_{k=1}^{c} \mu_{k}^{g} d n_{k}^{g}
-\end{aligned}$$
+\end{aligned}
+$$
 
 For the composite system isolated from its surroundings, we will
 have:
 
-$$\begin{array}{l}
+$$
+\begin{array}{l}
 d U_{s y s}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime g} \\
 d V_{s y s}^{\prime}=0=d V^{\prime \alpha}+d V^{\prime g} \\
 d n_{k, s y s}=0=d n_{k}^{\alpha}+d n_{k}^{g}
-\end{array}$$
+\end{array}
+$$
 
 Note that number of atomic sites and vacancies are not constrained in isolated system, since we can move an atom from the interior to its surface and vice versa.
 
 Insert the isolation conditions into the entropy variation for the system to arrive at
 
-$$d S_{\text {sys,isolated }}=\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{g}}\right) d U^{\prime\alpha}+\left(\frac{P^{\alpha}}{T^\alpha}-\frac{P^g}{T^g}\right) d V^{\prime \alpha}-\sum_{k=1}^{c}\left(\frac{\mu_{k}^{\alpha}}{T^\alpha}-\frac{\mu_{k}^{g}}{T^{g}}\right) d n_{k}^{\alpha}-\frac{\mu_{v}^{\alpha}}{T^\alpha} d n_{v}^{\alpha}$$
+$$
+d S_{\text {sys,isolated }}=\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{g}}\right) d U^{\prime\alpha}+\left(\frac{P^{\alpha}}{T^\alpha}-\frac{P^g}{T^g}\right) d V^{\prime \alpha}-\sum_{k=1}^{c}\left(\frac{\mu_{k}^{\alpha}}{T^\alpha}-\frac{\mu_{k}^{g}}{T^{g}}\right) d n_{k}^{\alpha}-\frac{\mu_{v}^{\alpha}}{T^\alpha} d n_{v}^{\alpha}
+$$
 
 In this equation, $n_\nu$ is an independent variable because atomic sites may be created or annihilated with no other changes in the system.
 
-At =m, entropy is maximized, and so in addition to the familiar conditions for equality of temperature, pressure and chemical potentials of the components of the solid phase, α, and the vapor phase, we will have
-
-
-   </td>
-   </tr>
-  </table>
-</details>
+At =m, entropy is maximized, and so in addition to the familiar conditions for equality of temperature, pressure and chemical potentials of the components of the solid phase, α, and the vapor phase, **we will have**
 
 $$
-\mu_\nu^\alpha = 0
+\boxed{\mu_\nu^\alpha = 0}
 $$
-Which means in a crystal at =m, the chemical potential of vacancies is zero.
+
+**Which means in a crystal at =m, the chemical potential of vacancies is zero.**
 
 ### 15.4 Vacancy Concentration in Elemental Crystal at Equilibrium
 
 To calculate this, we can consider the non-perfect crystal as a dilute solution, with atoms as solvent and vacancies as solute. Then the chemical potential of any component is partial molar Gibbs free energy, write as:
+
 $$
 \mu_v^\alpha = \overline G_v^\alpha = \overline H_v^\alpha-T(\overline S_v^{xs,\alpha}+S_v^{ideal,\alpha})=0
 $$
@@ -1498,9 +1583,11 @@ Thermal expansion contributes to both change in length and change in lattice par
 Creation of vacancies contributes to change in length, but not to the change in lattice parameter.
 
 Mono-Vacancy concentration is proportional to
+
 $$
 3\left(\frac{\Delta L}{L}-\frac{\Delta a}{a}\right)
 $$
+
 ![](/img/in-post/post-thermodynamics/experimental_proof_of_vacancies.png)
 
 >R. O. Simmons and R. W. Balluffi, Phys. Rev. 117, 52-60 (1960).
@@ -1538,7 +1625,7 @@ Impurities can be further classified into two types: **substitutional** (usually
 
 ### 15.8 A Summary
 
-http://www.substech.com/dokuwiki/lib/exe/fetch.php?w=&h=&cache=cache&media=point_defects.png
+![](http://www.substech.com/dokuwiki/lib/exe/fetch.php?w=&h=&cache=cache&media=point_defects.png)
 
 ![](/img/in-post/post-thermodynamics/point_defeccts_of_crystals.png)
 
