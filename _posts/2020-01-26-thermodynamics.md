@@ -1914,13 +1914,14 @@ $$
 $$
 
 
-## 17 Thermodynamics of Stressed
+## 17 Thermodynamics of Stressed Systems
 
-##  Systems
+> This section overlaps greatly with E4215, and there is little colition between two courses. What is discussed here is much more simple.
 
-> This section overlaps greatly with E4215, and there is little colition between two courses. What is discussed is much more simple.
+
 
 ### 17.1 Properties
+
 I f we just consider **linear** properties,
 
 $$
@@ -1935,6 +1936,27 @@ If $R_0 \neq 0$, permanent property, e.g., net magnetization in a ferromagnetic 
 We only talk about isotropic materials, and not going to talk about anistropic.
 
 看课件吧
+
+## 18 Thermodynamics of Interfaces
+
+**Introduction**
+
+Until now we have dealt primarily with homogeneous phases or with composite systems consisting of several homogeneous phases, where we have ignored the surfaces of these phases or the interfaces that separate them. However, there are many instances where the properties of surfaces cannot be ignored.
+
+**Outline**
+
+- Thermodynamics of fluid-fluid interfaces
+  - Planar interfaces in fluids
+  - Curved interfaces in fluids 
+  - Interface Junctions and contact angles
+- Thermodynamics of solid-fluid interfaces
+- Remarks about solid-solid interfaces
+
+### 18.1 Fluid-Fluid Interfaces
+
+#### 18.1.1 Planar interfaces in fluids
+
+
 
 ## X - Unclassfied Notes from Im's class
 
