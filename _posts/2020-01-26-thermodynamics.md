@@ -18,13 +18,13 @@ tags:
 
 <!-- more -->
 
-<!-- 现在这篇文章仅在此处更新和保存。-->
+<!-- 现在这篇文章已不再更新。-->
 
 ## Before the Main Contents
 
 This post is Mike Lyou's study notes of several courses, which cover thermodynamics, kinetics and some other knowledge. I do not own the copyright of some contents, if the article unintentionally infringes your copyright, it will be deleted shortly after being informed. All rights reserved.
 
-This note is still being editing, so you may see some poorly written parts. Let me know if you notice any errors or typos, thanks so much.
+This note is not complete, but will not be updated anymore, because relavent course has ended. Let me know if you notice any errors or typos, thanks so much.
 
 
 # Thermodynamics
@@ -47,7 +47,7 @@ There are three levels of thermodynamics.
 
 - System
 - Barriers
-  - Diathermal（透热） or adiabatic（绝热）
+  - Diathermal or adiabatic
   - Permeable or impermeable
   - Movable or fixed
 - Surrounding
@@ -75,9 +75,7 @@ $\rightarrow$ Many **(Every?)** extensive variable has a **conjugate** intensive
 
 
 
-## 2 Laws of Thermodynamics
-
-> ~~众所周知，热力学三大定律一共有四条（还有第零定律）。~~
+## 2 Laws of Thermodynamic
 
 ### 2.1 Zeroth Law
 **If two systems are each in equilibrium with a third system, they
@@ -153,8 +151,6 @@ S_T = S_{298.15} + \int_{298.15}^{T} \frac{C_{p}}{T} d T
 $$
 
 
-
-
 ## 3 Conditions of Equilibrium
 
 ### 3.1 Equilibrium States
@@ -211,9 +207,10 @@ $$
 **3.  Continuous and differentiable**
 The continuity, differentiability and monotonic properties together, imply that the entropy function can be inverted with respect to the energy. And the internal energy is single-valued, continuous and differentiable.
 
-<!--
-$$S=S\left(U, V, N_{1}, \cdots, N_{r}\right) \rightarrow U=U\left(S, V, N_{1}, \cdots ,N_{r}\right)$$
--->
+
+$$
+S=S\left(U, V, N_{1}, \cdots, N_{r}\right) \rightarrow U=U\left(S, V, N_{1}, \cdots ,N_{r}\right)
+$$
 
 $$
 \boxed{U=U\left(S, V, N_{1}, \cdots ,N_{r}\right)}
@@ -306,7 +303,9 @@ $$
 
 **When the system has reached equilibrium**, according to the definition of equilibrium, **the entropy should reach its maximum**. That is, a virtual transfer of energy from system 1 to system 2 will produce no change of entropy, i.e.
 
-$$dS=0$$
+$$
+dS=0
+$$
 
 The entropy of the system is
 
@@ -327,8 +326,6 @@ d S&=\left(\frac{\partial S^{(1)}}{\partial U^{(1)}}\right)_{V^{(1)},N_{j}^{(1)}
 $$
 
 Therefore
-
-<!--$$\because dS=0 \quad \therefore T^{(1)}=T^{(2)}$$-->
 
 $$
 dS=0 \quad \Longrightarrow \quad T^{(1)}=T^{(2)}
@@ -543,7 +540,7 @@ $$
 
 Therefore we can arrive at the conclusion:
 
-For **isothermal(等热) processes**, the **Helmholtz free energy** reports the **total (reversible) work** done on the system.
+For **isothermal processes**, the **Helmholtz free energy** reports the **total (reversible) work** done on the system.
 
 Similar for enthalpy $H$ and Gibbs free energy $G$ (E4201-hw8-2).
 
@@ -655,11 +652,6 @@ c_P - c_V = \frac{T}{N}  \cdot \frac{\alpha}{\kappa_T} \cdot \alpha V = \frac{\a
 $$
 
 Q.E.D	(What is [Q.E.D](https://en.wikipedia.org/wiki/Q.E.D.)?)
-
-
-
-  </table>
-</details>
 
 
 ### 5.2 Maxwell Relations
@@ -794,7 +786,76 @@ Different crystal structure means different phase, including _allotropes_ (singl
 
 > 2nd order phase cannot co-exist, but 1st order phase can.
 
-### 6.3 The Clausius-Clapeyron Equation
+### 6.3 Gibbs Phase Rule
+
+Generally, **the freedom of a system $F$**, equals the numbers of variables minus numbers of independent relations. We can write it informally as
+
+$$
+ F = N_{\text{variables}} - N_{\text{relations}} \tag{1 }
+$$
+
+
+Consider a system composed of **$C$ components** and has **$P$ phases**.
+
+In order to describe the composition of particular phase $\phi$,  we need $(C-1)$ variables
+
+$$
+\begin{equation*}
+x_i^\phi \quad (i=1,2,\cdots,C-1;\phi=\alpha,\beta,\delta,\cdots)
+\end{equation*}
+$$
+
+>Here we don't need the $C$-th variables, since it's independent and can be determined via $\sum x_i^\phi = 1$.
+
+Then for all $P$ phases we have $P(C-1)$ variables.
+
+In addition, we treat **temperature and pressure** as variable for common thermodynamics systems, therefore there are two more variables. And in sum, we have
+
+$$
+N_{\text{variables}} = P (C-1) + 2 
+\tag{2}
+$$
+
+As for the numbers of relations, we know that chemical potential of every component in each phase is equal in equilibrium, i.e.
+
+$$
+\begin{equation*}
+\mu_i^\alpha = \mu_i^\beta = \mu_i^\delta = \cdots \quad (i=1,2,\cdots,C)
+\end{equation*}
+$$
+
+In sum
+
+$$
+N_{\text{relations}}  = C (P-1) \tag{3}
+$$
+Plugging $(2)(3)$ back to $(1)$, we have
+
+$$
+\begin{aligned}
+F &=  P (C-1) + 2 -  C (P-1)\\
+&= C-P+2
+\end{aligned}
+$$
+
+
+**The Gibbs Phase Rule**
+
+$$
+\boxed{F=C-P+2}
+$$
+
+If we are investigating **condensed systems**, the pressure can be considered fixed, therefore we have another representation
+
+$$
+F=C-P+1
+$$
+
+$\rightarrow$ &rarr; [Application of chemical reaction](http://www.che.uc.edu/jensen/w.%20b.%20jensen/reprints/079.%20Phase%20Rule.pdf)
+
+
+
+### 6.4 The Clausius-Clapeyron Equation
 
 A equilibrium line, where $\alpha$ and $\beta$ phases are in equilibrium, the $G, \mu, P,T$ must be equal, and therefore their viaration too $dG,d \mu, dP,dT$.
 
@@ -1025,11 +1086,6 @@ $$
 \end{aligned}
 $$
 
-<!--
-As we already know $G_{sep}=\left(x_A G_A^o +x_B G_B^o \right)$
-Then we can conclude $\Delta G_{mix} = RT \left(x_A \ln a_A + x_B  \ln a_B \right)$
--->
-
 Then
 
 $$
@@ -1142,34 +1198,47 @@ $$
 
 
 Consider **1 mole** solid solution made of atoms A and B, with mole fraction of $x_A$ and $x_B$. And we want to investigate the enthalpy change during the mixing process $\Delta H_{mix}$
+
 $$
 \Delta H_{mix} = H_{\text{solution}} - H_{\text{initial}}
 $$
+
 Because solid solution is a condensed system, the enthalpy is approximately equal to energy, which can be expressed in terms of bound energies:
+
 $$
 \Delta H_{mix}  \approx E_{\text{solution}} - E_{\text{initial}} \tag{1}
 $$
+
 For intial state,
+
 $$
 E_{\text{initial}} = x_A E_A^o + x_B E_B^o
 $$
+
 where $E_A^o$ is energy of 1 mole pure A, and $E_B^o$ is energy of 1 mole pure B:
+
 $$
 E_A^o = \frac{ N_{avo}Z}{2} \epsilon_{AA} \quad E_B^o = \frac{ N_{avo}Z}{2} \epsilon_{BB}
 $$
+
 in which, $N_{avo}$ is Avogadro's number, $Z$ is coordination number(number of nearest neighbors), and **we assume the coordination number is same for A, B and AB solution.** $\epsilon_{AA}$ and $\epsilon_{BB}$ are bound energies of A-A bound and B-B bound.
 
 Therefore the total energy before mixing is
+
 $$
 E_{\text{initial}} =   \left[ x_A \epsilon_{AA} +x_B \epsilon_{BB} \right] \frac{ N_{avo}Z}{2} \tag{2}
 $$
+
 For solid solution
+
 $$
 E_{\text{solution}} = P_{AA}\epsilon_{AA} + P_{BB}\epsilon_{BB} + P_{AB}\epsilon_{AB} 
 $$
+
 where $P_{AA}, P_{BB},P_{AB}$ are numbers of A-A, B-B and A-B bounds.
 
 Because of  an important assumption of regular solution, that **atoms are mixed randomly**, we have
+
 $$
 P_{AA} =  \frac{ N_{avo}Z}{2}
 $$
@@ -1177,15 +1246,19 @@ $$
 $$
 P_{BB} = x_B x_B \frac{ N_{avo}Z}{2}
 $$
-<!--$$ P_{AB} = x_A x_B \frac{ N_{avo}Z}{2} + x_B x_A \frac{ N_{avo}Z}{2} = 2 x_A x_B \frac{ N_{avo}Z}{2}$$-->
+
 $$
 P_{AB} = 2 \cdot x_A x_B \frac{ N_{avo}Z}{2}
 $$
+
 Then substitute to get total energy after mixing
+
 $$
 E_{\text{solution}} = \left[ x_A^2 \epsilon_{AA} +x_B^2 \epsilon_{BB}  + 2 x_A x_B \epsilon_{AB}\right] \frac{ N_{avo}Z}{2} \tag{ 3}
 $$
+
 Plugging $(2)(3)$ into $(1)$
+
 $$
 \begin{aligned}
 \Delta H_{mix}  &\approx \frac{ N_{avo}Z}{2} \left[	 (x_A \epsilon_{AA} +x_B \epsilon_{BB} ) -(x_A^2 \epsilon_{AA} +x_B^2 \epsilon_{BB}  + 2 x_A x_B \epsilon_{AB}) \right]\\
@@ -1193,10 +1266,13 @@ $$
 &= \Omega x_A x_B
 \end{aligned}
 $$
+
 where
+
 $$
 \Omega =  N_{avo}Z\left[ \epsilon_{AB} - \frac{1}{2}(\epsilon_{AA} - \epsilon_{BB})\right]
 $$
+
 ### 9.6 Nonregular(Subregular or Real) Solution
 
 For component $A$, we have
@@ -1331,37 +1407,56 @@ Electrical potential of two phases: $\phi^\alpha, \phi^\varepsilon$
 
 **After a long derivation** &darr;
 
-$$d S^{\prime \alpha}=\frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P^{\alpha}}{T^{\alpha}} d V^{\prime \alpha}-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha} d n_{C u}^{\alpha}+\mu_{e}^{\alpha} d n_{e}^{\alpha}\right]$$
+$$
+d S^{\prime \alpha}=\frac{1}{T^{\alpha}} d U^{\prime \alpha}+\frac{P^{\alpha}}{T^{\alpha}} d V^{\prime \alpha}-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha} d n_{C u}^{\alpha}+\mu_{e}^{\alpha} d n_{e}^{\alpha}\right]
+$$
 
-$$d S^{\prime \varepsilon}=\frac{1}{T^{\varepsilon}} d U^{\prime \varepsilon}+\frac{P^{\varepsilon}}{T^{\varepsilon}} d V^{\prime \varepsilon}-\frac{1}{T^{\varepsilon}} \mu_{C u^{2+}}^{\varepsilon} d n_{C u^{2+}}^{\varepsilon}$$
+$$
+d S^{\prime \varepsilon}=\frac{1}{T^{\varepsilon}} d U^{\prime \varepsilon}+\frac{P^{\varepsilon}}{T^{\varepsilon}} d V^{\prime \varepsilon}-\frac{1}{T^{\varepsilon}} \mu_{C u^{2+}}^{\varepsilon} d n_{C u^{2+}}^{\varepsilon}
+$$
 
 $$d S_{s y s}^{\prime}=d S^{\prime \alpha}+d S^{\prime \varepsilon}$$
 
 Isolation constraints:
 
-$$d m_{C u}=0=d n_{C u}^{\alpha}+d n_{C u^{2+}}^{\varepsilon}$$
+$$
+d m_{C u}=0=d n_{C u}^{\alpha}+d n_{C u^{2+}}^{\varepsilon}
+$$
 
-$$d q_{t o t}=0=d q^{\alpha}+d q^{\varepsilon}=(-1) F d n_{e}^{\alpha}+(+2) F d n_{C u^{2+}}^{\varepsilon}$$
+$$
+d q_{t o t}=0=d q^{\alpha}+d q^{\varepsilon}=(-1) F d n_{e}^{\alpha}+(+2) F d n_{C u^{2+}}^{\varepsilon}
+$$
 
 Additional isolation constraints:
 
-$$d V_{s y s}^{\prime}=0=d V^{\prime \alpha}+d V^{\prime \varepsilon} $$
+$$
+d V_{s y s}^{\prime}=0=d V^{\prime \alpha}+d V^{\prime \varepsilon} 
+$$
 
-$$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha} d q^{\alpha}+\phi^{\varepsilon} d q^{\varepsilon} $$
+$$
+d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha} d q^{\alpha}+\phi^{\varepsilon} d q^{\varepsilon} 
+$$
 
-$$d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha}\left(-F d n_{e}^{\alpha}\right)+\phi^{\varepsilon}\left(z^{+} F d n_{C u^{2+}}^{\varepsilon}\right)$$
+$$
+d U_{T o t}^{\prime}=0=d U^{\prime \alpha}+d U^{\prime \varepsilon}+\phi^{\alpha}\left(-F d n_{e}^{\alpha}\right)+\phi^{\varepsilon}\left(z^{+} F d n_{C u^{2+}}^{\varepsilon}\right)
+$$
 
 Use all expressions to arrive at:
 
-$$d S_{\text {sys,isolated }}^{\prime}=\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{\varepsilon}}\right) d U^{\prime \alpha}+\left(\frac{P^{\alpha}}{T^{\alpha}}-\frac{P^{\varepsilon}}{T^{\varepsilon}}\right) d V^{\prime \alpha} \quad $$
+$$
+d S_{\text {sys,isolated }}^{\prime}=\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{\varepsilon}}\right) d U^{\prime \alpha}+\left(\frac{P^{\alpha}}{T^{\alpha}}-\frac{P^{\varepsilon}}{T^{\varepsilon}}\right) d V^{\prime \alpha} \quad 
+$$
 
-$$-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2}+}^{\varepsilon}+2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)\right] d n_{C u}^{\alpha}$$
+$$
+-\frac{1}{T^{\alpha}}\left[\mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2}+}^{\varepsilon}+2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)\right] d n_{C u}^{\alpha}
+$$
 
-$$T^{\alpha}=T^{\varepsilon}, \quad P^{\alpha}=P^{\varepsilon}$$
-
-
+$$
+T^{\alpha}=T^{\varepsilon}, \quad P^{\alpha}=P^{\varepsilon}
+$$
 
 **&darr;We eventually arrive at this:**
+
 $$
 \mu_{C u}^{\alpha}-2 \mu_{e}^{\alpha}-\mu_{C u^{2+}}^{\varepsilon}=-2 F\left(\phi^{\alpha}-\phi^{\varepsilon}\right)
 $$
@@ -1914,136 +2009,59 @@ $$
 $$
 
 
-## 17 Thermodynamics of Stressed Systems
-
-> This section overlaps greatly with E4215, and there is little colition between two courses. What is discussed here is much more simple.
-
-
-
-### 17.1 Properties
-
-I f we just consider **linear** properties,
-
-$$
-R=R_{0}+\left.\frac{\partial R}{\partial F}\right|_ {F=0} F=R_{0}+\mathbf{P} F \text { with } \mathbf{P}=\left.\frac{\partial R}{\partial F}\right|_ {F=0}
-$$
-
-where $R$ is response, $F$ is field, $P$ is propertiy.
-
-If $R_0 = 0$, no remnant response, e.g., conductivity.
-If $R_0 \neq 0$, permanent property, e.g., net magnetization in a ferromagnetic material.
-
-We only talk about isotropic materials, and not going to talk about anistropic.
-
-看课件吧
-
-## 18 Thermodynamics of Interfaces
-
-**Introduction**
-
-Until now we have dealt primarily with homogeneous phases or with composite systems consisting of several homogeneous phases, where we have ignored the surfaces of these phases or the interfaces that separate them. However, there are many instances where the properties of surfaces cannot be ignored.
-
-**Outline**
-
-- Thermodynamics of fluid-fluid interfaces
-  - Planar interfaces in fluids
-  - Curved interfaces in fluids 
-  - Interface Junctions and contact angles
-- Thermodynamics of solid-fluid interfaces
-- Remarks about solid-solid interfaces
-
-### 18.1 Fluid-Fluid Interfaces
-
-#### 18.1.1 Planar interfaces in fluids
-
-
 
 ## X - Unclassfied Notes from Im's class
 
-### $G$ as a function of temperature
+### X.1 $G$ as a function of temperature
 
-$$\because C_{P}=\left(\frac{\partial Q}{\partial T}\right)_ {P}=\left(\frac{\partial H}{\partial T}\right)_ {P}$$
+$$
+\because C_{P}=\left(\frac{\partial Q}{\partial T}\right)_ {P}=\left(\frac{\partial H}{\partial T}\right)_ {P}
+$$
 
-$$\therefore H=H_0 +\int C_ P dT$$
+$$
+\therefore H=H_0 +\int C_ P dT
+$$
 
-$$S=\int_0^T d S=\int_0^T \frac{d Q}{T}=\int_0^T \frac{C_P}{T} d T$$
+$$
+S=\int_0^T d S=\int_0^T \frac{d Q}{T}=\int_0^T \frac{C_P}{T} d T
+$$
 
-$$G=H-TS$$
+$$
+G=H-TS
+$$
 
-$$\left(\frac{\partial G}{\partial T}\right)_ P =-S < 0$$
+$$
+\left(\frac{\partial G}{\partial T}\right)_ P =-S < 0
+$$
 
-$$\left(\frac{\partial^{2} G}{\partial T^{2}}\right)_ {P}=-\left(\frac{\partial S}{\partial T}\right)_ {P}=-\frac{C_{P}}{T} < 0$$
+$$
+\left(\frac{\partial^{2} G}{\partial T^{2}}\right)_ {P}=-\left(\frac{\partial S}{\partial T}\right)_ {P}=-\frac{C_{P}}{T} < 0
+$$
 
 We should be able to draw sketches about $H$, $S$, $G$.
 
 Need to add picture later.
 
-### Order of Phase Transitions(Transformations)
+### X.2 Order of Phase Transitions(Transformations)
 
 Ehrenfest's defination:
 
 For s $n$-th order transformation, $\large \frac{\partial^{n-1} G}{\partial T^{n-1}}$ is continious, and $\large \frac{\partial^{n} G}{\partial T^{n}}$ is discontinious.
-
-### Thermodynamic Driving Force of Transformation
-$$\large \color{red} {\text{Need to do}}$$
-
-### Gibbs Phase Rule
-
-Generally, **the freedom of a system $F$**, equals the numbers of variables minus numbers of independent relations. We can write it informally as
-
-$$ F = N_{\text{variables}} - N_{\text{relations}} \tag{1 }$$
-
-Consider a system composed of **$C$ components** and has **$P$ phases**.
-
-In order to describe the composition of particular phase $\phi$,  we need $(C-1)$ variables
-
-$$x_i^\phi \quad (i=1,2,\cdots,C-1;\phi=\alpha,\beta,\delta,\cdots)$$
-
->Here we don't need the $C$-th variables, since it's independent and can be determined via $\sum x_i^\phi = 1$.
-
-Then for all $P$ phases we have $P(C-1)$ variables.
-
-In addition, we treat **temperature and pressure** as variable for common thermodynamics systems, therefore there are two more variables. And in sum, we have
-
-$$N_{\text{variables}} = P (C-1) + 2 \tag{2}$$
-
-As for the numbers of relations, we know that chemical potential of every component in each phase is equal in equilibrium, i.e.
-
-$$\mu_i^\alpha = \mu_i^\beta = \mu_i^\delta = \cdots \quad (i=1,2,\cdots,C)$$
-
-In sum
-
-$$N_{\text{relations}}  = C (P-1) \tag{3}$$
-
-Plugging $(2)(3)$ back to $(1)$, we have
-
-$$\begin{aligned}
-F &=  P (C-1) + 2 -  C (P-1)\\
-&= C-P+2
-\end{aligned}$$
-
-**The Gibbs Phase Rule**
-
-$$\boxed{F=C-P+2}$$
-
-If we are investigating **condensed systems**, the pressure can be considered fixed, therefore we have another representation
-
-$$F=C-P+1$$
-
-$\rightarrow$ &rarr; [Application of chemical reaction](http://www.che.uc.edu/jensen/w.%20b.%20jensen/reprints/079.%20Phase%20Rule.pdf)
-
 
 
 ## Some words
 
 Good books will make it hard to re-write a new one, but bad books will not and will encourage you to write a brand new one.
 
-During the writing of this long long note, I have referenced materials from all four courses I am taking this semester. And I have to say, some lecture slides is so perfectly arranged that it was really difficult to write my own words without using the sentense and logic relation, so in therory you may find some parts is seemed to be cpoied directly from somewhere else. However, not all lecture materials are well-prepared, even thoug that course have beeing open for years. Those not-so-good materials ergues me to write a new one, otherwise I will forget eveything some time later, and find it impossible to read anything useful from those bad materials.
+During the writing of this long long note, I have referenced many materials from all four courses I am taking this semester. And I have to say, some lecture slides is so perfectly arranged that it was really difficult to write my own words without using the sentense and logic relation, so in therory you may find some parts is seemed to be cpoied directly from somewhere else. However, not all lecture materials are well-prepared, even thoug that course have beeing open for years. Those not-so-good materials ergues me to write a new one, otherwise I will forget eveything some time later, and find it impossible to read anything useful from those bad materials.
 
 I would rather not to mention which course is good or which is bad. Every professor has their unique style, and although they themselves have the responsibility to imporve the course quality, we as students cannot use bad course slides as excutes for not studying well. Well, hope we will never meet that situation anymore. If it do happens, work with classmates.
 
-This note should be a good note for myself, and I have tried hard to make it good for you, too. Please just let me know if you find this note helpful, I would be so happy.
+Thermodynamics is such a course that you may easily feel that you "understand". Before turely understand, we might need to study it twice or more.
 
-Please do not reproduce this note on the Internet, since there are many content not aothorised.
+This note should be a good note for myself, and I have tried hard to make it good for you, too. Please just let me know if you find this note helpful, I would be so happy. As is said at the begining, this note will not be upgrated anymore. I hope this is the last time I learn this.
+
+Please do not reproduce this note on the Internet, since there are many content not aothorised. If you would like you learn more, you can refer to the book _Thermodynamics in Material_ by _Robert DeHoff_. Good luck!
 
 Mike Lyou
+May 15th, 2020
