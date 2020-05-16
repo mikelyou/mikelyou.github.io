@@ -24,7 +24,7 @@ tags:
 
 This post is Mike Lyou's study notes of several courses, which cover thermodynamics, kinetics and some other knowledge. I do not own the copyright of some contents, if the article unintentionally infringes your copyright, it will be deleted shortly after being informed. All rights reserved.
 
-This note is not complete, but will not be updated anymore, because relavent course has ended. Let me know if you notice any errors or typos, thanks so much.
+**This note is not complete, but will not be updated anymore, and may be deleted soon**, because relavent course has ended. **If you would like this post not being deleted, please let me know**. Let me know if you notice any errors or typos, thanks so much.
 
 
 # Thermodynamics
@@ -289,7 +289,7 @@ The temperature of all systems is equal to the temperature of all subsystems (at
 
 From the single fact that **entropy is maximized for the given constraints**, we can get several important implications.
 
-![](/img/in-post/post-thermodynamics/condition_of equilibrium.jpg)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/condition_of equilibrium.jpg)
 
 #### 3.6.1 Equilibrium of Temperature
 
@@ -782,7 +782,7 @@ Different crystal structure means different phase, including _allotropes_ (singl
 
 **Phase diagrams** can tell us which phase id stable for a system under certain condition. Sometimes write for short as $\mathrm{PD}$ or $\mathrm{\Phi D}$.
 
-![](/img/in-post/post-thermodynamics/phase_diagram_silica.png)
+<img src="https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/phase_diagram_silica.png" style="zoom:67%;" />
 
 > 2nd order phase cannot co-exist, but 1st order phase can.
 
@@ -899,6 +899,10 @@ $$
 $$
 
 [EP5.2]()
+
+## 8 Binary Phase Diagrams
+
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/invariant_reactions.jpg)
 
 ## 9 Multicomponent Homogeneous Nonreacting Systems: _Solution_
 
@@ -1036,7 +1040,7 @@ $$
 
 Now we can construct the curve of $G_ {sol}$ for the first step.
 
-![](/img/in-post/post-thermodynamics/free_energy_solution_01.jpg)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/free_energy_solution_01.jpg)
 
 ***
 
@@ -1056,7 +1060,7 @@ $$
 \overline G_A = G_{sol} + ~ ~ ~ ~ ~ x_B   \cdot \color{red}{-}\frac{dG_{sol}}{dx_B} 
 $$
 
-![](/img/in-post/post-thermodynamics/free_energy_solution_02.jpg)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/free_energy_solution_02.jpg)
 
 ***
 
@@ -1093,7 +1097,7 @@ $$
 \Delta \overline G_{mix, B} \equiv \frac{\partial \Delta G_{mix}}{\partial x_B} = RT \ln a_B = \overline G_B -G_B^o
 $$
 
-![](/img/in-post/post-thermodynamics/free_energy_solution_03.jpg)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/free_energy_solution_03.jpg)
 
 ### 9.3 Binary Dilute solution
 
@@ -1112,12 +1116,8 @@ $$
 Here is an illustration from Prof. Barmak's Lecture.
 
 
-![][binary_dilute_solution]
 
-[binary_dilute_solution]: ./binary_dilute_solution.jpg
-<!--E:\GitHub\mikelyou.github.io\img\in-post\post-thermodynamics\binary_dilute_solution.jpg-->
-
-![](/img/in-post/post-thermodynamics/binary_dilute_solution.jpg)
+<img src="https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/binary_dilute_solution.jpg" style="zoom:67%;" />
 
 ### 9.4 Ideal Solution
 
@@ -1145,9 +1145,9 @@ $$
 
 Here are two fine graphs:
 
-![](/img/in-post/post-thermodynamics/ideal_solution.jpg)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/ideal_solution.jpg)
 
-![](/img/in-post/post-thermodynamics/ideal_solution_2.jpg)
+<img src="https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/ideal_solution_2.jpg" style="zoom:67%;" />
 
 
 ### 9.5 Regular Solution
@@ -1190,7 +1190,7 @@ $$
 \Delta S_{mix}^{xs,~reg} = 0 	\color{white}{zzzzzz}
 $$
 
-![](/img/in-post/post-thermodynamics/regular_solution.jpg)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/regular_solution.jpg)
 
 <!--[Regular Solution Parameter](#regular-solution-parameter) -->
 
@@ -1297,7 +1297,7 @@ $$
 \Delta V_{mix}^{xs,~real} = \Delta V_{mix}
 $$
 
-![](/img/in-post/post-thermodynamics/nonregular_solution.jpg)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/nonregular_solution.jpg)
 
 ## 14 Electrochemistry
 
@@ -1395,7 +1395,7 @@ In dilute solutions, strong electrolytes are fully dissociated, i.e. $\alpha=1$
 
 ### 14.3 Equilibrium in a Two-Phase System Involving an Electrolyte
 
-![](/img/in-post/post-thermodynamics/copper_solid_in_copper_chloride_solution.jpg)
+<img src="https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/copper_solid_in_copper_chloride_solution.jpg" style="zoom:50%;" />
 
 The reaction is: $C u^{\alpha}=\left(C u^{2+}\right)^{\varepsilon}+2\left(e^{-}\right)^{\alpha}$
 
@@ -1466,7 +1466,7 @@ The application of this relation is obtaining $\phi^{\alpha}-\phi^{\varepsilon}$
 
 ### 14.4 Equilibrium in an Electrochemical Cell
 
-![](/img/in-post/post-thermodynamics/copper_zinc_battery.png)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/copper_zinc_battery.png)
 
 Take $\mathrm{Cu-Zn}$ battery as a concrete example.
 
@@ -1564,11 +1564,11 @@ For convience, we usually use **standerd hydrogen electrode (SHE)** instead of *
 
 ### 14.8 Pourbaix Diagrams
 
-![](/img/in-post/post-thermodynamics/pourbaix_diagram.png)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/pourbaix_diagram.png)
 
 At upper region, **oxygen** is liberated from water; at bottom region, **hydrogen** is liberated from water.
 
-![](/img/in-post/post-thermodynamics/pourbaix_diagram_copper.png)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/pourbaix_diagram_copper.png)
 
 Above **a line**, **oxygen** is liberated from water; below **b line**, **hydrogen** is liberated from water.
 
@@ -1576,7 +1576,7 @@ Vertival line relates with reactions that no electrons involved.
 
 Hrizontal line relateds with reactions that no H<sup>+</sup> involved.
 
-![](/img/in-post/post-thermodynamics/pourbaix_diagram_gold.png)
+<img src="https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/pourbaix_diagram_gold.png" style="zoom:50%;" />
 
 **Water lines a and b fall within the neutral gold**, Au, region. It is consistent with our common knowledge that gold is stable.
 
@@ -1667,7 +1667,7 @@ $$
 
 Where $\Delta S_v^f$ is formation entropy of vacancies, and $\Delta H_v^f$ is formation enthalpy of vacancies.
 
-![](img/in-post/post-thermodynamics/concentration_of_vacancies.jpg)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/concentration_of_vacancies.jpg)
 
 ### 15.5 Experimental Proof of Vacancies
 
@@ -1683,7 +1683,7 @@ $$
 3\left(\frac{\Delta L}{L}-\frac{\Delta a}{a}\right)
 $$
 
-![](/img/in-post/post-thermodynamics/experimental_proof_of_vacancies.png)
+<img src="https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/experimental_proof_of_vacancies.png" style="zoom:50%;" />
 
 >R. O. Simmons and R. W. Balluffi, Phys. Rev. 117, 52-60 (1960).
 
@@ -1720,9 +1720,7 @@ Impurities can be further classified into two types: **substitutional** (usually
 
 ### 15.8 A Summary
 
-![](http://www.substech.com/dokuwiki/lib/exe/fetch.php?w=&h=&cache=cache&media=point_defects.png)
-
-![](/img/in-post/post-thermodynamics/point_defeccts_of_crystals.png)
+<img src="https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/point_defeccts_of_crystals.png" style="zoom:67%;" />
 
 
 ## 16 Point Defects in Ionic Compounds
@@ -1737,7 +1735,7 @@ Defects in ionic compounds can be ionic or electronic:
 
 Usually, point defects **in metals** are electrically **neutral** whereas i**n ionic compounds** point defects are **electrically charged**.
 
-![](/img/in-post/post-thermodynamics/point_defeccts_of_ionic_compounds.png)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/point_defeccts_of_ionic_compounds.png)
 
 &rarr; The high mobility of the ionic defects in certain compounds makes them suitable
 candidates as solid electrolytes for batteries and fuel cells.
@@ -1828,7 +1826,7 @@ $$
 
 When oxygen interstitial forms, the defect is sometimes called <u>anti-Frenkel</u>.
 
-<img src="C:\Users\采叶\AppData\Roaming\Typora\typora-user-images\image-20200416150056399.png" alt="image-20200416150056399" style="zoom:25%;" />
+<img src="C:\Users\采叶\AppData\Roaming\Typora\typora-user-images\image-20200416150056399.png" alt="image-20200416150056399" style="zoom: 50%;" />
 
 #### 16.3.3 **Electronic Defects**
 
