@@ -11,6 +11,7 @@ catalog: true
 copyright-statement:
 hidden: false
 #excerpt: Some tips.
+typora-copy-images-to: ../../public-images/thermodynamics
 tags:
   - Notes
   - Thermodynamics
@@ -19,6 +20,7 @@ tags:
 <!-- more -->
 
 <!-- 现在这篇文章已不再更新。-->
+
 
 ## Before the Main Contents
 

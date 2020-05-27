@@ -214,7 +214,7 @@ $$C d C l_{2} \stackrel{N a C l}{\longrightarrow} C d_{N a}^{\bullet}+2 C l_{C l
 
 比如下划线`_`在一些markdown编辑器中会被编译为斜体，而在 LaTeX 中则是下标的含义，在一行公式中出现两个下标，就有可能出现被markdown编辑器理解为斜体的bug。
 
-再比如`*` `$` `{}` 这些符号，搞不好就被认为是 markdown 或 LaTeX 再或 HTML 语句，甚至 `{{ content }}` 会被识别为 Liquid 语句。在写笔记或文章时，能少用这些符号就少用。
+再比如`*` `$` `{}` 这些符号，搞不好就被认为是 markdown 或 LaTeX 再或 HTML 语句，甚至`双花括号`会被识别为 Liquid 语句。在写笔记或文章时，能少用这些符号就少用。
 
 
 
