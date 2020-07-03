@@ -291,7 +291,7 @@ The temperature of all systems is equal to the temperature of all subsystems (at
 
 From the single fact that **entropy is maximized for the given constraints**, we can get several important implications.
 
-![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/condition_of equilibrium.jpg)
+![](https://raw.githubusercontent.com/mikelyou/public-images/master/thermodynamics/condition_of_equilibrium.jpg)
 
 #### 3.6.1 Equilibrium of Temperature
 
