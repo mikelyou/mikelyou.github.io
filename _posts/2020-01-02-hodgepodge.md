@@ -9,7 +9,7 @@ header-img: "img/post-bg-2015.jpg"
 mathjax: true
 catalog: true
 tags:
-  - Blog
+  - GitHub Pages
 ---
 
 Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.

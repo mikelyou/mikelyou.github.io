@@ -8,7 +8,7 @@ header-img: "img/post-bg-2015.jpg"
 excerpt: 本文详细介绍了本博客搭建的完整过程，并记录了本人在实际操作中遇到的问题。
 catalog: true
 tags:
-    - Blog
+    - GitHub Pages
 ---
 
 
