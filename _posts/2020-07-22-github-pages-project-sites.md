@@ -48,7 +48,7 @@ tags:
 3. 建议勾选 `Enforce HTTPS`，否则访问时会出现安全警告。
 4. 没有出错的话，一个项目主页就建立完成了，可以通过`<username>.github.io/<projectname>`访问到了
 
-这里我新建的项目为`mikelyou.github.io/ACG`。可以看到这个地址有点丑，而且地址对大小写敏感。我希望通过`acg.mikelyou.com` 这样更加美观的地址访问，那么就需要设置和绑定子域名。
+这里我新建的项目为`mikelyou.github.io/acg`。可以看到这个地址有点丑，而且地址对大小写敏感。我希望通过`acg.mikelyou.com` 这样更加美观的地址访问，那么就需要设置和绑定子域名。
 
 ## 绑定子域名
 
@@ -64,6 +64,21 @@ tags:
 
 ![](https://raw.githubusercontent.com/mikelyou/image-public/master/DNS-he-project-github-pages.png)
 
+## 从模板快速开始
+
+成功建立项目站点后，我便去寻找新的主题了，心想着找个萌萌的二次元主题，谁知道......
+
+在网上用`anime` `acg` `二次元` `moe` `cartoon` 等多种关键词检索后，我只找到一两个相关的 `jekyll` 主题，你看看我都用到什么关键词了，网络上的二次元主题几乎等于没有啊。虽然我最后也没有使用它们，我决定在这里列举一下，有兴趣的读者可以去康康：
+
+- [梦白的二次元主题](http://www.whiteg.cn/) | [GitHub页面](https://github.com/moewhite19/about)
+- [WuK的主题](https://wu-kan.cn) | [GitHub页面](https://github.com/wu-kan/jekyll-theme-WuK)
+
+没有用的主要原因是，发现需要安装新的依赖，和我之前用的模板差别很大。所以我在想不如直接用现在的博客作为模板，从模板创建一个新的仓库[^1]好了，这样就省去了很多安装和使用上的麻烦，所有在现有博客上的习惯都可以套用到新的项目上。
+
+1. 打开有的博客仓库，`Settings` &rarr;勾选 `Template repository`
+2. 回到仓库主界面，点击 `Use this template` 创建新的仓库，取名为`acg` ，建立站点时的仓库已经完成使命了可以删掉
+3. 将仓库里的内容更换为新的博客的内容，使用和之前一样的方法更新博客。
+
 ## 参考文献
 
 1. [单个GitHub帐号下添加多个GitHub Pages的相关问题](https://segmentfault.com/a/1190000003946969)
@@ -71,3 +86,12 @@ tags:
 3. [About custom domains for GitHub Pages sites](https://help.github.com/articles/about-custom-domains-for-github-pages-sites/)
 4. [User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
 5. [二级域名解析使用](https://blog.csdn.net/LD0807/article/details/54356876)(使用`A`记录的就是这篇)
+
+
+
+[^1]: [从模板创建仓库](https://docs.github.com/cn/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)类似于创建仓库的复刻，但存在一些重要差异：
+
+- 新的复刻包含父仓库的整个提交历史记录，而从模板创建的仓库从一个提交开始记录。
+- 对复刻的提交不会显示在您的贡献图中，而对从模板创建的仓库的提交会显示在您的贡献图中。
+- 复刻可能是向现有项目贡献代码的临时方式，而从模板创建的仓库可以快速启动新项目。
+
