@@ -18,3 +18,10 @@ Please star [Hux Blog](https://github.com/Huxpro/huxpro.github.io) instead of th
 
 - RSS
 
+## History
+
+### 2020-07-25
+ 
+- Replaced old url `mikelyou.com` with `blog.mikelyou.com`
+- Changed DNS server from **he** to **cloudflare**
+- Now two blogs can use `https` at the same time
