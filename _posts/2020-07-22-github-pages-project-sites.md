@@ -18,7 +18,7 @@ tags:
 
 <!-- more -->
 
-今天突发奇想，想要尝试在自己仅有的一个GitHub账号下创建多个GitHub Pages，并将其部署在子域名上。没想到在网上搜索了一下后，发现真的可以做到。本文记录了配置的过程，希望能帮助到有同样需求的人。阅读本文前，请确保你已经创建过自己的 GitHub Pages，如果没有可以参考我的[这篇博文](https://mikelyou.com/2019/12/27/hello-world/)。
+今天突发奇想，想要尝试在自己仅有的一个GitHub账号下创建多个GitHub Pages，并将其部署在子域名上。没想到在网上搜索了一下后，发现真的可以做到。本文记录了配置的过程，希望能帮助到有同样需求的人。阅读本文前，请确保你已经创建过自己的 GitHub Pages，如果没有可以参考我的[这篇博文](https://blog.mikelyou.com/2019/12/27/hello-world/)。
 
 ## 场景再现
 
@@ -70,28 +70,58 @@ tags:
 
 在网上用`anime` `acg` `二次元` `moe` `cartoon` 等多种关键词检索后，我只找到一两个相关的 `jekyll` 主题，你看看我都用到什么关键词了，网络上的二次元主题几乎等于没有啊。虽然我最后也没有使用它们，我决定在这里列举一下，有兴趣的读者可以去康康：
 
-- [梦白的二次元主题](http://www.whiteg.cn/) | [GitHub页面](https://github.com/moewhite19/about)
-- [WuK的主题](https://wu-kan.cn) | [GitHub页面](https://github.com/wu-kan/jekyll-theme-WuK)
+- [梦白的二次元主题](http://www.whiteg.cn/)  [GitHub页面](https://github.com/moewhite19/about)
+- [WuK的主题](https://wu-kan.cn)  [GitHub页面](https://github.com/wu-kan/jekyll-theme-WuK)
 
-没有用的主要原因是，发现需要安装新的依赖，和我之前用的模板差别很大。所以我在想不如直接用现在的博客作为模板，从模板创建一个新的仓库[^1]好了，这样就省去了很多安装和使用上的麻烦，所有在现有博客上的习惯都可以套用到新的项目上。
+没有用的主要原因是，发现需要安装新的依赖，和我之前用的模板差别很大。所以我在想不如直接用现在的博客作为模板，从**模板创建一个新的仓库**好了，这样就省去了很多安装和使用上的麻烦，所有在现有博客上的习惯都可以套用到新的项目上。
 
 1. 打开有的博客仓库，`Settings` &rarr;勾选 `Template repository`
 2. 回到仓库主界面，点击 `Use this template` 创建新的仓库，取名为`acg` ，建立站点时的仓库已经完成使命了可以删掉
 3. 将仓库里的内容更换为新的博客的内容，使用和之前一样的方法更新博客。
 
-## 参考文献
+>[从模板创建仓库](https://docs.github.com/cn/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)类似于创建仓库的复刻，但存在一些重要差异：
+>
+>- 新的复刻包含父仓库的整个提交历史记录，而从模板创建的仓库从一个提交开始记录。
+>- 对复刻的提交不会显示在您的贡献图中，而对从模板创建的仓库的提交会显示在您的贡献图中。
+>- 复刻可能是向现有项目贡献代码的临时方式，而从模板创建的仓库可以快速启动新项目。
+
+
+## 如何开启 https
+
+> 本段内容参考了 [这篇文章]([https://tzhou2018.github.io/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/](https://tzhou2018.github.io/2018/04/为GitHub-Pages自定义域名并添加SSL-开启HTTPS强制/))。
+
+建立`acg.mikelyou.com` 站点后，我把之前的博客地址修改为 `blog.mikelyou.com` ，使得他们放在一起比较和谐。不过随后我注意到一个问题——我的两个博客 `blog.mikelyou.com` 和 `acg.mikelyou.com` 无法同时开启 `https`，其中有一个站点会被 Chrome 提示 `“链接是不安全的”` 。我很快找到了原因，是GitHub Pages本身的限制。上面提到的这篇文章，我只把相关的内容在这里简述一下，如果有不清楚的地方请去看原文。
+
+首先，为什么要使用 https 协议？因为 https 协议提高网站访问安全性、目前越来越多的浏览器会判断当前站点支不支持https协议。
+
+默认情况下使用GitHub Pages的给定域名则支持http和https两种协议，但是如果使用自定义域名的话，则只能通过`http://`访问，也就是说我们在`Github上搭建 Hexo 或Jekyll 主题博客`后，通过`CNAME`绑定个人域名后，我们只能通过`http://`域名来访问。如果访问`https://XXX.github.io/`(即原来的GitHub Pages域名)将会被重定向到`我们的自定义域名`。但若直接访问`https://我们的自定义域名`，浏览器会报`SSL_DOMAIN_NOT_MATCHED`警告。
+
+那么怎么给自己的域名加上`https`呢？这篇文章的作者使用了 [CloudFlare](https://www.cloudflare.com/) 的`免费的https服务`。
+
+[CloudFlare](https://www.cloudflare.com/) 是一家CDN提供商，它提供了`免费的https服务`(但不是应用SSL证书)。实现模式就是，用户到CDN服务器的连接为`https`，而CDN服务器到GithubPage服务器的连接为`http`，就是在CDN服务器那里加上反向代理。
+
+1. 注册并登录CloudFlare，并将自己域名下的`name server`修改为CloudFlare的`name server`。
+2. 在CloudFlare的DNS设置域名匹配到自己的GithubPage(启用动态DNS加速)。
+3. 在CloudFlare的`Crypto`设置SSL为`Flexible`(等待一定时间实现建立连接后，就可以通过`https`来访问自己的 GithubPage )。
+4. 在CloudFlare的`Page Rules`中设置路由规则。一般情况下，利用`Always use https`设置规则，规则链接为`http://域名/*` , 这样就可以把 `http` 链接强制转换为 `https`。
+
+![](https://raw.githubusercontent.com/mikelyou/image-public/master/cloudflare-page-rules.png)
+
+> 上面第一条规则是因为我的 `blog` 站点原本使用的地址是 `mikelyou.com` 根域名，添加这条规则可以让原来的地址依然可以访问，直接跳转到新的博客地址。（一共三个免费规则正好被我用完）
+
+![](https://raw.githubusercontent.com/mikelyou/image-public/master/cloudflare-dns.png)
+
+上图为新的 DNS 配置，前文的 He 的 DNS 服务不再使用。
+
+于是在这个过程中，我把 DNS 服务商也换了，然后发现 CloudFlare 比之前用的 [Hurricane Electric](https://dns.he.net/) 好用多了，而且还提供很多其他免费功能，我觉得 Google Analytics 也可以被这个替代了。
+
+## 参考文献 
 
 1. [单个GitHub帐号下添加多个GitHub Pages的相关问题](https://segmentfault.com/a/1190000003946969)
 2. [GitHub Pages 自定义域名实践整理](https://segmentfault.com/a/1190000018038675)
 3. [About custom domains for GitHub Pages sites](https://help.github.com/articles/about-custom-domains-for-github-pages-sites/)
 4. [User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
 5. [二级域名解析使用](https://blog.csdn.net/LD0807/article/details/54356876)(使用`A`记录的就是这篇)
+6. [为GitHub-Pages自定义域名并添加SSL-开启HTTPS强制]([https://tzhou2018.github.io/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/](https://tzhou2018.github.io/2018/04/为GitHub-Pages自定义域名并添加SSL-开启HTTPS强制/))
 
-
-
-[^1]: [从模板创建仓库](https://docs.github.com/cn/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)类似于创建仓库的复刻，但存在一些重要差异：
-
-- 新的复刻包含父仓库的整个提交历史记录，而从模板创建的仓库从一个提交开始记录。
-- 对复刻的提交不会显示在您的贡献图中，而对从模板创建的仓库的提交会显示在您的贡献图中。
-- 复刻可能是向现有项目贡献代码的临时方式，而从模板创建的仓库可以快速启动新项目。
 
