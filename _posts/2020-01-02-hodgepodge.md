@@ -200,22 +200,6 @@ Catalog style: floats at the right of the page.
 
 By the way, the method of adding in-post link is using `[Enable Catalog](#enable-catalog)` which looks as [Enable Catalog](#enable-catalog).
 
-## ~~Insert catalog~~
-
-Solved in [#Enable Catalog](#enable-catalog). No need to read this part.
-
-In jekyll, simply write the following line where you want to display the catalog:
-
-```
-## Catalog
-{:.no_toc} <!--I dont want it itself appears-->
-
-*  
-{:toc}
-```
-
-Reference: [给JEKYLL的文章添加目录](http://www.zhengjiachao.com/topics/github.io/add-outline-on-jekyll-post.html)
-
 ## How to write math using Latex grammar (mathjax)
 
 It is already embaded in Hux's blog.
