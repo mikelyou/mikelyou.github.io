@@ -88,7 +88,7 @@ tags:
 
 ## 如何开启 https
 
-> 本段内容参考了 [这篇文章]([https://tzhou2018.github.io/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/](https://tzhou2018.github.io/2018/04/为GitHub-Pages自定义域名并添加SSL-开启HTTPS强制/))。
+> 本段内容参考了 [这篇文章](https://tzhou2018.github.io/2018/04/为GitHub-Pages自定义域名并添加SSL-开启HTTPS强制/)。
 
 建立`acg.mikelyou.com` 站点后，我把之前的博客地址修改为 `blog.mikelyou.com` ，使得他们放在一起比较和谐。不过随后我注意到一个问题——我的两个博客 `blog.mikelyou.com` 和 `acg.mikelyou.com` 无法同时开启 `https`，其中有一个站点会被 Chrome 提示 `“链接是不安全的”` 。我很快找到了原因，是GitHub Pages本身的限制。上面提到的这篇文章，我只把相关的内容在这里简述一下，如果有不清楚的地方请去看原文。
 
@@ -122,6 +122,6 @@ tags:
 3. [About custom domains for GitHub Pages sites](https://help.github.com/articles/about-custom-domains-for-github-pages-sites/)
 4. [User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
 5. [二级域名解析使用](https://blog.csdn.net/LD0807/article/details/54356876)(使用`A`记录的就是这篇)
-6. [为GitHub-Pages自定义域名并添加SSL-开启HTTPS强制]([https://tzhou2018.github.io/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/](https://tzhou2018.github.io/2018/04/为GitHub-Pages自定义域名并添加SSL-开启HTTPS强制/))
+6. [为GitHub-Pages自定义域名并添加SSL-开启HTTPS强制](https://tzhou2018.github.io/2018/04/为GitHub-Pages自定义域名并添加SSL-开启HTTPS强制/)
 
 
