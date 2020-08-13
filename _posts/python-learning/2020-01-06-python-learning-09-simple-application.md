@@ -11,7 +11,7 @@ tags:
   - Notes
 ---
 
-After learning the [file operations](https://mikelyou.com/2020/01/03/python-learning-07-file-operations/) and [directory operations](https://mikelyou.com/2020/01/03/python-learning-08-directory-operations/), I eventually could use python to do some tasks.
+After learning the [file operations](https://blog.mikelyou.com/2020/01/03/python-learning-07-file-operations/) and [directory operations](https://blog.mikelyou.com/2020/01/03/python-learning-08-directory-operations/), I eventually could use python to do some tasks.
 
 <!-- more -->
 

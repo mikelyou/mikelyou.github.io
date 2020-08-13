@@ -11,7 +11,7 @@ tags:
   - Cmd
 ---
 
-[See English Version &rarr;](https://mikelyou.com/2020/01/04/basic-cmd/)
+[See English Version &rarr;](https://blog.mikelyou.com/2020/01/04/basic-cmd/)
 
 本文简要介绍了常用的Windows 命令行。
 <!-- more -->
