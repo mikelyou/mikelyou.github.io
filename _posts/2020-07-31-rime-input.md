@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: "Rime 输入法安装和使用指北"
 subtitle: ''
@@ -47,13 +48,9 @@ tags:
 
 **Rime 输入法的优势在于它高度的可自定义化**。从外观，到按键设置、标点定制，还可以实现输入颜文字、希腊字母等奇葩操作。只要肯花一点时间，就可以让输入法变成我们想要的样子。
 
-此外，我们不必再担心输入法的隐私问题，也不必和广告秦王绕柱了。总结起来就是三点：
+此外，我们不必再担心输入法的 ~~**隐私问题**~~ ，也不必和 ~~**广告**~~ 秦王绕柱了。
 
-- 高度可调教
-- 保护隐私
-- 无广告
-
-Ps. 这里要吐槽一点， Rime 的帮助文档写的不是很好，让人一下子找不到要怎么配置和使用。我看了其他人写的介绍之后，才能看懂官方的文档。另外官方文档的语言是繁中和英文混杂，这让简中读者很痛苦，建议使用浏览器的翻译功能。
+> Ps.  Rime 的帮助文档写的不是很好，让人一下子找不到要怎么配置和使用。我看了其他人写的教程之后，才能看懂官方的文档。另外官方文档的语言是繁中和英文混杂，这让简中读者很痛苦，建议使用浏览器的翻译功能。
 
 ## 2 下载与安装
 
@@ -151,21 +148,60 @@ patch:
     - "Control+grave"
 ```
 
-### 2.3 左<kbd>Shift</kbd> 键切换英文输入
+### 2.3 中英文切换
 
-这里直接参考的[致第一次安装RIME的你](https://www.zybuluo.com/eternity/note/81763)，讲道理没感觉有啥区别啊......但是肯定没有错！（其实完全不懂.jpg）
+中西文切换键的默认设置写在 `default.yaml` 里面，我们可以通过 `default.custom.yaml` 在全局范围重定义该组快速键（请看 [官方示例](https://gist.github.com/lotem/2981316) ）.
+
+**可用的按键**有 <kbd>Caps_Lock </kbd> <kbd>Shift_L</kbd> <kbd>Shift_R</kbd>  <kbd>Control_L</kbd>  <kbd>control_R</kbd>；而 Mac 系统上的鼠须管不能区分左、右，因此只有对<kbd>Shift_L</kbd><kbd>Control_L</kbd> 的设定起作用.
+
+**已输入编码时按切换键**（也就是打字打了一半的时候，按上面列举的按键），可选的临时切换策略有三：
+
+- `inline_ascii` 在输入法的 **临时西文编辑区** 内输入字母、数字、符号、空格等，回车上屏后 **自动复位** 到中文
+- `commit_text` 已输入的 **候选文字** （也即中文）上屏并切换至西文输入模式
+- `commit_code` 已输入的 **编码字符** （也即英文）上屏并切换至西文输入模式
+- 设为 `noop`，屏蔽该切换键
+- 设为 `clear`，清除已输入的编码
+
+有的用户喜欢设置的比较复杂，把每个键位都用上。但对我来说，默认方案已经足够，如下：
 
 ```yaml
-# default.custom.yaml
-patch:
+# default.yaml
   ascii_composer/good_old_caps_lock: true
   ascii_composer/switch_key:
-    Caps_Lock: noop
+    Caps_Lock: commit_code
+    Control_L: noop
+    Control_R: noop
     Shift_L: commit_code
-    Shift_R: inline_ascii
-    Control_L: clear
-    Control_R: commit_text
+    Shift_R: commit_code
 ```
+
+上面第一行的意思是：按下 Caps Lock 会切换到英文模式，默认输出大写字母（值为 `false` 则默认输出小写字母，为 `noop` 则无操作）
+
+下面几行的意思是，在已输入编码时，按下对应的按键有不同的效果：
+
+- Caps Lock、左右Shift：已输入编码字符上屏，也就是英文字母上屏
+- 左右Control 无操作
+
+在这种设置下，我们在不同输入模式下按不同键的效果为（为了更加直观，表格中以 ENGLISH 和 english 表示英文大写和英文小写）：
+
+| 输入模式 | 按键                  | 效果                                        |
+| -------- | --------------------- | ------------------------------------------- |
+| 中文     | <kbd>Caps_Lock </kbd> | 切换至 ENGLISH 输入模式，已输入编码直接上屏 |
+| 中文     | <kbd>Shift </kbd>     | 切换至 english 输入模式，已输入编码直接上屏 |
+| ENGLISH  | <kbd>Caps_Lock </kbd> | 切换至 **中文** 输入模式                    |
+| ENGLISH  | <kbd>Shift </kbd>     | 无操作（注：希望能够切换大小写，之后研究）  |
+| english  | <kbd>Caps_Lock </kbd> | 切换至 ENGLISH 输入模式                     |
+| english  | <kbd>Shift </kbd>     | 切换至 **中文** 输入模式                    |
+
+我顺便把另外几个按键也整理了以下：
+
+| 输入模式 | 按键  | 效果                                     |
+| -------- | ----- | ---------------------------------------- |
+| 中文     | Space | 候选文字直接上屏（也即通常的打字模式）   |
+| 中文     | Enter | 已输入编码直接上屏，保持中文输入模式不变 |
+| 中文     | Esc   | 清除编码                                 |
+
+设置好这一部分，我们就可以开心的随时切换中英文打字了。
 
 ### 2.4 以方括号 <kbd>[</kbd> <kbd>]</kbd> 来换页（有待补充所有快捷键）
 
@@ -183,14 +219,20 @@ patch:
 
 ### 2.5 在特定程序里关闭中文输入
 
+在一些终端、代码编辑器或快速启动工具等程序中，中文很少会用到，那么我们可以在这些程序里默认关闭中文输入。还有在很多游戏中，默认关闭中文输入可以避免 “想前进，却在屏幕上打出一长串 W” 的窒息操作 。
+
+比如下面的例子，我们希望在 Photoshop 和 Illustrator 中默认关闭中文输入。
+
 ```yaml
 # weasel.custom.yaml
 patch:
-    app_options/photoshop.exe:
+    app_options/photoshop.exe: # 程序名字全用小寫字母
       ascii_mode: true
-    app_options/illustrator.exe:
+    app_options/illustrator.exe: # 如果有多个程序，按照这个格式补充
       ascii_mode: true
 ```
+
+程序的名称一般为 `*.exe`，如果不知道，可以通过快捷方式的右键菜单中的 “打开文件所在位置 ” 找到。
 
 ## 5 输入方案配置
 
@@ -459,7 +501,7 @@ patch:
 
 ```
 【中州韻】 ~/.config/ibus/rime/
- ~/.config/fcitx/rime/
+		 ~/.config/fcitx/rime/
 【小狼毫】 "%appdata%\\Rime"
 【鼠鬚管】 ~/Library/Rime/
 ```
