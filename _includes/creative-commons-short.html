@@ -1,0 +1,37 @@
+<!--
+See this page if you don't know which to choose
+https://creativecommons.org/share-your-work/licensing-examples/
+-->
+
+{% if page.copyright-statement == 'CC BY' %}
+  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0 International License</a>.
+{% endif %}
+
+{% if page.copyright-statement == 'CC BY-SA' %}
+  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 International License</a>.
+{% endif %}
+
+{% if page.copyright-statement == 'CC BY-ND' %}
+  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0 International License</a>.
+{% endif %}
+
+{% if page.copyright-statement == 'CC BY-NC' %}
+  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 International License</a>.
+{% endif %}
+
+{% if page.copyright-statement == 'CC BY-NC-SA' %}
+  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA International License</a>.
+{% endif %}
+
+{% if page.copyright-statement == 'CC BY-NC-ND' %}
+  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0 International License</a>.
+{% endif %}
+
+{% if page.copyright-statement == 'python-series' %}
+  Copyright Statement: This python learning series are posted only for personal studies and communication. The whole series are not allowed to be reproduced unles otherwise indicated. I do not own copyright of some of the content. If any post accidentally infringes your copyright, it will be removed shortly after being informed. View <a href="https://blog.mikelyou.com/2020/01/02/python-learning-00-readme/">python-learning-readme</a> for more information.
+{% endif %}
+
+{% if page.copyright-statement == None %}
+  <!-- other conditions -->
+  All work at this site, unless otherwise noted, are not allowed to be reproduced, all rights reserved. If any post accidentally infringes your copyright, it will be removed shortly after being informed.<br /><br />本站所有文章，除非另有声明，均不允许以任何形式转载，本站保留所有权利。如果本站内容不小心侵犯了您的著作权，侵权内容会在收到通知后立即删除。
+{% endif %}
