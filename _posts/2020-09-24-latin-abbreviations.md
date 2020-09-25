@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Frenquetly Used Latin Abbreviations"
+title: "Common Latin Abbreviations"
 subtitle: '英文中常用的拉丁语缩写'
 date: 2020-09-24 00:00:00
 author: "Mike Lyou"
@@ -11,7 +11,7 @@ mathjax: true
 catalog: true
 copyright-statement: CC BY-NC-SA
 hidden: false
-excerpt: This article summaries frequently used Latin abbreviations in scientific writing, especially in math and physics.
+excerpt: This article summaries common Latin abbreviations in scientific writing, especially in math and physics.
 tags:
  - Scientific English
 
@@ -19,7 +19,7 @@ tags:
 
 <!-- more -->
 
-A brief summary of frequently used Latin phrases and abbreviations used in everyday life and math or physics fields. Some phrases or abbreviations are not concluded, just because I have never seen them before, thus classified as "not frequently used".
+A brief summary of common Latin phrases and abbreviations used in everyday life and math or physics fields. Some phrases or abbreviations are not concluded, just because I have never seen them before, thus classified as "not frequently used".
 
 （常用拉丁短语和缩写，主要为日常使用和数学物理领域使用。一些短语没有列出，单纯是因为我没有见过，所以被归为“不常用”.）
 

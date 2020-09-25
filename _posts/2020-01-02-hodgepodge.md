@@ -10,6 +10,7 @@ mathjax: true
 catalog: true
 tags:
   - GitHub Pages
+  - LaTeX
 ---
 
 Some tips discoverd. Write down for later usage. You maybe find something not clear, it is normal since it is for myself. If something is good, a new post will be published.
