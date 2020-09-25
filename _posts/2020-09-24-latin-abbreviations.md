@@ -11,7 +11,7 @@ mathjax: true
 catalog: true
 copyright-statement: CC BY-NC-SA
 hidden: false
-excerpt: This article summaries frenquently used Latin abbreviations in scientific writting, especially in math and physics.
+excerpt: This article summaries frequently used Latin abbreviations in scientific writing, especially in math and physics.
 tags:
  - Scientific English
 
@@ -19,7 +19,7 @@ tags:
 
 <!-- more -->
 
-A brief summary of frenquently used Latin phrases and abbreviations used in everyday life and math or physics fields. Some phrases or abbreviations are not consluded, just because I have never seen them before, thus clasfied as "not frenquently used".
+A brief summary of frequently used Latin phrases and abbreviations used in everyday life and math or physics fields. Some phrases or abbreviations are not concluded, just because I have never seen them before, thus classified as "not frequently used".
 
 （常用拉丁短语和缩写，主要为日常使用和数学物理领域使用。一些短语没有列出，单纯是因为我没有见过，所以被归为“不常用”.）
 
@@ -31,7 +31,7 @@ A brief summary of frenquently used Latin phrases and abbreviations used in ever
 | etc.           | et cetera                        | "and the others"        | Example: I need to go to the store and buy some pie, milk, cheese, *etc*. |
 | e.g.           | exempli gratia                   | "for example", "for instance"                               |                                                              |
 | i.e.           | id est                           | "that is", "in other words"                                 |                                                              |
-| N.B.           | nota bene                        | "note well"                                                  | To atteact attention. Some people use "*Note*" for the same purpose. |
+| N.B.           | nota bene                        | "note well"                                                  | To attract attention. Some people use "*Note*" for the same purpose. |
 | per cent.      | per centum                       | "for each one hundred"                                       | Commonly "percent" in American English.                      |
 | P.S.           | post scriptum                    | "after what has been written"                                | Used to indicate additions to a text after the signature of a letter. |
 | P.P.S.         | post post scriptum               |                                                              | Sometimes extended to comical length with P.P.P.S., P.P.P.P.S., and so on. |

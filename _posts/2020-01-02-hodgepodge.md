@@ -80,9 +80,9 @@ Reference:
 1. [不蒜子](http://ibruce.info/2015/04/04/busuanzi/)
 2. [为博客增加建站时间显示](https://sillyli.com/webtime/)
 
-## Details about MathJax (Lable and Cite Equations)
+## Details about MathJax (Label and Cite Equations)
 
-During the writing of thermodynamics study notes, I came up with the need to label a bunch of equations and cite them in derivations. And after some strugle, I found a way to lable and cite equations.
+During the writing of thermodynamics study notes, I came up with the need to label a bunch of equations and cite them in derivations. And after some struggle, I found a way to label and cite equations.
 
 Below is a simple example, below is a equation, with auto-generated equation-number:
 
@@ -140,11 +140,11 @@ $$ x^2 + y^2 = R^2 $$
    \tag{eq-aaaaaa}
 \end{equation}
 
-- We can cite a equation using `\ref{eq-aaaaaa}` or `\eqref{1}` to cite without brackets or with brackets. (Here no example because I've changed confuguration, see below)
+- We can cite a equation using `\ref{eq-aaaaaa}` or `\eqref{1}` to cite without brackets or with brackets. (Here no example because I've changed configuration, see below)
 
-Then problem comes. If we use the auto-generated equation-number, we have to look for their numbers before each citation, which will be very boring when an article is very long, and the number will change if we insert new equation between. But if we lable all of them, it would be another tiring work.
+Then problem comes. If we use the auto-generated equation-number, we have to look for their numbers before each citation, which will be very boring when an article is very long, and the number will change if we insert new equation between. But if we label all of them, it would be another tiring work.
 
-If you are familiar with LaTeX writing, you may use `\label{yourlabel}` to label an equation, by doing so, we can cite equations using their label names, and enjoy the convinience of automatical equation numbering.
+If you are familiar with LaTeX writing, you may use `\label{yourlabel}` to label an equation, by doing so, we can cite equations using their label names, and enjoy the convenience of automatically equation numbering.
 
 There are only one change in configuration: adding `useLabelIds: true` in `mathjax_support.html` (you may ignore other differences)
 
@@ -168,7 +168,7 @@ By doing so, we can use `label` instead of `tag` to cite equations (and will dis
 \end{equation}
 ```
 
-This is the example equation at the very begining. And let's use `\eqref{eq-example}` to cite \eqref{eq-example}. And now using  `\eqref{2.16}` to cite \eqref{2.16} will give you something like `???`.
+This is the example equation at the very beginning. And let's use `\eqref{eq-example}` to cite \eqref{eq-example}. And now using  `\eqref{2.16}` to cite \eqref{2.16} will give you something like `???`.
 
 
 References and More Reading:  
@@ -178,7 +178,7 @@ References and More Reading:
 
 ## Hide posts at homepage
 
-Using `hidden: true` at post head can hide perticular post at homepage, but it's still visible at archive, and can be reached through link from neighboring posts.
+Using `hidden: true` at post head can hide particular post at homepage, but it's still visible at archive, and can be reached through link from neighboring posts.
 
 Using `published: false` will totally exclude it from website.
 
@@ -233,10 +233,11 @@ Many answers I found think for sure that I know how css files work, but I didn't
 
 You can find `bootstrap.css` and `bootstrap.min.css` under `/css` directory. If you use theme from others, there may be another two `sometheme.css` and `sometheme.min.css`. You can add the css style directly into one of the `*.css` file, or create a new `sample.css` and add it.
 
-You maybe notice `*.min.css` is hard to read, that is because`*.min.css` file is minified `*.css` file, which removes unassary space and other stuffs. Their functions are identical, but `*.min.css` has better efficiency. If you use theme from others, they usually use `*.min.css` rather than `*.css`. So you when you have made up your `*.css` file, you should use [css minifier](https://cssminifier.com) or other tools to generate a `*.min.css` file.
+You maybe notice `*.min.css` is hard to read, that is because`*.min.css` file is minified `*.css` file, which removes unnecessary space and other stuffs. Their functions are identical, but `*.min.css` has better efficiency. If you use theme from others, they usually use `*.min.css` rather than `*.css`. So you when you have made up your `*.css` file, you should use [css minifier](https://cssminifier.com) or other tools to generate a `*.min.css` file.
 
 If you create a new `*.css` file, you should also include it in `head.html`.
 <!-- {% raw %} -->
+
 ```
 <link rel="stylesheet" href="{{ "/css/sample.min.css" | prepend: site.baseurl }}">
 ```
@@ -252,7 +253,7 @@ Here is [another method](https://stackoverflow.com/questions/19331362/using-an-i
 
 ## Enable Catalog
 
-It's already embaded in Hux's blog. (~~But I've finding it for long time Orz...~~)
+It's already embeded in Hux's blog. (~~But I've finding it for long time Orz...~~)
 
 Just adding `catalog: true` can enable catalog. It is written in `post.html`.
 
@@ -266,7 +267,7 @@ By the way, the method of adding in-post link is using `[Enable Catalog](#enable
 
 ## How to write math using Latex grammar (mathjax)
 
-It is already embaded in Hux's blog.
+It is already embeded in Hux's blog.
 
 Add `mathjax: true` to enable it.
 
@@ -296,7 +297,7 @@ $$ S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a) $$
 - [CSDN](https://blog.csdn.net/Sdnu08gis/article/details/99691621)（讲到如何添加新的`新建`）
 
 
-## Atom plugin (irrelavent)
+## Atom plugin (irrelevant)
 Added `markdown-preview-plus` to enable writing math equations with LaTeX. Eg. $\mu$
 
 $$ S = \int_{a}^b f(x) \mathrm{d}x = F(b) - F(a) $$
@@ -307,7 +308,7 @@ If you don't need the equation numbers, just use `$+symbol+$` or `$$the equation
 
 Reference: [&rarr;简书](https://www.jianshu.com/p/6b54e2eb9ae2)
 
-By the way, I found another article, which proved irrelavent with my concern. It can make you write pure LaTeX document in `Plan Text`. The article [&rarr;知乎](https://zhuanlan.zhihu.com/p/35929936)
+By the way, I found another article, which proved irrelevant with my concern. It can make you write pure LaTeX document in `Plan Text`. The article [&rarr;知乎](https://zhuanlan.zhihu.com/p/35929936)
 
 ## Copyright statement
 
@@ -351,7 +352,7 @@ Reference:
 
 ## Add Valine comment block
 
-I've struggled adding Disqus for a long time, but still nothing achieved. Though not decide to give up Disqus, I found Valine, and sucessfully add it to my blog in only one hour.
+I've struggled adding Disqus for a long time, but still nothing achieved. Though not decide to give up Disqus, I found Valine, and successfully add it to my blog in only one hour.
 
 In `_config.yml` write this
 ```
