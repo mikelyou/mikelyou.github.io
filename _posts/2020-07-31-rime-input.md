@@ -547,6 +547,8 @@ import_tables:
 2. 大量的不常用符号（麻将🀍 星座♌）适合使用自定义符号
 3. 两种方法可以同时应用
 
+> 关于词库文件 `dict.yaml`， [雪齋的文檔](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md#dictyaml-詳解) 有详细解释，需要高度自定义的读者可以阅读.
+
 ### 5.5 同步
 
 （有待补充...）
