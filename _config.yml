@@ -19,8 +19,8 @@ github_username:  mikelyou
 #twitter_username:
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
-jianshu_username: 27a496cd42ec
-email_address: cl3934@columbia.edu
+#jianshu_username: 27a496cd42ec
+email_address: liuch259@outlook.com
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
@@ -74,8 +74,8 @@ valine_appKey: lLruq0KJwl4pRcRYvyjsCLPA
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-155105379-1'            # Format: UA-xxxxxx-xx
-ga_domain: mikelyou.com
+#ga_track_id: 'UA-155105379-1'            # Format: UA-xxxxxx-xx
+#ga_domain: mikelyou.com
 
 
 
