@@ -9,7 +9,7 @@ header-img: "img/dream-catcher-902508_1920.jpg"
 mathjax: false
 catalog: true
 copyright-statement: CC BY-NC
-hidden:
+hidden: true
 excerpt: 想记住梦里的灵感和故事？可以看看这篇文章。学会如何记录自己的梦，可以为创作提供更多灵感。
 tags:
 ---

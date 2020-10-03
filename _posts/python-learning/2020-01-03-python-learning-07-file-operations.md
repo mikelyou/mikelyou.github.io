@@ -6,6 +6,7 @@ date: 2020-01-04 19:30:00
 author: "Mike Lyou"
 header-style: text
 copyright-statement: python-series
+hidden: true
 tags:
   - Python
   - Notes
@@ -111,7 +112,7 @@ with open('path/to/file', 'r') as f:
         if not piece:
             break
         print piece
-```        
+```
 在上面，我们使用 `f.read(1024)` 来每次读取 1024 个字节（1KB） 的文件内容，将其存到 `piece`，再对 `piece` 进行处理。
 
 事实上，我们还可以结合 `yield` 来使用：
@@ -173,7 +174,7 @@ with open('data.txt', 'r') as f:
 with open('E:/Program Datas/PycharmProjects/p1302/data2.txt', 'w', 'w') as f:    # 文件需和python程序在同个盘符下，盘符'E:/'可省略
     f.write('one\n')
     f.write('two')
-```    
+```
 
 - 如果上述文件已存在，则会清空原内容并覆盖掉；
 - 如果上述路径是正确的（比如存在 上述路径），但是文件不存在（`data2.txt` 不存在），则会新建一个文件，并写入上述内容；

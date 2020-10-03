@@ -6,6 +6,7 @@ date: 2020-01-04 20:30:00
 author: "Mike Lyou"
 header-style: text
 copyright-statement: python-series
+hidden: true
 tags:
   - Python
   - Notes
@@ -203,7 +204,7 @@ import os
 for f_name in os.listdir('some_directory'):
     if f_name.endswith('.txt'):
         print(f_name)
-```        
+```
 
 上述代码找到 `some_directory` 中的所有文件，遍历并使用 `.endswith()` 来打印所有扩展名为 `.txt` 的文件名。运行代码在我的电脑上输出如下:
 
@@ -227,7 +228,7 @@ import fnmatch
 for f_name in os.listdir('some_directory'):
     if fnmatch.fnmatch(f_name, '*.txt'):
         print(f_name)
-```        
+```
 
 - 迭代 `some_directory` 中的文件列表，并使用 `.fnmatch()` 对扩展名为 `.txt` 的文件执行通配符搜索。
 
@@ -244,7 +245,7 @@ import fnmatch
 for f_name in os.listdir('some_directory'):
     if fnmatch.fnmatch(f_name, 'data_*_backup.txt'):
         print(f_name)
-```  
+```
 
 输出如下 :
 
@@ -344,7 +345,7 @@ for dirpath, dirname, files in os.walk('.'):
    for file_name in files:
        print(file_name)
 
-```       
+```
 `os.walk()` 在每个循环中返回三个值：
 
 - 当前文件夹的名称

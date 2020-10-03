@@ -121,17 +121,22 @@ Many others are not listed here.
 
 ###  Miscellaneous symbols (杂项符号)
 
-| Symbol     | LaTeX code |
-| ---------- | ---------- |
-| $\infty$   | \infty     |
-| $\nabla$   | \nabla     |
-| $\partial$ | \partial   |
-| $\hbar$    | \hbar      |
-| $\hslash$  | \hslash    |
-| $\prime$   | \prime     |
-| $\cdots$   | \cdots     |
-| $\vdots$   | \vdots     |
-| $\ddots$   | \ddots     |
+| Symbol         | LaTeX code              |
+| -------------- | ----------------------- |
+| $\infty$       | \infty                  |
+| $\nabla$       | \nabla                  |
+| $\partial$     | \partial                |
+| $\hbar$        | \hbar                   |
+| $\hslash$      | \hslash                 |
+| $\prime$       | \prime                  |
+| $\cdots$       | \cdots                  |
+| $\vdots$       | \vdots                  |
+| $\ddots$       | \ddots                  |
+| $\AA$          | \AA  (See a note below) |
+| $\mathring{A}$ | \mathring{A}            |
+| $\LaTeX$       | \LaTeX                  |
+
+> Note: `\AA` maybe not work in some environment, e.g. [mathjax](https://github.com/mathjax/MathJax/issues/795). The simplest way is use `\mathring{A}` instead, which looks like $\mathring{A}$.
 
 ### Math mode accents
 

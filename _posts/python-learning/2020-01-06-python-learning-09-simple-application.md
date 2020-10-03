@@ -6,6 +6,7 @@ date: 2020-01-06 14:30:00
 author: "Mike Lyou"
 header-img: "img/post-bg-table.jpg"
 copyright-statement: CC4.0
+hidden: true
 tags:
   - Python
   - Notes

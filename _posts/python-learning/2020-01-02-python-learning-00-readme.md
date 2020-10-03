@@ -8,6 +8,7 @@ header-img: "img/post-bg-table.jpg"
 header-mask: 0.4
 #header-style: text
 copyright-statement: python-series
+hidden: true
 tags:
   - Python
   - Notes
