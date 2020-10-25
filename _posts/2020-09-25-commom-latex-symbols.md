@@ -136,7 +136,7 @@ Many others are not listed here.
 | $\mathring{A}$ | \mathring{A}            |
 | $\LaTeX$       | \LaTeX                  |
 
-> Note: `\AA` maybe not work in some environment, e.g. [mathjax](https://github.com/mathjax/MathJax/issues/795). The simplest way is use `\mathring{A}` instead, which looks like $\mathring{A}$.
+> Note: `\AA` (as well as `\LaTeX`) belong to *text mode* rather than *symbols*, therefore maybe not work in some environment, e.g. [mathjax](https://github.com/mathjax/MathJax/issues/795). The simplest way is use `\mathring{A}` instead, which looks like $\mathring{A}$.
 
 ### Math mode accents
 
