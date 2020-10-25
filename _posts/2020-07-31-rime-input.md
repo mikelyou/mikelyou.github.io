@@ -440,7 +440,7 @@ patch:
 
 #### ~~5.4.2 增加自己的词库~~
 
-> **本段暂时失效，本人按照 [5.4.3][# 5.4.3] 方法操作。** 
+> **本段暂时失效，本人按照 [5.4.3](# 543-增加自己的词库) 方法操作。** 
 
 在这个架构底下增加自己的词库相当容易，只需添加一个自订的 `*.dict.yaml` 文件，内容可以仿照 `luna_pinyin.extended.dict.yaml`，并于其中引入 `luna_pinyin.extended` 及相关字典档，例如：
 
@@ -470,7 +470,7 @@ patch:
 
 如此，往后 `luna_pinyin.extended` 升级时并不会影响到这个 `lazywei.dict.yaml`，所以直接将所有文件覆盖即可。
 
-#### 5.4.3
+#### 5.4.3 增加自己的词库
 
 仿照已有词典，新建 `mikelyou.dict.yaml` 文件，写入以下代码和相应注释：
 
@@ -513,7 +513,30 @@ import_tables:
 [旺柴]	wang chai	 1 #便于微信聊天是直接输入表情
 ```
 
-#### 5.4.4 扩充词库 vs. 自定义符号
+#### 5.4.4 导出其他输入法的词库
+
+请使用 [深蓝词库转换](https://github.com/studyzy/imewlconverter) 工具，这是一款开源免费的输入法词库转换程序，支持超过20种的输入法工具和词库。
+
+该程序的说明文档写的非常清楚，在此不予赘述，仅记录一下本人导出搜狗 `bin` 格式词库的方法。
+
+> 我使用的搜狗输入法版本：8.9正式版（8.9.0.2180）
+> 深蓝词库转换版本：2.9
+
+第一步、打开 `属性设置` &rarr; `词库` &rarr; `中文用户词库` &rarr; `导出/备份`。然后我们可以得到一份 `*.bin` 文件，这是加密的搜狗词库文件，但是没有关西，深蓝工具可以帮我们解密它。
+
+![](https://raw.githubusercontent.com/mikelyou/image-public/master/rime-sougou-wordwook-transfer.png)
+
+第二步、前往 [Release](https://github.com/studyzy/imewlconverter/releases) 或其他可靠来源下载 深蓝词库转换工具，运行 `exe` 程序，然后看到如下界面。选择想要转换的文件 &rarr; 目标格式 &rarr; 选择文件 &rarr; 点击转换，即可。
+
+![](https://raw.githubusercontent.com/mikelyou/image-public/master/rime-imewlconverter.png)
+
+第三步、将转换后的词库添加到 [自己的词库](#543-增加自己的词库) 中。
+
+一直没找到时间做这件事，今天发现竟然一下子就可以解决，终于可以把搜狗彻底卸载掉了。在这台电脑上用了快三年了的搜狗，掰掰~
+
+<img src="https://raw.githubusercontent.com/mikelyou/image-public/master/rime-sougou-inputcounting.png" style="zoom:33%;" />
+
+#### 5.4.5 扩充词库 vs. 自定义符号
 
 可能你已经感觉到，**自定义符号** 和 **自定义词库** 二者在功能上似乎有些重叠，一些功能用两个方法都能实现。这个时候就要看哪种方法更优。
 
@@ -637,4 +660,3 @@ touch ~/.config/ibus/rime/; ibus restart
 4. [在Rime輸入方案選單中添加五筆、雙拼、粵拼、注音，保留你需要的](https://gist.github.com/lotem/2309739)
 5. [安装及配置 Mac 上的 Rime 输入法——鼠鬚管 (Squirrel) ](https://www.dreamxu.com/install-config-squirrel/)
 6. [「鼠须管」配置方案分享 - V2EX](https://www.v2ex.com/t/303479)
-
