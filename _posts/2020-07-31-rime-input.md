@@ -472,7 +472,7 @@ patch:
 
 #### 5.4.3 增加自己的词库
 
-仿照已有词典，新建 `mikelyou.dict.yaml` 文件，写入以下代码和相应注释：
+仿照已有词典，新建词典文件，如 `mikelyou.dict.yaml` ，写入以下代码和相应注释：
 
 ```yaml
 # mikelyou.dict.yaml
@@ -482,6 +482,10 @@ version: "2020.08.27"
 sort: by_weight
 use_preset_vocabulary: true
 ...
+
+词语一
+词语二
+词语三
 ```
 
 并在 `luna_pinyin.extended.dict.yaml` 中添加此词库:
@@ -492,26 +496,16 @@ import_tables:
   - mikelyou
 ```
 
-然后就可以添加词语了。根据已有词库，一个词的格式为：
+词语的格式为：
 
-```yaml
-词语>>ci yu>>1
-采叶小火>>cai ye xiao huo>>1
-修齊治平>>xiu qi zhi ping>>1
-核能火箭>> >>1
-一歲一枯榮
-```
+- 普通词语直接写， 如： `词语一`
+- 若词语读音不规则，或不是汉字，则需要在后面写上拼音全拼，如：
+  - `[旺柴]	wang chai` 
+  - `🍋	ning meng`
 
-其中拼音为全拼，即便我使用双拼方案也一样。
+其中拼音一定是全拼，即便你使用的是双拼方案等。
 
-- 如果是正常的词语，如 `采叶小火` ，用对应的拼音就可以打出来，只是词库中没有这个词的话，直接写入该词即可;
-- 如果想添加类似 `[旺柴]` 并通过 `wang chai` 的拼音打出来，就必须写清楚拼音.
-
-这里我们可以把常用的邮箱地址等都添加进来，也可以添加英文词语，我这里抛砖引玉：
-
-```yaml
-[旺柴]	wang chai	 1 #便于微信聊天是直接输入表情
-```
+理论上我们可以把邮箱、网址、颜文字、英文词语都加入词库，但是这样做好不好有待思考。
 
 #### 5.4.4 导出其他输入法的词库
 
@@ -536,7 +530,21 @@ import_tables:
 
 <img src="https://raw.githubusercontent.com/mikelyou/image-public/master/rime-sougou-inputcounting.png" style="zoom:33%;" />
 
-#### 5.4.5 扩充词库 vs. 自定义符号
+#### 5.4.5 下载网络词库
+
+使用了一段时间小狼毫之后发现，扩充词库还是很有必要的，毕竟很多诸如专业词汇、城市信息、网络用语等是 rime 基础词库无法覆盖的；很多词语我们使用频率不高，于是造成了 “半天拼好一个词，然后再也没用过” 的尴尬场面。
+
+以下是两个大的词库来源，数量很多但比较旧，质量参差不齐。
+
+- [搜狗细胞词库_词库下载](https://pinyin.sogou.com/dict/)
+
+- [百度输入法-词库首页](https://shurufa.baidu.com/dict)
+
+更多的以后有机会我会研究一下哪里有更好更新的词库。
+
+下载好词库后使用深蓝转换工具即可，与上一步骤同理。
+
+#### 5.4.6 扩充词库 vs. 自定义符号
 
 可能你已经感觉到，**自定义符号** 和 **自定义词库** 二者在功能上似乎有些重叠，一些功能用两个方法都能实现。这个时候就要看哪种方法更优。
 
@@ -660,3 +668,4 @@ touch ~/.config/ibus/rime/; ibus restart
 4. [在Rime輸入方案選單中添加五筆、雙拼、粵拼、注音，保留你需要的](https://gist.github.com/lotem/2309739)
 5. [安装及配置 Mac 上的 Rime 输入法——鼠鬚管 (Squirrel) ](https://www.dreamxu.com/install-config-squirrel/)
 6. [「鼠须管」配置方案分享 - V2EX](https://www.v2ex.com/t/303479)
+7. [「鼠须管」的调教笔记](https://scomper.me/gtd/-shu-xu-guan-de-diao-jiao-bi-ji)
