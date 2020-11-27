@@ -24,6 +24,10 @@ tags:
 
 **适合的读者**：想要按照教程自己配置 Rime 输入法的用户。
 
+观前提示：本文部分内容可能过于详细，初次使用 Rime 的读者可以大胆跳过太长、太复杂的内容。读者亦可通过右侧目录和 Ctrl+F 搜索关键词，查找特定内容。
+
+***
+
 
 
 ![](https://i.imgur.com/3utln3J.png)
@@ -76,8 +80,9 @@ RIME Github 页面：[https://github.com/rime](https://github.com/rime)
 
 Rime 默认的输入方案有很多，但如果你是五笔或双拼用户，就需要自己添加方案。以 *自然码双拼* 为例，方法如下：
 
-1. 在 [Github](https://github.com/rime) 找到想要的方案，将其中的 `*.yaml` 文件下载下来，放到 **用户文件夹（见下）** 中
-2. 在 **用户文件夹** 中新建 `default.custom.yaml` 文件并写入如下内容
+**第一步**：在 [Github](https://github.com/rime) 找到想要的方案，将其中的 `*.yaml` 文件下载下来，放到 **用户文件夹（见下）** 中
+
+第二步：在 **用户文件夹** 中新建 `default.custom.yaml` 文件并写入如下内容
 
 ```yaml
 # default.custom.yaml
@@ -88,7 +93,7 @@ patch:
 
 > 注意：上述代码中，`patch:` 这一行在同一个文件中只需出现一次，如果有多处修改都包含此行，则只需保留一个，并按照相同缩进对其即可。**缩进很重要，请务必对齐。**
 
-3. 通过开始菜单或托盘图标 **重新部署** 即可
+**第三步**：通过开始菜单或托盘图标 **重新部署** 即可
 
 其中，**用户文件夹** 的默认位置如下（如果你没有指定位置的话）：
 
@@ -152,7 +157,7 @@ patch:
 
 中西文切换键的默认设置写在 `default.yaml` 里面，我们可以通过 `default.custom.yaml` 在全局范围重定义该组快速键（请看 [官方示例](https://gist.github.com/lotem/2981316) ）.
 
-**可用的按键**有 <kbd>Caps_Lock </kbd> <kbd>Shift_L</kbd> <kbd>Shift_R</kbd>  <kbd>Control_L</kbd>  <kbd>control_R</kbd>；而 Mac 系统上的鼠须管不能区分左、右，因此只有对<kbd>Shift_L</kbd><kbd>Control_L</kbd> 的设定起作用.
+**可用的按键**有 <kbd>Caps_Lock </kbd>  <kbd>Shift_L</kbd>  <kbd>Shift_R</kbd>  <kbd>Control_L</kbd>  <kbd>control_R</kbd>；而 Mac 系统上的鼠须管不能区分左、右，因此只有对<kbd>Shift_L</kbd>  <kbd>Control_L</kbd> 的设定起作用.
 
 **已输入编码时按切换键**（也就是打字打了一半的时候，按上面列举的按键），可选的临时切换策略有三：
 
@@ -203,7 +208,7 @@ patch:
 
 设置好这一部分，我们就可以开心的随时切换中英文打字了。
 
-### 2.4 以方括号 <kbd>[</kbd> <kbd>]</kbd> 来换页（有待补充所有快捷键）
+### 2.4 以方括号 <kbd>[</kbd> <kbd>]</kbd> 来换页
 
 ```yaml
 # default.custom.yaml
@@ -236,9 +241,13 @@ patch:
 
 ## 5 输入方案配置
 
-该部分以 *朙月拼音* 为例，其他输入方案同理。
+该部分以 *朙月拼音* 为例。
 
-举个例子，在下文中某处需要新建或修改 `luna_pinyin.custom.yaml` 文件，而我使用的是 *自然码双拼*，那么我需要操作的文件为 `double_pinyin.custom.yaml`。其他与特定输入法无关的文件，如 `mysymbols.yaml` ，则无需变动，直接按照文中所述进行操作即可。 [不知道输入方案对应的英文是什么？](https://gist.github.com/lotem/2309739)
+**请读者注意：如果你使用的不是 *朙月拼音* ，那么下文中出现 `luna_pinyin.custom.yaml` 文件的地方，请替换为相应文件。** 搞清楚这一点很重要，因为你可能会同时拥有上述两种文件，如果对错误的文件进行了修改，可能就不起作用。[不知道输入方案对应的英文是什么？](https://gist.github.com/lotem/2309739)
+
+举个例子，我使用 *自然码双拼*，对应的文件为 `double_pinyin.custom.yaml`。在下文中任何要修改 `luna_pinyin.custom.yaml` 的地方，操作对象换为 `double_pinyin.custom.yaml`。
+
+其他文件则按照文中所述进行操作即可。 
 
 ### 5.1 定制标点符号
 
@@ -256,9 +265,9 @@ punctuator:
 
 解释：
 
-`punctuator` 是 Rime 中负责转换标点符号的组件。该组件会从设定中读取符号映射表，而知道该做哪些转换。  
+- `punctuator` 是 Rime 中负责转换标点符号的组件。该组件会从设定中读取符号映射表，而知道该做哪些转换。  
 
-`punctuator/import_preset` 是说，本方案要继承一组预设的符号映射表、要从另一个设定档 `default.yaml` 导入。
+- `punctuator/import_preset` 是说，本方案要继承一组预设的符号映射表、要从另一个设定档 `default.yaml` 导入。
 
 查看 `default.yaml` ，確有如下符号表：
 
@@ -276,7 +285,7 @@ punctuator:
 欲令 `/` 键直接输出「、」，可如此定制 `luna_pinyin.custom.yaml`（如果没有需求的话，在全角状态和半角状态下使用相同的定义即可）:
 
 ```yaml
-# luna_pinyin.schema.yaml
+# luna_pinyin.custom.yaml （或相应文件）
 patch:
   punctuator/full_shape:
     "/" : "、"
@@ -303,7 +312,7 @@ punctuator:
 Ps. 如果要用 Backquote键（<kbd>\`</kbd>）输入 `·` ，会触发笔画什么东西（[参考](https://github.com/rime/squirrel/issues/102)），解决这个问题只需添加一行代码即可：
 
 ```yaml
-# luna_pinyin.custom.yaml
+# luna_pinyin.custom.yaml  （或相应文件）
 patch:
     recognizer/patterns/reverse_lookup: {}
 ```
@@ -434,7 +443,7 @@ patch:
     | 小鹤双拼    | double_pinyin_flypy |
     | MSPY双拼    | double_pinyin_mspy  |
 
-4. 若为「朙月拼音」系列输入方案用户，请将补靪文档 `luna_pinyin.custom.yaml` 改名为你所使用的输入方案对应的 id。（比如朙月拼音·简化字方案，则将 `luna_pinyin.custom.yaml` 改名为 `luna_pinyin_simp.custom.yaml`）。
+4. 若为「朙月拼音」系列输入方案用户，请将补丁文档 `luna_pinyin.custom.yaml` 改名为你所使用的输入方案对应的 id。（比如朙月拼音·简化字方案，则将 `luna_pinyin.custom.yaml` 改名为 `luna_pinyin_simp.custom.yaml`）。
 
 验证：切换到拼音或其他适用方案，输入「一介书生」（验证扩充词库之基本词库）、「一丈红」（验证扩充词库之汉语大词典词汇）、「疑是地上霜」（验证扩充词库之诗词词库）、输入「哆啦A梦（duo la a meng）」（验证扩充词库之西文词库，此子词库为朙月拼音系列方案专有，双拼方案不推荐使用）。
 
@@ -544,6 +553,8 @@ import_tables:
 
 下载好词库后使用深蓝转换工具即可，与上一步骤同理。
 
+
+
 #### 5.4.6 扩充词库 vs. 自定义符号
 
 可能你已经感觉到，**自定义符号** 和 **自定义词库** 二者在功能上似乎有些重叠，一些功能用两个方法都能实现。这个时候就要看哪种方法更优。
@@ -646,9 +657,9 @@ touch ~/.config/ibus/rime/; ibus restart
 
 在打字界面按下 <kbd>Ctrl</kbd>+<kbd>`</kbd> 或 <kbd>F4</kbd> 即可进行全角和半角的切换
 
-## 7 碎碎念
+## 7 为什么我选择 Rime
 
-> 这段原本是开头来着，实在是 “赶动” 读者，就扔到最后了。搜狗还是比较好用的，如果没有广告的话。
+下面几段话原本是开头来着，实在是 “赶动” 读者，就扔到最后了。搜狗还是比较好用的，如果没有广告的话。
 
 我使用搜狗拼音很长时间了，也曾做过很多自定义的尝试，比如添加自定义词语、修改按键等，曾经还把希腊字母加入了输入方案。但是能够自定义的地方并不多，而且时不时弹出广告让人很烦，隐私问题则从来没有放过心，只能装作无事罢了。每次看到搜狗弹出广告，我就会去网上搜索一通，看看有没有解决方法。曾经看到过 “去广告版”的搜狗输入法，不过因为资源不多，而且资源是否安全也需要自行判断，一直都没有真正尝试过。
 
@@ -669,3 +680,4 @@ touch ~/.config/ibus/rime/; ibus restart
 5. [安装及配置 Mac 上的 Rime 输入法——鼠鬚管 (Squirrel) ](https://www.dreamxu.com/install-config-squirrel/)
 6. [「鼠须管」配置方案分享 - V2EX](https://www.v2ex.com/t/303479)
 7. [「鼠须管」的调教笔记](https://scomper.me/gtd/-shu-xu-guan-de-diao-jiao-bi-ji)
+8. [〔新手推荐敎程〕关于导入词库及「深蓝词库转换」的正确操作方法【rime吧】](https://tieba.baidu.com/p/2757690418)
