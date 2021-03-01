@@ -1,0 +1,273 @@
+---
+
+layout: post
+title: "基础逻辑代数"
+subtitle: ''
+date: 2021-03-01 17:00:00
+author: "Mike Lyou"
+#header-style: text
+header-img: "img/post-bg-table.jpg"
+mathjax: true
+catalog: true
+copyright-statement: CC BY-NC-SA
+hidden: false
+excerpt: 一起来复习一下数电基础。
+tags:
+ - Study
+ - 电子电路
+
+---
+
+<!-- more -->
+
+
+
+## 基础运算
+
+### 『和』运算
+
+$$
+Y=A+B
+$$
+
+其运算规律为
+
+
+$$
+\begin{aligned} 
+0+0=0\\
+0+1=1\\
+1+0=1\\
+1+1=1
+\end{aligned}
+$$
+
+### 『积』运算
+
+$$
+Y=A\cdot B
+$$
+
+其运算规律为
+
+
+$$
+\begin{aligned} 
+0\cdot 0=0\\
+0\cdot 1=0\\
+1\cdot 0=0\\
+1\cdot 1=1
+\end{aligned}
+$$
+
+### 『异或』(XOR) 运算
+
+![](https://raw.githubusercontent.com/mikelyou/image-public/master/xor-gate.png)
+$$
+Y=A \oplus B=A \overline{B}+\overline{A} B
+$$
+
+其运算规律为
+
+
+$$
+\begin{aligned} 
+0\oplus 0=0\\
+0\oplus 1=1\\
+1\oplus 0=1\\
+1\oplus 1=0
+\end{aligned}
+$$
+
+
+当 $A$ 和 $B$ 不相同时，结果为 $1$；当 $A$ 和 $B$ 相同时，结果为 $0$；
+
+也可以理解为『相加后模2』.
+
+### 『同或』(XNOR) 运算
+
+![](https://raw.githubusercontent.com/mikelyou/image-public/master/xnor-gate.png)
+$$
+Y=A \odot B=\bar{A} \overline{B}+ AB
+$$
+
+其运算规律为
+
+
+$$
+\begin{aligned} 
+0\odot 0=1\\
+0\odot 1=0\\
+1\odot 0=0\\
+1\odot 1=1
+\end{aligned}
+$$
+
+
+相当于在『异或』运算后再去『非』；
+
+也被称为『异或非』运算.
+
+***
+
+『异或』运算和『同或』运算有如下关系：
+
+
+$$
+A \odot B=\overline{A \oplus B}\\
+A \oplus B=\overline{A \odot B}
+$$
+
+## 基本公式
+
+### 与 0 和 1 的运算
+
+$$
+\begin{array}{c}
+0 \cdot A=0 \\
+1+A=1 \\
+\end{array}
+\quad
+\begin{array}{c}
+1 \cdot A=A \\
+0+A=A 
+\end{array}
+$$
+
+### 与自身运算
+
+$$
+\begin{array}{c}
+A \cdot A=A \\
+A \cdot \overline{A}=0 \\
+A+A=A \\
+A+\overline{A}=1 \\
+\overline{\bar{A}}=A\\
+\end{array}
+$$
+
+### 交换律、结合律和分配律
+
+$$
+\begin{array}{c}
+
+A \cdot B=B \cdot A \\
+A(B C)=(A B) C \\
+
+A+B=B+A \\
+A+(B+C)=(A+B)+C \\
+
+A(B+C)=A B+A C \\
+
+\end{array}
+$$
+
+
+
+### 若干常用公式及证明
+
+$$
+\overline{A B}=\overline{A}+\overline{B}\label{eq9}\tag{9}
+$$
+
+$$
+\overline{A+B}=\overline{A} \cdot \overline{B}
+$$
+
+
+
+这两个公式较为简单，写出真值表即可证明，略。
+
+***
+
+$$
+A+B C=(A+B)(A+C)\label{eq11}\tag{11}
+$$
+
+证明：
+
+
+$$
+\begin{aligned} 
+(A+B)(A+C)&=AA+AB+AC+BC\\
+&=A(1+B+C)+BC\\
+&=A+BC
+\end{aligned}
+$$
+
+***
+
+$$
+\mathrm{A}+\mathrm{AB}=\mathrm{A} 
+$$
+
+证明如下
+
+
+$$
+A+AB=A(1+B)=A
+$$
+
+***
+
+$$
+\mathrm{A}+\overline{\mathrm{A}} \mathrm{B}=\mathrm{A}+\mathrm{B} 
+$$
+
+证明如下
+
+利用 $\eqref{eq11}$ 展开等式左侧即可
+
+
+$$
+A+\overline{A}B=(A+\overline{A})(A+B)=A+B
+$$
+
+
+***
+
+$$
+\mathrm{A}(\mathrm{A}+\mathrm{B})=\mathrm{A} 
+$$
+
+证明
+
+
+$$
+A(A+B)=A+AB=A(1+B)=A
+$$
+
+***
+
+$$
+\mathrm{A} \mathrm{B}+\overline{\mathrm{A}} \mathrm{C}+\mathrm{B} \mathrm{C}=\mathrm{AB}+\overline{\mathrm{A}} \mathrm{C} \\
+\mathrm{A} \mathrm{B}+\overline{\mathrm{A}} \mathrm{C}+\mathrm{B} \mathrm{CD}=\mathrm{A} \mathrm{B}+\overline{\mathrm{A}} \mathrm{C}
+$$
+
+证明
+
+观察法。以第一行的公式为例，
+
+- 当 $A=0$ 时，左侧为 $B+BC=B$, 右侧为 $B$;
+- 当 $A=1$ 时，左侧为 $C+BC=C$, 右侧为 $C$;
+
+第二行公式同理.
+
+***
+
+$$
+\mathrm{A\cdot\overline{AB}}=\mathrm{A} \overline{\mathrm{B}} ; \quad \overline{\mathrm{A}} \cdot\overline{\mathrm{AB}}=\overline{\mathrm{A}}
+$$
+
+证明
+
+利用 $\eqref{eq9}$ 展开左侧，得
+
+
+$$
+\mathrm{A\cdot\overline{AB}}=\mathrm{A\cdot(\overline{A} + \overline{B})}=0+
+\mathrm{A} \overline{\mathrm{B}}\\
+\overline{\mathrm{A}} \cdot\overline{\mathrm{AB}}=\mathrm{\overline{A}(\overline{A} + \overline{B})}=\overline{\mathrm{A}}+\overline{\mathrm{A}}\mathrm{B}=\overline{\mathrm{A}}
+$$
+
+
