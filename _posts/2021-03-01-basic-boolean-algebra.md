@@ -167,11 +167,11 @@ $$
 ### 若干常用公式及证明
 
 $$
-\overline{A B}=\overline{A}+\overline{B}\label{eq9}\tag{9}
+\boxed{\overline{A B}=\overline{A}+\overline{B}}\label{eq9}\tag{9}
 $$
 
 $$
-\overline{A+B}=\overline{A} \cdot \overline{B}
+\boxed{\overline{A+B}=\overline{A} \cdot \overline{B}}
 $$
 
 
@@ -181,7 +181,7 @@ $$
 ***
 
 $$
-A+B C=(A+B)(A+C)\label{eq11}\tag{11}
+\boxed{A+B C=(A+B)(A+C)}\label{eq11}\tag{11}
 $$
 
 证明：
@@ -271,3 +271,9 @@ $$
 $$
 
 
+
+## 练习题
+
+题一：化简表达式 $\mathrm{Y=AB+\overline{A}C+\overline{B}C}$
+
+解： $\mathrm{Y=AB+(\overline{A}+\overline{B})C=AB+(\overline{AB})C=(AB+\overline{AB})(AB+C)=AB+C}$
