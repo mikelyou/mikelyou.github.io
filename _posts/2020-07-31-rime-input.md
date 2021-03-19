@@ -386,6 +386,12 @@ punctuator:
 
 不过我总感觉姿势不太对。我也没有实践过~~，因为在折腾的途中就发现上面第一种方法了..~~.
 
+#### 5.2.2 emoji
+
+[rtransformation/rime-opencc_emoji_symbols](https://github.com/rtransformation/rime-opencc_emoji_symbols) （双拼下部分emoji无法拼写）
+
+
+
 ### 5.3 添加自定义符号
 
 由于 `symbols.yaml` 不能使用 `*.custom` 打补丁，我们需要这样操作：
